@@ -1,0 +1,32 @@
+sudo: required
+addons:
+  chrome: stable
+
+language: node_js
+node_js:
+- "8"
+
+branches:
+  only:
+  - master
+
+cache:
+  directories:
+  - node_modules
+
+before_script:
+- npm install -g @angular/cli
+
+script:
+- npm run test-ci
+- npm run build-lib
+- npm run build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: dist/ng-components
+  on:
+    branch: master
