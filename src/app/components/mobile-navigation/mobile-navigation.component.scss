@@ -1,0 +1,49 @@
+@import "../../../../scss/theme/styles/variables.scss";
+@import "../../../../scss/theme/styles/mixins.scss";
+.mobile-nav {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  z-index: 1;
+  height: calc(100% - 56px);
+  .nav-link {
+    color: $dark;
+    padding: $spacer;
+  }
+}
+@include media-breakpoint-up(md) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+.mobile-header {
+  .col {
+    padding-top: .65rem;
+    padding-bottom: .35rem;
+    //padding: .375em 0;
+  }
+  .active {
+    background: $green;
+  }
+}
+
+header {
+  height: 56px;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  //padding-left: 0;
+}
+.mobile-header {
+  background: #333;
+  color: #fff;
+  height:56px;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+}
+.mobile-breadcrumb {
+  background: $white;
+  height: 56px;
+}

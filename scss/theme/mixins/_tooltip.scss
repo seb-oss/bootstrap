@@ -1,0 +1,5 @@
+@mixin text-help() {
+  text-decoration: none;
+  cursor: help;
+  border-bottom: dashed 1px $black;
+}

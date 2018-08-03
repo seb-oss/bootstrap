@@ -1,0 +1,7 @@
+@import "../../scss/theme/styles/variables.scss";
+@import "../../scss/theme/styles/mixins.scss";
+@include media-breakpoint-up(lg) {
+  .content {
+    margin-left: 256px;
+  }
+}

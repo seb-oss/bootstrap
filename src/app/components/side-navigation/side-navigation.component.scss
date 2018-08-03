@@ -1,0 +1,68 @@
+@import "../../../../scss/theme/styles/variables.scss";
+@import "../../../../scss/theme/styles/mixins.scss";
+
+.side-nav {
+  display: none;
+}
+
+@include media-breakpoint-up(lg) {
+  .side-nav {
+    display: block;
+    width: 256px;
+    background: #333;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+  }
+}
+
+.seb-logo {
+  height:56px;
+  width: 56px;
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: normal;
+
+}
+
+.menu-item:hover {
+  background: rgba($green,.25);
+  //background: $light;
+  /*.nav-link {
+    color: $dark;
+  }*/
+}
+
+.menu-item {
+  &.active {
+    .nav-link {
+      font-weight: $font-weight-medium;
+    }
+    background: $green;
+  }
+  &.active-parent {
+    .nav-link {
+      font-weight: $font-weight-medium;
+      &::after {
+        display: block;
+        content: "";
+        left: 0;
+        width: 5px;
+        background: $green;
+        top: 0;
+        position: absolute;
+        height: 100%;
+        animation: expand ease-out .2s;
+        transition: transform .2s ease-in-out;
+      }
+    }
+  }
+  &.active-match {
+    .nav-link {
+      font-weight: $font-weight-medium;
+    }
+  }
+}
