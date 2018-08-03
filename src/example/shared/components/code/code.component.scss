@@ -1,0 +1,49 @@
+@import "../../../../../scss/theme/styles/variables.scss";
+@import "../../../../../scss/theme/styles/mixins.scss";
+pre {
+  padding-top: .5rem;
+  border-left: 10px solid $blue;
+  padding-bottom: .5rem !important;
+}
+
+pre code {
+  box-shadow: none;
+  border-left: none;
+  background-image: linear-gradient(transparent 50%, rgba($gray-200, .5)  50%);
+  //background-size: 3em 2.95em;
+}
+
+::ng-deep {
+.token.selector, .token.attr-name, .token.string, .token.char, .token.function, .token.builtin, .token.inserted {
+  color: $green-darker;
+}
+
+.token.property, .token.tag, .token.boolean, .token.number, .token.function-name, .token.constant, .token.symbol, .token.deleted {
+  color: $purple;
+}
+
+.token.atrule, .token.attr-value, .token.keyword, .token.class-name {
+  color: $blue-dark;
+}
+  pre[class*="language-"]:before, pre[class*="language-"]:after {
+    display: none;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .btn-copy {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+  }
+}
+@include media-breakpoint-down(xs) {
+  .btn-copy {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+  }
+}

@@ -1,0 +1,168 @@
+$spinner-sm-size: 1rem;
+$spinner-size: 2rem;
+$spinner-md-size: 4rem;
+$spinner-lg-size: 6rem;
+
+.spinner,
+.spinner:before,
+.spinner:after {
+  border-radius: 50%;
+}
+.spinner {
+  color: $green;
+  position: relative;
+  width: $spinner-size;
+  height: $spinner-size;
+  box-shadow: inset 0 0 0 3.5px;
+  transform: translateZ(0);
+  animation: rotate-circle 2s infinite linear .75s;
+  &:after {
+    width: $spinner-size/2 + 0.2rem; //5.2em;
+    height: $spinner-size + 0.2rem; // 10.2em;
+    background: $white;
+    border-radius: 0 $spinner-size + 0.2rem $spinner-size + 0.2rem 0;//0 10.2em 10.2em 0;
+    top: -0.1rem;
+    left: $spinner-size/2 + 0.1rem;//5.1em;
+    transform-origin: 0 $spinner-size/2 + 0.1rem;//0 5.1em;
+    animation: rotate-circle 2s infinite ease;
+  }
+  &:before {
+    width: $spinner-size/2 + 0.2rem; //5.2em;
+    height: $spinner-size + 0.2rem; //10.2em;
+    background: $white;
+    border-radius: $spinner-size + 0.2rem 0 0 $spinner-size + 0.2rem; // 10.2em 0 0 10.2em;
+    top: -0.1rem;
+    left: -0.1rem;
+    transform-origin: $spinner-size/2 + 0.2rem $spinner-size/2 + 0.1rem; // 5.2em 5.1em;
+    animation: rotate-circle 2s infinite ease 1.5s;
+  }
+}
+
+.spinner.spinner-sm, .btn > .spinner {
+  width: $spinner-sm-size;
+  height: $spinner-sm-size;
+  box-shadow: inset 0 0 0 2px;
+  &:before {
+    width: $spinner-sm-size/2 + 0.2rem;
+    height: $spinner-sm-size + 0.2rem;
+    border-radius: $spinner-sm-size + 0.2rem 0 0 $spinner-sm-size + 0.2rem;
+    transform-origin: $spinner-sm-size/2 + 0.2rem $spinner-sm-size/2 + 0.1rem;
+  }
+  &:after {
+    width: $spinner-sm-size/2 + 0.2rem; //5.2em;
+    height: $spinner-sm-size + 0.2rem; // 10.2em;
+    border-radius: 0 $spinner-sm-size + 0.2rem $spinner-sm-size + 0.2rem 0;//0 10.2em 10.2em 0;
+    left: $spinner-sm-size/2 + 0.1rem;//5.1em;
+    transform-origin: 0 $spinner-sm-size/2 + 0.1rem;//0 5.1em;
+  }
+}
+
+.spinner.spinner-md {
+  width: $spinner-md-size;
+  height: $spinner-md-size;
+  box-shadow: inset 0 0 0 5px;
+  &:before {
+    width: $spinner-md-size/2 + 0.2rem;
+    height: $spinner-md-size + 0.2rem;
+    border-radius: $spinner-md-size + 0.2rem 0 0 $spinner-md-size + 0.2rem;
+    transform-origin: $spinner-md-size/2 + 0.2rem $spinner-md-size/2 + 0.1rem;
+  }
+  &:after {
+    width: $spinner-md-size/2 + 0.2rem; //5.2em;
+    height: $spinner-md-size + 0.2rem; // 10.2em;
+    border-radius: 0 $spinner-md-size + 0.2rem $spinner-md-size + 0.2rem 0;//0 10.2em 10.2em 0;
+    left: $spinner-md-size/2 + 0.1rem;//5.1em;
+    transform-origin: 0 $spinner-md-size/2 + 0.1rem;//0 5.1em;
+  }
+}
+
+.spinner.spinner-lg {
+  width: $spinner-lg-size;
+  height: $spinner-lg-size;
+  box-shadow: inset 0 0 0 7px;
+  &:before {
+    width: $spinner-lg-size/2 + 0.2rem;
+    height: $spinner-lg-size + 0.2rem;
+    border-radius: $spinner-lg-size + 0.2rem 0 0 $spinner-lg-size + 0.2rem;
+    transform-origin: $spinner-lg-size/2 + 0.2rem $spinner-lg-size/2 + 0.1rem;
+  }
+  &:after {
+    width: $spinner-lg-size/2 + 0.2rem; //5.2em;
+    height: $spinner-lg-size + 0.2rem; // 10.2em;
+    border-radius: 0 $spinner-lg-size + 0.2rem $spinner-lg-size + 0.2rem 0;//0 10.2em 10.2em 0;
+    left: $spinner-lg-size/2 + 0.1rem;//5.1em;
+    transform-origin: 0 $spinner-lg-size/2 + 0.1rem;//0 5.1em;
+  }
+}
+
+.spinner:before,
+.spinner:after {
+  position: absolute;
+  content: '';
+}
+
+.spinner.light {
+  &:before,
+  &:after {
+    background: $light;
+  }
+}
+
+.btn > .spinner {
+  //width: 1rem;
+  //height: 1rem;
+  color: $white;
+  display: inline-block;
+  vertical-align: -3px;
+  &:before,
+  &:after {
+    background: $btn-disabled-color;
+  }
+}
+
+@keyframes rotate-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-sq {
+  width: $spinner-size;
+  height: $spinner-size;
+  background-color: $green;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+.spinner-sq.spinner-sm,.btn > .spinner-sq {
+  width: 1rem;
+  height: 1rem;
+}
+
+.spinner-sq.spinner-md {
+  width: $spinner-md-size;
+  height: $spinner-md-size;
+}
+.spinner-sq.spinner-lg {
+  width: $spinner-lg-size;
+  height: $spinner-lg-size;
+}
+
+.btn > .spinner-sq {
+  background-color: $white;
+  display: inline-block;
+  vertical-align: -3px;
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  } 50% {
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    } 100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      }
+}

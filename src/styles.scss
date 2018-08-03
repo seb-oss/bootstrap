@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+// set font path
+//$seb-font-path: "/assets/fonts" !default;
+//@import "~scss/theme/variables";
+//@import "../scss/theme/fonts/fonts";
+
+// set font path
+$seb-font-path: "./assets/fonts" !default;
+
+@import "~scss/theme/bootstrap";
+@import '~prismjs/themes/prism-coy.css';

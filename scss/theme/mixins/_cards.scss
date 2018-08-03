@@ -1,0 +1,42 @@
+// Card variants
+
+@mixin custom-card-variant($header-background, $header-color,$body-background:"",$body-color:"") {
+  @if $body-background != "" {border-color: $body-background;} @else {border-color: #f1f1f1;}
+
+  .card-header {
+    background: $header-background;
+    border-color: $header-background;
+    color: $header-color;
+  }
+
+    .card-block {
+      @if $body-background != "" {
+        background: $body-background;
+      } @else {
+        background: #fff;
+      }
+      @if $body-color != "" { color: $body-color; }
+    }
+
+}
+
+@mixin custom-card-variant2($color) {
+  .card-header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 4px;
+    background: $color;
+    height: calc(100% + 2px);
+    left: -1px;
+    top: -1px;
+  }
+
+  .card-header {
+    position:relative;
+    background: #ffffff;
+  }
+  border: $card-border-width solid $card-border-color;
+  background: #ffffff;
+
+}

@@ -1,0 +1,17 @@
+@import "../../../../../scss/theme/styles/variables.scss";
+@import "../../../../../scss/theme/styles/mixins.scss";
+:host {
+  display: block;
+  position: relative;
+  margin-top: $spacer;
+  &:hover ::ng-deep.btn-copy {
+    opacity: 1;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .custom-select {
+    padding-right: 90px;
+    background-position-x: calc(100% - 65px);
+  }
+}
