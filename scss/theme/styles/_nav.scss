@@ -1,0 +1,18 @@
+@import "../../nav";
+
+// SEB Specific styles for nav tabs
+
+// tabs
+
+.nav-tabs > .nav-item > .nav-link:not(.active, .disabled){
+  &:hover {
+    background: $nav-tabs-link-hover-bg;
+    border-color: $nav-tabs-link-hover-bg;
+    color: $nav-tabs-link-hover-color;
+  }
+  &:focus {
+    background: $nav-tabs-link-focus-bg;
+    border-color: $nav-tabs-link-focus-border-color;
+    color: $nav-tabs-link-focus-color;
+  }
+}

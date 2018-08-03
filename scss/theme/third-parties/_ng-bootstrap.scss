@@ -1,0 +1,233 @@
+@mixin border-highlight() {
+  display: block;
+  content: "";
+  width: 4px;
+  background: $green;
+  top: -1px;
+  left: 0;
+  position: absolute;
+  height: calc(100% + 2px);
+  animation: expand ease-out .2s;
+  transition: transform .2s ease-in-out;
+}
+
+@mixin ng-bootstrap()  {
+
+  // Accordion
+  ngb-accordion .card {
+    box-shadow: none;
+    border-bottom: $accordion-border-color solid $accordion-border-width;
+    margin-bottom: 0 !important;
+    background-color: $accordion-body-bg;
+  }
+
+  ngb-accordion {
+    .card-header {
+      padding: $accordion-header-padding;
+      font-weight: $headings-font-weight;
+      a::before {
+        content: '';
+        display: inline-block;
+        width: $font-size-base;
+        height: $font-size-base;
+        margin-right: map-get($spacers, 2);
+        cursor: pointer;
+        background: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%230092e1' d='M443.5 162.6l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 351 28.5 155.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.7 4.8-12.3.1-17z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: $font-size-base;
+        background-position: center;
+        transform: rotateZ(-90deg) translateX(-3px);
+        transition: transform ease-in-out 300ms;
+      }
+      &.active a::before {
+        transform: rotateZ(0deg) translateY(2px);
+      }
+      a {
+        color: $headings-color;
+        &:hover {
+          text-decoration: none;
+          color: $link-hover-color
+        }
+        &.text-muted::before {
+          background: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='" + $text-muted + "' d='M443.5 162.6l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 351 28.5 155.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.7 4.8-12.3.1-17z'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-size: $font-size-base;
+          background-position: center;
+        }
+      }
+      &:hover a:not([aria-disabled="true"])::after, &.active a::after {
+        @include border-highlight();
+      }
+    }
+    .card-body {
+      // border-top: $accordion-border-color solid $accordion-border-width;
+      background-color: $accordion-body-bg;
+      padding: $accordion-body-padding;
+    }
+  }
+
+  // tooltip
+  abbr[ngbTooltip] {
+    @include text-help;
+  }
+
+  // experimental
+
+  //dropdown style for mobile
+  @include media-breakpoint-down('xs') {
+    [ngbdropdownmenu] .dropdown-multi-select-options {
+      margin-top: 4.5rem;
+    }
+
+    [ngbdropdownmenu] > .dropdown-control {
+      position: fixed;
+      width: 100%;
+      margin-top: -(map_get($spacers, 2));
+      background: #fff;
+      padding: map_get($spacers, 2) map_get($spacers, 2) 0 map_get($spacers, 2);
+    }
+
+    [ngbdropdownmenu].show {
+      position: fixed;
+      left: 0 !important;
+      bottom: 0 !important;
+      top: auto !important;
+      margin-bottom: 0 !important;
+      z-index: $zindex-dropdown;
+      background: #fff;
+      max-height: 50vh;
+      /*overflow: auto;*/
+      width: 100vw !important;
+      border-radius: 0;
+      border: none;
+      overflow: hidden;
+      /*&::before {
+        content: 'Close';
+        width: 100%;
+        display: block;
+        text-align: right;
+        padding-right: 1rem;
+        color: $link-color;
+        margin-bottom: 0.35rem;
+      }*/
+      .dropdown-multi-select-options {
+        max-height: calc(50vh - 5rem);
+        overflow: auto;
+      }
+    }
+
+    [ngbdropdown].show {
+      [ngbdropdowntoggle] {
+        z-index: $zindex-dropdown;
+        background-color: $white !important;
+        opacity: 0.35;
+      }
+      &::after {
+        position: fixed;
+        top: 0;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        content: '';
+        left: 0;
+      }
+    }
+
+  }
+
+
+  [ngbdropdowntoggle] {
+    text-align: left;
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: baseline;
+    &::after {
+      border: none;
+      content: '';
+      display: inline-block;
+      height: $font-size-base;
+      width: $font-size-base;
+      background: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%230092e1' d='M443.5 162.6l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 351 28.5 155.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.7 4.8-12.3.1-17z'/%3E%3C/svg%3E");
+      background-size: cover;
+      background-position-y: 2px;
+      background-repeat: no-repeat;
+      margin-left: 0.6rem;
+    }
+    &.btn-sm {
+      &::after {
+        height: $font-size-sm;
+        width: $font-size-sm;
+        margin-left: 0.35rem;
+      }
+      + .dropdown-menu {
+        .dropdown-item {
+          padding-top: $dropdown-item-padding-y/2;
+          padding-bottom: $dropdown-item-padding-y/2;
+          font-size: $font-size-sm;
+        }
+      }
+    }
+    &.btn-lg {
+      &::after {
+        height: $font-size-lg;
+        width: $font-size-lg;
+        margin-left: 0.75rem;
+      }
+    }
+  }
+
+  [ngbdropdowntoggle]:hover {
+    &::after {
+      background-size: cover;
+      background-position-y: 2px;
+      background-repeat: no-repeat;
+    }
+  }
+  /*[ngbdropdown].show [ngbdropdowntoggle], [ngbdropdowntoggle]:active {
+    &::after {
+      background: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='#fff' d='M443.5 162.6l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 351 28.5 155.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.7 4.8-12.3.1-17z'/%3E%3C/svg%3E");
+      background-size: cover;
+      background-position-y: 2px;
+      background-repeat: no-repeat;
+    }
+  }
+  [ngbdropdown].show [ngbdropdowntoggle]:hover {
+    background: $blue;
+  }*/
+  [ngbdropdown] + .progress-feedback,
+  [ngbdropdown] + .invalid-feedback,
+  [ngbdropdown] + .valid-feedback {
+    &::before {
+      margin-top: -6px;
+      border-radius: 0 0 4px 4px;
+    }
+  }
+  [ngbdropdown].is-invalid ~ .progress-feedback,
+  [ngbdropdown].is-invalid ~ .invalid-feedback,
+  [ngbdropdown].is-valid ~ .valid-feedback
+  {display: block;}
+
+  .is-invalid > [ngbdropdowntoggle] {
+    &:focus {
+      border-color: $danger;
+      box-shadow: 0 0 0 $input-focus-width rgba($danger, .25);
+    }
+    &:hover {
+      border-color: $danger !important;
+    }
+    &:active {
+      color: $input-color !important;
+      background: $white !important;
+    }
+  }
+}
+@keyframes expand{
+  0%{
+    transform:scaleY(0);
+  }
+  to{
+    transform:scaleY(1);
+  }
+}

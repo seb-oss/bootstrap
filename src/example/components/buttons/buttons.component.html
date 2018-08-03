@@ -1,0 +1,69 @@
+<a name="buttons"><h2 class="px-3 px-md-0">Buttons</h2></a>
+<div class="card mb-3">
+  <div class="card-body">
+    <p>We have three main button classes that we use <code>.btn-primary</code>, <code>.btn-secondary</code> and <code>.btn-link</code>, use the latter to give buttons the same behavior as normal links (used for links placed outside text segments and paragraphs as well as actions similar to "go to" or regular links).</p>
+    <label>Standard</label>
+    <div>
+      <app-buttons-main></app-buttons-main>
+    </div>
+    <label class="mt-3">Disabled</label>
+    <div>
+      <button type="button" class="btn btn-primary disabled">Primary</button>
+      <button type="button" class="btn btn-secondary disabled">Secondary</button>
+      <button type="button" class="btn btn-link disabled">Link</button>
+      <button type="button" class="btn btn-outline-primary disabled">Primary-outlined</button>
+    </div>
+    <!--<app-code [code]="SNIPPETS.main.markup" [lang]="'markup'"></app-code>-->
+    <app-snippet-wrapper [snippets]="SNIPPETS.main"></app-snippet-wrapper>
+  </div>
+</div>
+<h3 class="px-3 px-md-0">Buttons and colored backgrounds</h3>
+<div class="card mb-3" #buttonsLightExample>
+  <div class="card-body">
+    <p>The <code>.btn-light</code> class should only be used when buttons are placed on colored or dark backgrounds/images.</p>
+    <div class="row align-items-center no-gutters">
+      <div class="col-6 col-md-4 col-lg bg-primary-element py-4 text-center">
+        <button class="btn btn-light">Light</button>
+      </div>
+      <div class="col-6 col-md-4 col-lg bg-info-element py-4 text-center">
+        <button class="btn btn-light">Light</button>
+      </div>
+      <div class="col-6 col-md-4 col-lg bg-success-element py-4 text-center">
+        <button class="btn btn-light">Light</button>
+      </div>
+      <div class="col-6 col-md-4 col-lg bg-warning-element py-4 text-center">
+        <button class="btn btn-light">Light</button>
+      </div>
+      <div class="col-6 col-md-4 col-lg bg-danger-element py-4 text-center">
+        <button class="btn btn-light">Light</button>
+      </div>
+      <div class="col-6 col-md-4 col-lg bg-image-example py-4 text-center">
+        <button class="btn btn-light">Light</button>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 class="px-3 px-md-0">Alternative buttons (internal use)</h3>
+<div class="card mb-3" #additionalButtonsExample>
+  <div class="card-body">
+    <p>Since SEB Style is a theme for Bootstrap and Bootstrap has some additional button classes to differentiate the severity or the meaning of a button like <code>.btn-danger</code> for actions like delete and remove that might require a bit more attentions, the following classes are available too. Note however that they'll still fallback to our default classes. For internal apps you can override this behaviour and get alternative buttons by setting <code>$enable-button-variations</code> variable to <code>true</code>.</p>
+    <div>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-danger">Info</button>
+    </div>
+  </div>
+</div>
+<h3 class="px-3 px-md-0">Sizing</h3>
+<div class="card mb-3" #smallButtonsExample>
+  <div class="card-body">
+    <p>Add <code>.btn-sm</code> for smaller buttons and <code>.btn-lg</code> for larger buttons.</p>
+    <div>
+      <app-buttons-sizes></app-buttons-sizes>
+    </div>
+    <app-snippet-wrapper [snippets]="SNIPPETS.sizes"></app-snippet-wrapper>
+  </div>
+</div>
+<!--<app-code [code]="markup" [lang]="'markup'"></app-code>-->
+

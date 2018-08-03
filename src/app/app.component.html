@@ -1,0 +1,11 @@
+<app-mobile-navigation></app-mobile-navigation>
+<app-side-navigation></app-side-navigation>
+<app-header></app-header>
+<div class="content" (window:scroll)="scroll($event)">
+  <!--<app-sub-header [scrollPosition]="scrollPosition"></app-sub-header>-->
+  <div class="row">
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
