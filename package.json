@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-demo",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "homepage": "https://sebgroup.github.io/bootstrap/",
   "scripts": {
     "ng": "ng",
