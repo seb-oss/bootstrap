@@ -11,7 +11,8 @@
     "url": "git+https://github.com/sebgroup/bootstrap.git"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "author": "Robert Hjalmers",
   "license": "Apache-2.0",
