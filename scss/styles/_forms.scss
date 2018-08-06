@@ -1,0 +1,118 @@
+@import "../bootstrap-core/forms";
+
+// SEB Specific styles for labels
+label:not(.form-check-label,.custom-checkbox,.custom-radio,.custom-control-label), legend.col-form-legend {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  margin-bottom: 0.25rem;
+}
+label:not(.form-check-label) {
+  line-height: 1.5rem;
+}
+
+.form-inline label, label.col-form-label {
+  margin-bottom: 0;
+}
+label {
+  color: $label-color;
+}
+
+// SEB Specific styles for progress feedback
+.progress-feedback {
+  width: 100%;
+  margin-top: $form-feedback-margin-top;
+  font-size: $form-feedback-font-size;
+  color: $text-muted;
+  &::before {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: transparent;
+    display: block;
+    position: relative;
+    margin-bottom: 4px;
+    transition: background .6s ease-out, width .6s ease-out;
+    z-index: 2;
+  }
+  &.p-0::before {
+    width: 0;
+  }
+  &.p-10, &.p-20, &.p-30 {
+    color: $danger;;
+    &::before {
+      background: $danger;
+    }
+  }
+  &.p-40, &.p-50, &.p-60 {
+    color: $warning;
+    &::before {
+      background: $warning;
+    }
+  }
+  &.p-70, &.p-80, &.p-90, &.p-100 {
+    color: $success;
+    &::before {
+      background: $success;
+    }
+  }
+}
+
+input + .progress-feedback, select + .progress-feedback, textarea + .progress-feedback, .input-group-append + .progress-feedback {
+  &::before {
+    margin-top: -6px;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+// SEB Specific styles for validation progress bar
+:focus + .progress-feedback,
+:focus + .invalid-feedback,
+:focus + .valid-feedback,
+.input-group-append + .progress-feedback,
+.input-group-append + .invalid-feedback,
+.input-group-append + .valid-feedback {
+  &.p-0::before {
+    width: 0;
+    border-radius: 0 0 0 4px;
+  }
+  @for $i from 1 through 9 {
+    &.p-#{$i}0::before {
+      width: #{$i}0%;
+      border-radius: 0 0 0 4px;
+    }
+  }
+  &.p-100::before {
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+.progress-feedback.progress-success {
+  color: $success;
+  &::before {
+    background: $success;
+  }
+}
+.progress-feedback.progress-warning {
+  color: $warning;
+  &::before {
+    background: $warning;
+  }
+}
+.progress-feedback.progress-danger {
+  color: $danger;
+  &::before {
+    background: $danger;
+  }
+}
+
+/* IE fix for input height */
+.form-control {
+  min-height: 40px;
+}
+.form-control-sm {
+  min-height: 28px;
+}
+.form-control-lg {
+  min-height: 48px;
+}

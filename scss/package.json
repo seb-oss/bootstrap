@@ -1,0 +1,23 @@
+{
+  "name": "@sebgroup/bootstrap",
+  "version": "1.0.0-alpha.4",
+  "description": "A standalone bootstrap theme for SEB",
+  "main": "scss/bootstrap.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebgroup/bootstrap.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "author": "Robert Hjalmers",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sebgroup/bootstrap/issues"
+  },
+  "homepage": "https://sebgroup.github.io/bootstrap/"
+}

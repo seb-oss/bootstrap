@@ -1,0 +1,19 @@
+@import "../bootstrap-core/dropdown";
+
+// SEB Specific styles for dropdowns
+button.btn.dropdown-toggle {
+  border-color: $input-border-color;
+  color: $input-color;
+  background: $input-bg;
+  font-weight: $font-weight-base;
+  &:hover {
+    border-color: $blue;
+  }
+}
+.dropdown-menu {
+  margin-top: 0.35rem;
+}
+
+.dropdown-control {
+  padding: 0 map_get($spacers, 2);
+}

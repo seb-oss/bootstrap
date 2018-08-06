@@ -1,0 +1,15 @@
+@import "../bootstrap-core/input-group";
+
+// SEB Specific styles for input-groups
+
+.input-group-prepend .input-group-text {
+  border-right: none;
+  z-index: 2;
+  position: relative;
+}
+
+.input-group-append .input-group-text {
+  border-left: none;
+  z-index: 2;
+  position: relative;
+}

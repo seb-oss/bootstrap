@@ -1,0 +1,45 @@
+/*!
+ * SEB Style - a theme for Bootstrap 4 (https://github.com/sebgroup/bootstrap)
+ * Copyright 2018 SEB
+ */
+
+@import "styles/functions";
+@import "variables";
+@import "mixins/mixins";
+@import "styles/root";
+@import "styles/print";
+@import "styles/reboot";
+@import "styles/type";
+@import "styles/images";
+@import "styles/code";
+@import "styles/grid";
+@import "styles/tables";
+@import "styles/forms";
+@import "styles/buttons";
+@import "styles/transitions";
+@import "styles/loaders";
+@import "styles/dropdown";
+@import "styles/button-group";
+@import "styles/input-group";
+@import "styles/custom-forms";
+@import "styles/nav";
+@import "styles/navbar";
+@import "styles/card";
+@import "styles/breadcrumb";
+@import "styles/pagination";
+@import "styles/badge";
+@import "styles/jumbotron";
+@import "styles/alert";
+@import "styles/progress";
+@import "styles/media";
+@import "styles/list-group";
+@import "styles/close";
+@import "styles/modal";
+@import "styles/tooltip";
+@import "styles/popover";
+@import "styles/carousel";
+@import "styles/utilities";
+@import "styles/accordion"; // SEB specific
+@import "styles/fifth-element"; // SEB Specific
+@import "third-parties/third-parties"; // SEB Specific
+@import 'fonts'; // SEB Specific
