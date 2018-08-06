@@ -1,5 +1,5 @@
-@import "../../../../../scss/theme/styles/variables.scss";
-@import "../../../../../scss/theme/styles/mixins.scss";
+@import "../../../../../scss/variables";
+@import "../../../../../scss/mixins/mixins";
 pre {
   padding-top: .5rem;
   border-left: 10px solid $blue;
