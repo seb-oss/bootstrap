@@ -41,20 +41,21 @@
     z-index: 5;
     display: none;
     max-width: 100%; // Contain to parent when possible
-    padding: $tooltip-padding-y $tooltip-padding-x;
+    padding: .5rem;
     margin-top: .1rem;
-    font-size: $tooltip-font-size;
-    line-height: $line-height-base;
-    color: color-yiq($color);
-    background-color: rgba($color, $tooltip-opacity);
-    @include border-radius($tooltip-border-radius);
+    font-size: .875rem;
+    line-height: 1;
+    color: #fff;
+    background-color: rgba($color, .8);
+    border-radius: .2rem;
   }
 
   .form-control,
   .custom-select {
     .was-validated &:#{$state},
     &.is-#{$state} {
-      border-color: $color;
+      //border-color: $color;
+      //border-bottom: $color solid 3px;
 
       &:focus {
         border-color: $color;
@@ -65,18 +66,15 @@
       ~ .#{$state}-tooltip {
         display: block;
       }
-    }
-  }
 
-  .form-control-file {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
-      ~ .#{$state}-feedback,
-      ~ .#{$state}-tooltip {
-        display: block;
-      }
+      /*~ .input-group-append > * {
+        border-bottom: $color solid 3px !important;
+      }*/
     }
   }
+  /*.input-group-prepend.is-invalid > * {
+    border-bottom: $color solid 3px !important;
+  }*/
 
   .form-check-input {
     .was-validated &:#{$state},
@@ -96,10 +94,11 @@
     .was-validated &:#{$state},
     &.is-#{$state} {
       ~ .custom-control-label {
-        color: $color;
+        //color: $color;
 
         &::before {
-          background-color: lighten($color, 25%);
+          //background-color: lighten($color, 25%);
+          border-color: $color;
         }
       }
 
@@ -129,7 +128,7 @@
       ~ .custom-file-label {
         border-color: $color;
 
-        &::after { border-color: inherit; }
+        &::before { border-color: inherit; }
       }
 
       ~ .#{$state}-feedback,
@@ -142,6 +141,25 @@
           box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
         }
       }
+    }
+  }
+  input + .#{$state}-feedback, textarea + .#{$state}-feedback, select + .#{$state}-feedback, .input-group-append + .#{$state}-feedback {
+    &::before {
+      margin-top: -6px;
+      border-radius: 0 0 4px 4px;
+    }
+  }
+  .#{$state}-feedback {
+    &::before {
+      content: '';
+      height: 3px;
+      width: 100%;
+      background: $color;
+      display: block;
+      position: relative;
+      margin-bottom: 4px;
+      transition: width .4s ease-in-out;
+      z-index: 2;
     }
   }
 }

@@ -1,0 +1,35 @@
+@import "../bootstrap-core/type";
+@import "../variables";
+
+h1, .h1 {
+  font-weight: $font-weight-bold ;
+}
+
+/* Adjust heading sizes depending on screen size */
+@include media-breakpoint-down(md) {
+  h1 {
+    font-size: $h1-md-font-size;
+  }
+  
+  h2 {
+    font-size: $h2-md-font-size;
+  }
+
+  h3 {
+    font-size: $h3-md-font-size;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  h1 {
+    font-size: $h1-sm-font-size;
+  }
+  
+  h2 {
+    font-size: $h2-sm-font-size;
+  }
+
+  h3 {
+    font-size: $h3-sm-font-size;
+  }
+}
