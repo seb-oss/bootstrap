@@ -28,3 +28,5 @@ deploy:
   - provider: script
     script: bash .travis/publish.sh
     skip-cleanup: true
+    on:
+      all_branches: true
