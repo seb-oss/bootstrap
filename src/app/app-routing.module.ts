@@ -6,12 +6,13 @@ import {
 import {ButtonsComponent} from '../example/components/buttons/buttons.component';
 import {AlertsComponent} from '../example/components/alerts/alerts.component';
 import {TabsComponent} from '../example/components/tabs/tabs.component';
+import {TablesComponent} from '../example/components/tables/tables.component';
 
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
     //{ path: 'typography', component: TypographyComponent },
-    //{ path: 'tables', component: TablesComponent },
+    { path: 'tables', component: TablesComponent },
     //{ path: 'colors', component: ColorsComponent },
     //{ path: 'modals', component: ModalsComponent },
     //{ path: 'cards', component: CardsComponent },
