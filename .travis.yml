@@ -6,10 +6,6 @@ language: node_js
 node_js:
 - "8"
 
-branches:
-  only:
-  - master
-
 cache:
   directories:
   - node_modules
@@ -18,20 +14,19 @@ before_script:
 - npm install -g @angular/cli
 
 script:
-- npm run test-ci
-- npm run build
-- npm run build-lib
+#- npm run test-ci
+- npm run build && npm run build-lib
 
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  local-dir: dist/bootstrap
-  provider: npm
-  email: "robert.hjalmers@seb.se"
-  api_key: $NPM_TOKEN
-  local-dir: dist/lib
-  on:
-    branch: master
-    tags: true
+  - provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    keep-history: true
+    local-dir: dist/bootstrap
+    on:
+      all_branches: true
+  - provider: script
+    script: bash .travis/publish.sh
+    skip-cleanup: true
+    on:
+      all_branches: true
