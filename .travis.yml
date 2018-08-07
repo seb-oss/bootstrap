@@ -15,16 +15,19 @@ before_script:
 
 script:
 - npm run test-ci
-- npm run build
-- npm run build-lib
+- npm run build && npm run build-lib
 
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  local-dir: dist/bootstrap
-  provider: npm
-  email: "robert.hjalmers@seb.se"
-  api_key: $NPM_TOKEN
-  local-dir: dist/lib
+  - provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    keep-history: true
+    local-dir: dist/bootstrap
+    on:
+      all_branches: true
+  - provider: npm
+    email: "robert.hjalmers@seb.se"
+    api_key: $NPM_TOKEN
+    local-dir: dist/lib
+    on:
+      all_branches: true
