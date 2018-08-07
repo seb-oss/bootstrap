@@ -6,6 +6,11 @@ language: node_js
 node_js:
 - "8"
 
+branches:
+  only:
+  - master
+  - develop
+
 cache:
   directories:
   - node_modules
@@ -14,7 +19,7 @@ before_script:
 - npm install -g @angular/cli
 
 script:
-#- npm run test-ci
+- npm run test-ci
 - npm run build && npm run build-lib
 
 deploy:
