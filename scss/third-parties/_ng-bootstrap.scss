@@ -230,6 +230,20 @@
   ngb-datepicker.dropdown-menu.show {
     z-index: $zindex-popover;
   }
+
+  @include media-breakpoint-down(sm) {
+    [ngbdropdown].show [ngbdropdowntoggle] {
+      z-index: $zindex-modal;
+    }
+
+    [ngbdropdown].show::after {
+      z-index: $zindex-modal-backdrop;
+    }
+    [ngbdropdownmenu].show {
+      z-index: $zindex-modal;
+
+    }
+  }
 }
 @keyframes expand{
   0%{
