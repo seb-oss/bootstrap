@@ -25,10 +25,6 @@ deploy:
     local-dir: dist/bootstrap
     on:
       all_branches: true
-  - provider: npm
+  - provider: script
+    script: .travis/publish.sh
     skip-cleanup: true
-    email: "robert.hjalmers@seb.se"
-    api_key: $NPM_TOKEN
-    local-dir: dist/lib
-    on:
-      all_branches: true
