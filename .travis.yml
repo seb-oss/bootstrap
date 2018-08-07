@@ -19,9 +19,6 @@ jobs:
     name: "Unit Tests"
     script:
     - npm run test-ci
-    name: "E2E Tests"
-    script:
-    - npm run e2e-ci
   - stage: deploy
     name: "Deploy to Github Pages"
     script:
