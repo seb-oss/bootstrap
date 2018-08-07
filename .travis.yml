@@ -15,26 +15,26 @@ before_script:
 
 jobs:
   include:
-  - stage: "Tests"
-    name: "Unit Tests"
+  - stage: "Test, deploy and release"
+  - name: "Unit Tests"
     script:
     - npm run test-ci
-  - stage: deploy
-    name: "Deploy to Github Pages"
+  - name: "Deploy to Github Pages"
     script:
     - npm run build
-    provider: pages
-    skip-cleanup: true
-    github-token: $GITHUB_TOKEN
-    keep-history: true
-    local-dir: dist/bootstrap
-  - stage: release
-    name: "Release to NPM"
+    deploy:
+      provider: pages
+      skip-cleanup: true
+      github-token: $GITHUB_TOKEN
+      keep-history: true
+      local-dir: dist/bootstrap
+  - name: "Release to NPM"
     script:
     - npm run build-lib
-    provider: npm
-    email: "robert.hjalmers@seb.se"
-    skip-cleanup: true
-    github-token: $NPM_TOKEN
-    keep-history: true
-    local-dir: dist/lib
+    deploy:
+      provider: npm
+      email: "robert.hjalmers@seb.se"
+      skip-cleanup: true
+      github-token: $NPM_TOKEN
+      keep-history: true
+      local-dir: dist/lib
