@@ -17,11 +17,9 @@ jobs:
   include:
   - stage: "Test, deploy and release"
     name: "Unit Tests"
-    - script:
-      - npm run test-ci
+    - script: npm run test-ci
     name: "Deploy to Github Pages"
-    - script:
-      - npm run build
+    - script: npm run build
       deploy:
         provider: pages
         skip-cleanup: true
@@ -29,8 +27,7 @@ jobs:
         keep-history: true
         local-dir: dist/bootstrap
     name: "Release to NPM"
-    - script:
-      - npm run build-lib
+    - script: npm run build-lib
       deploy:
         provider: npm
         email: "robert.hjalmers@seb.se"
