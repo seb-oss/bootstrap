@@ -27,11 +27,18 @@
     "e2e": "ng e2e",
     "e2e-ci": "ng e2e --protractor-config=e2e/protractor-ci.conf.js",
     "commit": "git-cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "prerelease": "standard-version --prerelease"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
+    }
+  },
+  "standard-version": {
+    "skip": {
+      "commit": true,
+      "tag": true
     }
   },
   "private": true,
