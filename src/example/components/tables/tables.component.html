@@ -1,0 +1,88 @@
+<a name="tables"><h2 class="px-3 px-md-0">Tables</h2></a>
+<div class="alert alert-info"><strong>Want more table features?</strong> The examples below shows the markup and classes needed when using standard html tables, if you're using angular and want support for sorting, filtering, search, export to CSV etc. please check out <a class="alert-link" href="https://hjalmers.github.io/angular-generic-table/" target="_blank">Angular Generic Table</a>.</div>
+<div class="row">
+  <div class="col-md-6 mb-4">
+    <h4 class="px-3 px-md-0">
+      Standard table
+    </h4>
+    <div class="card" #tableExample>
+      <div class="card-body">
+        <app-table-standard></app-table-standard>
+        <app-snippet-wrapper [snippets]="SNIPPETS.standard"></app-snippet-wrapper>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <h4 class="px-3 px-md-0">
+      Striped rows
+    </h4>
+    <div class="card" #tableExampleStriped>
+      <div class="card-body">
+        <app-table-striped></app-table-striped>
+        <app-snippet-wrapper [snippets]="SNIPPETS.striped"></app-snippet-wrapper>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <h4 class="px-3 px-md-0">Bordered table</h4>
+    <div class="card" #tableExampleBordered>
+      <div class="card-body">
+        <app-table-bordered></app-table-bordered>
+        <app-snippet-wrapper [snippets]="SNIPPETS.bordered"></app-snippet-wrapper>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <h4 class="px-3 px-md-0">Hoverable rows</h4>
+    <div class="card" #tableExampleHover>
+      <div class="card-body">
+        <app-table-hoverable></app-table-hoverable>
+        <app-snippet-wrapper [snippets]="SNIPPETS.bordered"></app-snippet-wrapper>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix hidden-sm-down"></div>
+  <div class="col-md-6 mb-4">
+    <h4 class="px-3 px-md-0">Small table</h4>
+    <div class="card" #tableExampleSmall>
+      <div class="card-body">
+        <app-table-small></app-table-small>
+        <app-snippet-wrapper [snippets]="SNIPPETS.bordered"></app-snippet-wrapper>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <h4 class="px-3 px-md-0">Expanded row</h4>
+    <div class="card" #tableExampleExpand>
+      <div class="card-body"><table class="table table-sm table-expandable">
+        <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr class="row-open">
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr class="row-expanded">
+          <td colspan="3">This row is expanded</td>
+        </tr>
+        <tr>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</div>
