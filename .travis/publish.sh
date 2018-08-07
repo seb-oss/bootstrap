@@ -1,7 +1,7 @@
 #!/bin/bash
 echo $TRAVIS_PULL_REQUEST
 echo $TRAVIS_BRANCH
-if [ $TRAVIS_PULL_REQUEST == false ] && [ $TRAVIS_BRANCH == "development" ];
+if [ $TRAVIS_PULL_REQUEST == false ] && [ $TRAVIS_BRANCH == "develop" ];
     then
         echo "Publishing package to npm";
         cd dist/lib
