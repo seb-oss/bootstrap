@@ -26,6 +26,7 @@ deploy:
     on:
       all_branches: true
   - provider: npm
+    skip-cleanup: true
     email: "robert.hjalmers@seb.se"
     api_key: $NPM_TOKEN
     local-dir: dist/lib
