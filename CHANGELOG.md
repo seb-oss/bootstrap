@@ -29,14 +29,3 @@ All notable changes to this project will be documented in this file. See [standa
 
 <a name="1.0.0-alpha"></a>
 # 1.0.0-alpha (2018-08-03)
-
-
-
-## Release History
-
-## [Unreleased]
-
-### Added
-
-* Initial structure for demo and snippets
-* Config for CI with Travis
