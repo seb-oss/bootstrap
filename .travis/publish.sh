@@ -5,8 +5,8 @@ if [ $TRAVIS_PULL_REQUEST == false ] && [ $TRAVIS_BRANCH == "develop" ];
     then
         echo "Publishing package to npm";
         cd dist/lib
-        _auth = $NPM_TOKEN > ~/.npmrc
-        email = $NPM_EMAIL >> ~/.npmrc
+        echo _auth = $NPM_TOKEN > ~/.npmrc
+        echo email = $NPM_EMAIL >> ~/.npmrc
         npm publish
         echo "Package successfully published to npm"
     else
