@@ -24,6 +24,11 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# Visual tests (backstop)
+/backstop_data/html_report/
+/backstop_data/ci_report/
+/backstop_data/bitmaps_test/
+
 # misc
 /.sass-cache
 /connect.lock

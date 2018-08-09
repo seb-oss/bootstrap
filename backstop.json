@@ -1,0 +1,280 @@
+{
+  "id": "backstop_default",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "Fonts and typography",
+      "url": "http://localhost:4200/typography"
+    },
+    {
+      "label": "Icons",
+      "url": "http://localhost:4200/icons"
+    },
+    {
+      "label": "Colors",
+      "url": "http://localhost:4200/colors"
+    },
+    {
+      "label": "Grid",
+      "url": "http://localhost:4200/grid"
+    },
+    {
+      "label": "Alerts",
+      "url": "http://localhost:4200/alerts"
+    },
+    {
+      "label": "Alerts (closed)",
+      "url": "http://localhost:4200/alerts",
+      "clickSelector": ".close"
+    },
+    {
+      "label": "Breadcrumbs",
+      "url": "http://localhost:4200/breadcrumbs"
+    },
+    {
+      "label": "Tabs",
+      "url": "http://localhost:4200/tabs"
+    },
+    {
+      "label": "Tab (hover)",
+      "url": "http://localhost:4200/tabs",
+      "selectors": [
+        "app-tabs > div.card.mb-4 > div.card-body > ul > li:nth-child(2)"
+      ],
+      "hoverSelector": "app-tabs > div.card.mb-4 > div.card-body > ul > li:nth-child(2)"
+    },
+    {
+      "label": "Tab active (hover)",
+      "url": "http://localhost:4200/tabs",
+      "selectors": [
+        "app-tabs > div.card.mb-4 > div.card-body > ul > li:nth-child(1)"
+      ],
+      "hoverSelector": "app-tabs > div.card.mb-4 > div.card-body > ul > li:nth-child(1)"
+    },
+    {
+      "label": "Tab disabled (hover)",
+      "url": "http://localhost:4200/tabs",
+      "selectors": [
+        "app-tabs > div.card.mb-4 > div.card-body > ul > li:nth-child(4)"
+      ],
+      "hoverSelector": "app-tabs > div.card.mb-4 > div.card-body > ul > li:nth-child(4)"
+    },
+    {
+      "label": "Forms",
+      "url": "http://localhost:4200/forms"
+    },
+    {
+      "label": "Forms (selections)",
+      "url": "http://localhost:4200/forms",
+      "clickSelectors": [
+        "#customCheck1",
+        "#customRadio1",
+        "#personalIdInput",
+        "#exampleFormControlSelect1",
+        "#exampleFormControlTextarea1"
+      ]
+    },
+    {
+      "label": "Checkboxes and slide toggles",
+      "url": "http://localhost:4200/checkboxes-and-slide-toggles"
+    },
+    {
+      "label": "Checkboxes and slide toggles (selections)",
+      "url": "http://localhost:4200/checkboxes-and-slide-toggles",
+      "clickSelectors": [
+        "#customCheckInline",
+        "#customCheckInline1",
+        "#customCheckInline2",
+        "#customCheck",
+        "#customSlideToggle",
+        "#customCheckDisabled",
+        "#customSlideToggleDisabled"
+      ]
+    },
+    {
+      "label": "Buttons",
+      "url": "http://localhost:4200/buttons"
+    },
+    {
+      "label": "Primary button (hover)",
+      "selectors": [
+        ".btn-primary"
+      ],
+      "url": "http://localhost:4200/buttons",
+      "hoverSelector": ".btn-primary"
+    },
+    {
+      "label": "Secondary button (hover)",
+      "selectors": [
+        ".btn-secondary"
+      ],
+      "url": "http://localhost:4200/buttons",
+      "hoverSelector": ".btn-secondary"
+    },
+    {
+      "label": "Link button (hover)",
+      "selectors": [
+        ".btn-link"
+      ],
+      "url": "http://localhost:4200/buttons",
+      "hoverSelector": ".btn-link"
+    },
+    {
+      "label": "Primary outline button (hover)",
+      "selectors": [
+        ".btn-outline-primary"
+      ],
+      "url": "http://localhost:4200/buttons",
+      "hoverSelector": ".btn-outline-primary"
+    },
+    {
+      "label": "Light button (hover)",
+      "selectors": [
+        ".btn-light"
+      ],
+      "url": "http://localhost:4200/buttons",
+      "hoverSelector": ".btn-light"
+    },
+    {
+      "label": "Disabled button (hover)",
+      "selectors": [
+        ".disabled"
+      ],
+      "url": "http://localhost:4200/buttons",
+      "hoverSelector": ".disabled"
+    },
+    {
+      "label": "Input group",
+      "url": "http://localhost:4200/input-group"
+    },
+    {
+      "label": "List group",
+      "url": "http://localhost:4200/list-group"
+    },
+    {
+      "label": "Dropdowns",
+      "url": "http://localhost:4200/dropdowns"
+    },
+    {
+      "label": "Dropdown (html)",
+      "selectors": [
+        "#selectExample"
+      ],
+      "url": "http://localhost:4200/dropdowns",
+      "clickSelector": "#selectExample"
+    },
+    {
+      "label": "Dropdown (Angular)",
+      "selectors": [
+        "app-dropdowns > div:nth-child(7)"
+      ],
+      "url": "http://localhost:4200/dropdowns",
+      "clickSelector": "#dropdownExample"
+    },
+    {
+      "label": "Dropdown (multi-select)",
+      "selectors": [
+        "app-dropdowns > div:nth-child(9) > div.card-body > form > div > div > div > div"
+      ],
+      "url": "http://localhost:4200/dropdowns",
+      "clickSelectors": [
+        "#multiSelect",
+        "app-dropdowns > div:nth-child(9) > div.card-body > form > div > div > div > div > div.dropdown-control > div.btn-group.w-100 > button:nth-child(2)"
+      ]
+    },
+    {
+      "label": "Cards",
+      "url": "http://localhost:4200/cards"
+    },
+    {
+      "label": "Tables",
+      "url": "http://localhost:4200/tables"
+    },
+    {
+      "label": "Modals",
+      "url": "http://localhost:4200/modals",
+      "misMatchThreshold": 1.50
+    },
+    {
+      "label": "Modal with backdrop",
+      "url": "http://localhost:4200/modals",
+      "clickSelector": "app-modals > div.row.mb-4 > div:nth-child(1) > div > div > button",
+      "misMatchThreshold": 1.00
+    },
+    {
+      "label": "Modal aside",
+      "url": "http://localhost:4200/modals",
+      "clickSelector": "app-modals > div.row.mb-4 > div:nth-child(2) > div > div.card-body > button",
+      "misMatchThreshold": 1.00
+    },
+    {
+      "label": "Modal fullscreen",
+      "url": "http://localhost:4200/modals",
+      "clickSelector": "app-modals > div.row.mb-4 > div:nth-child(3) > div > div > button",
+      "misMatchThreshold": 1.00
+    },
+    {
+      "label": "Pagination",
+      "url": "http://localhost:4200/pagination",
+      "hoverSelector": "app-pagination > div.card.mb-4 > div.card-body > nav > ul > li:nth-child(4)"
+    },
+    {
+      "label": "Tooltips",
+      "url": "http://localhost:4200/tooltips",
+      "hoverSelector": "app-tooltips > div:nth-child(7) > div.card-body > table > thead > tr > th:nth-child(2) > span"
+    },
+    {
+      "label": "Accordion",
+      "url": "http://localhost:4200/accordion"
+    },
+    {
+      "label": "Accordion (second activated)",
+      "url": "http://localhost:4200/accordion",
+      "clickSelector": "#static-2-header",
+      "hoverSelector": "#static-1-header"
+    },
+    {
+      "label": "Components",
+      "url": "http://localhost:4200/example-page"
+    },
+    {
+      "label": "Components (modal activated)",
+      "url": "http://localhost:4200/example-page",
+      "clickSelector": "app-example-page > div:nth-child(1) > div.row > div:nth-child(1) > div > div > div > div > button"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": [
+    "CI"
+  ],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": [
+      "--no-sandbox"
+    ]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false,
+  "cliExitOnFail": true
+}
