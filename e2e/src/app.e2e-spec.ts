@@ -1,14 +1,21 @@
 import { AppPage } from './app.po';
 
 describe('workspace-project App', () => {
-  let page: AppPage;
+    const page: AppPage = new AppPage();
 
-  beforeEach(() => {
-    page = new AppPage();
-  });
+    beforeAll(() => {
+        page.eyesOpen();
+    });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to bootstrap!');
-  });
+    afterAll(() => {
+        page.eyesClose();
+    });
+
+    it('should open the buttons example page', () => {
+        page.navigateToButtons();
+    });
+
+    it('should grab a screenshot of the buttons example', () => {
+        page.eyesScreenshot('Buttons');
+    });
 });
