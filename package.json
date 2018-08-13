@@ -38,6 +38,9 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "release": {
+    "pkgRoot": "dist/lib"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.1.0",
