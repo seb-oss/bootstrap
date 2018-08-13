@@ -12,7 +12,8 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
-    "access": "public"
+    "access": "public",
+    "tag": "next"
   },
   "author": "Robert Hjalmers",
   "license": "Apache-2.0",
