@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-demo",
-  "version": "1.0.0-alpha.6",
+  "version": "0.0.0-development",
   "homepage": "https://sebgroup.github.io/bootstrap/",
   "scripts": {
     "ng": "ng",
@@ -30,18 +30,12 @@
     "e2e": "ng e2e",
     "e2e-ci": "ng e2e --protractor-config=e2e/protractor-ci.conf.js",
     "commit": "git-cz",
-    "release": "standard-version",
-    "prerelease": "standard-version --prerelease"
+    "travis-deploy-once": "travis-deploy-once --pro",
+    "semantic-release": "semantic-release && npm run build"
   },
   "config": {
     "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
-  "standard-version": {
-    "skip": {
-      "commit": true,
-      "tag": true
+      "path": "./node_modules/cz-conventional-changelog"
     }
   },
   "private": true,
@@ -74,6 +68,7 @@
     "codelyzer": "~4.2.1",
     "commitizen": "^2.10.1",
     "copyfiles": "^2.0.0",
+    "cz-conventional-changelog": "^2.1.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~1.7.1",
@@ -89,10 +84,18 @@
     "renamer": "^1.0.0",
     "replace": "^1.0.0",
     "rimraf": "^2.6.2",
-    "standard-version": "^4.4.0",
     "start-server-and-test": "^1.7.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
-    "typescript": "~2.7.2"
+    "typescript": "~2.7.2",
+    "travis-deploy-once": "^5.0.2",
+    "semantic-release": "^15.9.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sebgroup/bootstrap.git"
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }
