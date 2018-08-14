@@ -15,12 +15,14 @@ import { TableStripedComponent } from './components/tables/table-striped/table-s
 import { TableBorderedComponent } from './components/tables/table-bordered/table-bordered.component';
 import { TableHoverableComponent } from './components/tables/table-hoverable/table-hoverable.component';
 import { TableSmallComponent } from './components/tables/table-small/table-small.component';
+import {ExemplifyModule} from 'angular-exemplify';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ExemplifyModule
   ],
   declarations: [ButtonsComponent, CodeComponent, ButtonsMainComponent, SnippetWrapperComponent, ButtonsSizesComponent, AlertsComponent, TabsComponent, TablesComponent, TableStandardComponent, TableStripedComponent, TableBorderedComponent, TableHoverableComponent, TableSmallComponent],
   exports: [ButtonsComponent, CodeComponent]
