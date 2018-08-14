@@ -23,6 +23,8 @@ import {
     ValidationMessagePipe
 } from './components/forms/forms.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { CheckboxesAndSlideTogglesComponent } from './components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   imports: [
@@ -30,6 +32,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     HttpClientModule,
     ExemplifyModule,
+    RouterModule,
     NgbModule
   ],
   declarations: [
@@ -49,7 +52,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
       BreadcrumbsComponent,
       FormsComponent,
       PersonalIdentityNumberDirective,
-      ValidationMessagePipe
+      ValidationMessagePipe,
+      CheckboxesAndSlideTogglesComponent
   ],
   exports: [ButtonsComponent, CodeComponent]
 })

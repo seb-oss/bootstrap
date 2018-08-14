@@ -9,6 +9,7 @@ import {TabsComponent} from '../example/components/tabs/tabs.component';
 import {TablesComponent} from '../example/components/tables/tables.component';
 import {BreadcrumbsComponent} from '../example/components/breadcrumbs/breadcrumbs.component';
 import {FormsComponent} from '../example/components/forms/forms.component';
+import {CheckboxesAndSlideTogglesComponent} from '../example/components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,7 @@ const routes: Routes = [
     { path: 'buttons', component: ButtonsComponent },
     //{ path: 'input-group', component: InputGroupComponent },
     { path: 'forms', component: FormsComponent },
-    //{ path: 'checkboxes-and-slide-toggles', component: CheckboxesComponent },
+    { path: 'checkboxes-and-slide-toggles', component: CheckboxesAndSlideTogglesComponent },
     //{ path: 'pagination', component: PaginationComponent },
     { path: 'tabs', component: TabsComponent },
     { path: 'alerts', component: AlertsComponent },
