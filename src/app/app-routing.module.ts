@@ -7,6 +7,7 @@ import {ButtonsComponent} from '../example/components/buttons/buttons.component'
 import {AlertsComponent} from '../example/components/alerts/alerts.component';
 import {TabsComponent} from '../example/components/tabs/tabs.component';
 import {TablesComponent} from '../example/components/tables/tables.component';
+import {BreadcrumbsComponent} from '../example/components/breadcrumbs/breadcrumbs.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,7 @@ const routes: Routes = [
     //{ path: 'pagination', component: PaginationComponent },
     { path: 'tabs', component: TabsComponent },
     { path: 'alerts', component: AlertsComponent },
-    //{ path: 'breadcrumbs', component: BreadcrumbsComponent },
+    { path: 'breadcrumbs', component: BreadcrumbsComponent },
     //{ path: 'tooltips', component: TooltipsComponent },
     //{ path: 'example-page', component: ExamplePageComponent },
     //{ path: 'about', component: AboutComponent },

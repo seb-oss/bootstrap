@@ -16,6 +16,7 @@ import { TableBorderedComponent } from './components/tables/table-bordered/table
 import { TableHoverableComponent } from './components/tables/table-hoverable/table-hoverable.component';
 import { TableSmallComponent } from './components/tables/table-small/table-small.component';
 import {ExemplifyModule} from 'angular-exemplify';
+import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,7 @@ import {ExemplifyModule} from 'angular-exemplify';
     HttpClientModule,
     ExemplifyModule
   ],
-  declarations: [ButtonsComponent, CodeComponent, ButtonsMainComponent, SnippetWrapperComponent, ButtonsSizesComponent, AlertsComponent, TabsComponent, TablesComponent, TableStandardComponent, TableStripedComponent, TableBorderedComponent, TableHoverableComponent, TableSmallComponent],
+  declarations: [ButtonsComponent, CodeComponent, ButtonsMainComponent, SnippetWrapperComponent, ButtonsSizesComponent, AlertsComponent, TabsComponent, TablesComponent, TableStandardComponent, TableStripedComponent, TableBorderedComponent, TableHoverableComponent, TableSmallComponent, BreadcrumbsComponent],
   exports: [ButtonsComponent, CodeComponent]
 })
 export class ExampleModule { }
