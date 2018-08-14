@@ -52,9 +52,11 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "@ng-bootstrap/ng-bootstrap": "^3.0.0",
     "angular-exemplify": "^3.0.1",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
+    "swe-validation": "^1.0.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

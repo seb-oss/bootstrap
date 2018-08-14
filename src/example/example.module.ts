@@ -17,15 +17,40 @@ import { TableHoverableComponent } from './components/tables/table-hoverable/tab
 import { TableSmallComponent } from './components/tables/table-small/table-small.component';
 import {ExemplifyModule} from 'angular-exemplify';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
+import {
+    FormsComponent,
+    PersonalIdentityNumberDirective,
+    ValidationMessagePipe
+} from './components/forms/forms.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     HttpClientModule,
-    ExemplifyModule
+    ExemplifyModule,
+    NgbModule
   ],
-  declarations: [ButtonsComponent, CodeComponent, ButtonsMainComponent, SnippetWrapperComponent, ButtonsSizesComponent, AlertsComponent, TabsComponent, TablesComponent, TableStandardComponent, TableStripedComponent, TableBorderedComponent, TableHoverableComponent, TableSmallComponent, BreadcrumbsComponent],
+  declarations: [
+      ButtonsComponent,
+      CodeComponent,
+      ButtonsMainComponent,
+      SnippetWrapperComponent,
+      ButtonsSizesComponent,
+      AlertsComponent,
+      TabsComponent,
+      TablesComponent,
+      TableStandardComponent,
+      TableStripedComponent,
+      TableBorderedComponent,
+      TableHoverableComponent,
+      TableSmallComponent,
+      BreadcrumbsComponent,
+      FormsComponent,
+      PersonalIdentityNumberDirective,
+      ValidationMessagePipe
+  ],
   exports: [ButtonsComponent, CodeComponent]
 })
 export class ExampleModule { }

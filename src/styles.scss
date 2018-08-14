@@ -7,6 +7,7 @@
 
 // set font path
 $seb-font-path: "./assets/fonts" !default;
+$enable-ng-bootstrap: true;
 
 @import "../scss/bootstrap";
 @import '~angular-exemplify/scss/prism-exemplify';
