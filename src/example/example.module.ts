@@ -15,14 +15,46 @@ import { TableStripedComponent } from './components/tables/table-striped/table-s
 import { TableBorderedComponent } from './components/tables/table-bordered/table-bordered.component';
 import { TableHoverableComponent } from './components/tables/table-hoverable/table-hoverable.component';
 import { TableSmallComponent } from './components/tables/table-small/table-small.component';
+import {ExemplifyModule} from 'angular-exemplify';
+import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
+import {
+    FormsComponent,
+    PersonalIdentityNumberDirective,
+    ValidationMessagePipe
+} from './components/forms/forms.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { CheckboxesAndSlideTogglesComponent } from './components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ExemplifyModule,
+    RouterModule,
+    NgbModule
   ],
-  declarations: [ButtonsComponent, CodeComponent, ButtonsMainComponent, SnippetWrapperComponent, ButtonsSizesComponent, AlertsComponent, TabsComponent, TablesComponent, TableStandardComponent, TableStripedComponent, TableBorderedComponent, TableHoverableComponent, TableSmallComponent],
+  declarations: [
+      ButtonsComponent,
+      CodeComponent,
+      ButtonsMainComponent,
+      SnippetWrapperComponent,
+      ButtonsSizesComponent,
+      AlertsComponent,
+      TabsComponent,
+      TablesComponent,
+      TableStandardComponent,
+      TableStripedComponent,
+      TableBorderedComponent,
+      TableHoverableComponent,
+      TableSmallComponent,
+      BreadcrumbsComponent,
+      FormsComponent,
+      PersonalIdentityNumberDirective,
+      ValidationMessagePipe,
+      CheckboxesAndSlideTogglesComponent
+  ],
   exports: [ButtonsComponent, CodeComponent]
 })
 export class ExampleModule { }

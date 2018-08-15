@@ -7,6 +7,11 @@
 
 // set font path
 $seb-font-path: "./assets/fonts" !default;
+$enable-ng-bootstrap: true;
 
 @import "../scss/bootstrap";
-@import '~prismjs/themes/prism-coy.css';
+@import '~angular-exemplify/scss/prism-exemplify';
+
+exemplify > ul {
+  margin-top: 2rem;
+}

@@ -1,0 +1,59 @@
+<a name="checkboxes"><h2 class="px-3 px-md-0 my-3">Checkboxes and slide toggles</h2></a>
+<p class="px-3 px-md-0">Below you'll find some examples of checkboxes and layout options using the grid (rows and columns), check the <a routerLink="/forms">forms</a> section for more form elements or head over to <a href="https://getbootstrap.com/docs/4.0/components/forms/#overview" target="_blank">bootstrap docs</a> for more info and examples.</p>
+<div class="card mb-4" id="checkboxExample">
+  <h4 class="card-header">Standard checkbox</h4>
+  <div class="card-body">
+    <p>We use a standard input element with <code>type="checkbox"</code> for checkboxes but we need to wrap it in a div to get the right style for the different states.</p>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="customCheck">
+      <label class="custom-control-label" for="customCheck">Check this custom checkbox</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
+      <label class="custom-control-label" for="customCheckDisabled">This checkbox is disabled</label>
+    </div>
+    <exemplify [selector]="'#checkboxExample .custom-control'"></exemplify>
+  </div>
+</div>
+<div class="card mb-4" id="checkboxLayoutExample">
+  <h4 class="card-header">Horizontal layout</h4>
+  <div class="card-body">
+    <p>Use rows and columns to create a responsive layout, in the example below checkboxes will be placed inline on medium sized screens and up. On smaller screens the checkboxes will stack on top of each other, test by resizing the window. Use one of the following utility classes <code>.my-*</code>, <code>.mb-*</code> or <code>.mt-*</code> to add spacing between the different options, ie. <code>mb-2 mb-md-0</code> to get a small bottom margin on small sreens and below.</p>
+    <div class="row">
+      <div class="col-12 col-md-auto mb-2 mb-md-0">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="customCheckInline">
+          <label class="custom-control-label" for="customCheckInline">Check this custom checkbox</label>
+        </div>
+      </div>
+      <div class="col-12 col-md-auto mb-2 mb-md-0">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="customCheckInline1">
+          <label class="custom-control-label" for="customCheckInline1">And this one</label>
+        </div>
+      </div>
+      <div class="col-12 col-md-auto">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="customCheckInline2">
+          <label class="custom-control-label" for="customCheckInline2">Don't forget me</label>
+        </div>
+      </div>
+    </div>
+    <exemplify [selector]="'#checkboxLayoutExample .row'"></exemplify>
+  </div>
+</div>
+<div class="card mb-4" id="slideToggleExample">
+  <h4 class="card-header">Slide toggle</h4>
+  <div class="card-body">
+    <p>The slide toggle works just like a normal checkbox and uses the same markup and bindings, to make it look like a slide toggle just add the class <code>custom-slide-toggle</code>.</p>
+    <div class="custom-control custom-slide-toggle">
+      <input type="checkbox" class="custom-control-input" id="customSlideToggle">
+      <label class="custom-control-label" for="customSlideToggle">Toggle this input</label>
+    </div>
+    <div class="custom-control custom-slide-toggle">
+      <input type="checkbox" class="custom-control-input" id="customSlideToggleDisabled" disabled>
+      <label class="custom-control-label" for="customSlideToggleDisabled">Toggle disabled</label>
+    </div>
+    <exemplify [selector]="'#slideToggleExample .custom-control'"></exemplify>
+  </div>
+</div>

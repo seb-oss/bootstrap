@@ -1,5 +1,5 @@
-<a name="alerts"><h2 class="px-3 px-md-0">Alerts</h2></a>
-<div class="card">
+<a name="alerts"><h2 class="my-3">Alerts</h2></a>
+<div class="card mb-4">
   <div class="card-body">
     <h5>When to use alerts?</h5>
     <p>Alerts are available for any length of text and can be used for more than traditional alerts. Ideally they should be used when we want content or information to stand out, be separated from the "normal" state, highlight a change, make the user aware of important information or simply to convey the response from an action.</p>
@@ -48,9 +48,10 @@
     </table>
   </div>
 </div>
-<p class="px-3 px-md-0">The first example below uses the <code>.alert-outline-*</code> class (replace * with context) for a more subtle message. The background is white to make it stick out when placed on grey backgrounds.</p>
-<div class="card" #alertOutlineExample>
-  <div class="card-body bg-light">
+<div class="card mb-4" id="alertOutlineExample">
+  <h4 class="card-header">Alert outlined</h4>
+  <div class="card-body">
+    <p>The examples below use the <code>.alert-outline-*</code> class (replace * with context) for a more subtle message. The background is white to make it stick out when placed on grey backgrounds.</p>
     <div class="alert alert-outline-primary" role="alert">
       <strong>Primary content</strong> This message just needs to stand out.
     </div>
@@ -69,11 +70,13 @@
     <div class="alert alert-outline-danger" role="alert">
       <strong>Oh snap!</strong> Change a few things up and try submitting again.
     </div>
+    <exemplify [selector]="'#alertOutlineExample .alert'"></exemplify>
   </div>
 </div>
-<p class="px-3 px-md-0">The example below uses the traditional <code>.alert-*</code> class (replace * with context), for use cases where the message is really important and needs to stand out.</p>
-<div class="card" #alertExample>
+<div class="card mb-4" id="alertExample">
+  <h4 class="card-header">Alert</h4>
   <div class="card-body">
+    <p>The examples below use the traditional <code>.alert-*</code> class (replace * with context), for use cases where the message is really important and needs to stand out.</p>
     <div class="alert alert-primary" role="alert">
       <strong>Primary content</strong> This message just needs to stand out.
     </div>
@@ -92,11 +95,13 @@
     <div class="alert alert-danger" role="alert">
       <strong>Oh snap!</strong> Change a few things up and try submitting again.
     </div>
+    <exemplify [selector]="'#alertExample .alert'"></exemplify>
   </div>
 </div>
-<p class="px-3 px-md-0">Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
-<div class="card" #alertLinkExample>
+<div class="card mb-4" id="alertLinkExample">
+  <h4 class="card-header">Alert with link</h4>
   <div class="card-body">
+    <p>Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
     <div class="alert alert-success" role="alert">
       This is a success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
     </div>
@@ -109,11 +114,13 @@
     <div class="alert alert-info" role="alert">
       This is a info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
     </div>
+    <exemplify [selector]="'#alertLinkExample .alert'"></exemplify>
   </div>
 </div>
-<p class="px-3 px-md-0">A more complex alert that can be dismissed (please note that JavaScript or framework is needed to dismiss alert messages!).</p>
-<div class="card" #alertAdvancedExample>
+<div class="card mb-4" id="alertAdvancedExample">
+  <h4 class="card-header">Alert that can be dismissed</h4>
   <div class="card-body bg-light">
+    <p>A more complex alert that can be dismissed (please note that JavaScript or framework is needed to dismiss alert messages!).</p>
     <button class="btn btn-primary" (click)="active = true" *ngIf="!active">Show alerts</button>
     <div class="alert alert-danger fade" role="alert" [ngClass]="{'show':active}">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="active = !active">
@@ -133,5 +140,6 @@
       <hr>
       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
     </div>
+    <exemplify [selector]="'#alertAdvancedExample .alert'"></exemplify>
   </div>
 </div>
