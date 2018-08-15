@@ -277,6 +277,7 @@ $custom-control-indicator-disabled-bg:          $gray-100 !default;
 $custom-control-label-disabled-color:           $gray-400 !default;
 
 $custom-radio-indicator-icon-checked:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3.5' fill='#{$custom-control-indicator-checked-bg}'/%3E%3C/svg%3E"), "#", "%23") !default;
+$custom-slide-toggle-indicator-icon-checked:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3.5' fill='#{$custom-control-indicator-checked-bg}'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB Specific
 
 $custom-select-indicator-color:     $blue;
 $custom-select-bg-size:             16px 16px !default; // In pixels because image dimensions
