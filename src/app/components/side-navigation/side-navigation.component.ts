@@ -17,6 +17,7 @@ export class SideNavigationComponent implements OnInit {
   activeRoute: string;
   constructor(private router: Router, private menuService: MenuService) { }
   $startItems: Observable<Array<MenuItem>>;
+  $baseItems: Observable<Array<MenuItem>>;
   $menuItems: Observable<Array<MenuItem>>;
 
   ngOnInit() {
@@ -27,6 +28,7 @@ export class SideNavigationComponent implements OnInit {
     });
     this.$menuItems = this.menuService.getComponents();
     this.$startItems = this.menuService.getStartItems();
+    this.$baseItems = this.menuService.getBaseItems();
   }
 
 }

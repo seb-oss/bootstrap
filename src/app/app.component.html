@@ -4,7 +4,7 @@
 <div class="content" (window:scroll)="scroll($event)">
   <!--<app-sub-header [scrollPosition]="scrollPosition"></app-sub-header>-->
   <div class="row">
-    <div class="col">
+    <div class="col mx-auto" style="max-width: 920px">
       <router-outlet></router-outlet>
       <div class="py-3 text-center">Version: <a href="{{'https://github.com/sebgroup/bootstrap/releases/tag/v' + version}}" target="_blank" class="mr-3">{{version}}</a>Build: {{travis_build_number}} </div>
     </div>
