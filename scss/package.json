@@ -12,13 +12,15 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
-    "access": "public",
-    "tag": "next"
+    "access": "public"
   },
   "author": "Robert Hjalmers",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/sebgroup/bootstrap/issues"
   },
-  "homepage": "https://sebgroup.github.io/bootstrap/"
+  "homepage": "https://sebgroup.github.io/bootstrap/",
+  "dependencies": {
+    "@sebgroup/fonts": "^1.0.0"
+  }
 }
