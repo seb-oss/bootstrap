@@ -25,6 +25,14 @@ import {
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CheckboxesAndSlideTogglesComponent } from './components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component';
 import {RouterModule} from '@angular/router';
+import { IconsComponent } from './components/icons/icons.component';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {faArrowAltRight} from '@fortawesome/pro-light-svg-icons';
+import { InputGroupComponent } from './components/input-group/input-group.component';
+import { ListGroupComponent } from './components/list-group/list-group.component';
+import { LoadersComponent } from './components/loaders/loaders.component';
+library.add(faArrowAltRight);
 
 @NgModule({
   imports: [
@@ -33,7 +41,8 @@ import {RouterModule} from '@angular/router';
     HttpClientModule,
     ExemplifyModule,
     RouterModule,
-    NgbModule
+    NgbModule,
+    FontAwesomeModule
   ],
   declarations: [
       ButtonsComponent,
@@ -53,7 +62,11 @@ import {RouterModule} from '@angular/router';
       FormsComponent,
       PersonalIdentityNumberDirective,
       ValidationMessagePipe,
-      CheckboxesAndSlideTogglesComponent
+      CheckboxesAndSlideTogglesComponent,
+      IconsComponent,
+      InputGroupComponent,
+      ListGroupComponent,
+      LoadersComponent
   ],
   exports: [ButtonsComponent, CodeComponent]
 })
