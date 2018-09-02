@@ -26,7 +26,7 @@
     "visualtest:ci": "start-server-and-test start http://localhost:4200 visualtest",
     "visualtest": "backstop test",
     "visualtest:approve": "backstop approve",
-    "preinstall": "npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN",
+    "add-fa-config": "npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "e2e-ci": "ng e2e --protractor-config=e2e/protractor-ci.conf.js",
