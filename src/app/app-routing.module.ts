@@ -10,6 +10,10 @@ import {TablesComponent} from '../example/components/tables/tables.component';
 import {BreadcrumbsComponent} from '../example/components/breadcrumbs/breadcrumbs.component';
 import {FormsComponent} from '../example/components/forms/forms.component';
 import {CheckboxesAndSlideTogglesComponent} from '../example/components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component';
+import {IconsComponent} from '../example/components/icons/icons.component';
+import {InputGroupComponent} from '../example/components/input-group/input-group.component';
+import {ListGroupComponent} from '../example/components/list-group/list-group.component';
+import {LoadersComponent} from '../example/components/loaders/loaders.component';
 
 
 const routes: Routes = [
@@ -20,7 +24,7 @@ const routes: Routes = [
     //{ path: 'modals', component: ModalsComponent },
     //{ path: 'cards', component: CardsComponent },
     { path: 'buttons', component: ButtonsComponent },
-    //{ path: 'input-group', component: InputGroupComponent },
+    { path: 'input-group', component: InputGroupComponent },
     { path: 'forms', component: FormsComponent },
     { path: 'checkboxes-and-slide-toggles', component: CheckboxesAndSlideTogglesComponent },
     //{ path: 'pagination', component: PaginationComponent },
@@ -33,9 +37,9 @@ const routes: Routes = [
     //{ path: 'dropdowns', component: DropdownsComponent },
     //{ path: 'accordion', component: AccordionComponent },
     //{ path: 'grid', component: GridComponent },
-    //{ path: 'icons', component: IconsComponent },
-    //{ path: 'list-group', component: ListGroupComponent },
-    //{ path: 'loaders', component: LoadersComponent },
+    { path: 'icons', component: IconsComponent },
+    { path: 'list-group', component: ListGroupComponent },
+    { path: 'loaders', component: LoadersComponent },
     //{ path: 'wizard', component: WizardExampleComponent },
     { path: '**', redirectTo: 'about' }
 ];

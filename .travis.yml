@@ -6,6 +6,7 @@ language: node_js
 node_js: node
 
 install:
+- npm run add-fa-config
 - npm ci
 cache:
   directories:

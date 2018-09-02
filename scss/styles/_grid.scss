@@ -4,3 +4,7 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+@if ($enable-responsive-gutters) {
+  @include custom-gutter($responsive-gutters);
+}

@@ -22,6 +22,10 @@ export class MenuService {
     return of(this.start);
   }
 
+    getBaseItems() {
+        return of(this.base);
+    }
+
   getComponents() {
     return of(this.components);
   }
@@ -53,7 +57,15 @@ export class MenuService {
   },{
     name:'Wiki',
     path:'/wiki'
-  }]
+  }];
+
+    base: Array<MenuItem> = [{
+        name:'Fonts and typography',
+        path:'/typography'
+    }, {
+        name:'Icons',
+        path:'/icons'
+    }];
 
   components:Array<MenuItem> = [{
     name:'Alerts',

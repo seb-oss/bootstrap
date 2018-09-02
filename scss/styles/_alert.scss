@@ -38,6 +38,22 @@
   font-weight: $alert-link-font-weight;
 }
 
+// Prevent header from getting border when zoomed to 125%
+.alert-heading {
+  position: relative;
+  z-index: 0;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: inherit;
+    top: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 1px);
+    left: -1px;
+    z-index: -1;
+  }
+}
 
 // Dismissible alerts
 //

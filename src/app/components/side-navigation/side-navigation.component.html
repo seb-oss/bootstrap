@@ -10,7 +10,7 @@
       <h5 class="text-white">Bootstrap</h5>
     </div>
   </div>
-  <div class="container-fluid">
+  <div class="container-fluid nav-wrapper pb-5">
     <div class="row mt-5 mb-3 align-items-center">
       <div class="col pl-0">
         <h6 class="text-white pl-3 mb-0"><!--<i class="fal fa-list mr-2"></i>-->Start</h6>
@@ -27,18 +27,32 @@
     </nav>
     <div class="row mt-5 mb-3 align-items-center">
       <div class="col pl-0">
+        <h6 class="text-white pl-3 mb-0"><!--<i class="fal fa-list mr-2"></i>-->Base</h6>
+      </div>
+    </div>
+    <nav class="nav flex-column">
+      <ng-container *ngFor="let menuItem of $baseItems | async">
+        <div class="row align-items-center menu-item" routerLinkActive="active">
+          <div class="col pl-0">
+            <a class="nav-link" routerLink="{{menuItem.path}}" (click)="menuItem.active = !menuItem.active">{{menuItem.name}}</a>
+          </div>
+        </div>
+      </ng-container>
+    </nav>
+    <div class="row mt-5 mb-3 align-items-center">
+      <div class="col pl-0">
         <h6 class="text-white pl-3 mb-0"><!--<i class="fal fa-list mr-2"></i>-->Components</h6>
       </div>
     </div>
-      <nav class="nav flex-column">
-        <ng-container *ngFor="let menuItem of $menuItems | async">
-          <div class="row align-items-center menu-item" routerLinkActive="active">
-            <div class="col pl-0">
-              <a class="nav-link" routerLink="{{menuItem.path}}" (click)="menuItem.active = !menuItem.active">{{menuItem.name}}</a>
-            </div>
+    <nav class="nav flex-column">
+      <ng-container *ngFor="let menuItem of $menuItems | async">
+        <div class="row align-items-center menu-item" routerLinkActive="active">
+          <div class="col pl-0">
+            <a class="nav-link" routerLink="{{menuItem.path}}" (click)="menuItem.active = !menuItem.active">{{menuItem.name}}</a>
           </div>
-        </ng-container>
-      </nav>
+        </div>
+      </ng-container>
+    </nav>
   </div>
 </div>
 
