@@ -4,6 +4,22 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 
+## Install with npm
+```
+npm install @sebgroup/bootstrap --save
+```
+
+For more info please see the [wiki](https://github.com/sebgroup/bootstrap/wiki)
+
+
+## Use sebgroup/bootstrap with libraries such as Angular and/or React
+sebgroup/bootstrap was created to be framework agnostic ie. it will never contain code for any particular JavaScript framework, so it's going to work with your framework as long as you use the right markup. If you need more complex components such as datepickers, advanced tables, multiselect dropdowns etc. checkout these libraries:
+
+### Angular 2+
+[**ng-bootstrap**](https://ng-bootstrap.github.io/) - A set of angular components using Bootstrap 4 markup
+[**angular-generic-table**](https://hjalmers.github.io/angular-generic-table/start) - A smarter table component
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
 ## Development server
