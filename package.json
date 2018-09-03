@@ -19,7 +19,7 @@
     "minify-all-css": "cleancss -o dist/lib/css/bootstrap-prebuild-all.min.css dist/lib/css/bootstrap-prebuild-all.css --source-map",
     "rename-css": "renamer --find \"p-prebuild\" --replace \"p\" dist/lib/css/*",
     "compile-css": "npm run build-css && npm run autoprefix-css && npm run minify-css && npm run build-all-css && npm run autoprefix-all-css && npm run minify-all-css && npm run rename-css",
-    "copy-scss": "copyfiles -u 1 scss/**/*.scss dist/lib/scss && rimraf dist/lib/scss/bootstrap-prebuild.scss dist/lib/scss/bootstrap-prebuild-all.scss",
+    "copy-scss": "copyfiles -u 1 'scss/**/*.scss' -e 'scss/**/*-prebuild*.scss' dist/lib/scss",
     "copy-fonts": "copyfiles -u 2 scss/fonts/* dist/lib/fonts",
     "test": "ng test",
     "test-ci": "ng test --watch=false --progress --browsers=ChromeHeadlessNoSandbox",
