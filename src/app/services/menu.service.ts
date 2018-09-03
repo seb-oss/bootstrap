@@ -53,10 +53,10 @@ export class MenuService {
     path:'/about'
   },{
     name:'Issues',
-    path:'/issues'
+    path:'https://github.com/sebgroup/bootstrap/issues'
   },{
     name:'Wiki',
-    path:'/wiki'
+    path:'https://github.com/sebgroup/bootstrap/wiki'
   }];
 
     base: Array<MenuItem> = [{
