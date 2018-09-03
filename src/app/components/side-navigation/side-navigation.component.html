@@ -20,7 +20,8 @@
       <ng-container *ngFor="let menuItem of $startItems | async">
         <div class="row align-items-center menu-item" routerLinkActive="active">
           <div class="col pl-0">
-            <a class="nav-link" routerLink="{{menuItem.path}}" (click)="menuItem.active = !menuItem.active">{{menuItem.name}}</a>
+            <a *ngIf="menuItem.path.substr(0, 8) !== 'https://'" class="nav-link" routerLink="{{menuItem.path}}" (click)="menuItem.active = !menuItem.active">{{menuItem.name}}</a>
+            <a *ngIf="menuItem.path.substr(0, 8) === 'https://'" class="nav-link" href="{{menuItem.path}}" target="_blank">{{menuItem.name}}</a>
           </div>
         </div>
       </ng-container>
