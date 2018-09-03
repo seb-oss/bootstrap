@@ -1,11 +1,11 @@
 {
   "name": "bootstrap-demo",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "homepage": "https://sebgroup.github.io/bootstrap/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --aot --base-href /bootstrap/",
+    "build": "ng build --base-href /bootstrap/",
     "prebuild": "replace __TRAVIS_BUILD_NUMBER__ $TRAVIS_BUILD_NUMBER src/environments/environment.ts && replace __TRAVIS_BUILD_NUMBER__ $TRAVIS_BUILD_NUMBER src/environments/environment.prod.ts",
     "build-lib": "npm run copy-scss && npm run copy-fonts && npm run compile-css && copyfiles -f CHANGELOG.md LICENSE.md README.md scss/package.json dist/lib",
     "prebuild-lib": "rimraf dist/lib",
