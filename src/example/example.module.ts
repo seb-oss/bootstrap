@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ButtonsComponent} from './components/buttons/buttons.component';
-import { CodeComponent } from './shared/components/code/code.component';
-import { SnippetWrapperComponent } from './shared/components/snippet-wrapper/snippet-wrapper.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AlertsComponent } from './components/alerts/alerts.component';
 import { TabsComponent } from './components/tabs/tabs.component';
@@ -45,8 +43,6 @@ library.add(faArrowAltRight);
   ],
   declarations: [
       ButtonsComponent,
-      CodeComponent,
-      SnippetWrapperComponent,
       AlertsComponent,
       TabsComponent,
       TablesComponent,
@@ -66,6 +62,6 @@ library.add(faArrowAltRight);
       TooltipsComponent,
       AccordionComponent
   ],
-  exports: [ButtonsComponent, CodeComponent]
+  exports: [ButtonsComponent]
 })
 export class ExampleModule { }
