@@ -18,6 +18,7 @@ import {DropdownsComponent} from '../example/components/dropdowns/dropdowns.comp
 import {CardsComponent} from '../example/components/cards/cards.component';
 import {ModalsComponent} from '../example/components/modals/modals.component';
 import {PaginationComponent} from '../example/components/pagination/pagination.component';
+import {TooltipsComponent} from '../example/components/tooltips/tooltips.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
@@ -34,7 +35,7 @@ const routes: Routes = [
     { path: 'tabs', component: TabsComponent },
     { path: 'alerts', component: AlertsComponent },
     { path: 'breadcrumbs', component: BreadcrumbsComponent },
-    //{ path: 'tooltips', component: TooltipsComponent },
+    { path: 'tooltips', component: TooltipsComponent },
     //{ path: 'example-page', component: ExamplePageComponent },
     //{ path: 'about', component: AboutComponent },
     { path: 'dropdowns', component: DropdownsComponent },
