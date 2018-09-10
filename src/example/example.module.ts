@@ -35,6 +35,7 @@ import { LoadersComponent } from './components/loaders/loaders.component';
 import { DropdownsComponent } from './components/dropdowns/dropdowns.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { ModalsComponent } from './components/modals/modals.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 library.add(faArrowAltRight);
 
 @NgModule({
@@ -72,7 +73,8 @@ library.add(faArrowAltRight);
       LoadersComponent,
       DropdownsComponent,
       CardsComponent,
-      ModalsComponent
+      ModalsComponent,
+      PaginationComponent
   ],
   exports: [ButtonsComponent, CodeComponent]
 })

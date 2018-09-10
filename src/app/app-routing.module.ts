@@ -17,6 +17,7 @@ import {LoadersComponent} from '../example/components/loaders/loaders.component'
 import {DropdownsComponent} from '../example/components/dropdowns/dropdowns.component';
 import {CardsComponent} from '../example/components/cards/cards.component';
 import {ModalsComponent} from '../example/components/modals/modals.component';
+import {PaginationComponent} from '../example/components/pagination/pagination.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
@@ -29,7 +30,7 @@ const routes: Routes = [
     { path: 'input-group', component: InputGroupComponent },
     { path: 'forms', component: FormsComponent },
     { path: 'checkboxes-and-slide-toggles', component: CheckboxesAndSlideTogglesComponent },
-    //{ path: 'pagination', component: PaginationComponent },
+    { path: 'pagination', component: PaginationComponent },
     { path: 'tabs', component: TabsComponent },
     { path: 'alerts', component: AlertsComponent },
     { path: 'breadcrumbs', component: BreadcrumbsComponent },
