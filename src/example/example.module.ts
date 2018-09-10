@@ -10,11 +10,6 @@ import { AlertsComponent } from './components/alerts/alerts.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import {FormsModule} from '@angular/forms';
 import { TablesComponent } from './components/tables/tables.component';
-import { TableStandardComponent } from './components/tables/table-standard/table-standard.component';
-import { TableStripedComponent } from './components/tables/table-striped/table-striped.component';
-import { TableBorderedComponent } from './components/tables/table-bordered/table-bordered.component';
-import { TableHoverableComponent } from './components/tables/table-hoverable/table-hoverable.component';
-import { TableSmallComponent } from './components/tables/table-small/table-small.component';
 import {ExemplifyModule} from 'angular-exemplify';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 import {
@@ -59,11 +54,6 @@ library.add(faArrowAltRight);
       AlertsComponent,
       TabsComponent,
       TablesComponent,
-      TableStandardComponent,
-      TableStripedComponent,
-      TableBorderedComponent,
-      TableHoverableComponent,
-      TableSmallComponent,
       BreadcrumbsComponent,
       FormsComponent,
       PersonalIdentityNumberDirective,
