@@ -1,0 +1,134 @@
+<a name="tabs"><h2 class="px-3 px-md-0 my-3">Selects and dropdowns</h2></a>
+<p class="px-3 px-md-0">The native html select element looks and behaves a bit differently depending on the browser and the device a user is on but it will always work and iOS and Android devices will use their own native components in it's place.</p>
+<div class="card mb-4" id="selectExample">
+  <h4 class="card-header">
+    Native html select
+  </h4>
+  <div class="card-body">
+    <form>
+      <div class="row">
+        <div class="col-12 col-sm-auto">
+          <label for="native_select">Example select</label>
+          <select class="custom-select" id="native_select">
+            <option>First</option>
+            <option>Second</option>
+            <option>Third</option>
+            <option>Forth</option>
+          </select>
+        </div>
+      </div>
+    </form>
+    <exemplify [selector]="'#selectExample .col-12 > *'"></exemplify>
+  </div>
+</div>
+<div class="alert alert-info mt-5">
+  <strong>Framework needed!</strong> Please note that the examples below uses a framework for Angular called <a class="alert-link" href="https://ng-bootstrap.github.io/" target="_blank">ng-bootstrap</a> and their <a class="alert-link" href="https://ng-bootstrap.github.io/#/components/dropdown/" target="_blank">dropdown component</a>, so in order to use the components below you need to add ng-bootstrap to your project.
+</div>
+<div class="card mb-4" id="dropdownExample">
+  <h4 class="card-header">
+    Angular dropdown select
+  </h4>
+  <div class="card-body">
+    <form>
+      <div class="row">
+        <div class="col-12 col-sm-auto">
+          <label for="ngb_dropdown">Example dropdown select</label>
+          <div ngbDropdown>
+            <button class="btn btn-outline-primary w-100" id="ngb_dropdown" ngbDropdownToggle>{{selected ? selected:'select...'}}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownExample" class="w-100 mb-3">
+              <button *ngFor="let option of options" class="dropdown-item" (click)="selected = option" [ngClass]="{'active':selected === option}">{{option}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <code>
+      <p class="mt-3 mb-0">Selected: {{selected | json}}</p>
+    </code>
+    <exemplify [selector]="'#dropdownExample .col-12 > *'" [escapeStrings]="[' ngbDropdownToggle', ' ngbDropdownMenu',' ngbDropdown', '[ngClass]']"></exemplify>
+  </div>
+</div>
+<div class="card mb-4" id="multiselectExample">
+  <h4 class="card-header">
+    Angular multi-select
+  </h4>
+  <div class="card-body">
+    <form>
+      <div class="row">
+        <div class="col-12 col-sm-auto">
+          <label for="ngb_multiselect">Example multi-select</label>
+          <div ngbDropdown #multiSelect="ngbDropdown">
+            <button ngClass="{{classes ? classes:'btn btn-secondary w-100'}}" id="ngb_multiselect" ngbDropdownToggle>{{selectedMulti.length === 0 ? 'select...': selectedMulti.length === 1 ? selectedMulti[0]: selectedMulti.length + ' selected'}}</button>
+            <div ngbDropdownMenu aria-labelledby="ngb_multiselect" class="w-100 mb-3">
+              <div class="dropdown-control">
+                <div class="row mb-2 d-sm-none">
+                  <div class="col text-right">
+                    <span>Close</span><i class="fal fa-times ml-2"></i>
+                  </div>
+                </div>
+                <div class="btn-group w-100">
+                  <button class="btn btn-sm btn-secondary w-100" (click)="$event.stopPropagation();deselectAll()">None</button>
+                  <button class="btn btn-sm btn-secondary w-100" (click)="$event.stopPropagation();selectAll()">All</button>
+                </div>
+                <div class="dropdown-divider"></div>
+              </div>
+              <div class="dropdown-multi-select-options">
+                <button *ngFor="let option of options" class="dropdown-item" (click)="$event.stopPropagation();select(option)" [ngClass]="{'active':selectedMulti.indexOf(option) !== -1}">{{option}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <code>
+      <p class="mt-3 mb-0">Selected: {{selectedMulti | json}}</p>
+    </code>
+    <exemplify [selector]="'#multiselectExample .col-12 > *'" [escapeStrings]="[' ngbDropdownToggle', ' ngbDropdownMenu',' ngbDropdown', '[ngClass]']"></exemplify>
+  </div>
+</div>
+<div class="card mb-4" id="dropdownSizeExample">
+  <h4 class="card-header">
+    Angular dropdown select sizing
+  </h4>
+  <div class="card-body">
+    <form>
+      <div class="row">
+        <div class="col-12 col-sm-auto">
+          <label for="dropdownSmall">Small dropdown select</label>
+          <div ngbDropdown>
+            <button class="btn btn-secondary btn-sm w-100" id="dropdownSmall" ngbDropdownToggle>{{selected ? selected:'select...'}}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownSmall" class="w-100 mb-3">
+              <button *ngFor="let option of options" class="dropdown-item" (click)="selected = option" [ngClass]="{'active':selected === option}">{{option}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-auto">
+          <label for="dropdownNormal">Normal dropdown select</label>
+          <div ngbDropdown>
+            <button class="btn btn-secondary w-100" id="dropdownNormal" ngbDropdownToggle>{{selected ? selected:'select...'}}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownNormal" class="w-100 mb-3">
+              <button *ngFor="let option of options" class="dropdown-item" (click)="selected = option" [ngClass]="{'active':selected === option}">{{option}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-auto">
+          <label for="dropdownLarge">Large dropdown select</label>
+          <div ngbDropdown>
+            <button class="btn btn-secondary btn-lg w-100" id="dropdownLarge" ngbDropdownToggle>{{selected ? selected:'select...'}}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownLarge" class="w-100 mb-3">
+              <button *ngFor="let option of options" class="dropdown-item" (click)="selected = option" [ngClass]="{'active':selected === option}">{{option}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <code>
+      <p class="mt-3 mb-0">Selected: {{selected | json}}</p>
+    </code>
+    <exemplify [selector]="'#dropdownSizeExample .col-12 > *'" [escapeStrings]="[' ngbDropdownToggle', ' ngbDropdownMenu',' ngbDropdown', '[ngClass]']"></exemplify>
+  </div>
+</div>

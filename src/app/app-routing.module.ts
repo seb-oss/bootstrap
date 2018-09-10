@@ -14,6 +14,7 @@ import {IconsComponent} from '../example/components/icons/icons.component';
 import {InputGroupComponent} from '../example/components/input-group/input-group.component';
 import {ListGroupComponent} from '../example/components/list-group/list-group.component';
 import {LoadersComponent} from '../example/components/loaders/loaders.component';
+import {DropdownsComponent} from '../example/components/dropdowns/dropdowns.component';
 
 
 const routes: Routes = [
@@ -34,7 +35,7 @@ const routes: Routes = [
     //{ path: 'tooltips', component: TooltipsComponent },
     //{ path: 'example-page', component: ExamplePageComponent },
     //{ path: 'about', component: AboutComponent },
-    //{ path: 'dropdowns', component: DropdownsComponent },
+    { path: 'dropdowns', component: DropdownsComponent },
     //{ path: 'accordion', component: AccordionComponent },
     //{ path: 'grid', component: GridComponent },
     { path: 'icons', component: IconsComponent },

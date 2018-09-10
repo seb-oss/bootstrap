@@ -32,6 +32,7 @@ import {faArrowAltRight} from '@fortawesome/pro-light-svg-icons';
 import { InputGroupComponent } from './components/input-group/input-group.component';
 import { ListGroupComponent } from './components/list-group/list-group.component';
 import { LoadersComponent } from './components/loaders/loaders.component';
+import { DropdownsComponent } from './components/dropdowns/dropdowns.component';
 library.add(faArrowAltRight);
 
 @NgModule({
@@ -66,7 +67,8 @@ library.add(faArrowAltRight);
       IconsComponent,
       InputGroupComponent,
       ListGroupComponent,
-      LoadersComponent
+      LoadersComponent,
+      DropdownsComponent
   ],
   exports: [ButtonsComponent, CodeComponent]
 })
