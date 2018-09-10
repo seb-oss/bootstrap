@@ -37,6 +37,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { ModalsComponent } from './components/modals/modals.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { TooltipsComponent } from './components/tooltips/tooltips.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
 library.add(faArrowAltRight);
 
 @NgModule({
@@ -76,7 +77,8 @@ library.add(faArrowAltRight);
       CardsComponent,
       ModalsComponent,
       PaginationComponent,
-      TooltipsComponent
+      TooltipsComponent,
+      AccordionComponent
   ],
   exports: [ButtonsComponent, CodeComponent]
 })

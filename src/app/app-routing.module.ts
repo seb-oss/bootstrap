@@ -19,6 +19,7 @@ import {CardsComponent} from '../example/components/cards/cards.component';
 import {ModalsComponent} from '../example/components/modals/modals.component';
 import {PaginationComponent} from '../example/components/pagination/pagination.component';
 import {TooltipsComponent} from '../example/components/tooltips/tooltips.component';
+import {AccordionComponent} from '../example/components/accordion/accordion.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
@@ -39,7 +40,7 @@ const routes: Routes = [
     //{ path: 'example-page', component: ExamplePageComponent },
     //{ path: 'about', component: AboutComponent },
     { path: 'dropdowns', component: DropdownsComponent },
-    //{ path: 'accordion', component: AccordionComponent },
+    { path: 'accordion', component: AccordionComponent },
     //{ path: 'grid', component: GridComponent },
     { path: 'icons', component: IconsComponent },
     { path: 'list-group', component: ListGroupComponent },
