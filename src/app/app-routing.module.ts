@@ -16,14 +16,14 @@ import {ListGroupComponent} from '../example/components/list-group/list-group.co
 import {LoadersComponent} from '../example/components/loaders/loaders.component';
 import {DropdownsComponent} from '../example/components/dropdowns/dropdowns.component';
 import {CardsComponent} from '../example/components/cards/cards.component';
-
+import {ModalsComponent} from '../example/components/modals/modals.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
     //{ path: 'typography', component: TypographyComponent },
     { path: 'tables', component: TablesComponent },
     //{ path: 'colors', component: ColorsComponent },
-    //{ path: 'modals', component: ModalsComponent },
+    { path: 'modals', component: ModalsComponent },
     { path: 'cards', component: CardsComponent },
     { path: 'buttons', component: ButtonsComponent },
     { path: 'input-group', component: InputGroupComponent },
