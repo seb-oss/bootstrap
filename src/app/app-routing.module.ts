@@ -15,6 +15,7 @@ import {InputGroupComponent} from '../example/components/input-group/input-group
 import {ListGroupComponent} from '../example/components/list-group/list-group.component';
 import {LoadersComponent} from '../example/components/loaders/loaders.component';
 import {DropdownsComponent} from '../example/components/dropdowns/dropdowns.component';
+import {CardsComponent} from '../example/components/cards/cards.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,7 @@ const routes: Routes = [
     { path: 'tables', component: TablesComponent },
     //{ path: 'colors', component: ColorsComponent },
     //{ path: 'modals', component: ModalsComponent },
-    //{ path: 'cards', component: CardsComponent },
+    { path: 'cards', component: CardsComponent },
     { path: 'buttons', component: ButtonsComponent },
     { path: 'input-group', component: InputGroupComponent },
     { path: 'forms', component: FormsComponent },

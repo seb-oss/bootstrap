@@ -33,6 +33,7 @@ import { InputGroupComponent } from './components/input-group/input-group.compon
 import { ListGroupComponent } from './components/list-group/list-group.component';
 import { LoadersComponent } from './components/loaders/loaders.component';
 import { DropdownsComponent } from './components/dropdowns/dropdowns.component';
+import { CardsComponent } from './components/cards/cards.component';
 library.add(faArrowAltRight);
 
 @NgModule({
@@ -68,7 +69,8 @@ library.add(faArrowAltRight);
       InputGroupComponent,
       ListGroupComponent,
       LoadersComponent,
-      DropdownsComponent
+      DropdownsComponent,
+      CardsComponent
   ],
   exports: [ButtonsComponent, CodeComponent]
 })
