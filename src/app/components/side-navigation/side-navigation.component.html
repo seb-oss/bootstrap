@@ -1,4 +1,4 @@
-<div class="side-nav">
+<div class="side-nav" [ngClass]="{'active': $isActive | async}">
   <div class="row no-gutters">
     <div class="col-auto">
       <svg class="seb-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
@@ -7,10 +7,13 @@
       </svg>
     </div>
     <div class="col align-self-center pl-3">
-      <h5 class="text-white">Bootstrap</h5>
+      <h5 class="text-white mb-0">Bootstrap</h5>
+    </div>
+    <div class="col-auto align-self-center px-3 d-lg-none" (click)="toggleMenu()">
+      <i class="fal fa-times fa-lg text-white"></i>
     </div>
   </div>
-  <div class="container-fluid nav-wrapper pb-5">
+  <div class="container-fluid nav-wrapper pb-5 scrollbar-dark">
     <div class="row mt-5 mb-3 align-items-center">
       <div class="col pl-0">
         <h6 class="text-white pl-3 mb-0"><!--<i class="fal fa-list mr-2"></i>-->Start</h6>
@@ -20,8 +23,12 @@
       <ng-container *ngFor="let menuItem of $startItems | async">
         <div class="row align-items-center menu-item" routerLinkActive="active">
           <div class="col pl-0">
-            <a *ngIf="menuItem.path.substr(0, 8) !== 'https://'" class="nav-link" routerLink="{{menuItem.path}}" (click)="menuItem.active = !menuItem.active">{{menuItem.name}}</a>
-            <a *ngIf="menuItem.path.substr(0, 8) === 'https://'" class="nav-link" href="{{menuItem.path}}" target="_blank">{{menuItem.name}}</a>
+            <ng-container *ngIf="menuItem.path.substr(0,4) !== 'http'">
+              <a class="nav-link" routerLink="{{menuItem.path}}" (click)="menuItem.active = !menuItem.active">{{menuItem.name}}</a>
+            </ng-container>
+            <ng-container *ngIf="menuItem.path.substr(0,4) === 'http'">
+              <a class="nav-link" [href]="menuItem.path" target="_blank">{{menuItem.name}}</a>
+            </ng-container>
           </div>
         </div>
       </ng-container>

@@ -1,0 +1,44 @@
+<a name="typography"><h2 class="px-3 px-md-0 my-3">Fonts and typography</h2></a>
+<div class="card">
+  <div class="card-body" id="headings">
+    <h4 class="card-title">Headings</h4>
+    <p>Note that the font sizes for <code>h1</code>, <code>h2</code> and <code>h3</code> adjust according to viewport size.</p>
+    <h1>Heading h1</h1>
+    <h2>Heading h2</h2>
+    <h3>Heading h3</h3>
+    <h4>Heading h4</h4>
+    <h5>Heading h5</h5>
+    <h6>Heading h6</h6>
+    <exemplify [selector]="'#headings > *:not(exemplify):not(.card-title)'"></exemplify>
+  </div>
+  <div class="card-body" id="lead">
+    <h4 class="card-title">Lead</h4>
+    <p class="lead">Sed sit amet mauris ut ligula vulputate gravida sit amet ac nisi. Sed iaculis magna massa, ut lacinia ante congue vitae.</p>
+    <exemplify [selector]="'#lead > .lead'"></exemplify>
+  </div>
+  <div class="card-body" id="paragraph">
+    <h4 class="card-title">Paragraph</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec ornare turpis. Sed sit amet mauris ut ligula vulputate gravida sit amet ac nisi. Sed iaculis magna massa, ut lacinia ante congue vitae. Fusce ac tempus leo. Sed nec nisl volutpat augue scelerisque luctus eu a augue. Donec ut pretium justo. Sed at sapien sed libero elementum volutpat. Suspendisse eget condimentum diam, maximus suscipit est. Ut vestibulum vitae nulla luctus dapibus. Nullam semper mi a varius pharetra. Nulla quis nisi suscipit, lacinia ante vitae, commodo magna.</p>
+    <exemplify [selector]="'#paragraph > p'"></exemplify>
+  </div>
+  <div class="card-body" id="weights">
+    <h4 class="card-title">Weights</h4>
+    <p class="font-weight-light">Light AaBbCc 0123456789</p>
+    <p class="font-weight-normal">Regular AaBbCc 0123456789</p>
+    <p class="font-weight-medium">Medium AaBbCc 0123456789</p>
+    <p class="font-weight-bold">Bold AaBbCc 0123456789</p>
+    <exemplify [selector]="'#weights > p'"></exemplify>
+  </div>
+  <div class="card-body" id="italic">
+    <h4 class="card-title">Italic</h4>
+    <p class="font-weight-light font-italic">Light Italic AaBbCc 0123456789</p>
+    <p class="font-weight-normal font-italic">Regular Italic AaBbCc 0123456789</p>
+    <p class="font-weight-medium font-italic">Medium Italic AaBbCc 0123456789</p>
+    <p class="font-weight-bold font-italic">Bold Italic AaBbCc 0123456789</p>
+    <exemplify [selector]="'#italic > p'"></exemplify>
+  </div>
+</div>
+<hr>
+
+<hr>
+

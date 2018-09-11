@@ -2,18 +2,24 @@
 @import "../../../../scss/mixins/mixins";
 
 .side-nav {
-  display: none;
+  transform: translate3d(-256px,0,0);
+  transition: transform 400ms ease-in-out;
+  background: #333;
+  width: 256px;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  &.active {
+    transform: translate3d(0,0,0);
+    display: block;
+    z-index: 100;
+  }
 }
 
 @include media-breakpoint-up(lg) {
   .side-nav {
-    display: block;
-    width: 256px;
-    background: #333;
-    height: 100vh;
-    position: fixed;
-    z-index: 1;
-    left: 0;
+    transform: translate3d(0,0,0);
   }
 }
 
@@ -69,6 +75,7 @@
 
 .nav-wrapper {
   height: calc(100% - 56px);
+  overflow-y: hidden;
   &:hover {
     overflow-y: auto;
   }
