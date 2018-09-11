@@ -1,6 +1,6 @@
 {
   "name": "@sebgroup/bootstrap",
-  "version": "1.0.0-alpha.5",
+  "version": "0.0.0-semantically-released",
   "description": "A standalone bootstrap theme for SEB",
   "main": "scss/bootstrap.scss",
   "scripts": {
