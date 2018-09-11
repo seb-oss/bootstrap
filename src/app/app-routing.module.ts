@@ -21,6 +21,7 @@ import {PaginationComponent} from '../example/components/pagination/pagination.c
 import {TooltipsComponent} from '../example/components/tooltips/tooltips.component';
 import {AccordionComponent} from '../example/components/accordion/accordion.component';
 import {TypographyComponent} from '../example/components/typography/typography.component';
+import {AboutComponent} from './components/about/about.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
@@ -39,7 +40,7 @@ const routes: Routes = [
     { path: 'breadcrumbs', component: BreadcrumbsComponent },
     { path: 'tooltips', component: TooltipsComponent },
     //{ path: 'example-page', component: ExamplePageComponent },
-    //{ path: 'about', component: AboutComponent },
+    { path: 'about', component: AboutComponent },
     { path: 'dropdowns', component: DropdownsComponent },
     { path: 'accordion', component: AccordionComponent },
     //{ path: 'grid', component: GridComponent },
