@@ -29,6 +29,7 @@ import { ModalsComponent } from './components/modals/modals.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { TooltipsComponent } from './components/tooltips/tooltips.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
+import { TypographyComponent } from './components/typography/typography.component';
 library.add(faArrowAltRight);
 
 @NgModule({
@@ -60,7 +61,8 @@ library.add(faArrowAltRight);
       ModalsComponent,
       PaginationComponent,
       TooltipsComponent,
-      AccordionComponent
+      AccordionComponent,
+      TypographyComponent
   ],
   exports: [ButtonsComponent]
 })

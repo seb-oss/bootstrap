@@ -20,10 +20,11 @@ import {ModalsComponent} from '../example/components/modals/modals.component';
 import {PaginationComponent} from '../example/components/pagination/pagination.component';
 import {TooltipsComponent} from '../example/components/tooltips/tooltips.component';
 import {AccordionComponent} from '../example/components/accordion/accordion.component';
+import {TypographyComponent} from '../example/components/typography/typography.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
-    //{ path: 'typography', component: TypographyComponent },
+    { path: 'typography', component: TypographyComponent },
     { path: 'tables', component: TablesComponent },
     //{ path: 'colors', component: ColorsComponent },
     { path: 'modals', component: ModalsComponent },
