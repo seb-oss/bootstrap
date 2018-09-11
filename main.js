@@ -7,249 +7,7 @@
 /*! exports provided: name, version, description, main, scripts, repository, publishConfig, author, license, bugs, homepage, dependencies, default */
 /***/ (function(module) {
 
-module.exports = {"name":"@sebgroup/bootstrap","version":"1.0.3","description":"A standalone bootstrap theme for SEB","main":"scss/bootstrap.scss","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"git+https://github.com/sebgroup/bootstrap.git"},"publishConfig":{"registry":"https://registry.npmjs.org/","access":"public"},"author":"Robert Hjalmers","license":"Apache-2.0","bugs":{"url":"https://github.com/sebgroup/bootstrap/issues"},"homepage":"https://sebgroup.github.io/bootstrap/","dependencies":{"@sebgroup/fonts":"^1.0.0"}};
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/alerts/alerts.component.ts":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/alerts/alerts.component.ts ***!
-  \*************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-alerts',\n  templateUrl: './alerts.component.html',\n  styles: []\n})\nexport class AlertsComponent implements OnInit {\n\n  active = true;\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/breadcrumbs/breadcrumbs.component.ts":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/breadcrumbs/breadcrumbs.component.ts ***!
-  \***********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-breadcrumbs',\n  templateUrl: './breadcrumbs.component.html',\n  styles: []\n})\nexport class BreadcrumbsComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/buttons/buttons-main/buttons-main.component.ts":
-/*!*********************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/buttons/buttons-main/buttons-main.component.ts ***!
-  \*********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-buttons-main',\n  templateUrl: './buttons-main.component.html',\n  styles: []\n})\nexport class ButtonsMainComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/buttons/buttons-main/index.md":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/buttons/buttons-main/index.md ***!
-  \****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/buttons/buttons-sizes/buttons-sizes.component.scss":
-/*!*************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/buttons/buttons-sizes/buttons-sizes.component.scss ***!
-  \*************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/buttons/buttons-sizes/buttons-sizes.component.ts":
-/*!***********************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/buttons/buttons-sizes/buttons-sizes.component.ts ***!
-  \***********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-buttons-sizes',\n  templateUrl: './buttons-sizes.component.html',\n  styleUrls: ['./buttons-sizes.component.scss']\n})\nexport class ButtonsSizesComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/buttons/buttons.component.scss":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/buttons/buttons.component.scss ***!
-  \*****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/buttons/buttons.component.ts":
-/*!***************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/buttons/buttons.component.ts ***!
-  \***************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\nimport * as testHtml from '!raw-loader!./test.html';\nimport { of } from 'rxjs';\n\n@Component({\n  selector: 'app-buttons',\n  templateUrl: './buttons.component.html',\n  styleUrls: ['./buttons.component.scss']\n})\nexport class ButtonsComponent implements OnInit {\n\n  SNIPPETS = {\n    main: [\n      {\n        name: 'markup',\n        lang: 'markup',\n        src: 'buttons/buttons-main/buttons-main.component.html'\n      },{\n        lang: 'typescript',\n        src: 'buttons/buttons-main/buttons-main.component.ts'\n      },\n      {\n        lang: 'typescript',\n        src: 'https://raw.githubusercontent.com/ng-bootstrap/ng-bootstrap/master/demo/src/app/components/buttons/demos/checkbox/buttons-checkbox.ts'\n      }\n    ],\n    sizes: [\n      {\n        name: 'markup',\n        lang: 'markup',\n        src: 'buttons/buttons-sizes/buttons-sizes.component.html'\n      }\n    ]\n  };\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component.ts":
-/*!*********************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component.ts ***!
-  \*********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-checkboxes-and-slide-toggles',\n  templateUrl: './checkboxes-and-slide-toggles.component.html'\n})\nexport class CheckboxesAndSlideTogglesComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/forms/forms.component.ts":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/forms/forms.component.ts ***!
-  \***********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import {Component, OnInit} from '@angular/core';\n\n@Component({\n  selector: 'app-forms',\n  templateUrl: './forms.component.html',\n  styles: []\n})\nexport class FormsComponent {\n\n  constructor() { }\n\n    fileToUpload: File = null;\n    fileName = 'Choose file';\n\n    options: Array<string> = ['First', 'Second', 'Third', 'Forth']; // available options, used by dropdown and multi-select example\n    selected: string; // selected option for dropdown example\n\n    personalIdentityNumber = '';\n    password = '';\n    Math: Math = Math;\n    passwordStrength = 'Enter desired password';\n    // password.length <= 3 ? 'Weak' : password.length <= 6 ? 'Okay': password.length <= 9 'Strong':''\n\n\n\n    handleFileInput(files: FileList) {\n        this.fileToUpload = files.item(0);\n        this.fileName = this.fileToUpload.name;\n    }\n    onValueChange() {\n        this.personalIdentityNumber = this.personalIdentityNumber.replace(/\\D+/g, '').slice(0, 12);\n    }\n\n    onKeyDownPreventNonDigits(event: any) {\n        const inputChar = event.key;\n        const pattern = /\\D+/g;\n        const allowedKeyCodes = [8, 37, 39, 46];\n\n        const selectedChars = event.currentTarget.valueOf().selectionEnd - event.currentTarget.selectionStart;\n        if ((allowedKeyCodes.indexOf(event.keyCode) < 0 && !event.ctrlKey && pattern.test(inputChar) && selectedChars === 0)\n            || (this.personalIdentityNumber && this.personalIdentityNumber.length > 11 && !event.ctrlKey && selectedChars === 0 && allowedKeyCodes.indexOf(event.keyCode) < 0)) {\n            event.preventDefault();\n        }\n    }\n\n}\n\nimport { Pipe, PipeTransform } from '@angular/core';\n\n@Pipe({\n    name: 'validationMessage'\n})\nexport class ValidationMessagePipe implements PipeTransform {\n\n    transform(errors: Object): string {\n        const ERROR = Object.keys(errors)[0];\n        if (ERROR === 'required') {\n            return 'Required, please enter your personal id.'\n        } else if (ERROR === 'toShort') {\n            return 'To short, please enter complete personal id with 12 digits.'\n        } else if(ERROR === 'incorrect') {\n            return 'Incorrect personal identity number.'\n        }\n        return ERROR\n    }\n\n}\n\nimport {Directive} from '@angular/core';\nimport {AbstractControl, ValidatorFn, NG_VALIDATORS, Validator, Validators} from '@angular/forms';\nimport * as sweValidation from 'swe-validation';\n\n/** Check that the entered personal identity number is valid */\nexport function personalIdentityNumberValidator(): ValidatorFn {\n    return (control: AbstractControl): {[key: string]: any} => {\n        const personalIdentityNumber = control.value;\n\n        // don't check if personal id is omitted\n        if (!personalIdentityNumber) {\n            return null;\n        }\n\n        // make sure id when entered is at least 12 digits long\n        if (personalIdentityNumber.toString().length < 12) {\n            return {'toShort': {personalIdentityNumber}};\n        }\n\n        // check if personal id entered is valid using luhn algorithm (https://sv.wikipedia.org/wiki/luhn-algoritmen)\n        const personalId = sweValidation.ssn(personalIdentityNumber);\n        return !personalId.isValid ? {'incorrect': {personalIdentityNumber}} : null;\n    };\n}\n\n@Directive({\n    selector: '[personalIdentityNumberCheck]',\n    providers: [{provide: NG_VALIDATORS, useExisting: PersonalIdentityNumberDirective, multi: true}]\n})\nexport class PersonalIdentityNumberDirective implements OnInit, Validator {\n    private valFn = Validators.nullValidator;\n\n    ngOnInit() {\n        this.valFn = personalIdentityNumberValidator();\n    }\n    validate(control: AbstractControl): {[key: string]: any} {\n        return this.valFn(control);\n    }\n}"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/icons/icons.component.ts":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/icons/icons.component.ts ***!
-  \***********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\nimport { faArrowAltRight } from '@fortawesome/pro-light-svg-icons';\n\n@Component({\n  selector: 'app-icons',\n  templateUrl: './icons.component.html',\n  styles: []\n})\nexport class IconsComponent implements OnInit {\n\n    iconSearchString = '';\n    icons: Array<string> = [\n        'archive',\n        'lock-alt',\n        'unlock-alt',\n        'cog',\n        'print',\n        'calendar-alt',\n        'phone',\n        'mobile',\n        'tablet',\n        'desktop-alt',\n        'envelope',\n        'share-alt',\n        'user-alt',\n        'comment-alt',\n        'comments',\n        'link',\n        'external-link-square',\n        'credit-card',\n        'balance-scale',\n        'bookmark',\n        'book',\n        'arrow-left',\n        'arrow-right',\n        'arrow-up',\n        'arrow-down',\n        'arrow-to-bottom',\n        'long-arrow-left',\n        'long-arrow-right',\n        'long-arrow-up',\n        'long-arrow-down',\n        'chevron-left',\n        'chevron-right',\n        'chevron-up',\n        'chevron-down',\n        'sync',\n        'at',\n        'percent',\n        'star',\n        'heart',\n        'plus',\n        'minus',\n        'exclamation-triangle',\n        'copy',\n        'upload',\n        'calculator',\n        'home',\n        'clock',\n        'filter',\n        'search',\n        'edit',\n        'sign-in',\n        'sign-out',\n        'sliders-h',\n        'sliders-v',\n        'bell',\n        'undo',\n        'info-circle',\n        'reply',\n        'reply-all',\n        'trash-alt',\n        'times'\n    ];\n    filteredIcons: Array<string> = this.icons;\n    faArrowAltRight = faArrowAltRight;\n\n\n    filterIcons(search: string) {\n        this.filteredIcons = this.icons.filter(icon => icon.indexOf(search) !== -1);\n    }\n  constructor() { }\n  ngOnInit() {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/icons/icons.md":
-/*!*************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/icons/icons.md ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "In order to install the pro version of Font Awesome which includes the light theme that we want to use, you need to configure the @fortawesome scope to use their Pro NPM registry.\n```\nnpm config set \"@fortawesome:registry\" https://npm.fontawesome.com/\nnpm config set \"//npm.fontawesome.com/:_authToken\" TOKEN\n```\n\nOnce the configuration is updated you can proceed and install Font Awesome\n```\nnpm install @fortawesome/angular-fontawesome --save\nnpm install @fortawesome/pro-light-svg-icons --save\nnpm install @fortawesome/fontawesome-svg-core --save\nnpm install @fortawesome/fontawesome-pro --save-dev\n```\n\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/input-group/input-group.component.ts":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/input-group/input-group.component.ts ***!
-  \***********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-input-group',\n  templateUrl: './input-group.component.html'\n})\nexport class InputGroupComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/list-group/list-group.component.ts":
-/*!*********************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/list-group/list-group.component.ts ***!
-  \*********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-list-group',\n  templateUrl: './list-group.component.html',\n  styles: []\n})\nexport class ListGroupComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/loaders/loaders.component.ts":
-/*!***************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/loaders/loaders.component.ts ***!
-  \***************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-loaders',\n  templateUrl: './loaders.component.html',\n  styles: []\n})\nexport class LoadersComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/tables/table-bordered/table-bordered.component.ts":
-/*!************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/tables/table-bordered/table-bordered.component.ts ***!
-  \************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-table-bordered',\n  templateUrl: './table-bordered.component.html',\n  styles: []\n})\nexport class TableBorderedComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/tables/table-hoverable/table-hoverable.component.ts":
-/*!**************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/tables/table-hoverable/table-hoverable.component.ts ***!
-  \**************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-table-hoverable',\n  templateUrl: './table-hoverable.component.html',\n  styles: []\n})\nexport class TableHoverableComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/tables/table-small/table-small.component.ts":
-/*!******************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/tables/table-small/table-small.component.ts ***!
-  \******************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-table-small',\n  templateUrl: './table-small.component.html',\n  styles: []\n})\nexport class TableSmallComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/tables/table-standard/table-standard.component.ts":
-/*!************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/tables/table-standard/table-standard.component.ts ***!
-  \************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-table-standard',\n  templateUrl: './table-standard.component.html',\n  styles: []\n})\nexport class TableStandardComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/tables/table-striped/table-striped.component.ts":
-/*!**********************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/tables/table-striped/table-striped.component.ts ***!
-  \**********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-table-striped',\n  templateUrl: './table-striped.component.html',\n  styles: []\n})\nexport class TableStripedComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/tables/tables.component.ts":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/tables/tables.component.ts ***!
-  \*************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-tables',\n  templateUrl: './tables.component.html'\n})\nexport class TablesComponent implements OnInit {\n    SNIPPETS = {\n        standard: [\n            {\n                name: 'markup',\n                lang: 'markup',\n                src: 'tables/table-standard/table-standard.component.html'\n            }\n        ],\n        striped: [{\n            name: 'markup',\n            lang: 'markup',\n            src: 'tables/table-striped/table-striped.component.html'\n        }],\n        bordered: [{\n            name: 'markup',\n            lang: 'markup',\n            src: 'tables/table-bordered/table-bordered.component.html'\n        }],\n        hoverable: [{\n            name: 'markup',\n            lang: 'markup',\n            src: 'tables/table-hoverable/table-hoverable.component.html'\n        }],\n        small: [{\n            name: 'markup',\n            lang: 'markup',\n            src: 'tables/table-small/table-small.component.html'\n        }]\n    };\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/example/components/tabs/tabs.component.ts":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/example/components/tabs/tabs.component.ts ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-tabs',\n  templateUrl: './tabs.component.html',\n  styles: []\n})\nexport class TabsComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
+module.exports = {"name":"@sebgroup/bootstrap","version":"0.0.0-semantically-released","description":"A standalone bootstrap theme for SEB","main":"scss/bootstrap.scss","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"git+https://github.com/sebgroup/bootstrap.git"},"publishConfig":{"registry":"https://registry.npmjs.org/","access":"public"},"author":"Robert Hjalmers","license":"Apache-2.0","bugs":{"url":"https://github.com/sebgroup/bootstrap/issues"},"homepage":"https://sebgroup.github.io/bootstrap/","dependencies":{"@sebgroup/fonts":"^1.0.0"}};
 
 /***/ }),
 
@@ -299,6 +57,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _example_components_input_group_input_group_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../example/components/input-group/input-group.component */ "./src/example/components/input-group/input-group.component.ts");
 /* harmony import */ var _example_components_list_group_list_group_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../example/components/list-group/list-group.component */ "./src/example/components/list-group/list-group.component.ts");
 /* harmony import */ var _example_components_loaders_loaders_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../example/components/loaders/loaders.component */ "./src/example/components/loaders/loaders.component.ts");
+/* harmony import */ var _example_components_dropdowns_dropdowns_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../example/components/dropdowns/dropdowns.component */ "./src/example/components/dropdowns/dropdowns.component.ts");
+/* harmony import */ var _example_components_cards_cards_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../example/components/cards/cards.component */ "./src/example/components/cards/cards.component.ts");
+/* harmony import */ var _example_components_modals_modals_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../example/components/modals/modals.component */ "./src/example/components/modals/modals.component.ts");
+/* harmony import */ var _example_components_pagination_pagination_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../example/components/pagination/pagination.component */ "./src/example/components/pagination/pagination.component.ts");
+/* harmony import */ var _example_components_tooltips_tooltips_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../example/components/tooltips/tooltips.component */ "./src/example/components/tooltips/tooltips.component.ts");
+/* harmony import */ var _example_components_accordion_accordion_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../example/components/accordion/accordion.component */ "./src/example/components/accordion/accordion.component.ts");
+/* harmony import */ var _example_components_typography_typography_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../example/components/typography/typography.component */ "./src/example/components/typography/typography.component.ts");
+/* harmony import */ var _components_about_about_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/about/about.component */ "./src/app/components/about/about.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -318,26 +84,34 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
+
+
+
+
+
 var routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
-    //{ path: 'typography', component: TypographyComponent },
+    { path: 'typography', component: _example_components_typography_typography_component__WEBPACK_IMPORTED_MODULE_19__["TypographyComponent"] },
     { path: 'tables', component: _example_components_tables_tables_component__WEBPACK_IMPORTED_MODULE_5__["TablesComponent"] },
     //{ path: 'colors', component: ColorsComponent },
-    //{ path: 'modals', component: ModalsComponent },
-    //{ path: 'cards', component: CardsComponent },
+    { path: 'modals', component: _example_components_modals_modals_component__WEBPACK_IMPORTED_MODULE_15__["ModalsComponent"] },
+    { path: 'cards', component: _example_components_cards_cards_component__WEBPACK_IMPORTED_MODULE_14__["CardsComponent"] },
     { path: 'buttons', component: _example_components_buttons_buttons_component__WEBPACK_IMPORTED_MODULE_2__["ButtonsComponent"] },
     { path: 'input-group', component: _example_components_input_group_input_group_component__WEBPACK_IMPORTED_MODULE_10__["InputGroupComponent"] },
     { path: 'forms', component: _example_components_forms_forms_component__WEBPACK_IMPORTED_MODULE_7__["FormsComponent"] },
     { path: 'checkboxes-and-slide-toggles', component: _example_components_checkboxes_and_slide_toggles_checkboxes_and_slide_toggles_component__WEBPACK_IMPORTED_MODULE_8__["CheckboxesAndSlideTogglesComponent"] },
-    //{ path: 'pagination', component: PaginationComponent },
+    { path: 'pagination', component: _example_components_pagination_pagination_component__WEBPACK_IMPORTED_MODULE_16__["PaginationComponent"] },
     { path: 'tabs', component: _example_components_tabs_tabs_component__WEBPACK_IMPORTED_MODULE_4__["TabsComponent"] },
     { path: 'alerts', component: _example_components_alerts_alerts_component__WEBPACK_IMPORTED_MODULE_3__["AlertsComponent"] },
     { path: 'breadcrumbs', component: _example_components_breadcrumbs_breadcrumbs_component__WEBPACK_IMPORTED_MODULE_6__["BreadcrumbsComponent"] },
-    //{ path: 'tooltips', component: TooltipsComponent },
+    { path: 'tooltips', component: _example_components_tooltips_tooltips_component__WEBPACK_IMPORTED_MODULE_17__["TooltipsComponent"] },
     //{ path: 'example-page', component: ExamplePageComponent },
-    //{ path: 'about', component: AboutComponent },
-    //{ path: 'dropdowns', component: DropdownsComponent },
-    //{ path: 'accordion', component: AccordionComponent },
+    { path: 'about', component: _components_about_about_component__WEBPACK_IMPORTED_MODULE_20__["AboutComponent"] },
+    { path: 'dropdowns', component: _example_components_dropdowns_dropdowns_component__WEBPACK_IMPORTED_MODULE_13__["DropdownsComponent"] },
+    { path: 'accordion', component: _example_components_accordion_accordion_component__WEBPACK_IMPORTED_MODULE_18__["AccordionComponent"] },
     //{ path: 'grid', component: GridComponent },
     { path: 'icons', component: _example_components_icons_icons_component__WEBPACK_IMPORTED_MODULE_9__["IconsComponent"] },
     { path: 'list-group', component: _example_components_list_group_list_group_component__WEBPACK_IMPORTED_MODULE_11__["ListGroupComponent"] },
@@ -444,12 +218,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_mobile_navigation_mobile_navigation_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/mobile-navigation/mobile-navigation.component */ "./src/app/components/mobile-navigation/mobile-navigation.component.ts");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/header/header.component */ "./src/app/components/header/header.component.ts");
+/* harmony import */ var _components_about_about_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/about/about.component */ "./src/app/components/about/about.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -468,7 +244,8 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
                 _components_side_navigation_side_navigation_component__WEBPACK_IMPORTED_MODULE_5__["SideNavigationComponent"],
                 _components_mobile_navigation_mobile_navigation_component__WEBPACK_IMPORTED_MODULE_6__["MobileNavigationComponent"],
-                _components_header_header_component__WEBPACK_IMPORTED_MODULE_8__["HeaderComponent"]
+                _components_header_header_component__WEBPACK_IMPORTED_MODULE_8__["HeaderComponent"],
+                _components_about_about_component__WEBPACK_IMPORTED_MODULE_9__["AboutComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -487,6 +264,58 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/about/about.component.html":
+/*!*******************************************************!*\
+  !*** ./src/app/components/about/about.component.html ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 class=\"my-3\">About</h1>\n<div class=\"card mb-5\">\n  <div class=\"card-body\">\n    <h3 class=\"card-title\">What is sebgroup/bootstrap?</h3>\n    <p class=\"lead mb-0\">sebgroup/bootstrap is a standalone theme built on <a href=\"https://sebgroup.github.io/bootstrap/\" target=\"_blank\">Bootstrap 4</a>, note that there's no dependencies to bootstrap other than the requirement to follow their markup.</p>\n  </div>\n  <div class=\"card-body pt-0\">\n    <h4 class=\"card-title\">Bootstrap markup</h4>\n    <p>sebgroup/bootstrap has no external dependency to bootstrap but since the project is built on top off bootstrap, all markup examples on their website will work for sebgroup/bootstrap too. Please note that not all components have been styled for SEB yet and this library doesn't include any Javascript either.</p>\n    <p>The later is by design as the goal and purpose of this project is to hold <strong>common styles for standard web components</strong> and not control how they work or behave as that would require additional Javascript and that is something most frameworks take care of ie. React, Angular, Vue etc. This is also the reason as to why some of the components like pagination, accordion etc. on the <a href=\"https://sebgroup.github.io/bootstrap/\" target=\"_blank\">demo page</a> doesn't do anything when you try to use them.</p>\n  </div>\n  <div class=\"card-body pt-0\">\n    <h4 class=\"card-title\">Getting started</h4>\n    <p>Read about how to get started in the <a href=\"https://github.com/sebgroup/bootstrap/wiki\" target=\"_blank\">wiki</a>.</p>\n  </div>\n  <div class=\"card-body pt-0\">\n    <h4 class=\"card-title\">Having issues?</h4>\n    <p>Feel free to ask questions and create issues on <a href=\"https://github.com/sebgroup/bootstrap/issues\" target=\"_blank\">github</a>.</p>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/about/about.component.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/components/about/about.component.ts ***!
+  \*****************************************************/
+/*! exports provided: AboutComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutComponent", function() { return AboutComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AboutComponent = /** @class */ (function () {
+    function AboutComponent() {
+    }
+    AboutComponent.prototype.ngOnInit = function () {
+    };
+    AboutComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-about',
+            template: __webpack_require__(/*! ./about.component.html */ "./src/app/components/about/about.component.html"),
+            styles: []
+        }),
+        __metadata("design:paramtypes", [])
+    ], AboutComponent);
+    return AboutComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/header/header.component.html":
 /*!*********************************************************!*\
   !*** ./src/app/components/header/header.component.html ***!
@@ -494,7 +323,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"col-12 col-md-auto d-lg-none\">\n  <div class=\"row justify-content-between justify-content-lg-end h-100\">\n  <div class=\"col col-md-auto d-none d-md-flex brand\">\n    <div class=\"row mobile-header\">\n      <div class=\"col align-self-center text-center\">\n        <i class=\"fal fa-home fa-1x d-block\"></i>\n        <div>Menu</div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"col d-md-none px-0\" *ngIf=\"activeTab\">\n    <div class=\"row mobile-header h-100 align-items-center text-center no-gutters\">\n      <div class=\"col\" ngClass=\"{{activeTab === 'start' ? 'active':''}}\" (click)=\"showMenu('start')\"><i class=\"fal fa-home fa-1x d-block\"></i>Start</div>\n      <div class=\"col\" ngClass=\"{{activeTab === 'components' ? 'active':''}}\" (click)=\"showMenu('components')\"><i class=\"fal fa-bookmark fa-1x d-block\"></i>Components</div>\n    </div>\n  </div>\n    <div class=\"col d-none d-md-flex bg-white border-bottom sticky-header\" [@scrollAnimation]=\"stickyHeader\">\n      <div class=\"row align-items-center h-100\">\n        <div class=\"col\">\n          <h5 class=\"mb-0\">Section header</h5>\n          <ol class=\"breadcrumb mb-0 pl-0 py-0\">\n            <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>\n            <li class=\"breadcrumb-item active\">Section header</li>\n          </ol>\n        </div>\n        <div class=\"col-auto\">\n          <div class=\"card-menu-control\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n"
+module.exports = "<header class=\"col-12 col-md-auto d-lg-none\">\n  <div class=\"row justify-content-between justify-content-lg-end h-100\">\n  <div class=\"col col-md-auto d-none d-md-flex brand\">\n    <div class=\"row mobile-header\">\n      <div class=\"col-auto px-0\">\n        <svg class=\"seb-logo\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 800\">\n          <path d=\"M0 0h800v800H0z\" fill=\"#60cd18\"/>\n          <path d=\"M290.55 348.35l-25.87 19.32c-12.22-10.51-28-12.57-36.65-12.57s-18 2.51-19.37 8.82c-1.38 6.12 4.31 10.88 14.08 13.53 11.14 3 21.29 5.66 36.92 10.12 23.24 6.63 39.13 16.69 39.13 40 0 32.14-28.53 48.8-66.75 48.8s-64.26-19.91-72-29.2l27.35-20.45c19.21 16.75 32.57 19.11 43.74 19.11 12.81 0 24.79-2.75 26.33-10 1.25-5.82-3.58-10.45-14.49-13-12.35-2.85-22.77-5.14-34.4-8.2-31.52-8.27-40.41-26.6-40.41-43.06 0-22.67 21.1-45.95 59.69-45.95 39.57 0 62.74 22.67 62.74 22.67m164.9-20.4H340.12V472.1h117.45v-33.24h-76.94v-23.22h53v-31.8h-53v-23h74.83zM310.27 505.37h9V294.63h-9zm162.45 0h9V294.63h-9zm29.8-33.27h92.64c24.77 0 44.84-14.93 44.84-38.84 0-18.65-12.21-31-29.32-36.47a9.6 9.6 0 0 0-1.66-.21 10.36 10.36 0 0 0 1.66-.29c9.8-3.88 20.66-14.21 20.66-31.8 0-22.31-19.74-36.54-44.1-36.54h-84.72zm40.7-114.17h32.36c7.45 0 13.48 5.88 13.48 12.64s-6 12.66-13.48 12.66h-32.36zm39.58 82.13h-39.58v-26.29h39.58a13.15 13.15 0 0 1 0 26.28z\" fill=\"#fff\"/>\n        </svg>\n      </div>\n      <div class=\"col align-self-center text-center px-3\" (click)=\"toggleMenu()\">\n        <i class=\"fal fa-bars fa-1x d-block\"></i>\n        <div>Menu</div>\n      </div>\n    </div>\n  </div>\n    <div class=\"col align-self-center pl-3 d-none d-sm-flex\">\n      <h3 class=\"mb-0\">Bootstrap</h3>\n    </div>\n  <div class=\"col d-md-none px-0\" *ngIf=\"activeTab\">\n    <div class=\"row mobile-header h-100 align-items-center text-center no-gutters\">\n      <div class=\"col\" ngClass=\"{{activeTab === 'start' ? 'active':''}}\" (click)=\"showMenu('start')\"><i class=\"fal fa-home fa-1x d-block\"></i>Start</div>\n      <div class=\"col\" ngClass=\"{{activeTab === 'components' ? 'active':''}}\" (click)=\"showMenu('components')\"><i class=\"fal fa-bookmark fa-1x d-block\"></i>Components</div>\n    </div>\n  </div>\n    <div class=\"col d-none d-md-flex bg-white border-bottom sticky-header\" [@scrollAnimation]=\"stickyHeader\">\n      <div class=\"row align-items-center h-100\">\n        <div class=\"col\">\n          <h5 class=\"mb-0\">Section header</h5>\n          <ol class=\"breadcrumb mb-0 pl-0 py-0\">\n            <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>\n            <li class=\"breadcrumb-item active\">Section header</li>\n          </ol>\n        </div>\n        <div class=\"col-auto\">\n          <div class=\"card-menu-control\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n"
 
 /***/ }),
 
@@ -522,6 +351,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_menu_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/menu.service */ "./src/app/services/menu.service.ts");
 /* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
+/* harmony import */ var _services_nav_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/nav.service */ "./src/app/services/nav.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -534,9 +364,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent(menuService) {
+    function HeaderComponent(menuService, navService) {
         this.menuService = menuService;
+        this.navService = navService;
         this.activeTab = 'components';
         this._scrollPosition = 0;
         this.stickyHeader = 'hide';
@@ -558,11 +390,15 @@ var HeaderComponent = /** @class */ (function () {
         configurable: true
     });
     HeaderComponent.prototype.ngOnInit = function () {
+        this.$isActive = this.navService.getState();
     };
     HeaderComponent.prototype.getMenu = function () {
     };
     HeaderComponent.prototype.showMenu = function (tab) {
         this.menuService.switchTab(tab);
+    };
+    HeaderComponent.prototype.toggleMenu = function () {
+        this.navService.toggleState();
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -589,7 +425,7 @@ var HeaderComponent = /** @class */ (function () {
                 ])
             ]
         }),
-        __metadata("design:paramtypes", [_services_menu_service__WEBPACK_IMPORTED_MODULE_1__["MenuService"]])
+        __metadata("design:paramtypes", [_services_menu_service__WEBPACK_IMPORTED_MODULE_1__["MenuService"], _services_nav_service__WEBPACK_IMPORTED_MODULE_3__["NavService"]])
     ], HeaderComponent);
     return HeaderComponent;
 }());
@@ -747,7 +583,7 @@ var MobileNavigationComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"side-nav\">\n  <div class=\"row no-gutters\">\n    <div class=\"col-auto\">\n      <svg class=\"seb-logo\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 800\">\n        <path d=\"M0 0h800v800H0z\" fill=\"#60cd18\"/>\n        <path d=\"M290.55 348.35l-25.87 19.32c-12.22-10.51-28-12.57-36.65-12.57s-18 2.51-19.37 8.82c-1.38 6.12 4.31 10.88 14.08 13.53 11.14 3 21.29 5.66 36.92 10.12 23.24 6.63 39.13 16.69 39.13 40 0 32.14-28.53 48.8-66.75 48.8s-64.26-19.91-72-29.2l27.35-20.45c19.21 16.75 32.57 19.11 43.74 19.11 12.81 0 24.79-2.75 26.33-10 1.25-5.82-3.58-10.45-14.49-13-12.35-2.85-22.77-5.14-34.4-8.2-31.52-8.27-40.41-26.6-40.41-43.06 0-22.67 21.1-45.95 59.69-45.95 39.57 0 62.74 22.67 62.74 22.67m164.9-20.4H340.12V472.1h117.45v-33.24h-76.94v-23.22h53v-31.8h-53v-23h74.83zM310.27 505.37h9V294.63h-9zm162.45 0h9V294.63h-9zm29.8-33.27h92.64c24.77 0 44.84-14.93 44.84-38.84 0-18.65-12.21-31-29.32-36.47a9.6 9.6 0 0 0-1.66-.21 10.36 10.36 0 0 0 1.66-.29c9.8-3.88 20.66-14.21 20.66-31.8 0-22.31-19.74-36.54-44.1-36.54h-84.72zm40.7-114.17h32.36c7.45 0 13.48 5.88 13.48 12.64s-6 12.66-13.48 12.66h-32.36zm39.58 82.13h-39.58v-26.29h39.58a13.15 13.15 0 0 1 0 26.28z\" fill=\"#fff\"/>\n      </svg>\n    </div>\n    <div class=\"col align-self-center pl-3\">\n      <h5 class=\"text-white\">Bootstrap</h5>\n    </div>\n  </div>\n  <div class=\"container-fluid nav-wrapper pb-5\">\n    <div class=\"row mt-5 mb-3 align-items-center\">\n      <div class=\"col pl-0\">\n        <h6 class=\"text-white pl-3 mb-0\"><!--<i class=\"fal fa-list mr-2\"></i>-->Start</h6>\n      </div>\n    </div>\n    <nav class=\"nav flex-column\">\n      <ng-container *ngFor=\"let menuItem of $startItems | async\">\n        <div class=\"row align-items-center menu-item\" routerLinkActive=\"active\">\n          <div class=\"col pl-0\">\n            <a *ngIf=\"menuItem.path.substr(0, 8) !== 'https://'\" class=\"nav-link\" routerLink=\"{{menuItem.path}}\" (click)=\"menuItem.active = !menuItem.active\">{{menuItem.name}}</a>\n            <a *ngIf=\"menuItem.path.substr(0, 8) === 'https://'\" class=\"nav-link\" href=\"{{menuItem.path}}\" target=\"_blank\">{{menuItem.name}}</a>\n          </div>\n        </div>\n      </ng-container>\n    </nav>\n    <div class=\"row mt-5 mb-3 align-items-center\">\n      <div class=\"col pl-0\">\n        <h6 class=\"text-white pl-3 mb-0\"><!--<i class=\"fal fa-list mr-2\"></i>-->Base</h6>\n      </div>\n    </div>\n    <nav class=\"nav flex-column\">\n      <ng-container *ngFor=\"let menuItem of $baseItems | async\">\n        <div class=\"row align-items-center menu-item\" routerLinkActive=\"active\">\n          <div class=\"col pl-0\">\n            <a class=\"nav-link\" routerLink=\"{{menuItem.path}}\" (click)=\"menuItem.active = !menuItem.active\">{{menuItem.name}}</a>\n          </div>\n        </div>\n      </ng-container>\n    </nav>\n    <div class=\"row mt-5 mb-3 align-items-center\">\n      <div class=\"col pl-0\">\n        <h6 class=\"text-white pl-3 mb-0\"><!--<i class=\"fal fa-list mr-2\"></i>-->Components</h6>\n      </div>\n    </div>\n    <nav class=\"nav flex-column\">\n      <ng-container *ngFor=\"let menuItem of $menuItems | async\">\n        <div class=\"row align-items-center menu-item\" routerLinkActive=\"active\">\n          <div class=\"col pl-0\">\n            <a class=\"nav-link\" routerLink=\"{{menuItem.path}}\" (click)=\"menuItem.active = !menuItem.active\">{{menuItem.name}}</a>\n          </div>\n        </div>\n      </ng-container>\n    </nav>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"side-nav\" [ngClass]=\"{'active': $isActive | async}\">\n  <div class=\"row no-gutters\">\n    <div class=\"col-auto\">\n      <svg class=\"seb-logo\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 800\">\n        <path d=\"M0 0h800v800H0z\" fill=\"#60cd18\"/>\n        <path d=\"M290.55 348.35l-25.87 19.32c-12.22-10.51-28-12.57-36.65-12.57s-18 2.51-19.37 8.82c-1.38 6.12 4.31 10.88 14.08 13.53 11.14 3 21.29 5.66 36.92 10.12 23.24 6.63 39.13 16.69 39.13 40 0 32.14-28.53 48.8-66.75 48.8s-64.26-19.91-72-29.2l27.35-20.45c19.21 16.75 32.57 19.11 43.74 19.11 12.81 0 24.79-2.75 26.33-10 1.25-5.82-3.58-10.45-14.49-13-12.35-2.85-22.77-5.14-34.4-8.2-31.52-8.27-40.41-26.6-40.41-43.06 0-22.67 21.1-45.95 59.69-45.95 39.57 0 62.74 22.67 62.74 22.67m164.9-20.4H340.12V472.1h117.45v-33.24h-76.94v-23.22h53v-31.8h-53v-23h74.83zM310.27 505.37h9V294.63h-9zm162.45 0h9V294.63h-9zm29.8-33.27h92.64c24.77 0 44.84-14.93 44.84-38.84 0-18.65-12.21-31-29.32-36.47a9.6 9.6 0 0 0-1.66-.21 10.36 10.36 0 0 0 1.66-.29c9.8-3.88 20.66-14.21 20.66-31.8 0-22.31-19.74-36.54-44.1-36.54h-84.72zm40.7-114.17h32.36c7.45 0 13.48 5.88 13.48 12.64s-6 12.66-13.48 12.66h-32.36zm39.58 82.13h-39.58v-26.29h39.58a13.15 13.15 0 0 1 0 26.28z\" fill=\"#fff\"/>\n      </svg>\n    </div>\n    <div class=\"col align-self-center pl-3\">\n      <h5 class=\"text-white mb-0\">Bootstrap</h5>\n    </div>\n    <div class=\"col-auto align-self-center px-3 d-lg-none\" (click)=\"toggleMenu()\">\n      <i class=\"fal fa-times fa-lg text-white\"></i>\n    </div>\n  </div>\n  <div class=\"container-fluid nav-wrapper pb-5 scrollbar-dark\">\n    <div class=\"row mt-5 mb-3 align-items-center\">\n      <div class=\"col pl-0\">\n        <h6 class=\"text-white pl-3 mb-0\"><!--<i class=\"fal fa-list mr-2\"></i>-->Start</h6>\n      </div>\n    </div>\n    <nav class=\"nav flex-column\">\n      <ng-container *ngFor=\"let menuItem of $startItems | async\">\n        <div class=\"row align-items-center menu-item\" routerLinkActive=\"active\">\n          <div class=\"col pl-0\">\n            <ng-container *ngIf=\"menuItem.path.substr(0,4) !== 'http'\">\n              <a class=\"nav-link\" routerLink=\"{{menuItem.path}}\" (click)=\"menuItem.active = !menuItem.active\">{{menuItem.name}}</a>\n            </ng-container>\n            <ng-container *ngIf=\"menuItem.path.substr(0,4) === 'http'\">\n              <a class=\"nav-link\" [href]=\"menuItem.path\" target=\"_blank\">{{menuItem.name}}</a>\n            </ng-container>\n          </div>\n        </div>\n      </ng-container>\n    </nav>\n    <div class=\"row mt-5 mb-3 align-items-center\">\n      <div class=\"col pl-0\">\n        <h6 class=\"text-white pl-3 mb-0\"><!--<i class=\"fal fa-list mr-2\"></i>-->Base</h6>\n      </div>\n    </div>\n    <nav class=\"nav flex-column\">\n      <ng-container *ngFor=\"let menuItem of $baseItems | async\">\n        <div class=\"row align-items-center menu-item\" routerLinkActive=\"active\">\n          <div class=\"col pl-0\">\n            <a class=\"nav-link\" routerLink=\"{{menuItem.path}}\" (click)=\"menuItem.active = !menuItem.active\">{{menuItem.name}}</a>\n          </div>\n        </div>\n      </ng-container>\n    </nav>\n    <div class=\"row mt-5 mb-3 align-items-center\">\n      <div class=\"col pl-0\">\n        <h6 class=\"text-white pl-3 mb-0\"><!--<i class=\"fal fa-list mr-2\"></i>-->Components</h6>\n      </div>\n    </div>\n    <nav class=\"nav flex-column\">\n      <ng-container *ngFor=\"let menuItem of $menuItems | async\">\n        <div class=\"row align-items-center menu-item\" routerLinkActive=\"active\">\n          <div class=\"col pl-0\">\n            <a class=\"nav-link\" routerLink=\"{{menuItem.path}}\" (click)=\"menuItem.active = !menuItem.active\">{{menuItem.name}}</a>\n          </div>\n        </div>\n      </ng-container>\n    </nav>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -758,7 +594,7 @@ module.exports = "<div class=\"side-nav\">\n  <div class=\"row no-gutters\">\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".side-nav {\n  display: none; }\n\n@media (min-width: 992px) {\n  .side-nav {\n    display: block;\n    width: 256px;\n    background: #333;\n    height: 100vh;\n    position: fixed;\n    z-index: 1;\n    left: 0; } }\n\n.seb-logo {\n  height: 56px;\n  width: 56px; }\n\n.nav-link {\n  color: #fff;\n  font-weight: normal; }\n\n.menu-item:hover {\n  background: rgba(96, 205, 24, 0.25);\n  /*.nav-link {\n    color: $dark;\n  }*/ }\n\n.menu-item.active {\n  background: #60cd18; }\n\n.menu-item.active .nav-link {\n    font-weight: 500; }\n\n.menu-item.active-parent .nav-link {\n  font-weight: 500; }\n\n.menu-item.active-parent .nav-link::after {\n    display: block;\n    content: \"\";\n    left: 0;\n    width: 5px;\n    background: #60cd18;\n    top: 0;\n    position: absolute;\n    height: 100%;\n    -webkit-animation: expand ease-out .2s;\n            animation: expand ease-out .2s;\n    transition: -webkit-transform .2s ease-in-out;\n    transition: transform .2s ease-in-out;\n    transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out; }\n\n.menu-item.active-match .nav-link {\n  font-weight: 500; }\n\n.nav-wrapper {\n  height: calc(100% - 56px); }\n\n.nav-wrapper:hover {\n    overflow-y: auto; }\n"
+module.exports = ".side-nav {\n  -webkit-transform: translate3d(-256px, 0, 0);\n          transform: translate3d(-256px, 0, 0);\n  transition: -webkit-transform 400ms ease-in-out;\n  transition: transform 400ms ease-in-out;\n  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;\n  background: #333;\n  width: 256px;\n  height: 100vh;\n  position: fixed;\n  z-index: 100;\n  left: 0; }\n  .side-nav.active {\n    -webkit-transform: translate3d(0, 0, 0);\n            transform: translate3d(0, 0, 0);\n    display: block;\n    z-index: 100; }\n  @media (min-width: 992px) {\n  .side-nav {\n    -webkit-transform: translate3d(0, 0, 0);\n            transform: translate3d(0, 0, 0); } }\n  .seb-logo {\n  height: 56px;\n  width: 56px; }\n  .nav-link {\n  color: #fff;\n  font-weight: normal; }\n  .menu-item:hover {\n  background: rgba(96, 205, 24, 0.25);\n  /*.nav-link {\n    color: $dark;\n  }*/ }\n  .menu-item.active {\n  background: #60cd18; }\n  .menu-item.active .nav-link {\n    font-weight: 500; }\n  .menu-item.active-parent .nav-link {\n  font-weight: 500; }\n  .menu-item.active-parent .nav-link::after {\n    display: block;\n    content: \"\";\n    left: 0;\n    width: 5px;\n    background: #60cd18;\n    top: 0;\n    position: absolute;\n    height: 100%;\n    -webkit-animation: expand ease-out .2s;\n            animation: expand ease-out .2s;\n    transition: -webkit-transform .2s ease-in-out;\n    transition: transform .2s ease-in-out;\n    transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out; }\n  .menu-item.active-match .nav-link {\n  font-weight: 500; }\n  .nav-wrapper {\n  height: calc(100% - 56px);\n  overflow-y: hidden; }\n  .nav-wrapper:hover {\n    overflow-y: auto; }\n"
 
 /***/ }),
 
@@ -776,6 +612,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _services_menu_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/menu.service */ "./src/app/services/menu.service.ts");
+/* harmony import */ var _services_nav_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/nav.service */ "./src/app/services/nav.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -789,10 +626,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var SideNavigationComponent = /** @class */ (function () {
-    function SideNavigationComponent(router, menuService) {
+    function SideNavigationComponent(router, menuService, navService) {
         this.router = router;
         this.menuService = menuService;
+        this.navService = navService;
     }
     SideNavigationComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -802,6 +641,10 @@ var SideNavigationComponent = /** @class */ (function () {
         this.$menuItems = this.menuService.getComponents();
         this.$startItems = this.menuService.getStartItems();
         this.$baseItems = this.menuService.getBaseItems();
+        this.$isActive = this.navService.getState();
+    };
+    SideNavigationComponent.prototype.toggleMenu = function () {
+        this.navService.toggleState(false);
     };
     SideNavigationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -809,7 +652,7 @@ var SideNavigationComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./side-navigation.component.html */ "./src/app/components/side-navigation/side-navigation.component.html"),
             styles: [__webpack_require__(/*! ./side-navigation.component.scss */ "./src/app/components/side-navigation/side-navigation.component.scss")]
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _services_menu_service__WEBPACK_IMPORTED_MODULE_3__["MenuService"]])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _services_menu_service__WEBPACK_IMPORTED_MODULE_3__["MenuService"], _services_nav_service__WEBPACK_IMPORTED_MODULE_4__["NavService"]])
     ], SideNavigationComponent);
     return SideNavigationComponent;
 }());
@@ -911,7 +754,6 @@ var MenuService = /** @class */ (function () {
                 name: 'Loaders',
                 path: '/loaders'
             }];
-        //this.$activeTab.next('components');
         this.updateMenu('start');
     }
     MenuService.prototype.getMenu = function () {
@@ -954,6 +796,53 @@ var MenuService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/nav.service.ts":
+/*!*****************************************!*\
+  !*** ./src/app/services/nav.service.ts ***!
+  \*****************************************/
+/*! exports provided: NavService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavService", function() { return NavService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var NavService = /** @class */ (function () {
+    function NavService() {
+        this.$isActive = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](false);
+        this.$isActive.next(false);
+    }
+    NavService.prototype.toggleState = function (state) {
+        this.$isActive.next(state || !this.$isActive.value);
+    };
+    NavService.prototype.getState = function () {
+        return this.$isActive.asObservable();
+    };
+    NavService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [])
+    ], NavService);
+    return NavService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -979,7 +868,7 @@ var environment = {
         }
         return version;
     })(),
-    travis_build_number: '46'
+    travis_build_number: '50'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
@@ -992,95 +881,55 @@ var environment = {
 
 /***/ }),
 
-/***/ "./src/example/components sync recursive ./!./node_modules/raw-loader/index.js!./ ^\\.\\/.*$":
-/*!************************************************************************!*\
-  !*** ./src/example/components sync ./node_modules/raw-loader ^\.\/.*$ ***!
-  \************************************************************************/
+/***/ "./src/example/components/accordion/accordion.component.html":
+/*!*******************************************************************!*\
+  !*** ./src/example/components/accordion/accordion.component.html ***!
+  \*******************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-var map = {
-	"./alerts/alerts.component": "./node_modules/raw-loader/index.js!./src/example/components/alerts/alerts.component.ts",
-	"./alerts/alerts.component.html": "./src/example/components/alerts/alerts.component.html",
-	"./alerts/alerts.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/alerts/alerts.component.ts",
-	"./breadcrumbs/breadcrumbs.component": "./node_modules/raw-loader/index.js!./src/example/components/breadcrumbs/breadcrumbs.component.ts",
-	"./breadcrumbs/breadcrumbs.component.html": "./src/example/components/breadcrumbs/breadcrumbs.component.html",
-	"./breadcrumbs/breadcrumbs.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/breadcrumbs/breadcrumbs.component.ts",
-	"./buttons/buttons-main/buttons-main.component": "./node_modules/raw-loader/index.js!./src/example/components/buttons/buttons-main/buttons-main.component.ts",
-	"./buttons/buttons-main/buttons-main.component.html": "./src/example/components/buttons/buttons-main/buttons-main.component.html",
-	"./buttons/buttons-main/buttons-main.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/buttons/buttons-main/buttons-main.component.ts",
-	"./buttons/buttons-main/index.md": "./node_modules/raw-loader/index.js!./src/example/components/buttons/buttons-main/index.md",
-	"./buttons/buttons-sizes/buttons-sizes.component": "./node_modules/raw-loader/index.js!./src/example/components/buttons/buttons-sizes/buttons-sizes.component.ts",
-	"./buttons/buttons-sizes/buttons-sizes.component.html": "./src/example/components/buttons/buttons-sizes/buttons-sizes.component.html",
-	"./buttons/buttons-sizes/buttons-sizes.component.scss": "./node_modules/raw-loader/index.js!./src/example/components/buttons/buttons-sizes/buttons-sizes.component.scss",
-	"./buttons/buttons-sizes/buttons-sizes.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/buttons/buttons-sizes/buttons-sizes.component.ts",
-	"./buttons/buttons.component": "./node_modules/raw-loader/index.js!./src/example/components/buttons/buttons.component.ts",
-	"./buttons/buttons.component.html": "./src/example/components/buttons/buttons.component.html",
-	"./buttons/buttons.component.scss": "./node_modules/raw-loader/index.js!./src/example/components/buttons/buttons.component.scss",
-	"./buttons/buttons.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/buttons/buttons.component.ts",
-	"./checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component": "./node_modules/raw-loader/index.js!./src/example/components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component.ts",
-	"./checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component.html": "./src/example/components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component.html",
-	"./checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component.ts",
-	"./forms/forms.component": "./node_modules/raw-loader/index.js!./src/example/components/forms/forms.component.ts",
-	"./forms/forms.component.html": "./src/example/components/forms/forms.component.html",
-	"./forms/forms.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/forms/forms.component.ts",
-	"./icons/icons.component": "./node_modules/raw-loader/index.js!./src/example/components/icons/icons.component.ts",
-	"./icons/icons.component.html": "./src/example/components/icons/icons.component.html",
-	"./icons/icons.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/icons/icons.component.ts",
-	"./icons/icons.md": "./node_modules/raw-loader/index.js!./src/example/components/icons/icons.md",
-	"./input-group/input-group.component": "./node_modules/raw-loader/index.js!./src/example/components/input-group/input-group.component.ts",
-	"./input-group/input-group.component.html": "./src/example/components/input-group/input-group.component.html",
-	"./input-group/input-group.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/input-group/input-group.component.ts",
-	"./list-group/list-group.component": "./node_modules/raw-loader/index.js!./src/example/components/list-group/list-group.component.ts",
-	"./list-group/list-group.component.html": "./src/example/components/list-group/list-group.component.html",
-	"./list-group/list-group.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/list-group/list-group.component.ts",
-	"./loaders/loaders.component": "./node_modules/raw-loader/index.js!./src/example/components/loaders/loaders.component.ts",
-	"./loaders/loaders.component.html": "./src/example/components/loaders/loaders.component.html",
-	"./loaders/loaders.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/loaders/loaders.component.ts",
-	"./tables/table-bordered/table-bordered.component": "./node_modules/raw-loader/index.js!./src/example/components/tables/table-bordered/table-bordered.component.ts",
-	"./tables/table-bordered/table-bordered.component.html": "./src/example/components/tables/table-bordered/table-bordered.component.html",
-	"./tables/table-bordered/table-bordered.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/tables/table-bordered/table-bordered.component.ts",
-	"./tables/table-hoverable/table-hoverable.component": "./node_modules/raw-loader/index.js!./src/example/components/tables/table-hoverable/table-hoverable.component.ts",
-	"./tables/table-hoverable/table-hoverable.component.html": "./src/example/components/tables/table-hoverable/table-hoverable.component.html",
-	"./tables/table-hoverable/table-hoverable.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/tables/table-hoverable/table-hoverable.component.ts",
-	"./tables/table-small/table-small.component": "./node_modules/raw-loader/index.js!./src/example/components/tables/table-small/table-small.component.ts",
-	"./tables/table-small/table-small.component.html": "./src/example/components/tables/table-small/table-small.component.html",
-	"./tables/table-small/table-small.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/tables/table-small/table-small.component.ts",
-	"./tables/table-standard/table-standard.component": "./node_modules/raw-loader/index.js!./src/example/components/tables/table-standard/table-standard.component.ts",
-	"./tables/table-standard/table-standard.component.html": "./src/example/components/tables/table-standard/table-standard.component.html",
-	"./tables/table-standard/table-standard.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/tables/table-standard/table-standard.component.ts",
-	"./tables/table-striped/table-striped.component": "./node_modules/raw-loader/index.js!./src/example/components/tables/table-striped/table-striped.component.ts",
-	"./tables/table-striped/table-striped.component.html": "./src/example/components/tables/table-striped/table-striped.component.html",
-	"./tables/table-striped/table-striped.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/tables/table-striped/table-striped.component.ts",
-	"./tables/tables.component": "./node_modules/raw-loader/index.js!./src/example/components/tables/tables.component.ts",
-	"./tables/tables.component.html": "./src/example/components/tables/tables.component.html",
-	"./tables/tables.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/tables/tables.component.ts",
-	"./tabs/tabs.component": "./node_modules/raw-loader/index.js!./src/example/components/tabs/tabs.component.ts",
-	"./tabs/tabs.component.html": "./src/example/components/tabs/tabs.component.html",
-	"./tabs/tabs.component.ts": "./node_modules/raw-loader/index.js!./src/example/components/tabs/tabs.component.ts"
+module.exports = "<a name=\"accordion\"><h2 class=\"px-3 px-md-0 my-3\">Accordion</h2></a>\n<div class=\"alert alert-info\">\n  <strong>Framework needed!</strong> Please note that the example below is just a representation of how accordions look and the needed markup. In order to use accordion you need a framework to control when and how to toggle between active states. If you're using angular, please take a look at <a class=\"alert-link\" href=\"https://ng-bootstrap.github.io/\" target=\"_blank\">ng-bootstrap</a> and their <a class=\"alert-link\" href=\"https://ng-bootstrap.github.io/#/components/accordion\" target=\"_blank\">accordion component</a>.</div>\n\n<div class=\"card\">\n  <div class=\"card-body\">\n    <ngb-accordion [closeOthers]=\"true\" activeIds=\"static-1\">\n      <ngb-panel id=\"static-1\" title=\"Simple\">\n        <ng-template ngbPanelContent>\n          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia\n          aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,\n          sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,\n          craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings\n          occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus\n          labore sustainable VHS.\n        </ng-template>\n      </ngb-panel>\n      <ngb-panel id=\"static-2\">\n        <ng-template ngbPanelTitle>\n          <strong>Custom title</strong><i class=\"fal fa-heart ml-2\"></i>\n        </ng-template>\n        <ng-template ngbPanelContent>\n          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia\n          aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,\n          sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,\n          craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings\n          occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus\n          labore sustainable VHS.\n        </ng-template>\n      </ngb-panel>\n      <ngb-panel id=\"static-3\" title=\"Disabled\" [disabled]=\"true\">\n        <ng-template ngbPanelContent>\n          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia\n          aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,\n          sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,\n          craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings\n          occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus\n          labore sustainable VHS.\n        </ng-template>\n      </ngb-panel>\n    </ngb-accordion>\n    <exemplify [selector]=\"'ngb-accordion'\" [escapeStrings]=\"[' ngbPanelContent', ' ngbPanelTitle', '[closeOthers]', ' activeIds']\"></exemplify>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/example/components/accordion/accordion.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/example/components/accordion/accordion.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: AccordionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccordionComponent", function() { return AccordionComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+var AccordionComponent = /** @class */ (function () {
+    function AccordionComponent() {
+    }
+    AccordionComponent.prototype.ngOnInit = function () {
+    };
+    AccordionComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-accordion',
+            template: __webpack_require__(/*! ./accordion.component.html */ "./src/example/components/accordion/accordion.component.html"),
+            styles: []
+        }),
+        __metadata("design:paramtypes", [])
+    ], AccordionComponent);
+    return AccordionComponent;
+}());
 
-function webpackContext(req) {
-	var id = webpackContextResolve(req);
-	var module = __webpack_require__(id);
-	return module;
-}
-function webpackContextResolve(req) {
-	var id = map[req];
-	if(!(id + 1)) { // check for number or string
-		var e = new Error("Cannot find module '" + req + "'");
-		e.code = 'MODULE_NOT_FOUND';
-		throw e;
-	}
-	return id;
-}
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = "./src/example/components sync recursive ./!./node_modules/raw-loader/index.js!./ ^\\.\\/.*$";
+
 
 /***/ }),
 
@@ -1189,121 +1038,6 @@ var BreadcrumbsComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/example/components/buttons/buttons-main/buttons-main.component.html":
-/*!*********************************************************************************!*\
-  !*** ./src/example/components/buttons/buttons-main/buttons-main.component.html ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<button type=\"button\" class=\"btn btn-primary\">Primary</button>\n<button type=\"button\" class=\"btn btn-secondary\">Secondary</button>\n<button type=\"button\" class=\"btn btn-link\">Link</button>\n<button type=\"button\" class=\"btn btn-outline-primary\">Primary outlined</button>\n"
-
-/***/ }),
-
-/***/ "./src/example/components/buttons/buttons-main/buttons-main.component.ts":
-/*!*******************************************************************************!*\
-  !*** ./src/example/components/buttons/buttons-main/buttons-main.component.ts ***!
-  \*******************************************************************************/
-/*! exports provided: ButtonsMainComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonsMainComponent", function() { return ButtonsMainComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ButtonsMainComponent = /** @class */ (function () {
-    function ButtonsMainComponent() {
-    }
-    ButtonsMainComponent.prototype.ngOnInit = function () {
-    };
-    ButtonsMainComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-buttons-main',
-            template: __webpack_require__(/*! ./buttons-main.component.html */ "./src/example/components/buttons/buttons-main/buttons-main.component.html"),
-            styles: []
-        }),
-        __metadata("design:paramtypes", [])
-    ], ButtonsMainComponent);
-    return ButtonsMainComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/example/components/buttons/buttons-sizes/buttons-sizes.component.html":
-/*!***********************************************************************************!*\
-  !*** ./src/example/components/buttons/buttons-sizes/buttons-sizes.component.html ***!
-  \***********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<button type=\"button\" class=\"btn btn-sm btn-primary\">Small primary</button>\n<button type=\"button\" class=\"btn btn-sm btn-secondary\">Small secondary</button>\n<button type=\"button\" class=\"btn btn-primary\">Primary</button>\n<button type=\"button\" class=\"btn btn-secondary\">Secondary</button>\n<button type=\"button\" class=\"btn btn-lg btn-primary\">Large primary</button>\n<button type=\"button\" class=\"btn btn-lg btn-secondary\">Large secondary</button>\n"
-
-/***/ }),
-
-/***/ "./src/example/components/buttons/buttons-sizes/buttons-sizes.component.scss":
-/*!***********************************************************************************!*\
-  !*** ./src/example/components/buttons/buttons-sizes/buttons-sizes.component.scss ***!
-  \***********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/example/components/buttons/buttons-sizes/buttons-sizes.component.ts":
-/*!*********************************************************************************!*\
-  !*** ./src/example/components/buttons/buttons-sizes/buttons-sizes.component.ts ***!
-  \*********************************************************************************/
-/*! exports provided: ButtonsSizesComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonsSizesComponent", function() { return ButtonsSizesComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ButtonsSizesComponent = /** @class */ (function () {
-    function ButtonsSizesComponent() {
-    }
-    ButtonsSizesComponent.prototype.ngOnInit = function () {
-    };
-    ButtonsSizesComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-buttons-sizes',
-            template: __webpack_require__(/*! ./buttons-sizes.component.html */ "./src/example/components/buttons/buttons-sizes/buttons-sizes.component.html"),
-            styles: [__webpack_require__(/*! ./buttons-sizes.component.scss */ "./src/example/components/buttons/buttons-sizes/buttons-sizes.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], ButtonsSizesComponent);
-    return ButtonsSizesComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/example/components/buttons/buttons.component.html":
 /*!***************************************************************!*\
   !*** ./src/example/components/buttons/buttons.component.html ***!
@@ -1311,7 +1045,7 @@ var ButtonsSizesComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<a name=\"buttons\"><h2 class=\"px-3 px-md-0 my-3\">Buttons</h2></a>\n<div class=\"card mb-3\">\n  <div class=\"card-body\">\n    <p>We have three main button classes that we use <code>.btn-primary</code>, <code>.btn-secondary</code> and <code>.btn-link</code>, use the latter to give buttons the same behavior as normal links (used for links placed outside text segments and paragraphs as well as actions similar to \"go to\" or regular links).</p>\n    <label>Standard</label>\n    <div>\n      <app-buttons-main></app-buttons-main>\n    </div>\n    <label class=\"mt-3\">Disabled</label>\n    <div>\n      <button type=\"button\" class=\"btn btn-primary disabled\">Primary</button>\n      <button type=\"button\" class=\"btn btn-secondary disabled\">Secondary</button>\n      <button type=\"button\" class=\"btn btn-link disabled\">Link</button>\n      <button type=\"button\" class=\"btn btn-outline-primary disabled\">Primary-outlined</button>\n    </div>\n    <!--<app-code [code]=\"SNIPPETS.main.markup\" [lang]=\"'markup'\"></app-code>-->\n    <app-snippet-wrapper [snippets]=\"SNIPPETS.main\"></app-snippet-wrapper>\n  </div>\n</div>\n<h3 class=\"px-3 px-md-0\">Buttons and colored backgrounds</h3>\n<div class=\"card mb-3\" #buttonsLightExample>\n  <div class=\"card-body\">\n    <p>The <code>.btn-light</code> class should only be used when buttons are placed on colored or dark backgrounds/images.</p>\n    <div class=\"row align-items-center no-gutters\">\n      <div class=\"col-6 col-md-4 col-lg bg-primary-element py-4 text-center\">\n        <button class=\"btn btn-light\">Light</button>\n      </div>\n      <div class=\"col-6 col-md-4 col-lg bg-info-element py-4 text-center\">\n        <button class=\"btn btn-light\">Light</button>\n      </div>\n      <div class=\"col-6 col-md-4 col-lg bg-success-element py-4 text-center\">\n        <button class=\"btn btn-light\">Light</button>\n      </div>\n      <div class=\"col-6 col-md-4 col-lg bg-warning-element py-4 text-center\">\n        <button class=\"btn btn-light\">Light</button>\n      </div>\n      <div class=\"col-6 col-md-4 col-lg bg-danger-element py-4 text-center\">\n        <button class=\"btn btn-light\">Light</button>\n      </div>\n      <div class=\"col-6 col-md-4 col-lg bg-image-example py-4 text-center\">\n        <button class=\"btn btn-light\">Light</button>\n      </div>\n    </div>\n  </div>\n</div>\n<h3 class=\"px-3 px-md-0\">Alternative buttons (internal use)</h3>\n<div class=\"card mb-3\" #additionalButtonsExample>\n  <div class=\"card-body\">\n    <p>Since SEB Style is a theme for Bootstrap and Bootstrap has some additional button classes to differentiate the severity or the meaning of a button like <code>.btn-danger</code> for actions like delete and remove that might require a bit more attentions, the following classes are available too. Note however that they'll still fallback to our default classes. For internal apps you can override this behaviour and get alternative buttons by setting <code>$enable-button-variations</code> variable to <code>true</code>.</p>\n    <div>\n      <button type=\"button\" class=\"btn btn-success\">Success</button>\n      <button type=\"button\" class=\"btn btn-warning\">Warning</button>\n      <button type=\"button\" class=\"btn btn-danger\">Danger</button>\n      <button type=\"button\" class=\"btn btn-danger\">Info</button>\n    </div>\n  </div>\n</div>\n<h3 class=\"px-3 px-md-0\">Sizing</h3>\n<div class=\"card mb-3\" #smallButtonsExample>\n  <div class=\"card-body\">\n    <p>Add <code>.btn-sm</code> for smaller buttons and <code>.btn-lg</code> for larger buttons.</p>\n    <div>\n      <app-buttons-sizes></app-buttons-sizes>\n    </div>\n    <app-snippet-wrapper [snippets]=\"SNIPPETS.sizes\"></app-snippet-wrapper>\n  </div>\n</div>\n<!--<app-code [code]=\"markup\" [lang]=\"'markup'\"></app-code>-->\n\n"
+module.exports = "<a name=\"buttons\"><h2 class=\"px-3 px-md-0 my-3\">Buttons</h2></a>\n<div class=\"card mb-4\" id=\"buttonsExample\">\n  <h4 class=\"card-header\">Main buttons</h4>\n  <div class=\"card-body\">\n    <p>We have three main button classes that we use <code>.btn-primary</code>, <code>.btn-secondary</code> and <code>.btn-link</code>, use the latter to give buttons the same behavior as normal links (used for links placed outside text segments and paragraphs as well as actions similar to \"go to\" or regular links).</p>\n    <label class=\"d-block\">Standard</label>\n    <button type=\"button\" class=\"btn btn-primary\">Primary</button>\n    <button type=\"button\" class=\"btn btn-secondary\">Secondary</button>\n    <button type=\"button\" class=\"btn btn-link\">Link</button>\n    <button type=\"button\" class=\"btn btn-outline-primary\">Primary outlined</button>\n    <label class=\"d-block mt-3\">Disabled</label>\n    <button type=\"button\" class=\"btn btn-primary disabled\">Primary</button>\n    <button type=\"button\" class=\"btn btn-secondary disabled\">Secondary</button>\n    <button type=\"button\" class=\"btn btn-link disabled\">Link</button>\n    <button type=\"button\" class=\"btn btn-outline-primary disabled\">Primary-outlined</button>\n    <exemplify [selector]=\"'#buttonsExample .btn:not(.disabled)'\"></exemplify>\n  </div>\n</div>\n<div class=\"card mb-4\" id=\"buttonsLightExample\">\n  <h4 class=\"card-header\">Buttons and colored backgrounds</h4>\n  <div class=\"card-body\">\n    <p>The <code>.btn-light</code> class should only be used when buttons are placed on colored or dark backgrounds/images.</p>\n    <div class=\"row align-items-center no-gutters\">\n      <div class=\"col-6 col-md-4 col-lg bg-primary-element py-4 text-center\">\n        <button class=\"btn btn-light\">Light</button>\n      </div>\n      <div class=\"col-6 col-md-4 col-lg bg-info-element py-4 text-center\">\n        <button class=\"btn btn-light\">Light</button>\n      </div>\n      <div class=\"col-6 col-md-4 col-lg bg-success-element py-4 text-center\">\n        <button class=\"btn btn-light\">Light</button>\n      </div>\n      <div class=\"col-6 col-md-4 col-lg bg-warning-element py-4 text-center\">\n        <button class=\"btn btn-light\">Light</button>\n      </div>\n      <div class=\"col-6 col-md-4 col-lg bg-danger-element py-4 text-center\">\n        <button class=\"btn btn-light\">Light</button>\n      </div>\n      <div class=\"col-6 col-md-4 col-lg bg-image-example py-4 text-center\">\n        <button class=\"btn btn-light\">Light</button>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"card mb-4\" id=\"additionalButtonsExample\">\n  <h4 class=\"card-header\">Alternative buttons (internal use)</h4>\n  <div class=\"card-body\">\n    <p>Since SEB Style is a theme for Bootstrap and Bootstrap has some additional button classes to differentiate the severity or the meaning of a button like <code>.btn-danger</code> for actions like delete and remove that might require a bit more attentions, the following classes are available too. Note however that they'll still fallback to our default classes. For internal apps you can override this behaviour and get alternative buttons by setting <code>$enable-button-variations</code> variable to <code>true</code>.</p>\n    <button type=\"button\" class=\"btn btn-success\">Success</button>\n    <button type=\"button\" class=\"btn btn-warning\">Warning</button>\n    <button type=\"button\" class=\"btn btn-danger\">Danger</button>\n    <button type=\"button\" class=\"btn btn-danger\">Info</button>\n    <exemplify [selector]=\"'#additionalButtonsExample .btn:not(.disabled)'\"></exemplify>\n  </div>\n</div>\n<div class=\"card mb-4\" id=\"smallButtonsExample\">\n  <h4 class=\"card-header\">Sizing</h4>\n  <div class=\"card-body\">\n    <p>Add <code>.btn-sm</code> for smaller buttons and <code>.btn-lg</code> for larger buttons.</p>\n    <button type=\"button\" class=\"btn btn-sm btn-primary\">Small primary</button>\n    <button type=\"button\" class=\"btn btn-sm btn-secondary\">Small secondary</button>\n    <button type=\"button\" class=\"btn btn-primary\">Primary</button>\n    <button type=\"button\" class=\"btn btn-secondary\">Secondary</button>\n    <button type=\"button\" class=\"btn btn-lg btn-primary\">Large primary</button>\n    <button type=\"button\" class=\"btn btn-lg btn-secondary\">Large secondary</button>\n    <exemplify [selector]=\"'#smallButtonsExample .btn:not(.disabled)'\"></exemplify>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1349,29 +1083,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var ButtonsComponent = /** @class */ (function () {
     function ButtonsComponent() {
-        this.SNIPPETS = {
-            main: [
-                {
-                    name: 'markup',
-                    lang: 'markup',
-                    src: 'buttons/buttons-main/buttons-main.component.html'
-                }, {
-                    lang: 'typescript',
-                    src: 'buttons/buttons-main/buttons-main.component.ts'
-                },
-                {
-                    lang: 'typescript',
-                    src: 'https://raw.githubusercontent.com/ng-bootstrap/ng-bootstrap/master/demo/src/app/components/buttons/demos/checkbox/buttons-checkbox.ts'
-                }
-            ],
-            sizes: [
-                {
-                    name: 'markup',
-                    lang: 'markup',
-                    src: 'buttons/buttons-sizes/buttons-sizes.component.html'
-                }
-            ]
-        };
     }
     ButtonsComponent.prototype.ngOnInit = function () {
     };
@@ -1384,6 +1095,58 @@ var ButtonsComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], ButtonsComponent);
     return ButtonsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/example/components/cards/cards.component.html":
+/*!***********************************************************!*\
+  !*** ./src/example/components/cards/cards.component.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<a name=\"cards\"><h2 class=\"px-3 px-md-0 my-3\">Cards</h2></a>\n<div class=\"row\">\n  <div class=\"col mb-4\">\n    <div class=\"card\">\n      <div class=\"card-body\" id=\"cardExample\">\n        <h4 class=\"card-title\">Card with header and content</h4>\n        <p class=\"mb-3\">For more info and examples please refer to Bootstraps <a href=\"http://getbootstrap.com/docs/4.1/components/card/\" target=\"_blank\">official documentation</a>.</p>\n        <div class=\"card\">\n          <h4 class=\"card-header\">Card header</h4>\n          <div class=\"card-body\">\n            <p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>\n            <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n          </div>\n        </div>\n        <exemplify [selector]=\"'#cardExample > .card'\"></exemplify>\n      </div>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/example/components/cards/cards.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/example/components/cards/cards.component.ts ***!
+  \*********************************************************/
+/*! exports provided: CardsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CardsComponent", function() { return CardsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CardsComponent = /** @class */ (function () {
+    function CardsComponent() {
+    }
+    CardsComponent.prototype.ngOnInit = function () {
+    };
+    CardsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-cards',
+            template: __webpack_require__(/*! ./cards.component.html */ "./src/example/components/cards/cards.component.html"),
+            styles: []
+        }),
+        __metadata("design:paramtypes", [])
+    ], CardsComponent);
+    return CardsComponent;
 }());
 
 
@@ -1435,6 +1198,89 @@ var CheckboxesAndSlideTogglesComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], CheckboxesAndSlideTogglesComponent);
     return CheckboxesAndSlideTogglesComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/example/components/dropdowns/dropdowns.component.html":
+/*!*******************************************************************!*\
+  !*** ./src/example/components/dropdowns/dropdowns.component.html ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<a name=\"tabs\"><h2 class=\"px-3 px-md-0 my-3\">Selects and dropdowns</h2></a>\n<p class=\"px-3 px-md-0\">The native html select element looks and behaves a bit differently depending on the browser and the device a user is on but it will always work and iOS and Android devices will use their own native components in it's place.</p>\n<div class=\"card mb-4\" id=\"selectExample\">\n  <h4 class=\"card-header\">\n    Native html select\n  </h4>\n  <div class=\"card-body\">\n    <form>\n      <div class=\"row\">\n        <div class=\"col-12 col-sm-auto\">\n          <label for=\"native_select\">Example select</label>\n          <select class=\"custom-select\" id=\"native_select\">\n            <option>First</option>\n            <option>Second</option>\n            <option>Third</option>\n            <option>Forth</option>\n          </select>\n        </div>\n      </div>\n    </form>\n    <exemplify [selector]=\"'#selectExample .col-12 > *'\"></exemplify>\n  </div>\n</div>\n<div class=\"alert alert-info mt-5\">\n  <strong>Framework needed!</strong> Please note that the examples below uses a framework for Angular called <a class=\"alert-link\" href=\"https://ng-bootstrap.github.io/\" target=\"_blank\">ng-bootstrap</a> and their <a class=\"alert-link\" href=\"https://ng-bootstrap.github.io/#/components/dropdown/\" target=\"_blank\">dropdown component</a>, so in order to use the components below you need to add ng-bootstrap to your project.\n</div>\n<div class=\"card mb-4\" id=\"dropdownExample\">\n  <h4 class=\"card-header\">\n    Angular dropdown select\n  </h4>\n  <div class=\"card-body\">\n    <form>\n      <div class=\"row\">\n        <div class=\"col-12 col-sm-auto\">\n          <label for=\"ngb_dropdown\">Example dropdown select</label>\n          <div ngbDropdown>\n            <button class=\"btn btn-outline-primary w-100\" id=\"ngb_dropdown\" ngbDropdownToggle>{{selected ? selected:'select...'}}</button>\n            <div ngbDropdownMenu aria-labelledby=\"dropdownExample\" class=\"w-100 mb-3\">\n              <button *ngFor=\"let option of options\" class=\"dropdown-item\" (click)=\"selected = option\" [ngClass]=\"{'active':selected === option}\">{{option}}</button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </form>\n    <code>\n      <p class=\"mt-3 mb-0\">Selected: {{selected | json}}</p>\n    </code>\n    <exemplify [selector]=\"'#dropdownExample .col-12 > *'\" [escapeStrings]=\"[' ngbDropdownToggle', ' ngbDropdownMenu',' ngbDropdown', '[ngClass]']\"></exemplify>\n  </div>\n</div>\n<div class=\"card mb-4\" id=\"multiselectExample\">\n  <h4 class=\"card-header\">\n    Angular multi-select\n  </h4>\n  <div class=\"card-body\">\n    <form>\n      <div class=\"row\">\n        <div class=\"col-12 col-sm-auto\">\n          <label for=\"ngb_multiselect\">Example multi-select</label>\n          <div ngbDropdown #multiSelect=\"ngbDropdown\">\n            <button ngClass=\"{{classes ? classes:'btn btn-secondary w-100'}}\" id=\"ngb_multiselect\" ngbDropdownToggle>{{selectedMulti.length === 0 ? 'select...': selectedMulti.length === 1 ? selectedMulti[0]: selectedMulti.length + ' selected'}}</button>\n            <div ngbDropdownMenu aria-labelledby=\"ngb_multiselect\" class=\"w-100 mb-3\">\n              <div class=\"dropdown-control\">\n                <div class=\"row mb-2 d-sm-none\">\n                  <div class=\"col text-right\">\n                    <span>Close</span><i class=\"fal fa-times ml-2\"></i>\n                  </div>\n                </div>\n                <div class=\"btn-group w-100\">\n                  <button class=\"btn btn-sm btn-secondary w-100\" (click)=\"$event.stopPropagation();deselectAll()\">None</button>\n                  <button class=\"btn btn-sm btn-secondary w-100\" (click)=\"$event.stopPropagation();selectAll()\">All</button>\n                </div>\n                <div class=\"dropdown-divider\"></div>\n              </div>\n              <div class=\"dropdown-multi-select-options\">\n                <button *ngFor=\"let option of options\" class=\"dropdown-item\" (click)=\"$event.stopPropagation();select(option)\" [ngClass]=\"{'active':selectedMulti.indexOf(option) !== -1}\">{{option}}</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </form>\n    <code>\n      <p class=\"mt-3 mb-0\">Selected: {{selectedMulti | json}}</p>\n    </code>\n    <exemplify [selector]=\"'#multiselectExample .col-12 > *'\" [escapeStrings]=\"[' ngbDropdownToggle', ' ngbDropdownMenu',' ngbDropdown', '[ngClass]']\"></exemplify>\n  </div>\n</div>\n<div class=\"card mb-4\" id=\"dropdownSizeExample\">\n  <h4 class=\"card-header\">\n    Angular dropdown select sizing\n  </h4>\n  <div class=\"card-body\">\n    <form>\n      <div class=\"row\">\n        <div class=\"col-12 col-sm-auto\">\n          <label for=\"dropdownSmall\">Small dropdown select</label>\n          <div ngbDropdown>\n            <button class=\"btn btn-secondary btn-sm w-100\" id=\"dropdownSmall\" ngbDropdownToggle>{{selected ? selected:'select...'}}</button>\n            <div ngbDropdownMenu aria-labelledby=\"dropdownSmall\" class=\"w-100 mb-3\">\n              <button *ngFor=\"let option of options\" class=\"dropdown-item\" (click)=\"selected = option\" [ngClass]=\"{'active':selected === option}\">{{option}}</button>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-12 col-sm-auto\">\n          <label for=\"dropdownNormal\">Normal dropdown select</label>\n          <div ngbDropdown>\n            <button class=\"btn btn-secondary w-100\" id=\"dropdownNormal\" ngbDropdownToggle>{{selected ? selected:'select...'}}</button>\n            <div ngbDropdownMenu aria-labelledby=\"dropdownNormal\" class=\"w-100 mb-3\">\n              <button *ngFor=\"let option of options\" class=\"dropdown-item\" (click)=\"selected = option\" [ngClass]=\"{'active':selected === option}\">{{option}}</button>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-12 col-sm-auto\">\n          <label for=\"dropdownLarge\">Large dropdown select</label>\n          <div ngbDropdown>\n            <button class=\"btn btn-secondary btn-lg w-100\" id=\"dropdownLarge\" ngbDropdownToggle>{{selected ? selected:'select...'}}</button>\n            <div ngbDropdownMenu aria-labelledby=\"dropdownLarge\" class=\"w-100 mb-3\">\n              <button *ngFor=\"let option of options\" class=\"dropdown-item\" (click)=\"selected = option\" [ngClass]=\"{'active':selected === option}\">{{option}}</button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </form>\n    <code>\n      <p class=\"mt-3 mb-0\">Selected: {{selected | json}}</p>\n    </code>\n    <exemplify [selector]=\"'#dropdownSizeExample .col-12 > *'\" [escapeStrings]=\"[' ngbDropdownToggle', ' ngbDropdownMenu',' ngbDropdown', '[ngClass]']\"></exemplify>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/example/components/dropdowns/dropdowns.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/example/components/dropdowns/dropdowns.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: DropdownsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DropdownsComponent", function() { return DropdownsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DropdownsComponent = /** @class */ (function () {
+    function DropdownsComponent() {
+        this.options = ['First', 'Second', 'Third', 'Forth']; // available options, used by dropdown and multi-select example
+        this.selectedMulti = []; // selected options for multi-select example
+    }
+    /**
+     * Select
+     * @Param {string} option - option to be selected/deselected
+     */
+    DropdownsComponent.prototype.select = function (option) {
+        // get index of option in selected options
+        var index = this.selectedMulti.indexOf(option);
+        // if option has index i.e. exists in array...
+        if (index !== -1) {
+            // ...remove it from the array
+            this.selectedMulti.splice(index, 1);
+        }
+        else {
+            // ...if not add it to the array
+            this.selectedMulti.push(option);
+        }
+    };
+    /**
+     * Select all - selects all options
+     */
+    DropdownsComponent.prototype.selectAll = function () {
+        this.selectedMulti = this.options.slice();
+    };
+    /**
+     * Deselect all - deselects all options
+     */
+    DropdownsComponent.prototype.deselectAll = function () {
+        this.selectedMulti = [];
+    };
+    DropdownsComponent.prototype.ngOnInit = function () {
+    };
+    DropdownsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-dropdowns',
+            template: __webpack_require__(/*! ./dropdowns.component.html */ "./src/example/components/dropdowns/dropdowns.component.html"),
+            styles: []
+        }),
+        __metadata("design:paramtypes", [])
+    ], DropdownsComponent);
+    return DropdownsComponent;
 }());
 
 
@@ -1866,27 +1712,27 @@ var LoadersComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/example/components/tables/table-bordered/table-bordered.component.html":
-/*!************************************************************************************!*\
-  !*** ./src/example/components/tables/table-bordered/table-bordered.component.html ***!
-  \************************************************************************************/
+/***/ "./src/example/components/modals/modals.component.html":
+/*!*************************************************************!*\
+  !*** ./src/example/components/modals/modals.component.html ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table class=\"table table-bordered\">\n  <thead>\n  <tr>\n    <th>#</th>\n    <th>First Name</th>\n    <th>Last Name</th>\n    <th>Username</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr>\n    <th scope=\"row\">1</th>\n    <td>Mark</td>\n    <td>Otto</td>\n    <td>@mdo</td>\n  </tr>\n  <tr>\n    <th scope=\"row\">2</th>\n    <td>Mark</td>\n    <td>Otto</td>\n    <td>@TwBootstrap</td>\n  </tr>\n  <tr>\n    <th scope=\"row\">3</th>\n    <td>Jacob</td>\n    <td>Thornton</td>\n    <td>@fat</td>\n  </tr>\n  <tr>\n    <th scope=\"row\">4</th>\n    <td colspan=\"2\">Larry the Bird</td>\n    <td>@twitter</td>\n  </tr>\n  </tbody>\n</table>"
+module.exports = "<a name=\"modals\"><h2 class=\"px-3 px-md-0 my-3\">Modals</h2></a>\n<div class=\"alert alert-info\"><strong>Framework needed!</strong> Please note that the examples below is just a representation of how modals look and the needed markup. In order to use modals you need a framework to control when and how to show them. If you're using angular, please take a look at <a class=\"alert-link\" href=\"https://ng-bootstrap.github.io/\" target=\"_blank\">ng-bootstrap</a> and their <a class=\"alert-link\" href=\"https://ng-bootstrap.github.io/#/components/modal\" target=\"_blank\">modal component</a>.</div>\n<div class=\"card\" id=\"modalExample\">\n  <h4 class=\"card-header\">Standard modal</h4>\n  <div class=\"card-body bg-secondary px-0\">\n    <div class=\"modal\">\n      <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n          <div class=\"modal-header\">\n            <h4 class=\"modal-title\">Modal title</h4>\n          </div>\n          <div class=\"modal-body\">\n            <p>Modal body text goes here.</p>\n          </div>\n          <div class=\"modal-footer\">\n            <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n            <button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"card-body pt-0\">\n    <exemplify [selector]=\"'#modalExample .modal'\"></exemplify>\n  </div>\n</div>\n<div class=\"card my-3\">\n  <h4 class=\"card-header\">Modal with backdrop</h4>\n  <div class=\"card-body\"><p>Below is a example of a standard modal opened with a backdrop.</p>\n    <button class=\"btn btn-primary\" (click)=\"modal = !modal\">Open modal</button>\n  </div>\n  <div  class=\"modal\" *ngIf=\"modal\" style=\"display: block;opacity: 1;position: fixed;top: 0;right: 0;bottom: 0; left: 0;z-index: 1050;\" (click)=\"modal = !modal\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h4 class=\"modal-title\">Modal title</h4>\n        </div>\n        <div class=\"modal-body\">\n          <p>Modal body text goes here.</p>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n          <button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"modal-backdrop fade show\" *ngIf=\"modal\"></div>\n</div>\n<div class=\"card my-3\">\n  <h4 class=\"card-header\">Aside modal</h4>\n  <div class=\"card-body\">\n    <p>Add <code>modal-aside</code> class to the modal element together with either <code>modal-aside-right</code> or <code>modal-aside-left</code> to get a modal that will slide in from the side.<br>Ex. <code>&lt;div  class=&quot;modal modal-aside modal-aside-right&quot;&gt;...&lt;/div&gt;</code></p>\n    <button class=\"btn btn-primary\" (click)=\"slideModal = !slideModal\">Open aside modal</button>\n  </div>\n  <div  class=\"modal modal-aside modal-aside-right\" [ngClass]=\"{'active': slideModal}\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h4 class=\"modal-title\">Modal title</h4>\n        </div>\n        <div class=\"modal-body\">\n          <p>Modal body text goes here.</p>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\" (click)=\"slideModal = !slideModal\">Close</button>\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"slideModal = !slideModal\">Save changes</button>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"card my-3\">\n  <h4 class=\"card-header\">Fullscreen modal aka take-over</h4>\n  <div class=\"card-body\">\n    <p>Add <code>modal-fullscreen</code> class to the modal element to get a fullscreen modal.<br>Ex. <code>&lt;div  class=&quot;modal modal-fullscreen&quot;&gt;...&lt;/div&gt;</code></p>\n    <button class=\"btn btn-primary\" (click)=\"takeOverModal = !takeOverModal\">Open fullscreen modal</button>\n  </div>\n  <div  class=\"modal modal-fullscreen\" *ngIf=\"takeOverModal\" style=\"display: block;opacity: 1;position: fixed;top: 0;right: 0;bottom: 0; left: 0;z-index: 1050;\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h4 class=\"modal-title\">Modal title</h4>\n        </div>\n        <div class=\"modal-body\">\n          <p>Modal body text goes here.</p>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\" (click)=\"takeOverModal = !takeOverModal\">Close</button>\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"takeOverModal = !takeOverModal\">Save changes</button>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
-/***/ "./src/example/components/tables/table-bordered/table-bordered.component.ts":
-/*!**********************************************************************************!*\
-  !*** ./src/example/components/tables/table-bordered/table-bordered.component.ts ***!
-  \**********************************************************************************/
-/*! exports provided: TableBorderedComponent */
+/***/ "./src/example/components/modals/modals.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/example/components/modals/modals.component.ts ***!
+  \***********************************************************/
+/*! exports provided: ModalsComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableBorderedComponent", function() { return TableBorderedComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModalsComponent", function() { return ModalsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1898,47 +1744,50 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var TableBorderedComponent = /** @class */ (function () {
-    function TableBorderedComponent() {
+var ModalsComponent = /** @class */ (function () {
+    function ModalsComponent() {
+        this.modal = false;
+        this.slideModal = false;
+        this.takeOverModal = false;
     }
-    TableBorderedComponent.prototype.ngOnInit = function () {
+    ModalsComponent.prototype.ngOnInit = function () {
     };
-    TableBorderedComponent = __decorate([
+    ModalsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-table-bordered',
-            template: __webpack_require__(/*! ./table-bordered.component.html */ "./src/example/components/tables/table-bordered/table-bordered.component.html"),
-            styles: []
+            selector: 'app-modals',
+            template: __webpack_require__(/*! ./modals.component.html */ "./src/example/components/modals/modals.component.html"),
+            styles: ["\n        #modalExample .modal {\n            opacity: 1;\n            display: block;\n            position: initial;\n        }\n        .modal.active {\n            display: block;\n        }\n    "]
         }),
         __metadata("design:paramtypes", [])
-    ], TableBorderedComponent);
-    return TableBorderedComponent;
+    ], ModalsComponent);
+    return ModalsComponent;
 }());
 
 
 
 /***/ }),
 
-/***/ "./src/example/components/tables/table-hoverable/table-hoverable.component.html":
-/*!**************************************************************************************!*\
-  !*** ./src/example/components/tables/table-hoverable/table-hoverable.component.html ***!
-  \**************************************************************************************/
+/***/ "./src/example/components/pagination/pagination.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/example/components/pagination/pagination.component.html ***!
+  \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table class=\"table table-hover\">\n  <thead>\n  <tr>\n    <th>#</th>\n    <th>First Name</th>\n    <th>Last Name</th>\n    <th>Username</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr>\n    <th scope=\"row\">1</th>\n    <td>Mark</td>\n    <td>Otto</td>\n    <td>@mdo</td>\n  </tr>\n  <tr>\n    <th scope=\"row\">2</th>\n    <td>Jacob</td>\n    <td>Thornton</td>\n    <td>@fat</td>\n  </tr>\n  <tr>\n    <th scope=\"row\">3</th>\n    <td>Larry</td>\n    <td>The bird</td>\n    <td>@twitter</td>\n  </tr>\n  <tr>\n    <th scope=\"row\">3</th>\n    <td colspan=\"2\">Larry the Bird</td>\n    <td>@twitter</td>\n  </tr>\n  </tbody>\n</table>"
+module.exports = "<a name=\"pagination\"><h2 class=\"px-3 px-md-0 my-3\">Pagination</h2></a>\n<div class=\"alert alert-info\"><strong>Framework needed!</strong> Please note that the example below is just a representation of how the pagination looks and the needed markup for it. In order to use pagination you need a framework to control when and how to show different pages. If you're using angular, please take a look at <a class=\"alert-link\" href=\"https://ng-bootstrap.github.io/\" target=\"_blank\">ng-bootstrap</a> and their <a class=\"alert-link\" href=\"https://ng-bootstrap.github.io/#/components/pagination\" target=\"_blank\">pagination component</a>.</div>\n<div class=\"card mb-4\" #paginationExample>\n  <div class=\"card-body\">\n    <nav aria-label=\"...\">\n      <ul class=\"pagination\">\n        <li class=\"page-item disabled\">\n          <a class=\"page-link\" href=\"#\" tabindex=\"-1\" aria-label=\"Previous\">\n            <span aria-hidden=\"true\">&laquo;</span>\n            <span class=\"sr-only\">Previous</span>\n          </a>\n        </li>\n        <li class=\"page-item active\">\n          <a class=\"page-link\" href=\"#\">1 <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">2</a></li>\n        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\n        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">4</a></li>\n        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">5</a></li>\n        <li class=\"page-item\">\n          <a class=\"page-link\" href=\"#\" aria-label=\"Next\">\n            <span aria-hidden=\"true\">&raquo;</span>\n            <span class=\"sr-only\">Next</span>\n          </a>\n        </li>\n      </ul>\n    </nav>\n    <exemplify [selector]=\"'nav'\"></exemplify>\n  </div>\n</div>\n"
 
 /***/ }),
 
-/***/ "./src/example/components/tables/table-hoverable/table-hoverable.component.ts":
-/*!************************************************************************************!*\
-  !*** ./src/example/components/tables/table-hoverable/table-hoverable.component.ts ***!
-  \************************************************************************************/
-/*! exports provided: TableHoverableComponent */
+/***/ "./src/example/components/pagination/pagination.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/example/components/pagination/pagination.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: PaginationComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableHoverableComponent", function() { return TableHoverableComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaginationComponent", function() { return PaginationComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1950,176 +1799,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var TableHoverableComponent = /** @class */ (function () {
-    function TableHoverableComponent() {
+var PaginationComponent = /** @class */ (function () {
+    function PaginationComponent() {
     }
-    TableHoverableComponent.prototype.ngOnInit = function () {
+    PaginationComponent.prototype.ngOnInit = function () {
     };
-    TableHoverableComponent = __decorate([
+    PaginationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-table-hoverable',
-            template: __webpack_require__(/*! ./table-hoverable.component.html */ "./src/example/components/tables/table-hoverable/table-hoverable.component.html"),
+            selector: 'app-pagination',
+            template: __webpack_require__(/*! ./pagination.component.html */ "./src/example/components/pagination/pagination.component.html"),
             styles: []
         }),
         __metadata("design:paramtypes", [])
-    ], TableHoverableComponent);
-    return TableHoverableComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/example/components/tables/table-small/table-small.component.html":
-/*!******************************************************************************!*\
-  !*** ./src/example/components/tables/table-small/table-small.component.html ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<table class=\"table table-sm\">\n  <thead>\n  <tr>\n    <th>#</th>\n    <th>First Name</th>\n    <th>Last Name</th>\n    <th>Username</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr>\n    <th scope=\"row\">1</th>\n    <td>Mark</td>\n    <td>Otto</td>\n    <td>@mdo</td>\n  </tr>\n  <tr>\n    <th scope=\"row\">2</th>\n    <td>Jacob</td>\n    <td>Thornton</td>\n    <td>@fat</td>\n  </tr>\n  <tr>\n    <th scope=\"row\">3</th>\n    <td>Larry</td>\n    <td>The bird</td>\n    <td>@twitter</td>\n  </tr>\n  <tr>\n    <th scope=\"row\">3</th>\n    <td colspan=\"2\">Larry the Bird</td>\n    <td>@twitter</td>\n  </tr>\n  </tbody>\n</table>"
-
-/***/ }),
-
-/***/ "./src/example/components/tables/table-small/table-small.component.ts":
-/*!****************************************************************************!*\
-  !*** ./src/example/components/tables/table-small/table-small.component.ts ***!
-  \****************************************************************************/
-/*! exports provided: TableSmallComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableSmallComponent", function() { return TableSmallComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var TableSmallComponent = /** @class */ (function () {
-    function TableSmallComponent() {
-    }
-    TableSmallComponent.prototype.ngOnInit = function () {
-    };
-    TableSmallComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-table-small',
-            template: __webpack_require__(/*! ./table-small.component.html */ "./src/example/components/tables/table-small/table-small.component.html"),
-            styles: []
-        }),
-        __metadata("design:paramtypes", [])
-    ], TableSmallComponent);
-    return TableSmallComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/example/components/tables/table-standard/table-standard.component.html":
-/*!************************************************************************************!*\
-  !*** ./src/example/components/tables/table-standard/table-standard.component.html ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<table class=\"table\">\n  <thead>\n  <tr>\n    <th>#</th>\n    <th>First Name</th>\n    <th>Last Name</th>\n    <th>Username</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr>\n    <th scope=\"row\">1</th>\n    <td>Mark</td>\n    <td>Otto</td>\n    <td>@mdo</td>\n  </tr>\n  <tr>\n    <th scope=\"row\">2</th>\n    <td>Jacob</td>\n    <td>Thornton</td>\n    <td>@fat</td>\n  </tr>\n  <tr>\n    <th scope=\"row\">3</th>\n    <td>Larry</td>\n    <td>the Bird</td>\n    <td>@twitter</td>\n  </tr>\n  </tbody>\n</table>\n"
-
-/***/ }),
-
-/***/ "./src/example/components/tables/table-standard/table-standard.component.ts":
-/*!**********************************************************************************!*\
-  !*** ./src/example/components/tables/table-standard/table-standard.component.ts ***!
-  \**********************************************************************************/
-/*! exports provided: TableStandardComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableStandardComponent", function() { return TableStandardComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var TableStandardComponent = /** @class */ (function () {
-    function TableStandardComponent() {
-    }
-    TableStandardComponent.prototype.ngOnInit = function () {
-    };
-    TableStandardComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-table-standard',
-            template: __webpack_require__(/*! ./table-standard.component.html */ "./src/example/components/tables/table-standard/table-standard.component.html"),
-            styles: []
-        }),
-        __metadata("design:paramtypes", [])
-    ], TableStandardComponent);
-    return TableStandardComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/example/components/tables/table-striped/table-striped.component.html":
-/*!**********************************************************************************!*\
-  !*** ./src/example/components/tables/table-striped/table-striped.component.html ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<table class=\"table table-striped\">\n  <thead>\n  <tr>\n    <th>#</th>\n    <th>First Name</th>\n    <th>Last Name</th>\n    <th>Username</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr>\n    <th scope=\"row\">1</th>\n    <td>Mark</td>\n    <td>Otto</td>\n    <td>@mdo</td>\n  </tr>\n  <tr>\n    <th scope=\"row\">2</th>\n    <td>Jacob</td>\n    <td>Thornton</td>\n    <td>@fat</td>\n  </tr>\n  <tr>\n    <th scope=\"row\">3</th>\n    <td>Larry</td>\n    <td>the Bird</td>\n    <td>@twitter</td>\n  </tr>\n  </tbody>\n</table>"
-
-/***/ }),
-
-/***/ "./src/example/components/tables/table-striped/table-striped.component.ts":
-/*!********************************************************************************!*\
-  !*** ./src/example/components/tables/table-striped/table-striped.component.ts ***!
-  \********************************************************************************/
-/*! exports provided: TableStripedComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableStripedComponent", function() { return TableStripedComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var TableStripedComponent = /** @class */ (function () {
-    function TableStripedComponent() {
-    }
-    TableStripedComponent.prototype.ngOnInit = function () {
-    };
-    TableStripedComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-table-striped',
-            template: __webpack_require__(/*! ./table-striped.component.html */ "./src/example/components/tables/table-striped/table-striped.component.html"),
-            styles: []
-        }),
-        __metadata("design:paramtypes", [])
-    ], TableStripedComponent);
-    return TableStripedComponent;
+    ], PaginationComponent);
+    return PaginationComponent;
 }());
 
 
@@ -2133,7 +1826,7 @@ var TableStripedComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<a name=\"tables\"><h2 class=\"px-3 px-md-0\">Tables</h2></a>\n<div class=\"alert alert-info\"><strong>Want more table features?</strong> The examples below shows the markup and classes needed when using standard html tables, if you're using angular and want support for sorting, filtering, search, export to CSV etc. please check out <a class=\"alert-link\" href=\"https://hjalmers.github.io/angular-generic-table/\" target=\"_blank\">Angular Generic Table</a>.</div>\n<div class=\"row\">\n  <div class=\"col-md-6 mb-4\">\n    <h4 class=\"px-3 px-md-0\">\n      Standard table\n    </h4>\n    <div class=\"card\" #tableExample>\n      <div class=\"card-body\">\n        <app-table-standard></app-table-standard>\n        <app-snippet-wrapper [snippets]=\"SNIPPETS.standard\"></app-snippet-wrapper>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-md-6 mb-4\">\n    <h4 class=\"px-3 px-md-0\">\n      Striped rows\n    </h4>\n    <div class=\"card\" #tableExampleStriped>\n      <div class=\"card-body\">\n        <app-table-striped></app-table-striped>\n        <app-snippet-wrapper [snippets]=\"SNIPPETS.striped\"></app-snippet-wrapper>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-md-6 mb-4\">\n    <h4 class=\"px-3 px-md-0\">Bordered table</h4>\n    <div class=\"card\" #tableExampleBordered>\n      <div class=\"card-body\">\n        <app-table-bordered></app-table-bordered>\n        <app-snippet-wrapper [snippets]=\"SNIPPETS.bordered\"></app-snippet-wrapper>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-md-6 mb-4\">\n    <h4 class=\"px-3 px-md-0\">Hoverable rows</h4>\n    <div class=\"card\" #tableExampleHover>\n      <div class=\"card-body\">\n        <app-table-hoverable></app-table-hoverable>\n        <app-snippet-wrapper [snippets]=\"SNIPPETS.bordered\"></app-snippet-wrapper>\n      </div>\n    </div>\n  </div>\n  <div class=\"clearfix hidden-sm-down\"></div>\n  <div class=\"col-md-6 mb-4\">\n    <h4 class=\"px-3 px-md-0\">Small table</h4>\n    <div class=\"card\" #tableExampleSmall>\n      <div class=\"card-body\">\n        <app-table-small></app-table-small>\n        <app-snippet-wrapper [snippets]=\"SNIPPETS.bordered\"></app-snippet-wrapper>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-md-6 mb-4\">\n    <h4 class=\"px-3 px-md-0\">Expanded row</h4>\n    <div class=\"card\" #tableExampleExpand>\n      <div class=\"card-body\"><table class=\"table table-sm table-expandable\">\n        <thead>\n        <tr>\n          <th>First Name</th>\n          <th>Last Name</th>\n          <th>Username</th>\n        </tr>\n        </thead>\n        <tbody>\n        <tr>\n          <td>Mark</td>\n          <td>Otto</td>\n          <td>@mdo</td>\n        </tr>\n        <tr class=\"row-open\">\n          <td>Jacob</td>\n          <td>Thornton</td>\n          <td>@fat</td>\n        </tr>\n        <tr class=\"row-expanded\">\n          <td colspan=\"3\">This row is expanded</td>\n        </tr>\n        <tr>\n          <td colspan=\"2\">Larry the Bird</td>\n          <td>@twitter</td>\n        </tr>\n        </tbody>\n      </table>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<a name=\"tables\"><h2 class=\"px-3 px-md-0 my-3\">Tables</h2></a>\n<div class=\"alert alert-info\"><strong>Want more table features?</strong> The examples below shows the markup and classes needed when using standard html tables, if you're using angular and want support for sorting, filtering, search, export to CSV etc. please check out <a class=\"alert-link\" href=\"https://hjalmers.github.io/angular-generic-table/\" target=\"_blank\">Angular Generic Table</a>.</div>\n<div class=\"row\">\n  <div class=\"col-md-6 mb-4\">\n    <h4 class=\"px-3 px-md-0\">\n      Standard table\n    </h4>\n    <div class=\"card\" id=\"tableExample\">\n      <div class=\"card-body\">\n        <table class=\"table\">\n          <thead>\n          <tr>\n            <th>#</th>\n            <th>First Name</th>\n            <th>Last Name</th>\n            <th>Username</th>\n          </tr>\n          </thead>\n          <tbody>\n          <tr>\n            <th scope=\"row\">1</th>\n            <td>Mark</td>\n            <td>Otto</td>\n            <td>@mdo</td>\n          </tr>\n          <tr>\n            <th scope=\"row\">2</th>\n            <td>Jacob</td>\n            <td>Thornton</td>\n            <td>@fat</td>\n          </tr>\n          <tr>\n            <th scope=\"row\">3</th>\n            <td>Larry</td>\n            <td>the Bird</td>\n            <td>@twitter</td>\n          </tr>\n          </tbody>\n        </table>\n        <exemplify [sources]=\"[{name:'markup', src: '<table class=&quot;table&quot;>...</table>', lang:'markup'}]\"></exemplify>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-md-6 mb-4\">\n    <h4 class=\"px-3 px-md-0\">\n      Striped rows\n    </h4>\n    <div class=\"card\" id=\"tableExampleStriped\">\n      <div class=\"card-body\">\n        <table class=\"table table-striped\">\n          <thead>\n          <tr>\n            <th>#</th>\n            <th>First Name</th>\n            <th>Last Name</th>\n            <th>Username</th>\n          </tr>\n          </thead>\n          <tbody>\n          <tr>\n            <th scope=\"row\">1</th>\n            <td>Mark</td>\n            <td>Otto</td>\n            <td>@mdo</td>\n          </tr>\n          <tr>\n            <th scope=\"row\">2</th>\n            <td>Jacob</td>\n            <td>Thornton</td>\n            <td>@fat</td>\n          </tr>\n          <tr>\n            <th scope=\"row\">3</th>\n            <td>Larry</td>\n            <td>the Bird</td>\n            <td>@twitter</td>\n          </tr>\n          </tbody>\n        </table>\n        <exemplify [sources]=\"[{name:'markup', src: '<table class=&quot;table table-striped&quot;>...</table>', lang:'markup'}]\"></exemplify>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-md-6 mb-4\">\n    <h4 class=\"px-3 px-md-0\">Bordered table</h4>\n    <div class=\"card\" id=\"tableExampleBordered\">\n      <div class=\"card-body\">\n        <table class=\"table table-bordered\">\n          <thead>\n          <tr>\n            <th>#</th>\n            <th>First Name</th>\n            <th>Last Name</th>\n            <th>Username</th>\n          </tr>\n          </thead>\n          <tbody>\n          <tr>\n            <th scope=\"row\">1</th>\n            <td>Mark</td>\n            <td>Otto</td>\n            <td>@mdo</td>\n          </tr>\n          <tr>\n            <th scope=\"row\">2</th>\n            <td>Mark</td>\n            <td>Otto</td>\n            <td>@TwBootstrap</td>\n          </tr>\n          <tr>\n            <th scope=\"row\">3</th>\n            <td>Jacob</td>\n            <td>Thornton</td>\n            <td>@fat</td>\n          </tr>\n          <tr>\n            <th scope=\"row\">4</th>\n            <td colspan=\"2\">Larry the Bird</td>\n            <td>@twitter</td>\n          </tr>\n          </tbody>\n        </table>\n        <exemplify [sources]=\"[{name:'markup', src: '<table class=&quot;table table-bordered&quot;>...</table>', lang:'markup'}]\"></exemplify>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-md-6 mb-4\">\n    <h4 class=\"px-3 px-md-0\">Hoverable rows</h4>\n    <div class=\"card\" id=\"tableExampleHover\">\n      <div class=\"card-body\">\n        <table class=\"table table-hover\">\n          <thead>\n          <tr>\n            <th>#</th>\n            <th>First Name</th>\n            <th>Last Name</th>\n            <th>Username</th>\n          </tr>\n          </thead>\n          <tbody>\n          <tr>\n            <th scope=\"row\">1</th>\n            <td>Mark</td>\n            <td>Otto</td>\n            <td>@mdo</td>\n          </tr>\n          <tr>\n            <th scope=\"row\">2</th>\n            <td>Jacob</td>\n            <td>Thornton</td>\n            <td>@fat</td>\n          </tr>\n          <tr>\n            <th scope=\"row\">3</th>\n            <td>Larry</td>\n            <td>The bird</td>\n            <td>@twitter</td>\n          </tr>\n          <tr>\n            <th scope=\"row\">3</th>\n            <td colspan=\"2\">Larry the Bird</td>\n            <td>@twitter</td>\n          </tr>\n          </tbody>\n        </table>\n        <exemplify [sources]=\"[{name:'markup', src: '<table class=&quot;table table-hover&quot;>...</table>', lang:'markup'}]\"></exemplify>\n      </div>\n    </div>\n  </div>\n  <div class=\"clearfix hidden-sm-down\"></div>\n  <div class=\"col-md-6 mb-4\">\n    <h4 class=\"px-3 px-md-0\">Small table</h4>\n    <div class=\"card\" id=\"tableExampleSmall\">\n      <div class=\"card-body\">\n        <table class=\"table table-sm\">\n          <thead>\n          <tr>\n            <th>#</th>\n            <th>First Name</th>\n            <th>Last Name</th>\n            <th>Username</th>\n          </tr>\n          </thead>\n          <tbody>\n          <tr>\n            <th scope=\"row\">1</th>\n            <td>Mark</td>\n            <td>Otto</td>\n            <td>@mdo</td>\n          </tr>\n          <tr>\n            <th scope=\"row\">2</th>\n            <td>Jacob</td>\n            <td>Thornton</td>\n            <td>@fat</td>\n          </tr>\n          <tr>\n            <th scope=\"row\">3</th>\n            <td>Larry</td>\n            <td>The bird</td>\n            <td>@twitter</td>\n          </tr>\n          <tr>\n            <th scope=\"row\">3</th>\n            <td colspan=\"2\">Larry the Bird</td>\n            <td>@twitter</td>\n          </tr>\n          </tbody>\n        </table>\n        <exemplify [sources]=\"[{name:'markup', src: '<table class=&quot;table table-sm&quot;>...</table>', lang:'markup'}]\"></exemplify>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-md-6 mb-4\">\n    <h4 class=\"px-3 px-md-0\">Expanded row</h4>\n    <div class=\"card\" id=\"tableExampleExpand\">\n      <div class=\"card-body\">\n        <table class=\"table table-sm table-expandable\">\n        <thead>\n        <tr>\n          <th>First Name</th>\n          <th>Last Name</th>\n          <th>Username</th>\n        </tr>\n        </thead>\n        <tbody>\n        <tr>\n          <td>Mark</td>\n          <td>Otto</td>\n          <td>@mdo</td>\n        </tr>\n        <tr class=\"row-open\">\n          <td>Jacob</td>\n          <td>Thornton</td>\n          <td>@fat</td>\n        </tr>\n        <tr class=\"row-expanded\">\n          <td colspan=\"3\">This row is expanded</td>\n        </tr>\n        <tr>\n          <td colspan=\"2\">Larry the Bird</td>\n          <td>@twitter</td>\n        </tr>\n        </tbody>\n      </table>\n        <exemplify [sources]=\"[{name:'markup', src: '<table class=&quot;table table-expandable&quot;>...</table>', lang:'markup'}]\"></exemplify>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2258,6 +1951,110 @@ var TabsComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/example/components/tooltips/tooltips.component.html":
+/*!*****************************************************************!*\
+  !*** ./src/example/components/tooltips/tooltips.component.html ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<a name=\"tooltips\"><h2 class=\"px-3 px-md-0 my-3\">Tooltips</h2></a>\n<div class=\"alert alert-info\"><strong>Framework needed!</strong> Please note that the example below is just a representation of how the tooltips look and the needed markup. In order to use tooltips you need a framework to control when and how to show tooltips. If you're using angular, please take a look at <a class=\"alert-link\" href=\"https://ng-bootstrap.github.io/\" target=\"_blank\">ng-bootstrap</a> and their <a class=\"alert-link\" href=\"https://ng-bootstrap.github.io/#/components/tooltip\" target=\"_blank\">tooltip component</a>.</div>\n<div class=\"card mb-4\" id=\"tooltipsExample\">\n  <div class=\"card-body bg-secondary\">\n      <div class=\"tooltip bs-tooltip-top\" role=\"tooltip\">\n        <div class=\"arrow\"></div>\n        <div class=\"tooltip-inner\">\n          Tooltip on the top\n        </div>\n      </div>\n      <div class=\"tooltip bs-tooltip-right\" role=\"tooltip\">\n        <div class=\"arrow\"></div>\n        <div class=\"tooltip-inner\">\n          Tooltip on the right\n        </div>\n      </div>\n      <div class=\"tooltip bs-tooltip-bottom\" role=\"tooltip\">\n        <div class=\"arrow\"></div>\n        <div class=\"tooltip-inner\">\n          Tooltip on the bottom\n        </div>\n      </div>\n      <div class=\"tooltip bs-tooltip-left\" role=\"tooltip\">\n        <div class=\"arrow\"></div>\n        <div class=\"tooltip-inner\">\n          Tooltip on the left\n        </div>\n      </div>\n  </div>\n  <div class=\"card-body pt-0\">\n    <exemplify [selector]=\"'#tooltipsExample .card-body > .tooltip'\"></exemplify>\n  </div>\n</div>\n<div class=\"card mb-4\">\n  <h4 class=\"card-header\">Usage and highlighting</h4>\n  <div class=\"card-body\">\n    <p>Use the traditional <code>&lt;abbr&gt;</code>-tag or the <code>.text-help</code> class to underline single words where you want to provide additional information inside a tooltip. In forms use <code>&lt;i class=\"fa-info-circle\"&gt;&lt;/i&gt;</code> to display an <i class=\"fal fa-info-circle\"></i>-icon.</p>\n  </div>\n</div>\n<div class=\"card mb-4\" id=\"tooltipExample\">\n  <h4 class=\"card-header\">Angular tooltip usage</h4>\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">Tooltip within text</h5>\n    <p>\n      Lorem ipsum dolor sit amet, <abbr placement=\"top\" ngbTooltip=\"Consectētur, third-person singular present active subjunctive of consector.\" container=\"body\">consectetur</abbr> adipiscing elit. Mauris in justo id eros mattis aliquet non vel orci. Cras a pulvinar enim, congue pretium velit. Donec ut bibendum felis, vel ultricies metus. Suspendisse <span class=\"text-help\" placement=\"top\" ngbTooltip=\"This time we've used the class 'text-help' to dash underline condimentum.\" container=\"body\">condimentum</span> magna vitae orci facilisis, nec lacinia elit semper.\n    </p>\n    <exemplify [selector]=\"'#tooltipExample > .card-body > p'\" [escapeStrings]=\"[' ngbTooltip',' ngClass', '[ngClass]']\"></exemplify>\n  </div>\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">Tooltip inside table</h5>\n    <table class=\"table\">\n      <thead>\n      <tr>\n        <th>#</th>\n        <th><span class=\"text-help\" ngbTooltip=\"This column shows first names.\" container=\"body\">First Name</span></th>\n        <th>Last Name</th>\n        <th>Username</th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr>\n        <th scope=\"row\">1</th>\n        <td><span class=\"text-help\" ngbTooltip=\"The name is Mark.\" container=\"body\">Mark</span></td>\n        <td>Otto</td>\n        <td>@mdo</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">2</th>\n        <td><span class=\"text-help\" ngbTooltip=\"The name is Jacob.\" container=\"body\">Jacob</span></td>\n        <td>Thornton</td>\n        <td>@fat</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">3</th>\n        <td><span class=\"text-help\" ngbTooltip=\"The name is Larry.\" container=\"body\">Larry</span></td>\n        <td>the Bird</td>\n        <td>@twitter</td>\n      </tr>\n      </tbody>\n    </table>\n    <exemplify [selector]=\"'#tooltipExample .card-body .table'\" [escapeStrings]=\"[' ngbTooltip',' ngClass', '[ngClass]']\"></exemplify>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/example/components/tooltips/tooltips.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/example/components/tooltips/tooltips.component.ts ***!
+  \***************************************************************/
+/*! exports provided: TooltipsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TooltipsComponent", function() { return TooltipsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TooltipsComponent = /** @class */ (function () {
+    function TooltipsComponent() {
+    }
+    TooltipsComponent.prototype.ngOnInit = function () {
+    };
+    TooltipsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-tooltips',
+            template: __webpack_require__(/*! ./tooltips.component.html */ "./src/example/components/tooltips/tooltips.component.html"),
+            styles: ["\n      .tooltip {\n          position: relative;\n          display: inline-block;\n          margin: 10px 20px;\n          opacity: 1;\n      }\n      .bs-tooltip-right .arrow, .bs-tooltip-left .arrow {\n          top: calc(50% - 0.4rem);\n      }\n      .bs-tooltip-top .arrow, .bs-tooltip-bottom .arrow {\n          right: calc(50% - 0.4rem);\n      }\n  "]
+        }),
+        __metadata("design:paramtypes", [])
+    ], TooltipsComponent);
+    return TooltipsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/example/components/typography/typography.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/example/components/typography/typography.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<a name=\"typography\"><h2 class=\"px-3 px-md-0 my-3\">Fonts and typography</h2></a>\n<div class=\"card\">\n  <div class=\"card-body\" id=\"headings\">\n    <h4 class=\"card-title\">Headings</h4>\n    <p>Note that the font sizes for <code>h1</code>, <code>h2</code> and <code>h3</code> adjust according to viewport size.</p>\n    <h1>Heading h1</h1>\n    <h2>Heading h2</h2>\n    <h3>Heading h3</h3>\n    <h4>Heading h4</h4>\n    <h5>Heading h5</h5>\n    <h6>Heading h6</h6>\n    <exemplify [selector]=\"'#headings > *:not(exemplify):not(.card-title)'\"></exemplify>\n  </div>\n  <div class=\"card-body\" id=\"lead\">\n    <h4 class=\"card-title\">Lead</h4>\n    <p class=\"lead\">Sed sit amet mauris ut ligula vulputate gravida sit amet ac nisi. Sed iaculis magna massa, ut lacinia ante congue vitae.</p>\n    <exemplify [selector]=\"'#lead > .lead'\"></exemplify>\n  </div>\n  <div class=\"card-body\" id=\"paragraph\">\n    <h4 class=\"card-title\">Paragraph</h4>\n    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec ornare turpis. Sed sit amet mauris ut ligula vulputate gravida sit amet ac nisi. Sed iaculis magna massa, ut lacinia ante congue vitae. Fusce ac tempus leo. Sed nec nisl volutpat augue scelerisque luctus eu a augue. Donec ut pretium justo. Sed at sapien sed libero elementum volutpat. Suspendisse eget condimentum diam, maximus suscipit est. Ut vestibulum vitae nulla luctus dapibus. Nullam semper mi a varius pharetra. Nulla quis nisi suscipit, lacinia ante vitae, commodo magna.</p>\n    <exemplify [selector]=\"'#paragraph > p'\"></exemplify>\n  </div>\n  <div class=\"card-body\" id=\"weights\">\n    <h4 class=\"card-title\">Weights</h4>\n    <p class=\"font-weight-light\">Light AaBbCc 0123456789</p>\n    <p class=\"font-weight-normal\">Regular AaBbCc 0123456789</p>\n    <p class=\"font-weight-medium\">Medium AaBbCc 0123456789</p>\n    <p class=\"font-weight-bold\">Bold AaBbCc 0123456789</p>\n    <exemplify [selector]=\"'#weights > p'\"></exemplify>\n  </div>\n  <div class=\"card-body\" id=\"italic\">\n    <h4 class=\"card-title\">Italic</h4>\n    <p class=\"font-weight-light font-italic\">Light Italic AaBbCc 0123456789</p>\n    <p class=\"font-weight-normal font-italic\">Regular Italic AaBbCc 0123456789</p>\n    <p class=\"font-weight-medium font-italic\">Medium Italic AaBbCc 0123456789</p>\n    <p class=\"font-weight-bold font-italic\">Bold Italic AaBbCc 0123456789</p>\n    <exemplify [selector]=\"'#italic > p'\"></exemplify>\n  </div>\n</div>\n<hr>\n\n<hr>\n\n"
+
+/***/ }),
+
+/***/ "./src/example/components/typography/typography.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/example/components/typography/typography.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: TypographyComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TypographyComponent", function() { return TypographyComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TypographyComponent = /** @class */ (function () {
+    function TypographyComponent() {
+    }
+    TypographyComponent.prototype.ngOnInit = function () {
+    };
+    TypographyComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-typography',
+            template: __webpack_require__(/*! ./typography.component.html */ "./src/example/components/typography/typography.component.html"),
+            styles: []
+        }),
+        __metadata("design:paramtypes", [])
+    ], TypographyComponent);
+    return TypographyComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/example/example.module.ts":
 /*!***************************************!*\
   !*** ./src/example/example.module.ts ***!
@@ -2271,33 +2068,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _components_buttons_buttons_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/buttons/buttons.component */ "./src/example/components/buttons/buttons.component.ts");
-/* harmony import */ var _shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./shared/components/code/code.component */ "./src/example/shared/components/code/code.component.ts");
-/* harmony import */ var _components_buttons_buttons_main_buttons_main_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/buttons/buttons-main/buttons-main.component */ "./src/example/components/buttons/buttons-main/buttons-main.component.ts");
-/* harmony import */ var _shared_components_snippet_wrapper_snippet_wrapper_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/components/snippet-wrapper/snippet-wrapper.component */ "./src/example/shared/components/snippet-wrapper/snippet-wrapper.component.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _components_buttons_buttons_sizes_buttons_sizes_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/buttons/buttons-sizes/buttons-sizes.component */ "./src/example/components/buttons/buttons-sizes/buttons-sizes.component.ts");
-/* harmony import */ var _components_alerts_alerts_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/alerts/alerts.component */ "./src/example/components/alerts/alerts.component.ts");
-/* harmony import */ var _components_tabs_tabs_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/tabs/tabs.component */ "./src/example/components/tabs/tabs.component.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _components_tables_tables_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/tables/tables.component */ "./src/example/components/tables/tables.component.ts");
-/* harmony import */ var _components_tables_table_standard_table_standard_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/tables/table-standard/table-standard.component */ "./src/example/components/tables/table-standard/table-standard.component.ts");
-/* harmony import */ var _components_tables_table_striped_table_striped_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/tables/table-striped/table-striped.component */ "./src/example/components/tables/table-striped/table-striped.component.ts");
-/* harmony import */ var _components_tables_table_bordered_table_bordered_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/tables/table-bordered/table-bordered.component */ "./src/example/components/tables/table-bordered/table-bordered.component.ts");
-/* harmony import */ var _components_tables_table_hoverable_table_hoverable_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/tables/table-hoverable/table-hoverable.component */ "./src/example/components/tables/table-hoverable/table-hoverable.component.ts");
-/* harmony import */ var _components_tables_table_small_table_small_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/tables/table-small/table-small.component */ "./src/example/components/tables/table-small/table-small.component.ts");
-/* harmony import */ var angular_exemplify__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! angular-exemplify */ "./node_modules/angular-exemplify/fesm5/angular-exemplify.js");
-/* harmony import */ var _components_breadcrumbs_breadcrumbs_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/breadcrumbs/breadcrumbs.component */ "./src/example/components/breadcrumbs/breadcrumbs.component.ts");
-/* harmony import */ var _components_forms_forms_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/forms/forms.component */ "./src/example/components/forms/forms.component.ts");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
-/* harmony import */ var _components_checkboxes_and_slide_toggles_checkboxes_and_slide_toggles_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component */ "./src/example/components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _components_icons_icons_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/icons/icons.component */ "./src/example/components/icons/icons.component.ts");
-/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm5/angular-fontawesome.js");
-/* harmony import */ var _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @fortawesome/fontawesome-svg-core */ "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js");
-/* harmony import */ var _fortawesome_pro_light_svg_icons__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @fortawesome/pro-light-svg-icons */ "./node_modules/@fortawesome/pro-light-svg-icons/index.es.js");
-/* harmony import */ var _components_input_group_input_group_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/input-group/input-group.component */ "./src/example/components/input-group/input-group.component.ts");
-/* harmony import */ var _components_list_group_list_group_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/list-group/list-group.component */ "./src/example/components/list-group/list-group.component.ts");
-/* harmony import */ var _components_loaders_loaders_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/loaders/loaders.component */ "./src/example/components/loaders/loaders.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _components_alerts_alerts_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/alerts/alerts.component */ "./src/example/components/alerts/alerts.component.ts");
+/* harmony import */ var _components_tabs_tabs_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/tabs/tabs.component */ "./src/example/components/tabs/tabs.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _components_tables_tables_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/tables/tables.component */ "./src/example/components/tables/tables.component.ts");
+/* harmony import */ var angular_exemplify__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! angular-exemplify */ "./node_modules/angular-exemplify/fesm5/angular-exemplify.js");
+/* harmony import */ var _components_breadcrumbs_breadcrumbs_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/breadcrumbs/breadcrumbs.component */ "./src/example/components/breadcrumbs/breadcrumbs.component.ts");
+/* harmony import */ var _components_forms_forms_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/forms/forms.component */ "./src/example/components/forms/forms.component.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _components_checkboxes_and_slide_toggles_checkboxes_and_slide_toggles_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component */ "./src/example/components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _components_icons_icons_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/icons/icons.component */ "./src/example/components/icons/icons.component.ts");
+/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm5/angular-fontawesome.js");
+/* harmony import */ var _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @fortawesome/fontawesome-svg-core */ "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js");
+/* harmony import */ var _fortawesome_pro_light_svg_icons__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @fortawesome/pro-light-svg-icons */ "./node_modules/@fortawesome/pro-light-svg-icons/index.es.js");
+/* harmony import */ var _components_input_group_input_group_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/input-group/input-group.component */ "./src/example/components/input-group/input-group.component.ts");
+/* harmony import */ var _components_list_group_list_group_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/list-group/list-group.component */ "./src/example/components/list-group/list-group.component.ts");
+/* harmony import */ var _components_loaders_loaders_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/loaders/loaders.component */ "./src/example/components/loaders/loaders.component.ts");
+/* harmony import */ var _components_dropdowns_dropdowns_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/dropdowns/dropdowns.component */ "./src/example/components/dropdowns/dropdowns.component.ts");
+/* harmony import */ var _components_cards_cards_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/cards/cards.component */ "./src/example/components/cards/cards.component.ts");
+/* harmony import */ var _components_modals_modals_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/modals/modals.component */ "./src/example/components/modals/modals.component.ts");
+/* harmony import */ var _components_pagination_pagination_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/pagination/pagination.component */ "./src/example/components/pagination/pagination.component.ts");
+/* harmony import */ var _components_tooltips_tooltips_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/tooltips/tooltips.component */ "./src/example/components/tooltips/tooltips.component.ts");
+/* harmony import */ var _components_accordion_accordion_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/accordion/accordion.component */ "./src/example/components/accordion/accordion.component.ts");
+/* harmony import */ var _components_typography_typography_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/typography/typography.component */ "./src/example/components/typography/typography.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2332,9 +2127,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
-
-_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_25__["library"].add(_fortawesome_pro_light_svg_icons__WEBPACK_IMPORTED_MODULE_26__["faArrowAltRight"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_16__["library"].add(_fortawesome_pro_light_svg_icons__WEBPACK_IMPORTED_MODULE_17__["faArrowAltRight"]);
 var ExampleModule = /** @class */ (function () {
     function ExampleModule() {
     }
@@ -2342,351 +2135,39 @@ var ExampleModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
-                angular_exemplify__WEBPACK_IMPORTED_MODULE_17__["ExemplifyModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_22__["RouterModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbModule"],
-                _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_24__["FontAwesomeModule"]
+                _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
+                angular_exemplify__WEBPACK_IMPORTED_MODULE_8__["ExemplifyModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_13__["RouterModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_11__["NgbModule"],
+                _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_15__["FontAwesomeModule"]
             ],
             declarations: [
                 _components_buttons_buttons_component__WEBPACK_IMPORTED_MODULE_2__["ButtonsComponent"],
-                _shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_3__["CodeComponent"],
-                _components_buttons_buttons_main_buttons_main_component__WEBPACK_IMPORTED_MODULE_4__["ButtonsMainComponent"],
-                _shared_components_snippet_wrapper_snippet_wrapper_component__WEBPACK_IMPORTED_MODULE_5__["SnippetWrapperComponent"],
-                _components_buttons_buttons_sizes_buttons_sizes_component__WEBPACK_IMPORTED_MODULE_7__["ButtonsSizesComponent"],
-                _components_alerts_alerts_component__WEBPACK_IMPORTED_MODULE_8__["AlertsComponent"],
-                _components_tabs_tabs_component__WEBPACK_IMPORTED_MODULE_9__["TabsComponent"],
-                _components_tables_tables_component__WEBPACK_IMPORTED_MODULE_11__["TablesComponent"],
-                _components_tables_table_standard_table_standard_component__WEBPACK_IMPORTED_MODULE_12__["TableStandardComponent"],
-                _components_tables_table_striped_table_striped_component__WEBPACK_IMPORTED_MODULE_13__["TableStripedComponent"],
-                _components_tables_table_bordered_table_bordered_component__WEBPACK_IMPORTED_MODULE_14__["TableBorderedComponent"],
-                _components_tables_table_hoverable_table_hoverable_component__WEBPACK_IMPORTED_MODULE_15__["TableHoverableComponent"],
-                _components_tables_table_small_table_small_component__WEBPACK_IMPORTED_MODULE_16__["TableSmallComponent"],
-                _components_breadcrumbs_breadcrumbs_component__WEBPACK_IMPORTED_MODULE_18__["BreadcrumbsComponent"],
-                _components_forms_forms_component__WEBPACK_IMPORTED_MODULE_19__["FormsComponent"],
-                _components_forms_forms_component__WEBPACK_IMPORTED_MODULE_19__["PersonalIdentityNumberDirective"],
-                _components_forms_forms_component__WEBPACK_IMPORTED_MODULE_19__["ValidationMessagePipe"],
-                _components_checkboxes_and_slide_toggles_checkboxes_and_slide_toggles_component__WEBPACK_IMPORTED_MODULE_21__["CheckboxesAndSlideTogglesComponent"],
-                _components_icons_icons_component__WEBPACK_IMPORTED_MODULE_23__["IconsComponent"],
-                _components_input_group_input_group_component__WEBPACK_IMPORTED_MODULE_27__["InputGroupComponent"],
-                _components_list_group_list_group_component__WEBPACK_IMPORTED_MODULE_28__["ListGroupComponent"],
-                _components_loaders_loaders_component__WEBPACK_IMPORTED_MODULE_29__["LoadersComponent"]
+                _components_alerts_alerts_component__WEBPACK_IMPORTED_MODULE_4__["AlertsComponent"],
+                _components_tabs_tabs_component__WEBPACK_IMPORTED_MODULE_5__["TabsComponent"],
+                _components_tables_tables_component__WEBPACK_IMPORTED_MODULE_7__["TablesComponent"],
+                _components_breadcrumbs_breadcrumbs_component__WEBPACK_IMPORTED_MODULE_9__["BreadcrumbsComponent"],
+                _components_forms_forms_component__WEBPACK_IMPORTED_MODULE_10__["FormsComponent"],
+                _components_forms_forms_component__WEBPACK_IMPORTED_MODULE_10__["PersonalIdentityNumberDirective"],
+                _components_forms_forms_component__WEBPACK_IMPORTED_MODULE_10__["ValidationMessagePipe"],
+                _components_checkboxes_and_slide_toggles_checkboxes_and_slide_toggles_component__WEBPACK_IMPORTED_MODULE_12__["CheckboxesAndSlideTogglesComponent"],
+                _components_icons_icons_component__WEBPACK_IMPORTED_MODULE_14__["IconsComponent"],
+                _components_input_group_input_group_component__WEBPACK_IMPORTED_MODULE_18__["InputGroupComponent"],
+                _components_list_group_list_group_component__WEBPACK_IMPORTED_MODULE_19__["ListGroupComponent"],
+                _components_loaders_loaders_component__WEBPACK_IMPORTED_MODULE_20__["LoadersComponent"],
+                _components_dropdowns_dropdowns_component__WEBPACK_IMPORTED_MODULE_21__["DropdownsComponent"],
+                _components_cards_cards_component__WEBPACK_IMPORTED_MODULE_22__["CardsComponent"],
+                _components_modals_modals_component__WEBPACK_IMPORTED_MODULE_23__["ModalsComponent"],
+                _components_pagination_pagination_component__WEBPACK_IMPORTED_MODULE_24__["PaginationComponent"],
+                _components_tooltips_tooltips_component__WEBPACK_IMPORTED_MODULE_25__["TooltipsComponent"],
+                _components_accordion_accordion_component__WEBPACK_IMPORTED_MODULE_26__["AccordionComponent"],
+                _components_typography_typography_component__WEBPACK_IMPORTED_MODULE_27__["TypographyComponent"]
             ],
-            exports: [_components_buttons_buttons_component__WEBPACK_IMPORTED_MODULE_2__["ButtonsComponent"], _shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_3__["CodeComponent"]]
+            exports: [_components_buttons_buttons_component__WEBPACK_IMPORTED_MODULE_2__["ButtonsComponent"]]
         })
     ], ExampleModule);
     return ExampleModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/example/shared/components/code/code.component.scss":
-/*!****************************************************************!*\
-  !*** ./src/example/shared/components/code/code.component.scss ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "pre {\n  padding-top: .5rem;\n  border-left: 10px solid #41B0EE;\n  padding-bottom: .5rem !important; }\n\npre code {\n  box-shadow: none;\n  border-left: none;\n  background-image: linear-gradient(transparent 50%, rgba(233, 233, 233, 0.5) 50%); }\n\n::ng-deep .token.selector, ::ng-deep .token.attr-name, ::ng-deep .token.string, ::ng-deep .token.char, ::ng-deep .token.function, ::ng-deep .token.builtin, ::ng-deep .token.inserted {\n  color: #379D00; }\n\n::ng-deep .token.property, ::ng-deep .token.tag, ::ng-deep .token.boolean, ::ng-deep .token.number, ::ng-deep .token.function-name, ::ng-deep .token.constant, ::ng-deep .token.symbol, ::ng-deep .token.deleted {\n  color: #673AB6; }\n\n::ng-deep .token.atrule, ::ng-deep .token.attr-value, ::ng-deep .token.keyword, ::ng-deep .token.class-name {\n  color: #0092E1; }\n\n::ng-deep pre[class*=\"language-\"]:before, ::ng-deep pre[class*=\"language-\"]:after {\n  display: none; }\n\n@media (min-width: 576px) {\n  .btn-copy {\n    position: absolute;\n    top: 0;\n    right: 0;\n    opacity: 0;\n    transition: opacity 400ms ease-in-out; } }\n\n@media (max-width: 575.98px) {\n  .btn-copy {\n    position: absolute;\n    top: 0;\n    right: 0;\n    width: 70px; } }\n"
-
-/***/ }),
-
-/***/ "./src/example/shared/components/code/code.component.ts":
-/*!**************************************************************!*\
-  !*** ./src/example/shared/components/code/code.component.ts ***!
-  \**************************************************************/
-/*! exports provided: CodeComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CodeComponent", function() { return CodeComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_code_highlight_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/code-highlight.service */ "./src/example/shared/services/code-highlight.service.ts");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var _services_window_ref_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../services/window-ref.service */ "./src/example/shared/services/window-ref.service.ts");
-var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-var CodeComponent = /** @class */ (function () {
-    function CodeComponent(_codeHighlight, http, windowRef) {
-        this._codeHighlight = _codeHighlight;
-        this.http = http;
-        this.windowRef = windowRef;
-        /**
-         * Copy to clipboard
-         * @param {string} text - text to be copied to clipboard.
-         */
-        this.copyToClipboard = function (text) {
-            if (this.window.clipboardData && this.window.clipboardData.setData) {
-                // IE specific code path to prevent textarea being shown while dialog is visible.
-                return this.window.clipboardData.setData("Text", text);
-            }
-            else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
-                var textarea = document.createElement("textarea");
-                textarea.textContent = text;
-                textarea.style.position = "fixed"; // Prevent scrolling to bottom of page in MS Edge.
-                document.body.appendChild(textarea);
-                textarea.select();
-                try {
-                    return document.execCommand("copy"); // Security exception may be thrown by some browsers.
-                }
-                catch (ex) {
-                    console.warn("Copy to clipboard failed.", ex);
-                    return false;
-                }
-                finally {
-                    document.body.removeChild(textarea);
-                }
-            }
-        };
-        this.window = this.windowRef.nativeWindow;
-    }
-    Object.defineProperty(CodeComponent.prototype, "snippet", {
-        get: function () {
-            return this._snippet;
-        },
-        set: function (snippet) {
-            var _this = this;
-            this._snippet = __assign({}, snippet, { code: snippet.src.indexOf('http') !== -1 ? this.getSourceCode(snippet.src) : Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(__webpack_require__("./src/example/components sync recursive ./!./node_modules/raw-loader/index.js!./ ^\\.\\/.*$")("./" + snippet.src)) });
-            this.snippet.code
-                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["take"])(1))
-                .subscribe(function (code) {
-                _this.highlight(code, _this.snippet.lang);
-                _this.code = code;
-            });
-        },
-        enumerable: true,
-        configurable: true
-    });
-    CodeComponent.prototype.highlight = function (code, lang) {
-        this.parsedSnippet = this._codeHighlight.highlight(code, lang);
-    };
-    CodeComponent.prototype.getSourceCode = function (url) {
-        return this.http.get(url, { responseType: 'text' });
-    };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], CodeComponent.prototype, "snippet", null);
-    CodeComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-code',
-            template: "\n    <button class=\"btn btn-link btn-copy\" (click)=\"copyToClipboard(code)\" *ngIf=\"code\">Copy</button>\n    <pre class=\"pb-3 m-0 language-{{snippet?.lang}}\">\n      <code class=\"language-{{snippet?.lang}}\" [innerHTML]=\"parsedSnippet\"></code>\n    </pre>",
-            styles: [__webpack_require__(/*! ./code.component.scss */ "./src/example/shared/components/code/code.component.scss")]
-        }),
-        __metadata("design:paramtypes", [_services_code_highlight_service__WEBPACK_IMPORTED_MODULE_1__["CodeHighlightService"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"],
-            _services_window_ref_service__WEBPACK_IMPORTED_MODULE_5__["WindowRef"]])
-    ], CodeComponent);
-    return CodeComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/example/shared/components/snippet-wrapper/snippet-wrapper.component.scss":
-/*!**************************************************************************************!*\
-  !*** ./src/example/shared/components/snippet-wrapper/snippet-wrapper.component.scss ***!
-  \**************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ":host {\n  display: block;\n  position: relative;\n  margin-top: 1rem; }\n  :host:hover ::ng-deep.btn-copy {\n    opacity: 1; }\n  @media (max-width: 575.98px) {\n  .custom-select {\n    padding-right: 90px;\n    background-position-x: calc(100% - 65px); } }\n"
-
-/***/ }),
-
-/***/ "./src/example/shared/components/snippet-wrapper/snippet-wrapper.component.ts":
-/*!************************************************************************************!*\
-  !*** ./src/example/shared/components/snippet-wrapper/snippet-wrapper.component.ts ***!
-  \************************************************************************************/
-/*! exports provided: SnippetWrapperComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SnippetWrapperComponent", function() { return SnippetWrapperComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var SnippetWrapperComponent = /** @class */ (function () {
-    function SnippetWrapperComponent() {
-    }
-    Object.defineProperty(SnippetWrapperComponent.prototype, "snippets", {
-        get: function () {
-            return this._snippets;
-        },
-        set: function (value) {
-            this._snippets = value.map(function (snippet) {
-                return {
-                    name: snippet.name || snippet.src.split('/').pop(),
-                    lang: snippet.lang,
-                    src: snippet.src,
-                };
-            });
-            if (!this.activeSnippet) {
-                this.setActiveSnippet(this.snippets[0]);
-            }
-        },
-        enumerable: true,
-        configurable: true
-    });
-    SnippetWrapperComponent.prototype.setActiveSnippet = function (snippet) {
-        this.activeSnippet = snippet;
-    };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", Array),
-        __metadata("design:paramtypes", [Array])
-    ], SnippetWrapperComponent.prototype, "snippets", null);
-    SnippetWrapperComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-snippet-wrapper',
-            template: "\n    <ul class=\"nav nav-tabs d-none d-sm-flex\">\n      <li class=\"nav-item\" *ngFor=\"let snippet of snippets\">\n        <button class=\"btn-link nav-link\" [ngClass]=\"{'active': snippet.name === activeSnippet.name}\"\n                (click)=\"setActiveSnippet(snippet)\">{{snippet.name}}\n        </button>\n      </li>\n    </ul>\n    <select class=\"custom-select d-sm-none\" [(ngModel)]=\"activeSnippet\">\n      <option *ngFor=\"let snippet of snippets\" [ngValue]=\"snippet\">{{snippet.name}}</option>\n    </select>\n    <app-code [snippet]=\"activeSnippet\"></app-code>\n  ",
-            styles: [__webpack_require__(/*! ./snippet-wrapper.component.scss */ "./src/example/shared/components/snippet-wrapper/snippet-wrapper.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], SnippetWrapperComponent);
-    return SnippetWrapperComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/example/shared/services/code-highlight.service.ts":
-/*!***************************************************************!*\
-  !*** ./src/example/shared/services/code-highlight.service.ts ***!
-  \***************************************************************/
-/*! exports provided: CodeHighlightService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CodeHighlightService", function() { return CodeHighlightService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var prismjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prismjs */ "./node_modules/prismjs/prism.js");
-/* harmony import */ var prismjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prismjs__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prismjs_components_prism_typescript__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prismjs/components/prism-typescript */ "./node_modules/prismjs/components/prism-typescript.js");
-/* harmony import */ var prismjs_components_prism_typescript__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prismjs_components_prism_typescript__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prismjs_components_prism_bash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prismjs/components/prism-bash */ "./node_modules/prismjs/components/prism-bash.js");
-/* harmony import */ var prismjs_components_prism_bash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prismjs_components_prism_bash__WEBPACK_IMPORTED_MODULE_3__);
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-// Prism tries to highlight the whole document on DOMContentLoad.
-// Unfortunately with webpack the only way of disabling it
-// is by simply forcing it to highlight no elements -> []
-prismjs__WEBPACK_IMPORTED_MODULE_1__["hooks"].add('before-highlightall', function (env) {
-    env['elements'] = [];
-});
-var CodeHighlightService = /** @class */ (function () {
-    function CodeHighlightService() {
-    }
-    CodeHighlightService.prototype.highlight = function (code, lang) {
-        try {
-            return prismjs__WEBPACK_IMPORTED_MODULE_1__["highlight"](code.trim(), prismjs__WEBPACK_IMPORTED_MODULE_1__["languages"][lang]);
-        }
-        catch (error) {
-            console.log(error);
-        }
-    };
-    CodeHighlightService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
-            providedIn: 'root'
-        })
-    ], CodeHighlightService);
-    return CodeHighlightService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/example/shared/services/window-ref.service.ts":
-/*!***********************************************************!*\
-  !*** ./src/example/shared/services/window-ref.service.ts ***!
-  \***********************************************************/
-/*! exports provided: WindowRef */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WindowRef", function() { return WindowRef; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-function _window() {
-    // return the global native browser window object
-    return window;
-}
-var WindowRef = /** @class */ (function () {
-    function WindowRef() {
-    }
-    Object.defineProperty(WindowRef.prototype, "nativeWindow", {
-        get: function () {
-            return _window();
-        },
-        enumerable: true,
-        configurable: true
-    });
-    WindowRef = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
-            providedIn: 'root'
-        }),
-        __metadata("design:paramtypes", [])
-    ], WindowRef);
-    return WindowRef;
 }());
 
 
