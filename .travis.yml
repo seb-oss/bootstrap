@@ -14,7 +14,7 @@ cache:
 
 script:
 - npm run test-ci
-- npm run build && npm run build-lib
+- npm run build && npm run build-lib && npm run build-sdl
 - export APPLITOOLS_BATCH_ID=`echo ${TRAVIS_PULL_REQUEST_SHA:=$TRAVIS_COMMIT}`
 - npm run e2e-ci
 
