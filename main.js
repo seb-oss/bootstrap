@@ -868,7 +868,7 @@ var environment = {
         }
         return version;
     })(),
-    travis_build_number: '58'
+    travis_build_number: '59'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
