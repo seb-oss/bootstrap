@@ -19,9 +19,19 @@
   </div>
   <div [@slideOut]="menuState" *ngIf="menuState === 'show'" class="position-absolute w-100">
     <div class="row border-bottom px-3 align-items-center" *ngFor="let menuItem of mobileMenu">
-      <div class="col">
-        <a class="nav-link active" routerLink="{{menuItem.path}}" (click)="hideMobileNav()">{{menuItem.name}}</a>
-      </div>
+        <ng-container *ngIf="menuItem.path.substr(0,4) !== 'http'">
+          <div class="col">
+            <a class="nav-link" routerLink="{{menuItem.path}}" (click)="hideMobileNav()">{{menuItem.name}}</a>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="menuItem.path.substr(0,4) === 'http'">
+          <div class="col">
+            <a class="nav-link" [href]="menuItem.path" target="_blank" (click)="hideMobileNav()">{{menuItem.name}}</a>
+          </div>
+          <div class="col-auto">
+            <i class="fal fa-external-link-square"></i>
+          </div>
+        </ng-container>
     </div>
   </div>
 

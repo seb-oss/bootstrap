@@ -55,8 +55,9 @@ export class HeaderComponent implements OnInit {
     getMenu() {
     }
 
-    showMenu(tab:  'start' | 'components') {
+    showMenu(tab:  'start' | 'components' | 'base') {
         this.menuService.switchTab(tab);
+        this.activeTab = tab;
     }
 
     toggleMenu() {

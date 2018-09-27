@@ -22,6 +22,7 @@ import {TooltipsComponent} from '../example/components/tooltips/tooltips.compone
 import {AccordionComponent} from '../example/components/accordion/accordion.component';
 import {TypographyComponent} from '../example/components/typography/typography.component';
 import {AboutComponent} from './components/about/about.component';
+import {SkeletonLoaderComponent} from '../example/components/skeleton-loader/skeleton-loader.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
@@ -48,7 +49,8 @@ const routes: Routes = [
     { path: 'list-group', component: ListGroupComponent },
     { path: 'loaders', component: LoadersComponent },
     //{ path: 'wizard', component: WizardExampleComponent },
-    { path: '**', redirectTo: 'about' }
+    { path: 'skeleton-loader', component: SkeletonLoaderComponent },
+    { path: '**', redirectTo: 'about' },
 ];
 
 @NgModule({
