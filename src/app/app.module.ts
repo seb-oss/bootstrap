@@ -8,13 +8,15 @@ import { SideNavigationComponent } from './components/side-navigation/side-navig
 import { MobileNavigationComponent } from './components/mobile-navigation/mobile-navigation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SideNavigationComponent,
     MobileNavigationComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

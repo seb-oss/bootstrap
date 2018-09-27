@@ -14,28 +14,35 @@ import {IconsComponent} from '../example/components/icons/icons.component';
 import {InputGroupComponent} from '../example/components/input-group/input-group.component';
 import {ListGroupComponent} from '../example/components/list-group/list-group.component';
 import {LoadersComponent} from '../example/components/loaders/loaders.component';
-
+import {DropdownsComponent} from '../example/components/dropdowns/dropdowns.component';
+import {CardsComponent} from '../example/components/cards/cards.component';
+import {ModalsComponent} from '../example/components/modals/modals.component';
+import {PaginationComponent} from '../example/components/pagination/pagination.component';
+import {TooltipsComponent} from '../example/components/tooltips/tooltips.component';
+import {AccordionComponent} from '../example/components/accordion/accordion.component';
+import {TypographyComponent} from '../example/components/typography/typography.component';
+import {AboutComponent} from './components/about/about.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
-    //{ path: 'typography', component: TypographyComponent },
+    { path: 'typography', component: TypographyComponent },
     { path: 'tables', component: TablesComponent },
     //{ path: 'colors', component: ColorsComponent },
-    //{ path: 'modals', component: ModalsComponent },
-    //{ path: 'cards', component: CardsComponent },
+    { path: 'modals', component: ModalsComponent },
+    { path: 'cards', component: CardsComponent },
     { path: 'buttons', component: ButtonsComponent },
     { path: 'input-group', component: InputGroupComponent },
     { path: 'forms', component: FormsComponent },
     { path: 'checkboxes-and-slide-toggles', component: CheckboxesAndSlideTogglesComponent },
-    //{ path: 'pagination', component: PaginationComponent },
+    { path: 'pagination', component: PaginationComponent },
     { path: 'tabs', component: TabsComponent },
     { path: 'alerts', component: AlertsComponent },
     { path: 'breadcrumbs', component: BreadcrumbsComponent },
-    //{ path: 'tooltips', component: TooltipsComponent },
+    { path: 'tooltips', component: TooltipsComponent },
     //{ path: 'example-page', component: ExamplePageComponent },
-    //{ path: 'about', component: AboutComponent },
-    //{ path: 'dropdowns', component: DropdownsComponent },
-    //{ path: 'accordion', component: AccordionComponent },
+    { path: 'about', component: AboutComponent },
+    { path: 'dropdowns', component: DropdownsComponent },
+    { path: 'accordion', component: AccordionComponent },
     //{ path: 'grid', component: GridComponent },
     { path: 'icons', component: IconsComponent },
     { path: 'list-group', component: ListGroupComponent },

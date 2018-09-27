@@ -3,6 +3,7 @@ import {MenuService} from '../../services/menu.service';
 import {Observable, ReplaySubject} from 'rxjs';
 import {map} from 'rxjs/internal/operators';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {NavService} from '../../services/nav.service';
 
 
 
@@ -27,15 +28,16 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class HeaderComponent implements OnInit {
 
-    activeTab: string = 'components';
-    private _scrollPosition: number = 0;
+    activeTab = 'components';
+    private _scrollPosition = 0;
     stickyHeader = 'hide';
+    $isActive: Observable<boolean>;
 
-    get scrollPosition():number {
+    get scrollPosition(): number {
         return this._scrollPosition;
     }
 
-    @Input() set scrollPosition(value:number) {
+    @Input() set scrollPosition(value: number) {
         this._scrollPosition = value;
 
         if (this.scrollPosition >= 100) {
@@ -44,9 +46,10 @@ export class HeaderComponent implements OnInit {
             this.stickyHeader = 'hide';
         }
     }
-    constructor(private menuService: MenuService) { }
+    constructor(private menuService: MenuService, private navService: NavService) { }
 
     ngOnInit() {
+        this.$isActive = this.navService.getState();
     }
 
     getMenu() {
@@ -54,5 +57,9 @@ export class HeaderComponent implements OnInit {
 
     showMenu(tab:  'start' | 'components') {
         this.menuService.switchTab(tab);
+    }
+
+    toggleMenu() {
+        this.navService.toggleState();
     }
 }

@@ -402,3 +402,19 @@ $breadcrumb-border-radius:          0 !default;
 
 @import "bootstrap-core/functions";
 @import "bootstrap-core/variables";
+
+// Scrollbar
+$scrollbar-track-bg:  $gray-100;
+$scrollbar-thumb-bg:  $gray-400;
+$scrollbar-track-dark-bg:  $dark;
+$scrollbar-thumb-dark-bg:  $gray-900;
+$scrollbar-thumb-active-bg: $blue;
+$scrollbar-thickness:     10px;
+
+// Accordion
+
+$accordion-border-color:    $table-border-color !default; // SEB specific
+$accordion-border-width:    $table-border-width !default; // SEB specific
+$accordion-header-padding:  $table-cell-padding !default; // SEB specific
+$accordion-body-padding:    $table-cell-padding !default; // SEB specific
+$accordion-body-bg:         transparent !default; // SEB specific
