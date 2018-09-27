@@ -76,6 +76,9 @@ export class MenuService {
     }, {
         name: 'Loaders',
         path: '/loaders'
+    }, {
+        name: 'Skeleton loaders',
+        path: '/skeleton-loader'
     }];
 
   constructor() {
@@ -101,17 +104,18 @@ export class MenuService {
     return this.$activeTab.asObservable();
   }
 
-  switchTab(tab:  'start' | 'components') {
+  switchTab(tab:  'start' | 'components' | 'base') {
     this.$activeTab.next(tab);
     this.updateMenu(tab);
   }
 
-  updateMenu(menu: 'start' | 'components') {
+  updateMenu(menu:  'start' | 'components' | 'base') {
     if (menu === 'start') {
       this.$menuItems.next(this.start);
-
+    } else if (menu === 'components') {
+        this.$menuItems.next(this.components);
     } else {
-      this.$menuItems.next(this.components);
+        this.$menuItems.next(this.base);
     }
   }
 }

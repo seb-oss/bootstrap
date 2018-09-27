@@ -1,4 +1,4 @@
-<header class="col-12 col-md-auto d-lg-none">
+<header class="col-12 d-lg-none bg-white border-bottom">
   <div class="row justify-content-between justify-content-lg-end h-100">
   <div class="col col-md-auto d-none d-md-flex brand">
     <div class="row mobile-header">
@@ -18,8 +18,10 @@
       <h3 class="mb-0">Bootstrap</h3>
     </div>
   <div class="col d-md-none px-0" *ngIf="activeTab">
+    {{activeTab}}
     <div class="row mobile-header h-100 align-items-center text-center no-gutters">
       <div class="col" ngClass="{{activeTab === 'start' ? 'active':''}}" (click)="showMenu('start')"><i class="fal fa-home fa-1x d-block"></i>Start</div>
+      <div class="col" ngClass="{{activeTab === 'base' ? 'active':''}}" (click)="showMenu('base')"><i class="fal fa-font fa-1x d-block"></i>Base</div>
       <div class="col" ngClass="{{activeTab === 'components' ? 'active':''}}" (click)="showMenu('components')"><i class="fal fa-bookmark fa-1x d-block"></i>Components</div>
     </div>
   </div>

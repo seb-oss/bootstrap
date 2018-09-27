@@ -8,12 +8,12 @@
   width: 256px;
   height: 100vh;
   position: fixed;
-  z-index: 100;
+  z-index: 1081;
   left: 0;
   &.active {
     transform: translate3d(0,0,0);
     display: block;
-    z-index: 100;
+    z-index: 1081;
   }
 }
 
