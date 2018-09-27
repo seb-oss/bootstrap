@@ -21,7 +21,7 @@ export class AppPage {
     }
 
     eyesOpen() {
-        eyes.open(browser, 'Angular Generic Table', 'Demo time!');
+        eyes.open(browser, '@sebgroup/botstrap', 'Buttons');
     }
 
     eyesScreenshot(name: string) {
