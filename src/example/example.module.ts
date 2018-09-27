@@ -30,6 +30,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { TooltipsComponent } from './components/tooltips/tooltips.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { TypographyComponent } from './components/typography/typography.component';
+import { SkeletonLoaderComponent } from './components/skeleton-loader/skeleton-loader.component';
 library.add(faArrowAltRight);
 
 @NgModule({
@@ -62,7 +63,8 @@ library.add(faArrowAltRight);
       PaginationComponent,
       TooltipsComponent,
       AccordionComponent,
-      TypographyComponent
+      TypographyComponent,
+      SkeletonLoaderComponent
   ],
   exports: [ButtonsComponent]
 })

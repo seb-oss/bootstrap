@@ -76,6 +76,9 @@ export class MenuService {
     }, {
         name: 'Loaders',
         path: '/loaders'
+    }, {
+        name: 'Skeleton loaders',
+        path: '/skeleton-loader'
     }];
 
   constructor() {
