@@ -326,7 +326,7 @@ var AboutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"col-12 d-lg-none bg-white border-bottom\">\n  <div class=\"row justify-content-between justify-content-lg-end h-100\">\n  <div class=\"col col-md-auto d-none d-md-flex brand\">\n    <div class=\"row mobile-header\">\n      <div class=\"col-auto px-0\">\n        <svg class=\"seb-logo\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 800\">\n          <path d=\"M0 0h800v800H0z\" fill=\"#60cd18\"/>\n          <path d=\"M290.55 348.35l-25.87 19.32c-12.22-10.51-28-12.57-36.65-12.57s-18 2.51-19.37 8.82c-1.38 6.12 4.31 10.88 14.08 13.53 11.14 3 21.29 5.66 36.92 10.12 23.24 6.63 39.13 16.69 39.13 40 0 32.14-28.53 48.8-66.75 48.8s-64.26-19.91-72-29.2l27.35-20.45c19.21 16.75 32.57 19.11 43.74 19.11 12.81 0 24.79-2.75 26.33-10 1.25-5.82-3.58-10.45-14.49-13-12.35-2.85-22.77-5.14-34.4-8.2-31.52-8.27-40.41-26.6-40.41-43.06 0-22.67 21.1-45.95 59.69-45.95 39.57 0 62.74 22.67 62.74 22.67m164.9-20.4H340.12V472.1h117.45v-33.24h-76.94v-23.22h53v-31.8h-53v-23h74.83zM310.27 505.37h9V294.63h-9zm162.45 0h9V294.63h-9zm29.8-33.27h92.64c24.77 0 44.84-14.93 44.84-38.84 0-18.65-12.21-31-29.32-36.47a9.6 9.6 0 0 0-1.66-.21 10.36 10.36 0 0 0 1.66-.29c9.8-3.88 20.66-14.21 20.66-31.8 0-22.31-19.74-36.54-44.1-36.54h-84.72zm40.7-114.17h32.36c7.45 0 13.48 5.88 13.48 12.64s-6 12.66-13.48 12.66h-32.36zm39.58 82.13h-39.58v-26.29h39.58a13.15 13.15 0 0 1 0 26.28z\" fill=\"#fff\"/>\n        </svg>\n      </div>\n      <div class=\"col align-self-center text-center px-3\" (click)=\"toggleMenu()\">\n        <i class=\"fal fa-bars fa-1x d-block\"></i>\n        <div>Menu</div>\n      </div>\n    </div>\n  </div>\n    <div class=\"col align-self-center pl-3 d-none d-sm-flex\">\n      <h3 class=\"mb-0\">Bootstrap</h3>\n    </div>\n  <div class=\"col d-md-none px-0\" *ngIf=\"activeTab\">\n    {{activeTab}}\n    <div class=\"row mobile-header h-100 align-items-center text-center no-gutters\">\n      <div class=\"col\" ngClass=\"{{activeTab === 'start' ? 'active':''}}\" (click)=\"showMenu('start')\"><i class=\"fal fa-home fa-1x d-block\"></i>Start</div>\n      <div class=\"col\" ngClass=\"{{activeTab === 'base' ? 'active':''}}\" (click)=\"showMenu('base')\"><i class=\"fal fa-font fa-1x d-block\"></i>Base</div>\n      <div class=\"col\" ngClass=\"{{activeTab === 'components' ? 'active':''}}\" (click)=\"showMenu('components')\"><i class=\"fal fa-bookmark fa-1x d-block\"></i>Components</div>\n    </div>\n  </div>\n    <div class=\"col d-none d-md-flex bg-white border-bottom sticky-header\" [@scrollAnimation]=\"stickyHeader\">\n      <div class=\"row align-items-center h-100\">\n        <div class=\"col\">\n          <h5 class=\"mb-0\">Section header</h5>\n          <ol class=\"breadcrumb mb-0 pl-0 py-0\">\n            <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>\n            <li class=\"breadcrumb-item active\">Section header</li>\n          </ol>\n        </div>\n        <div class=\"col-auto\">\n          <div class=\"card-menu-control\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n"
+module.exports = "<header class=\"col-12 d-lg-none bg-white\">\n  <div class=\"row justify-content-between justify-content-lg-end h-100\">\n    <div class=\"col col-md-auto d-none d-md-flex brand\">\n      <div class=\"row mobile-header\">\n        <div class=\"col-auto px-0\">\n          <svg class=\"seb-logo\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 800\">\n            <path d=\"M0 0h800v800H0z\" fill=\"#60cd18\"/>\n            <path d=\"M290.55 348.35l-25.87 19.32c-12.22-10.51-28-12.57-36.65-12.57s-18 2.51-19.37 8.82c-1.38 6.12 4.31 10.88 14.08 13.53 11.14 3 21.29 5.66 36.92 10.12 23.24 6.63 39.13 16.69 39.13 40 0 32.14-28.53 48.8-66.75 48.8s-64.26-19.91-72-29.2l27.35-20.45c19.21 16.75 32.57 19.11 43.74 19.11 12.81 0 24.79-2.75 26.33-10 1.25-5.82-3.58-10.45-14.49-13-12.35-2.85-22.77-5.14-34.4-8.2-31.52-8.27-40.41-26.6-40.41-43.06 0-22.67 21.1-45.95 59.69-45.95 39.57 0 62.74 22.67 62.74 22.67m164.9-20.4H340.12V472.1h117.45v-33.24h-76.94v-23.22h53v-31.8h-53v-23h74.83zM310.27 505.37h9V294.63h-9zm162.45 0h9V294.63h-9zm29.8-33.27h92.64c24.77 0 44.84-14.93 44.84-38.84 0-18.65-12.21-31-29.32-36.47a9.6 9.6 0 0 0-1.66-.21 10.36 10.36 0 0 0 1.66-.29c9.8-3.88 20.66-14.21 20.66-31.8 0-22.31-19.74-36.54-44.1-36.54h-84.72zm40.7-114.17h32.36c7.45 0 13.48 5.88 13.48 12.64s-6 12.66-13.48 12.66h-32.36zm39.58 82.13h-39.58v-26.29h39.58a13.15 13.15 0 0 1 0 26.28z\" fill=\"#fff\"/>\n          </svg>\n        </div>\n        <div class=\"col align-self-center text-center px-3\" (click)=\"toggleMenu()\">\n          <i class=\"fal fa-bars fa-1x d-block\"></i>\n          <div>Menu</div>\n        </div>\n      </div>\n    </div>\n    <div class=\"col d-md-none px-0\" *ngIf=\"activeTab\">\n      <div class=\"row mobile-header h-100 align-items-center text-center no-gutters\">\n        <div class=\"col\" ngClass=\"{{activeTab === 'start' ? 'active':''}}\" (click)=\"showMenu('start')\"><i class=\"fal fa-home fa-1x d-block\"></i>Start</div>\n        <div class=\"col\" ngClass=\"{{activeTab === 'base' ? 'active':''}}\" (click)=\"showMenu('base')\"><i class=\"fal fa-font fa-1x d-block\"></i>Base</div>\n        <div class=\"col\" ngClass=\"{{activeTab === 'components' ? 'active':''}}\" (click)=\"showMenu('components')\"><i class=\"fal fa-bookmark fa-1x d-block\"></i>Components</div>\n      </div>\n    </div>\n    <div class=\"col align-self-center pl-3 d-none d-sm-flex\">\n      <h3 class=\"mb-0\">Bootstrap</h3>\n    </div>\n    <div class=\"col d-none d-md-flex bg-white border-bottom sticky-header\" [@scrollAnimation]=\"stickyHeader\">\n      <div class=\"row align-items-center h-100\">\n        <div class=\"col\">\n          <h5 class=\"mb-0\">Section header</h5>\n          <ol class=\"breadcrumb mb-0 pl-0 py-0\">\n            <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>\n            <li class=\"breadcrumb-item active\">Section header</li>\n          </ol>\n        </div>\n        <div class=\"col-auto\">\n          <div class=\"card-menu-control\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n"
 
 /***/ }),
 
@@ -337,7 +337,7 @@ module.exports = "<header class=\"col-12 d-lg-none bg-white border-bottom\">\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "header {\n  height: 56px;\n  position: fixed;\n  z-index: 1080;\n  left: 0; }\n\n.brand, .profile, .mobile-header {\n  background: #333;\n  color: #fff;\n  height: 56px; }\n\n.seb-logo {\n  height: 56px;\n  width: 56px; }\n\n@media (min-width: 992px) {\n  header {\n    width: calc(100% - 256px);\n    left: 256px; } }\n\n.mobile-header .col {\n  padding-top: .65rem;\n  padding-bottom: .35rem; }\n\n.mobile-header .active {\n  background: #60cd18; }\n\n.dropdown-toggle {\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  cursor: pointer; }\n\n.dropdown-toggle::after {\n  display: none; }\n\n.dropdown.show {\n  background: #41B0EE; }\n\n.dropdown-item-link {\n  padding: 0.5rem 1.5rem; }\n\n.breadcrumb-container {\n  height: 56px; }\n\n.dropdown-header {\n  color: #343434;\n  background: #dedede; }\n\n.dropdown-menu .dropdown-header:first-child {\n  border-radius: 4px 4px 0 0; }\n"
+module.exports = "header {\n  height: 56px;\n  position: fixed;\n  z-index: 1080;\n  left: 0; }\n\n.brand, .profile, .mobile-header {\n  background: #333;\n  color: #fff;\n  height: 56px; }\n\n.seb-logo {\n  height: 56px;\n  width: 56px; }\n\n@media (min-width: 576px) {\n  header {\n    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15); } }\n\n@media (min-width: 992px) {\n  header {\n    width: calc(100% - 256px);\n    left: 256px; } }\n\n.mobile-header .col {\n  padding-top: .65rem;\n  padding-bottom: .35rem; }\n\n.mobile-header .active {\n  background: #60cd18; }\n\n.dropdown-toggle {\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  cursor: pointer; }\n\n.dropdown-toggle::after {\n  display: none; }\n\n.dropdown.show {\n  background: #41B0EE; }\n\n.dropdown-item-link {\n  padding: 0.5rem 1.5rem; }\n\n.breadcrumb-container {\n  height: 56px; }\n\n.dropdown-header {\n  color: #343434;\n  background: #dedede; }\n\n.dropdown-menu .dropdown-header:first-child {\n  border-radius: 4px 4px 0 0; }\n"
 
 /***/ }),
 
@@ -445,7 +445,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"mobile-nav bg-light w-100\" *ngIf=\"($activeTab | async) && $activeState | async as mobileMenu\">\n  <div class=\"col d-md-none px-0\" *ngIf=\"$activeTab | async as activeTab\">\n    <!--<div [@slideOut]=\"menuState\" *ngIf=\"menuState === 'show'\" class=\"row no-gutters\" >\n      <div class=\"col\" ngClass=\"{{activeTab === 'overview' ? 'active':''}}\" (click)=\"showMenu('overview')\"><i class=\"fal fa-home fa-1x d-block\"></i>Overview</div>\n      <div class=\"col\" ngClass=\"{{activeTab === 'shortcuts' ? 'active':''}}\" (click)=\"showMenu('shortcuts')\"><i class=\"fal fa-bookmark fa-1x d-block\"></i>Shortcuts</div>\n      <div class=\"col\" ngClass=\"{{activeTab === 'actions' ? 'active':''}}\" (click)=\"showMenu('actions')\"><i class=\"fal fa-plus fa-1x d-block\"></i>Actions</div>\n      <div class=\"col\" ngClass=\"{{activeTab === 'browse' ? 'active':''}}\" (click)=\"showMenu('browse')\"><i class=\"fal fa-bars fa-1x d-block\"></i>Browse</div>\n      <div class=\"col\" ngClass=\"{{activeTab === 'profile' ? 'active':''}}\" (click)=\"showMenu('profile')\"><i class=\"fal fa-user fa-1x d-block\"></i>Profile</div>\n    </div>-->\n    <div class=\"mobile-breadcrumb  border-bottom\">\n      <div  class=\"d-flex align-items-center position-absolute w-100 h-100\">\n        <h5 class=\"text-center position-absolute w-100\" [@slideOut]=\"menuState\" *ngIf=\"menuState === 'show'\">{{activeTab}}</h5>\n      </div>\n      <div  class=\"d-flex align-items-center position-absolute w-100 h-100\">\n        <div class=\"pl-3 position-absolute\" style=\"z-index: 1;\" [@fadeIn]=\"menu2State\" *ngIf=\"menu2State === 'show'\" ><button class=\"btn btn-link\" (click)=\"menu2State = 'hide';menuState = 'show';\"><i class=\"fal fa-chevron-left mr-2\"></i>Back</button></div>\n        <h5 class=\"text-center position-absolute w-100\" [@slideIn]=\"menu2State\" *ngIf=\"menu2State === 'show'\" ><!--{{($nextState | async)?.labelId}}--></h5>\n      </div>\n    </div>\n  </div>\n  <div [@slideOut]=\"menuState\" *ngIf=\"menuState === 'show'\" class=\"position-absolute w-100\">\n    <div class=\"row border-bottom px-3 align-items-center\" *ngFor=\"let menuItem of mobileMenu\">\n        <ng-container *ngIf=\"menuItem.path.substr(0,4) !== 'http'\">\n          <div class=\"col\">\n            <a class=\"nav-link\" routerLink=\"{{menuItem.path}}\" (click)=\"hideMobileNav()\">{{menuItem.name}}</a>\n          </div>\n        </ng-container>\n        <ng-container *ngIf=\"menuItem.path.substr(0,4) === 'http'\">\n          <div class=\"col\">\n            <a class=\"nav-link\" [href]=\"menuItem.path\" target=\"_blank\" (click)=\"hideMobileNav()\">{{menuItem.name}}</a>\n          </div>\n          <div class=\"col-auto\">\n            <i class=\"fal fa-external-link-square\"></i>\n          </div>\n        </ng-container>\n    </div>\n  </div>\n\n</div>\n"
+module.exports = "<div class=\"mobile-nav bg-light w-100\" *ngIf=\"($activeTab | async) && $activeState | async as mobileMenu\">\n  <div class=\"col d-md-none px-0\" *ngIf=\"$activeTab | async as activeTab\" (click)=\"hideMobileNav()\">\n    <div class=\"mobile-breadcrumb border-bottom\">\n      <div  class=\"d-flex align-items-center position-absolute w-100 h-100\">\n        <h5 class=\"text-center position-absolute w-100\" [@slideOut]=\"menuState\" *ngIf=\"menuState === 'show'\">{{activeTab}}</h5>\n      </div>\n    </div>\n  </div>\n  <div [@slideOut]=\"menuState\" *ngIf=\"menuState === 'show'\" class=\"position-absolute w-100\">\n    <div class=\"row border-bottom px-3 align-items-center\" *ngFor=\"let menuItem of mobileMenu\">\n        <ng-container *ngIf=\"menuItem.path.substr(0,4) !== 'http'\">\n          <div class=\"col\">\n            <a class=\"nav-link\" routerLink=\"{{menuItem.path}}\" (click)=\"hideMobileNav()\">{{menuItem.name}}</a>\n          </div>\n        </ng-container>\n        <ng-container *ngIf=\"menuItem.path.substr(0,4) === 'http'\">\n          <div class=\"col\">\n            <a class=\"nav-link\" [href]=\"menuItem.path\" target=\"_blank\" (click)=\"hideMobileNav()\">{{menuItem.name}}</a>\n          </div>\n          <div class=\"col-auto\">\n            <i class=\"fal fa-external-link-square\"></i>\n          </div>\n        </ng-container>\n    </div>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -491,32 +491,15 @@ var MobileNavigationComponent = /** @class */ (function () {
     function MobileNavigationComponent(menuService) {
         this.menuService = menuService;
         this.$activeState = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
-        this.$activeMobile = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         this.components = [];
         this.menuState = 'show';
-        this.menu2State = 'hide';
     }
     MobileNavigationComponent.prototype.ngOnInit = function () {
-        var _this = this;
         this.$activeTab = this.menuService.$activeTab;
-        this.$activeTab.subscribe(function (res) { return _this.loadMenu(res); });
-    };
-    MobileNavigationComponent.prototype.navigate = function (nextState, currentState) {
-    };
-    MobileNavigationComponent.prototype.loadMenu = function (tab) {
-        if (tab === 'components') {
-            this.$activeState = this.menuService.$menuItems;
-            //this.$activeState = this.menuService.$menuItems;
-        }
+        this.$activeState = this.menuService.$menuItems;
     };
     MobileNavigationComponent.prototype.hideMobileNav = function () {
         this.menuService.switchTab(null);
-    };
-    MobileNavigationComponent.prototype.animationDone = function ($event) {
-        //this.$activeState.next(state);
-        //this.menuState = 'show';
-        //this.menu2State = 'hide';
-        console.log($event);
     };
     MobileNavigationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -525,7 +508,7 @@ var MobileNavigationComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./mobile-navigation.component.scss */ "./src/app/components/mobile-navigation/mobile-navigation.component.scss")],
             animations: [
                 Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["trigger"])('slideOut', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["transition"])(':leave', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('500ms ease-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["transition"])(':leave', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('300ms ease-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({
                         opacity: 0,
                         transform: 'translateX(-100px)'
                     }))),
@@ -534,14 +517,14 @@ var MobileNavigationComponent = /** @class */ (function () {
                             opacity: 0,
                             transform: 'translateX(-100px)'
                         }),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('700ms ease-in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('500ms ease-in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({
                             opacity: 1,
                             transform: 'translateX(0)'
                         }))
                     ])
                 ]),
                 Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["trigger"])('slideIn', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["transition"])(':leave', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('700ms ease-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["transition"])(':leave', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('300ms ease-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({
                         opacity: 0,
                         transform: 'translateX(700px)'
                     }))),
@@ -550,7 +533,7 @@ var MobileNavigationComponent = /** @class */ (function () {
                             opacity: 0,
                             transform: 'translateX(700px)'
                         }),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('700ms ease-in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('500ms ease-in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({
                             opacity: 1,
                             transform: 'translateX(0)'
                         }))
@@ -878,7 +861,7 @@ var environment = {
         }
         return version;
     })(),
-    travis_build_number: '63'
+    travis_build_number: '64'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
