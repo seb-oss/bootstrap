@@ -5,7 +5,7 @@
   @include angular-generic-table;
 }
 @if ($enable-ng-bootstrap) {
-  @include ng-bootstrap;
+  @include ngb-animations();
   @include ngb-dropdown();
   @include ngb-accordion('ngb-accordion');
   @include ngb-tooltip('[ngbTooltip]');
