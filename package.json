@@ -69,7 +69,7 @@
     "@fortawesome/pro-light-svg-icons": "^5.3.1",
     "@ng-bootstrap/ng-bootstrap": "^3.2.0",
     "@sebgroup/fonts": "^1.0.0",
-    "angular-exemplify": "^3.1.1",
+    "angular-exemplify": "^3.1.2",
     "core-js": "^2.5.4",
     "rxjs": "^6.3.1",
     "swe-validation": "^1.0.1",
