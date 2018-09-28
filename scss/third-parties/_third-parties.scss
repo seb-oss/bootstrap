@@ -6,6 +6,7 @@
 }
 @if ($enable-ng-bootstrap) {
   @include ngb-animations();
+  @include ngb-datepicker('ngb-datepicker');
   @include ngb-dropdown();
   @include ngb-accordion('ngb-accordion');
   @include ngb-tooltip('[ngbTooltip]');

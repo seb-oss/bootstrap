@@ -77,8 +77,11 @@ export class MenuService {
         name: 'Loaders',
         path: '/loaders'
     }, {
-        name: 'Skeleton loaders',
-        path: '/skeleton-loader'
+      name: 'Skeleton loaders',
+      path: '/skeleton-loader'
+    }, {
+      name: 'Datepicker',
+      path: '/datepicker'
     }];
 
   constructor() {
