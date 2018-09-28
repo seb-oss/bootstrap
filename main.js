@@ -145,7 +145,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-mobile-navigation></app-mobile-navigation>\n<app-side-navigation></app-side-navigation>\n<app-header></app-header>\n<div class=\"content\" (window:scroll)=\"scroll($event)\" style=\"z-index: 0;\">\n  <!--<app-sub-header [scrollPosition]=\"scrollPosition\"></app-sub-header>-->\n  <div class=\"row\">\n    <div class=\"col mx-auto mt-5 mt-lg-0 pt-3 pt-lg-0\" style=\"max-width: 920px\">\n      <router-outlet></router-outlet>\n      <div class=\"py-3 text-center\">Version: <a href=\"{{'https://github.com/sebgroup/bootstrap/releases/tag/v' + version}}\" target=\"_blank\" class=\"mr-3\">{{version}}</a>Build: {{travis_build_number}} </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<app-mobile-navigation></app-mobile-navigation>\n<app-side-navigation></app-side-navigation>\n<app-header></app-header>\n<div class=\"content\" (window:scroll)=\"scroll($event)\" style=\"z-index: 0;\">\n  <!--<app-sub-header [scrollPosition]=\"scrollPosition\"></app-sub-header>-->\n  <div class=\"row\">\n    <div class=\"col mx-auto mt-5 mt-lg-0 pt-3 pt-lg-0\" style=\"max-width: 920px\">\n      <router-outlet></router-outlet>\n      <div class=\"py-3 text-center\">Version: <a href=\"{{'https://github.com/sebgroup/bootstrap/releases/' + version}}\" target=\"_blank\" class=\"mr-3\">{{version}}</a>Build: {{travis_build_number}} </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -183,7 +183,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.travis_build_number = _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].travis_build_number;
-        this.version = _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].version;
+        this.version = _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].version === '0.0.0-semantically-released' ? 'latest' : 'tag/v' + _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].version;
     }
     AppComponent.prototype.scroll = function ($event) {
         this.scrollPosition = $event.target.scrollingElement.scrollTop;
@@ -861,7 +861,7 @@ var environment = {
         }
         return version;
     })(),
-    travis_build_number: '64'
+    travis_build_number: '65'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
