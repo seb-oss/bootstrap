@@ -1,6 +1,6 @@
 <form class="form-inline">
   <div class="form-group">
-    <div class="input-group">
+    <div class="input-group" [ngClass]="{'active':d.isOpen()}">
       <input class="form-control" placeholder="yyyy-mm-dd"
              name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (focus)="d.toggle()">
       <div class="input-group-append">
