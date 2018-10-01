@@ -28,7 +28,7 @@
     }
     border-radius: $input-border-radius;
     .form-control, .btn {
-      z-index:  $zindex-modal;
+      z-index:  $zindex-modal - 5;
       opacity: 0.35;
       border-color: $input-focus-border-color;
     }
