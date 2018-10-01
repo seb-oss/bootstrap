@@ -61,9 +61,14 @@
       height: 2.5rem !important;
       line-height: 2.5rem !important;
     }
-    /*.bg-primary {
-      background-color: $component-active-bg !important;
-    }*/
+    .bg-primary {
+      background-color: $blue-dark !important;
+    }
+    .btn-light:not([disabled]):not(.disabled).active {
+      background: transparent;
+      color: $blue-dark;
+      font-weight:bold;
+    }
 
     // mobile
     @include media-breakpoint-down(xs) {
@@ -106,6 +111,12 @@
           margin-right: auto !important;
           margin-left:  auto !important;
         }
+      }
+      .btn-light:not([disabled]):not(.disabled).active {
+        background: transparent;
+        color: inherit;
+        font-weight:normal;
+        box-shadow: none;
       }
     }
   }
