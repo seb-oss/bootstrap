@@ -1,0 +1,6 @@
+// tooltip
+@mixin ngb-tooltip($selector) {
+  abbr#{$selector} {
+    @include text-help;
+  }
+}

@@ -31,6 +31,9 @@ import { TooltipsComponent } from './components/tooltips/tooltips.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { TypographyComponent } from './components/typography/typography.component';
 import { SkeletonLoaderComponent } from './components/skeleton-loader/skeleton-loader.component';
+import { DatepickerComponent } from './components/datepicker/datepicker.component';
+import { DatepickerSimpleComponent } from './components/datepicker/datepicker-simple/datepicker-simple.component';
+import { DatepickerInputComponent } from './components/datepicker/datepicker-input/datepicker-input.component';
 library.add(faArrowAltRight);
 
 @NgModule({
@@ -64,7 +67,10 @@ library.add(faArrowAltRight);
       TooltipsComponent,
       AccordionComponent,
       TypographyComponent,
-      SkeletonLoaderComponent
+      SkeletonLoaderComponent,
+      DatepickerComponent,
+      DatepickerSimpleComponent,
+      DatepickerInputComponent
   ],
   exports: [ButtonsComponent]
 })

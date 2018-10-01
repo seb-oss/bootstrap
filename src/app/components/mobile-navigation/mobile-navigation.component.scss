@@ -4,7 +4,7 @@
   position: fixed;
   top: 56px;
   left: 0;
-  z-index: 1080;
+  z-index: $zindex-fixed;
   height: calc(100% - 56px);
   overflow-y: auto;
   overflow-x: hidden;
