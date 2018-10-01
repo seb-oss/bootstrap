@@ -8,7 +8,7 @@
     "build": "ng build --base-href https://sebgroup.github.io/bootstrap/ && copyfiles -f src/404.html dist/bootstrap",
     "prebuild": "rimraf dist/bootstrap && replace __TRAVIS_BUILD_NUMBER__ $TRAVIS_BUILD_NUMBER src/environments/environment.ts && replace __TRAVIS_BUILD_NUMBER__ $TRAVIS_BUILD_NUMBER src/environments/environment.prod.ts",
     "build-lib": "npm run copy-scss && npm run copy-fonts && npm run compile-css && copyfiles -f CHANGELOG.md LICENSE.md README.md scss/package.json dist/lib",
-    "build-sdl": "rimraf dist/bootstrap/sdl && copyfiles -u 2 src/**/*.md dist/bootstrap/sdl/ && gulp build-dsl",
+    "build-sdl": "rimraf dist/bootstrap/sdl && copyfiles -u 2 src/**/*.md dist/bootstrap/sdl/ && gulp build-dsl && copyfiles -f scss/*.json dist/bootstrap/sdl/ && renamer --find \"package\" --replace \"version\" dist/bootstrap/sdl/*.json && copyfiles -f dist/lib/css/bootstrap-all* dist/bootstrap/",
     "prebuild-lib": "rimraf dist/lib",
     "prepublish-lib": "npm run build-lib",
     "publish-lib": "npm publish dist/lib",
