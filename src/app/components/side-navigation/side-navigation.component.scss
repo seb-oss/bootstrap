@@ -16,6 +16,11 @@
     z-index: $zindex-fixed;
   }
 }
+@include media-breakpoint-down(sm) {
+  .side-nav.active {
+    display: none;
+  }
+}
 
 @include media-breakpoint-up(lg) {
   .side-nav {
