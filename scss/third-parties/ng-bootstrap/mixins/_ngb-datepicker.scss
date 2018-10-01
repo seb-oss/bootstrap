@@ -12,6 +12,9 @@
       font-style: normal !important;
       color: $label-color !important;
     }
+    .ngb-dp-week-number {
+      font-style: normal !important;
+    }
     .ngb-dp-day:focus {
       outline: none;
       & > .btn-light {
@@ -78,17 +81,6 @@
         overflow: hidden;
         border: none !important;
 
-        & + div.input-group-append::after {
-          @include ngb-fade-in();
-          position: fixed;
-          top: 0;
-          background: rgba(0, 0, 0, 0.5);
-          width: 100%;
-          height: 100%;
-          z-index: $zindex-modal-backdrop;
-          content: '';
-          left: 0;
-        }
         .ngb-dp-header {
           border-radius: 0;
         }
@@ -115,6 +107,19 @@
           margin-left:  auto !important;
         }
       }
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    .input-group.active > [ngbdatepicker] ~ .input-group-append::after {
+      @include ngb-fade-in();
+      position: fixed;
+      top: 0;
+      background: rgba($modal-backdrop-bg, $modal-backdrop-opacity);
+      width: 100%;
+      height: 100%;
+      z-index: $zindex-modal-backdrop;
+      content: '';
+      left: 0;
     }
   }
 }
