@@ -1,0 +1,125 @@
+@mixin ngb-datepicker($selector) {
+  #{$selector} {
+    .btn-light {
+      color: $dark;
+    }
+
+    &.dropdown-menu.show {
+      z-index: $zindex-popover;
+      @include ngb-fade-in(300ms);
+    }
+    .ngb-dp-weekday {
+      font-style: normal !important;
+      color: $label-color !important;
+    }
+    .ngb-dp-week-number {
+      font-style: normal !important;
+    }
+    .ngb-dp-day:focus {
+      outline: none;
+      & > .btn-light {
+        box-shadow: 0 0 0 $btn-focus-width rgba(map-get($theme-colors,'primary'), .5);
+
+      }
+    }
+
+    .outside {
+      background: $gray-200 !important;
+      border-radius: 0;
+      &:hover {
+        color: $component-active-color !important;
+      }
+      &:hover::after {
+        content: '';
+        display: block;
+        background: map-get($theme-colors,'primary');
+        height: 100%;
+        margin-top: -2.5rem;
+        border-radius: $btn-border-radius;
+      }
+      &::after {
+        width: 2.5rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .bg-light {
+      background: transparent !important;
+    }
+    .ngb-dp-navigation-chevron {
+      border-width: 1px 1px 0 0 !important;
+    }
+    select.custom-select + select.custom-select {
+      margin-left: 6px;
+    }
+
+    border: solid 1px map-get($theme-colors,'primary') !important;
+
+    .ngb-dp-day, .ngb-dp-weekday, .ngb-dp-week-number, .btn-light {
+      width: 2.5rem !important;
+      height: 2.5rem !important;
+      line-height: 2.5rem !important;
+    }
+    /*.bg-primary {
+      background-color: $component-active-bg !important;
+    }*/
+
+    // mobile
+    @include media-breakpoint-down(xs) {
+      &.dropdown-menu.show {
+        @include ngb-slide-up();
+        position: fixed;
+        left: 0 !important;
+        bottom: 0 !important;
+        top: auto !important;
+        margin-bottom: 0 !important;
+        z-index: $zindex-modal;
+        background: #fff;
+        width: 100vw !important;
+        border-radius: 0;
+        overflow: hidden;
+        border: none !important;
+
+        .ngb-dp-header {
+          border-radius: 0;
+        }
+
+        ngb-datepicker-month-view {
+          width:  100vw;
+        }
+
+        .ngb-dp-weekday, .ngb-dp-day {
+          flex: 1 1 auto;
+        }
+
+        .btn-light {
+          margin-left:  auto;
+          margin-right: auto;
+        }
+
+        .outside {
+          width: 100% !important;
+        }
+
+        .ngb-dp-arrow-btn {
+          margin-right: auto !important;
+          margin-left:  auto !important;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    .input-group.active > [ngbdatepicker] ~ .input-group-append::after {
+      @include ngb-fade-in();
+      position: fixed;
+      top: 0;
+      background: rgba($modal-backdrop-bg, $modal-backdrop-opacity);
+      width: 100%;
+      height: 100%;
+      z-index: $zindex-modal-backdrop;
+      content: '';
+      left: 0;
+    }
+  }
+}

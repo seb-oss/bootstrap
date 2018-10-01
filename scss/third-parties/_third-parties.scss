@@ -1,9 +1,13 @@
 @import "generic-table";
-@import "ng-bootstrap";
+@import "ng-bootstrap/mixins";
 
 @if ($enable-angular-generic-table) {
   @include angular-generic-table;
 }
 @if ($enable-ng-bootstrap) {
-  @include ng-bootstrap;
+  @include ngb-animations();
+  @include ngb-datepicker('ngb-datepicker');
+  @include ngb-dropdown();
+  @include ngb-accordion('ngb-accordion');
+  @include ngb-tooltip('[ngbTooltip]');
 }

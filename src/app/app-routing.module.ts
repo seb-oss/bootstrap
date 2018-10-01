@@ -23,6 +23,7 @@ import {AccordionComponent} from '../example/components/accordion/accordion.comp
 import {TypographyComponent} from '../example/components/typography/typography.component';
 import {AboutComponent} from './components/about/about.component';
 import {SkeletonLoaderComponent} from '../example/components/skeleton-loader/skeleton-loader.component';
+import {DatepickerComponent} from '../example/components/datepicker/datepicker.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
@@ -50,6 +51,7 @@ const routes: Routes = [
     { path: 'loaders', component: LoadersComponent },
     //{ path: 'wizard', component: WizardExampleComponent },
     { path: 'skeleton-loader', component: SkeletonLoaderComponent },
+    { path: 'datepicker', component: DatepickerComponent },
     { path: '**', redirectTo: 'about' },
 ];
 

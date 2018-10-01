@@ -1,0 +1,159 @@
+@mixin ngb-dropdown-host($selector) {
+
+  #{$selector} + .progress-feedback,
+  #{$selector} + .invalid-feedback,
+  #{$selector} + .valid-feedback {
+    &::before {
+      margin-top: -6px;
+      border-radius: 0 0 4px 4px;
+    }
+  }
+  #{$selector}.is-invalid ~ .progress-feedback,
+  #{$selector}.is-invalid ~ .invalid-feedback,
+  #{$selector}.is-valid ~ .valid-feedback {
+    display: block;
+  }
+
+  //dropdown style for mobile
+  @include media-breakpoint-down(xs) {
+    #{$selector}.show {
+      [ngbdropdowntoggle] {
+        z-index: $zindex-modal;
+        background-color: $white !important;
+        opacity: 0.35;
+      }
+      &::after {
+        @include ngb-fade-in(300ms);
+        position: fixed;
+        top: 0;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        z-index: $zindex-modal-backdrop;
+        content: '';
+        left: 0;
+      }
+    }
+  }
+}
+@mixin ngb-dropdownmenu($selector) {
+  #{$selector}.show {
+    @include ngb-fade-in();
+  }
+  //dropdown style for mobile
+  @include media-breakpoint-down(xs) {
+    #{$selector} {
+      .dropdown-multi-select-options {
+        margin-top: 5rem;
+      }
+
+      .dropdown-item:focus {
+        box-shadow: 0 0 0 $btn-focus-width rgba(map-get($theme-colors,'primary'), .5);
+        outline: none;
+      }
+
+      & > .dropdown-control {
+        position: fixed;
+        width: 100%;
+        margin-top: -(map_get($spacers, 2));
+        background: #fff;
+        padding: map_get($spacers, 2) map_get($spacers, 2) 0 map_get($spacers, 2);
+      }
+
+      &.show {
+        position: fixed;
+        left: 0 !important;
+        bottom: 0 !important;
+        top: auto !important;
+        margin-bottom: 0 !important;
+        z-index: $zindex-modal;
+        background: #fff;
+        max-height: 50vh;
+        width: 100vw !important;
+        border-radius: 0;
+        border: none;
+        overflow: hidden;
+        @include ngb-slide-up();
+        .dropdown-multi-select-options {
+          max-height: calc(50vh - 5rem);
+          overflow: auto;
+        }
+      }
+    }
+  }
+
+}
+@mixin ngb-dropdowntoggle($selector) {
+  #{$selector} {
+    text-align: left;
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: baseline;
+    &::after {
+      border: none;
+      content: '';
+      display: inline-block;
+      height: $font-size-base;
+      width: $font-size-base;
+      background: str-replace(url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='#{$dropdown-chevron-color}' d='M443.5 162.6l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 351 28.5 155.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.7 4.8-12.3.1-17z'/%3E%3C/svg%3E"), "#", "%23");
+      background-size: cover;
+      background-position-y: 2px;
+      background-repeat: no-repeat;
+      margin-left: 0.6rem;
+    }
+    &:active::after {
+      background: str-replace(url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='#{$dropdown-chevron-active-color}' d='M443.5 162.6l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 351 28.5 155.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.7 4.8-12.3.1-17z'/%3E%3C/svg%3E"), "#", "%23");
+    }
+    &.btn-sm {
+      &::after {
+        height: $font-size-sm;
+        width: $font-size-sm;
+        margin-left: 0.35rem;
+      }
+      + .dropdown-menu {
+        .dropdown-item {
+          padding-top: $dropdown-item-padding-y/2;
+          padding-bottom: $dropdown-item-padding-y/2;
+          font-size: $font-size-sm;
+        }
+      }
+    }
+    &.btn-lg {
+      &::after {
+        height: $font-size-lg;
+        width: $font-size-lg;
+        margin-left: 0.75rem;
+      }
+    }
+    &:hover {
+      &::after {
+        background-size: cover;
+        background-position-y: 2px;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  .is-invalid > #{$selector} {
+    &:focus {
+      border-color: $danger;
+      box-shadow: 0 0 0 $input-focus-width rgba($danger, .25);
+    }
+    &:hover {
+      border-color: $danger !important;
+    }
+    &:active {
+      color: $input-color !important;
+      background: $white !important;
+    }
+  }
+}
+@mixin ngb-dropdown() {
+  @include ngb-dropdown-host('[ngbdropdown]');
+  @include ngb-dropdownmenu('[ngbdropdownmenu]');
+  @include ngb-dropdowntoggle('[ngbdropdowntoggle]');
+}
+
+
+
+

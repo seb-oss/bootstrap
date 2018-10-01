@@ -1,19 +1,8 @@
 <div class="mobile-nav bg-light w-100" *ngIf="($activeTab | async) && $activeState | async as mobileMenu">
-  <div class="col d-md-none px-0" *ngIf="$activeTab | async as activeTab">
-    <!--<div [@slideOut]="menuState" *ngIf="menuState === 'show'" class="row no-gutters" >
-      <div class="col" ngClass="{{activeTab === 'overview' ? 'active':''}}" (click)="showMenu('overview')"><i class="fal fa-home fa-1x d-block"></i>Overview</div>
-      <div class="col" ngClass="{{activeTab === 'shortcuts' ? 'active':''}}" (click)="showMenu('shortcuts')"><i class="fal fa-bookmark fa-1x d-block"></i>Shortcuts</div>
-      <div class="col" ngClass="{{activeTab === 'actions' ? 'active':''}}" (click)="showMenu('actions')"><i class="fal fa-plus fa-1x d-block"></i>Actions</div>
-      <div class="col" ngClass="{{activeTab === 'browse' ? 'active':''}}" (click)="showMenu('browse')"><i class="fal fa-bars fa-1x d-block"></i>Browse</div>
-      <div class="col" ngClass="{{activeTab === 'profile' ? 'active':''}}" (click)="showMenu('profile')"><i class="fal fa-user fa-1x d-block"></i>Profile</div>
-    </div>-->
-    <div class="mobile-breadcrumb  border-bottom">
+  <div class="col d-md-none px-0" *ngIf="$activeTab | async as activeTab" (click)="hideMobileNav()">
+    <div class="mobile-breadcrumb border-bottom">
       <div  class="d-flex align-items-center position-absolute w-100 h-100">
         <h5 class="text-center position-absolute w-100" [@slideOut]="menuState" *ngIf="menuState === 'show'">{{activeTab}}</h5>
-      </div>
-      <div  class="d-flex align-items-center position-absolute w-100 h-100">
-        <div class="pl-3 position-absolute" style="z-index: 1;" [@fadeIn]="menu2State" *ngIf="menu2State === 'show'" ><button class="btn btn-link" (click)="menu2State = 'hide';menuState = 'show';"><i class="fal fa-chevron-left mr-2"></i>Back</button></div>
-        <h5 class="text-center position-absolute w-100" [@slideIn]="menu2State" *ngIf="menu2State === 'show'" ><!--{{($nextState | async)?.labelId}}--></h5>
       </div>
     </div>
   </div>

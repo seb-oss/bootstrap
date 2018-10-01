@@ -24,7 +24,7 @@
         <div class="row align-items-center menu-item" routerLinkActive="active">
           <div class="col pl-0">
             <ng-container *ngIf="menuItem.path.substr(0,4) !== 'http'">
-              <a class="nav-link" routerLink="{{menuItem.path}}" (click)="menuItem.active = !menuItem.active">{{menuItem.name}}</a>
+              <a class="nav-link" routerLink="{{menuItem.path}}" (click)="menuItem.active = !menuItem.active; toggleMenu();">{{menuItem.name}}</a>
             </ng-container>
             <ng-container *ngIf="menuItem.path.substr(0,4) === 'http'">
               <a class="nav-link" [href]="menuItem.path" target="_blank">{{menuItem.name}}</a>
@@ -42,7 +42,7 @@
       <ng-container *ngFor="let menuItem of $baseItems | async">
         <div class="row align-items-center menu-item" routerLinkActive="active">
           <div class="col pl-0">
-            <a class="nav-link" routerLink="{{menuItem.path}}" (click)="menuItem.active = !menuItem.active">{{menuItem.name}}</a>
+            <a class="nav-link" routerLink="{{menuItem.path}}" (click)="menuItem.active = !menuItem.active; toggleMenu();">{{menuItem.name}}</a>
           </div>
         </div>
       </ng-container>
@@ -56,7 +56,7 @@
       <ng-container *ngFor="let menuItem of $menuItems | async">
         <div class="row align-items-center menu-item" routerLinkActive="active">
           <div class="col pl-0">
-            <a class="nav-link" routerLink="{{menuItem.path}}" (click)="menuItem.active = !menuItem.active">{{menuItem.name}}</a>
+            <a class="nav-link" routerLink="{{menuItem.path}}" (click)="menuItem.active = !menuItem.active; toggleMenu();">{{menuItem.name}}</a>
           </div>
         </div>
       </ng-container>
