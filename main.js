@@ -1,16 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
-/***/ "./dist/lib/package.json":
-/*!*******************************!*\
-  !*** ./dist/lib/package.json ***!
-  \*******************************/
-/*! exports provided: name, version, description, main, scripts, repository, publishConfig, author, license, bugs, homepage, dependencies, default */
-/***/ (function(module) {
-
-module.exports = {"name":"@sebgroup/bootstrap","version":"1.3.1","description":"A standalone bootstrap theme for SEB","main":"scss/bootstrap.scss","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"git+https://github.com/sebgroup/bootstrap.git"},"publishConfig":{"registry":"https://registry.npmjs.org/","access":"public"},"author":"Robert Hjalmers","license":"Apache-2.0","bugs":{"url":"https://github.com/sebgroup/bootstrap/issues"},"homepage":"https://sebgroup.github.io/bootstrap/","dependencies":{"@sebgroup/fonts":"^1.0.0"}};
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/index.js!./src/example/components/datepicker/datepicker-input/datepicker-input.component.html":
 /*!**********************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/example/components/datepicker/datepicker-input/datepicker-input.component.html ***!
@@ -905,14 +894,14 @@ var environment = {
     version: (function () {
         var version = '';
         try {
-            version = __webpack_require__(/*! ../../dist/lib/package.json */ "./dist/lib/package.json").version;
+            version = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module '../../dist/lib/package.json'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())).version;
         }
         catch (e) {
             version = 'n/a';
         }
         return version;
     })(),
-    travis_build_number: '75'
+    travis_build_number: '__TRAVIS_BUILD_NUMBER__'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
