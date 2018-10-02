@@ -14,7 +14,10 @@ cache:
 
 script:
 - npm run test-ci
-- npm run build && npm run build-lib && npm run build-sdl
+- if [ "$TRAVIS_BRANCH" == "master" ];
+  then npm run build && npm run build-lib && npm run build-sdl;
+  else npm run build-dev && npm run build-lib;
+  fi
 - export APPLITOOLS_BATCH_ID=`echo ${TRAVIS_PULL_REQUEST_SHA:=$TRAVIS_COMMIT}`
 - npm run e2e-ci
 
@@ -25,13 +28,23 @@ deploy:
     keep-history: true
     local-dir: dist/bootstrap
     on:
-      all_branches: true
+      branch: master
+  - provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    keep-history: true
+    local-dir: dist/bootstrap
+    on:
+      branch: develop
 
 git:
   depth: 3
 
 after_success:
-- npm run travis-deploy-once "npm run semantic-release"
+- if [ "$TRAVIS_BRANCH" == "master" ];
+  then npm run travis-deploy-once "npm run semantic-release";
+  fi
+
 
 branches:
   except:
