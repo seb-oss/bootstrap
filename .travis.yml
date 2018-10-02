@@ -33,7 +33,7 @@ deploy:
     skip-cleanup: true
     github-token: $GITHUB_TOKEN
     keep-history: true
-    local-dir: dist/bootstrap/dev
+    local-dir: dist/bootstrap
     on:
       branch: develop
 
