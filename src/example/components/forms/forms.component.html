@@ -332,15 +332,16 @@
 <div class="card mb-4 angular-validation">
   <div class="card-body">
     <p>Basic validation rules like <code>required</code>, <code>minlength</code> and <code>pattern</code> etc. provided by HTML and browsers natively for inputs are awesome for validation but they're not that user friendly or intuitive. Using a framework like Angular we can enhance the native behavior and extend it with our on validation rules. In the following example we've made it a bit more clever just showing one error at a time and we've also added custom validation for personal identity number.</p>
-    <p>Validation progress can be shown by applying one of the following classes to the feedback element: <code>p-0</code> for 0%, <code>p-10</code> for 10%, <code>p-20</code> for 20% and so on up till 100%. There's also another type of feedback besides <code>invalid-feedback</code> and <code>valid-feedback</code> called <code>progress-feedback</code> that will change color depending on the p value provided.</p>
+    <p>Validation progress can be shown by applying one of the following classes to the feedback element: <code>progress-0</code> for 0%, <code>progress-10</code> for 10%, <code>progress-20</code> for 20% and so on up till 100%. There's also another type of feedback besides <code>invalid-feedback</code> and <code>valid-feedback</code> called <code>progress-feedback</code> that will change color depending on the p value provided.</p>
     <div class="alert alert-info"><strong>Framework needed!</strong> Please note that the examples below uses angular but similar behavior can be achieved using other frameworks as well.</div>
-    <form #loginForm="ngForm" novalidate>
+    <form #loginForm="ngForm" novalidate autocomplete="off">
       <div class="form-row">
-        <div class="form-group col-12 col-sm-10 col-md-auto">
+        <div class="form-group col-12 col-sm-4 col-md-auto col-lg-3">
           <label for="personalIdInput">Personal Identity number</label>
           <input type="tel" [(ngModel)]="personalIdentityNumber"
                  [ngClass]="{'is-invalid':!personalIdentityNumberInput.valid && personalIdentityNumberInput.lostFocus, 'is-valid': personalIdentityNumberInput.valid}"
                  name="personalIdentityNumber"
+                 autocomplete="new-password"
                  class="form-control"
                  id="personalIdInput"
                  aria-describedby="personalIdHelp"
@@ -351,17 +352,18 @@
                  (keyup)="onValueChange()"
                  (change)="onValueChange()"
                  (focusout)="personalIdentityNumberInput.lostFocus = true">
-          <div *ngIf="!personalIdentityNumberInput.lostFocus && !personalIdentityNumberInput.valid" class="{{'progress-feedback progress-success text-muted p-' + Math.floor((personalIdentityNumber.length/1.2)) + (Math.floor((personalIdentityNumber.length/1.2)) === 0 ? '':'0')}}" id="personalIdHelp">Enter personal id, 10 digits</div>
-          <div class="{{personalIdentityNumberInput.valid ? 'valid-feedback ' : 'invalid-feedback ' + 'p-' + Math.floor((personalIdentityNumber.length/1.2)) + (Math.floor((personalIdentityNumber.length/1.2)) === 0 ? '':'0')}}">
+          <div *ngIf="!personalIdentityNumberInput.lostFocus && !personalIdentityNumberInput.valid" class="{{'progress-feedback progress-success text-muted progress-' + Math.floor((personalIdentityNumber.length/1.2)) + (Math.floor((personalIdentityNumber.length/1.2)) === 0 ? '':'0')}}" id="personalIdHelp">Enter personal id, 10 digits</div>
+          <div class="{{personalIdentityNumberInput.valid ? 'valid-feedback ' : 'invalid-feedback ' + 'progress-' + Math.floor((personalIdentityNumber.length/1.2)) + (Math.floor((personalIdentityNumber.length/1.2)) === 0 ? '':'0')}}">
             {{personalIdentityNumberInput.valid ? 'Looks good!' : (personalIdentityNumberInput.errors | validationMessage)}}
           </div>
         </div>
       </div>
       <div class="form-row">
-        <div class="form-group col-12 col-sm-10 col-md-auto">
+        <div class="form-group col-12 col-sm-4 col-md-auto col-lg-3">
           <label for="passwordId">Create password</label>
           <input type="password" [(ngModel)]="password"
                  [ngClass]="{'is-invalid':!passwordInput.valid && passwordInput.lostFocus}"
+                 autocomplete="new-password"
                  name="password"
                  class="form-control"
                  id="passwordId"
@@ -370,7 +372,7 @@
                  maxlength="10"
                  minlength="4"
                  (focusout)="passwordInput.lostFocus = true">
-          <div class="{{(password.length <= 3 && passwordInput.lostFocus ? 'invalid':'progress') + '-feedback p-' + (password.length === 0 ? '0': password.length <= 4 ? '10': (password.length <= 6 ? '30': (password.length <= 8 ? '60': (password.length < 10 ? '100': '100'))))}}" id="passwordHelp">{{password.length === 0 ? 'Enter desired password': (password.length <= 3 ? 'To short': (password.length <= 6 ? 'Weak password': (password.length <= 8 ? 'Okay password': (password.length <= 10 ? 'Strong password': ''))))}}</div>
+          <div class="{{(password.length <= 3 && passwordInput.lostFocus ? 'invalid':'progress') + '-feedback progress-' + (password.length === 0 ? '0': password.length <= 4 ? '10': (password.length <= 6 ? '30': (password.length <= 8 ? '60': (password.length < 10 ? '100': '100'))))}}" id="passwordHelp">{{password.length === 0 ? 'Enter desired password': (password.length <= 3 ? 'To short': (password.length <= 6 ? 'Weak password': (password.length <= 8 ? 'Okay password': (password.length <= 10 ? 'Strong password': ''))))}}</div>
         </div>
       </div>
     </form>
