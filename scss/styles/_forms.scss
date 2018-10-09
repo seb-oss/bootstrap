@@ -64,6 +64,15 @@ input + .progress-feedback, select + .progress-feedback, textarea + .progress-fe
   }
 }
 
+// SEB Specific styles for form control help
+.form-control ~ .form-control-help {
+  font-size: $form-feedback-font-size;
+  color: $text-muted;
+  margin-top: 5px;
+  &.valid-feedback {
+    margin-top: 4px;
+  }
+}
 
 // SEB Specific styles for validation progress bar
 :focus + .progress-feedback,
