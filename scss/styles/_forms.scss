@@ -34,22 +34,22 @@ label {
     transition: background .6s ease-out, width .6s ease-out;
     z-index: 2;
   }
-  &.p-0::before {
+  &.progress-0::before {
     width: 0;
   }
-  &.p-10, &.p-20, &.p-30 {
+  &.progress-10, &.progress-20, &.progress-30 {
     color: $danger;;
     &::before {
       background: $danger;
     }
   }
-  &.p-40, &.p-50, &.p-60 {
+  &.progress-40, &.progress-50, &.progress-60 {
     color: $warning;
     &::before {
       background: $warning;
     }
   }
-  &.p-70, &.p-80, &.p-90, &.p-100 {
+  &.progress-70, &.progress-80, &.progress-90, &.progress-100 {
     color: $success;
     &::before {
       background: $success;
@@ -64,6 +64,7 @@ input + .progress-feedback, select + .progress-feedback, textarea + .progress-fe
   }
 }
 
+
 // SEB Specific styles for validation progress bar
 :focus + .progress-feedback,
 :focus + .invalid-feedback,
@@ -71,17 +72,17 @@ input + .progress-feedback, select + .progress-feedback, textarea + .progress-fe
 .input-group-append + .progress-feedback,
 .input-group-append + .invalid-feedback,
 .input-group-append + .valid-feedback {
-  &.p-0::before {
+  &.progress-0::before {
     width: 0;
     border-radius: 0 0 0 4px;
   }
   @for $i from 1 through 9 {
-    &.p-#{$i}0::before {
+    &.progress-#{$i}0::before {
       width: #{$i}0%;
       border-radius: 0 0 0 4px;
     }
   }
-  &.p-100::before {
+  &.progress-100::before {
     width: 100%;
     border-radius: 0 0 4px 4px;
   }
