@@ -69,18 +69,19 @@ input + .progress-feedback, select + .progress-feedback, textarea + .progress-fe
   font-size: $form-feedback-font-size;
   color: $text-muted;
   margin-top: 5px;
+  width: 100%;
   &.valid-feedback {
     margin-top: 4px;
   }
 }
 
 // SEB Specific styles for validation progress bar
-:focus + .progress-feedback,
-:focus + .invalid-feedback,
-:focus + .valid-feedback,
-.input-group-append + .progress-feedback,
-.input-group-append + .invalid-feedback,
-.input-group-append + .valid-feedback {
+.form-control:focus + .progress-feedback,
+.form-control:focus + .invalid-feedback,
+.form-control:focus + .valid-feedback,
+.form-control:focus ~ .input-group-append + .progress-feedback,
+.form-control:focus ~ .input-group-append + .invalid-feedback,
+.form-control:focus ~ .input-group-append + .valid-feedback {
   &.progress-0::before {
     width: 0;
     border-radius: 0 0 0 4px;
