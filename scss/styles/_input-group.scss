@@ -14,6 +14,10 @@
   position: relative;
 }
 
+.form-control:disabled ~ .input-group-append > .input-group-text {
+  background: $input-disabled-bg;
+}
+
 @include media-breakpoint-down(xs) {
   .input-group.active {
     color: $input-focus-color;
