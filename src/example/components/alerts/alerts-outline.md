@@ -7,14 +7,15 @@ guid: some-random-and-unique-string-alerts1
 # Usage and description
 The first example below uses the `.alert-outline-*` class (replace * with context) for a more subtle message. The background is white to make it stick out when placed on grey backgrounds.
 
-# Want to import only alerts from Bootstrap?
-Sure, just add the following (instead of `@seb-style/bootstrap/dist/scss/bootstrap`)
+### Want to import only alerts from Bootstrap?
+Sure, just add the following (instead of `@sebgroup/bootstrap/scss/bootstrap`)
 ```scss
-@import "~@seb-style/variables/_variables"; // variables used by bootstrap
-@import "~@seb-style/bootstrap/dist/scss/styles/_functions"; // functions used by bootstrap
-@import "~@seb-style/bootstrap/dist/scss/styles/_mixins"; // mixins used by bootstrap
-@import "~@seb-style/bootstrap/dist/scss/styles/_reboot"; // reset browser specific styles (based on normalize.css)
-@import "~@seb-style/bootstrap/dist/scss/styles/alert"; // specific styles for alerts
+@import "~@sebgroup/bootstrap/variables";                   // variables used by bootstrap
+@import '~@sebgroup/fonts/scss/seb-fonts';                  // import seb font
+@import "~@sebgroup/bootstrap/scss/styles/functions";       // functions used by bootstrap
+@import "~@sebgroup/bootstrap/scss/styles/mixins/mixins";   // mixins used by bootstrap
+@import "~@sebgroup/bootstrap/scss/styles/reboot";          // reset browser specific styles (based on normalize.css)
+@import "~@sebgroup/bootstrap/scss/styles/alert";           // specific styles for alert
 ```
 
 Why not just import alerts? Well in order for the styles to build we need include some common variables, functions and mixins too, but don't worry these won't add size to the final output.
