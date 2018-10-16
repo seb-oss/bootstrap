@@ -7,7 +7,7 @@ guid: some-random-and-unique-checkbox
 # Usage and description
 Below you'll find some examples of checkboxes and layout options using the grid (rows and columns), head over to [bootstrap](https://getbootstrap.com/docs/4.0/components/forms/#overview) docs for more info and examples.
 
-#Standard checkbox
+# Standard checkbox
 We use a standard input element with type="checkbox" for checkboxes but we need to wrap it in a div to get the right style for the different states.
 
 ## Base state

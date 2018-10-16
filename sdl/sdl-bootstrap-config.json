@@ -210,6 +210,25 @@
                     ]
                 },
                 {
+                    "title": "Navbar",
+                    "shortpath": "navbar",
+                    "longpath": "src/components/navbar",
+                    "items": [
+                        {
+                            "title": "Navbar",
+                            "componentid": "component-navbar",
+                            "variantid": "dark",
+                            "guid": "sdl-bootstrap-component-navbar-dark",
+                            "filename": "navbar.md",
+                            "filepath": "components/navbar/navbar.md",
+                            "shortpath": "components/navbar/navbar",
+                            "longpath": "components/navbar/navbar.md",
+                            "type": "file",
+                            "private": false
+                        }
+                    ]
+                },
+                {
                     "title": "Pagination",
                     "shortpath": "pagination",
                     "longpath": "src/components/pagination",
@@ -223,6 +242,25 @@
                             "filepath": "components/pagination/pagination.md",
                             "shortpath": "components/pagination/pagination",
                             "longpath": "components/pagination/pagination.md",
+                            "type": "file",
+                            "private": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Skeleton-loader",
+                    "shortpath": "skeleton-loader",
+                    "longpath": "src/components/skeleton-loader",
+                    "items": [
+                        {
+                            "title": "Skeleton loader",
+                            "componentid": "component-skeleton-loader",
+                            "variantid": "default",
+                            "guid": "sdl-bootstrap-component-skeleton-loader-default",
+                            "filename": "skeleton-loader.md",
+                            "filepath": "components/skeleton-loader/skeleton-loader.md",
+                            "shortpath": "components/skeleton-loader/skeleton-loader",
+                            "longpath": "components/skeleton-loader/skeleton-loader.md",
                             "type": "file",
                             "private": false
                         }
@@ -335,7 +373,7 @@
                 }
             ],
             "filecount": 0,
-            "directorycount": 13,
+            "directorycount": 15,
             "type": "directory"
         }
     ]

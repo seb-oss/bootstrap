@@ -7,7 +7,7 @@
 /*! exports provided: name, version, description, main, scripts, repository, publishConfig, author, license, bugs, homepage, dependencies, default */
 /***/ (function(module) {
 
-module.exports = {"name":"@sebgroup/bootstrap","version":"2.1.0","description":"A standalone bootstrap theme for SEB","main":"scss/bootstrap.scss","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"git+https://github.com/sebgroup/bootstrap.git"},"publishConfig":{"registry":"https://registry.npmjs.org/","access":"public"},"author":"Robert Hjalmers","license":"Apache-2.0","bugs":{"url":"https://github.com/sebgroup/bootstrap/issues"},"homepage":"https://sebgroup.github.io/bootstrap/","dependencies":{"@sebgroup/fonts":"^1.0.0"}};
+module.exports = {"name":"@sebgroup/bootstrap","version":"2.2.0","description":"A standalone bootstrap theme for SEB","main":"scss/bootstrap.scss","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"git+https://github.com/sebgroup/bootstrap.git"},"publishConfig":{"registry":"https://registry.npmjs.org/","access":"public"},"author":"Robert Hjalmers","license":"Apache-2.0","bugs":{"url":"https://github.com/sebgroup/bootstrap/issues"},"homepage":"https://sebgroup.github.io/bootstrap/","dependencies":{"@sebgroup/fonts":"^1.0.0"}};
 
 /***/ }),
 
@@ -111,12 +111,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_about_about_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/about/about.component */ "./src/app/components/about/about.component.ts");
 /* harmony import */ var _example_components_skeleton_loader_skeleton_loader_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../example/components/skeleton-loader/skeleton-loader.component */ "./src/example/components/skeleton-loader/skeleton-loader.component.ts");
 /* harmony import */ var _example_components_datepicker_datepicker_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../example/components/datepicker/datepicker.component */ "./src/example/components/datepicker/datepicker.component.ts");
+/* harmony import */ var _example_components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../example/components/navbar/navbar.component */ "./src/example/components/navbar/navbar.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -167,6 +169,7 @@ var routes = [
     //{ path: 'wizard', component: WizardExampleComponent },
     { path: 'skeleton-loader', component: _example_components_skeleton_loader_skeleton_loader_component__WEBPACK_IMPORTED_MODULE_21__["SkeletonLoaderComponent"] },
     { path: 'datepicker', component: _example_components_datepicker_datepicker_component__WEBPACK_IMPORTED_MODULE_22__["DatepickerComponent"] },
+    { path: 'navbar', component: _example_components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_23__["NavbarComponent"] },
     { path: '**', redirectTo: 'about' },
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -794,6 +797,9 @@ var MenuService = /** @class */ (function () {
             }, {
                 name: 'Datepicker',
                 path: '/datepicker'
+            }, {
+                name: 'Navbar',
+                path: '/navbar'
             }];
         this.updateMenu('start');
     }
@@ -912,7 +918,7 @@ var environment = {
         }
         return version;
     })(),
-    travis_build_number: '84'
+    travis_build_number: '86'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
@@ -1633,7 +1639,7 @@ var PersonalIdentityNumberDirective = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"px-3 px-md-0 my-3\">Icons</h2>\n<p class=\"lead px-3 px-md-0\">\n  Font Aweseome 5 is the icon framework we're using.\n</p>\n<div class=\"card\">\n  <h5 class=\"card-header pb-0\">Usage</h5>\n  <div class=\"card-body\">\n    <p>In order to try out Font Awesome 5 you need to install the icon framework (contact <a href=\"mailto:robert.hjalmers@seb.se\">Robert Hjalmers</a> to get access). Once you've added the framework, you'll be able to use the icons with the following markup: <code>&lt;i class=&quot;fal fa-print&quot;&gt;&lt;/i&gt;</code> and change <code>print</code> to the name of the icon you'd like to use (see some of the available icons below).</p>\n    <h5>Icons</h5>\n    <div class=\"form-group row\">\n      <div class=\"col-12 col-md-auto\">\n        <label for=\"search_icon_input\">Search</label>\n        <input id=\"search_icon_input\" name=\"iconSearchString\" [(ngModel)]=\"iconSearchString\" (ngModelChange)=\"filterIcons($event)\" class=\"form-control\" type=\"text\" placeholder=\"Type to filter icons\">\n      </div>\n    </div>\n    <div class=\"row icon-list\">\n      <div class=\"col-6 col-md-4\" *ngFor=\"let icon of filteredIcons\">\n        <i class=\"{{'fal fa-' + icon}}\"></i> <span class=\"ml-2\">{{icon}}</span>\n      </div>\n    </div>\n    <h5 class=\"mt-4\">Sizing</h5>\n    <p>Icons are available in 4 different sizes, add <code>fa-xx</code>(replace with one of the classes below) to adjust icon size. Even though bigger sizes are available we should avoid using them and consider using pictograms instead.</p>\n    <div class=\"sizes\">\n      <div><i class=\"fal fa-heart fa-xs\"></i><span>fa-xs </span><small class=\"text-muted\">(extra small, 12 px)</small></div>\n      <div><i class=\"fal fa-heart\"></i><small class=\"text-muted\">(normal, 16 px)</small></div>\n      <div><i class=\"fal fa-heart fa-lg\"></i><span>fa-lg </span><small class=\"text-muted\">(large, 24 px)</small></div>\n      <div><i class=\"fal fa-heart fa-2x\"></i><span>fa-2x </span><small class=\"text-muted\">(2x, 32 px)</small></div>\n    </div>\n    <h5 class=\"mt-4\">Do's and don'ts</h5>\n    <label>Do</label>\n    <ul>\n      <li>Use icons when they add value</li>\n      <li>Use Font Awesome 5 for generic system icons up to 32 px (fa-2x)</li>\n    </ul>\n    <label>Don't</label>\n    <ul>\n      <li>Use Font Awesome for larger icons (bigger than 32 px), use pictograms (coming soon!)</li>\n      <li>Stack icons on top of each other</li>\n      <li>Add colors to icons other than <span class=\"text-success\">text-success</span>, <span class=\"text-warning\">text-warning</span> or <span class=\"text-danger\">text-danger</span> when applicable</li>\n    </ul>\n  </div>\n</div>\n<div style=\"text-align:center\">\n  <fa-icon [icon]=\"faArrowAltRight\"></fa-icon>\n</div>\n"
+module.exports = "<h2 class=\"px-3 px-md-0 my-3\">Icons</h2>\n<div class=\"card\">\n  <div class=\"card-body\">\n    <div class=\"alert alert-info\">\n      <strong>Framework needed!</strong> This library doesn't include any icons so you need to install Font Awesome 5, which is the icon framework we're using, separately. We're using the light version which requires a pro version, if you're on SEB:s network you can read more about our license <a class=\"alert-link\" href=\"https://github.sebank.se/seb-common/licenses/blob/master/font-awesome.md\" target=\"_blank\">here</a> otherwise contact <a class=\"alert-link\" href=\"mailto:robert.hjalmers@seb.se\">Robert Hjalmers</a> for more info.\n    </div>\n    <p>In order to try out Font Awesome 5 you need to install the icon framework . Once you've added the framework, you'll be able to use the icons with the following markup: <code>&lt;i class=&quot;fal fa-print&quot;&gt;&lt;/i&gt;</code> and change <code>print</code> to the name of the icon you'd like to use (see some of the available icons below).</p>\n    <h5>Icons</h5>\n    <div class=\"form-group row\">\n      <div class=\"col-12 col-md-auto\">\n        <label for=\"search_icon_input\">Search</label>\n        <input id=\"search_icon_input\" name=\"iconSearchString\" [(ngModel)]=\"iconSearchString\" (ngModelChange)=\"filterIcons($event)\" class=\"form-control\" type=\"text\" placeholder=\"Type to filter icons\">\n      </div>\n    </div>\n    <div class=\"row icon-list\">\n      <div class=\"col-6 col-md-4\" *ngFor=\"let icon of filteredIcons\">\n        <i class=\"{{'fal fa-' + icon}}\"></i> <span class=\"ml-2\">{{icon}}</span>\n      </div>\n    </div>\n    <h5 class=\"mt-4\">Sizing</h5>\n    <p>Icons are available in 4 different sizes, add <code>fa-xx</code>(replace with one of the classes below) to adjust icon size. Even though bigger sizes are available we should avoid using them and consider using pictograms instead.</p>\n    <div class=\"sizes\">\n      <div><i class=\"fal fa-heart fa-xs\"></i><span>fa-xs </span><small class=\"text-muted\">(extra small, 12 px)</small></div>\n      <div><i class=\"fal fa-heart\"></i><small class=\"text-muted\">(normal, 16 px)</small></div>\n      <div><i class=\"fal fa-heart fa-lg\"></i><span>fa-lg </span><small class=\"text-muted\">(large, 24 px)</small></div>\n      <div><i class=\"fal fa-heart fa-2x\"></i><span>fa-2x </span><small class=\"text-muted\">(2x, 32 px)</small></div>\n    </div>\n    <h5 class=\"mt-4\">Do's and don'ts</h5>\n    <label>Do</label>\n    <ul>\n      <li>Use icons when they add value</li>\n      <li>Use Font Awesome 5 for generic system icons up to 32 px (fa-2x)</li>\n    </ul>\n    <label>Don't</label>\n    <ul>\n      <li>Use Font Awesome for larger icons (bigger than 32 px), use pictograms (coming soon!)</li>\n      <li>Stack icons on top of each other</li>\n      <li>Add colors to icons other than <span class=\"text-success\">text-success</span>, <span class=\"text-warning\">text-warning</span> or <span class=\"text-danger\">text-danger</span> when applicable</li>\n    </ul>\n  </div>\n</div>\n<div style=\"text-align:center\">\n  <fa-icon [icon]=\"faArrowAltRight\"></fa-icon>\n</div>\n"
 
 /***/ }),
 
@@ -1953,6 +1959,58 @@ var ModalsComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], ModalsComponent);
     return ModalsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/example/components/navbar/navbar.component.html":
+/*!*************************************************************!*\
+  !*** ./src/example/components/navbar/navbar.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<a name=\"navbar\"><h2 class=\"px-3 px-md-0 my-3\">Navbar</h2></a>\n<p class=\"lead px-3 px-md-0 mb-4\">Most applications won't need the navbar as the navbar will be provided by the application shell, however there might be cases where you need a standalone navbar/header for your app. For more examples please visit <a href=\"http://getbootstrap.com/docs/4.1/components/navbar/\" target=\"_blank\">official bootstrap docs</a>.</p>\n<div class=\"card mb-4\" id=\"navbarThemeExample\">\n  <h4 class=\"card-header\">Color themes</h4>\n  <div class=\"card-body\">\n    <nav class=\"navbar navbar-dark bg-dark\">\n      <span class=\"navbar-brand\" href=\"#\">\n        Bootstrap\n      </span>\n      <span class=\"navbar-text\">\n          Navbar text with an inline element\n        </span>\n    </nav>\n    <exemplify [selector]=\"'#navbarThemeExample .navbar.navbar-dark.bg-dark'\"></exemplify>\n  </div>\n  <div class=\"card-body\">\n    <nav class=\"navbar navbar-light bg-white\">\n      <span class=\"navbar-brand\" href=\"#\">\n        Bootstrap\n      </span>\n      <span class=\"navbar-text\">\n          Navbar text with an inline element\n        </span>\n    </nav>\n    <exemplify [selector]=\"'#navbarThemeExample .navbar.navbar-light.bg-white'\"></exemplify>\n  </div>\n  <div class=\"card-body\">\n    <nav class=\"navbar navbar-light bg-light\">\n      <span class=\"navbar-brand\" href=\"#\">\n        Bootstrap\n      </span>\n      <span class=\"navbar-text\">\n          Navbar text with an inline element\n        </span>\n    </nav>\n    <exemplify [selector]=\"'#navbarThemeExample .navbar.navbar-light.bg-light'\"></exemplify>\n  </div>\n</div>\n<div class=\"card mb-4\" id=\"navbarFormsExample\">\n  <h4 class=\"card-header\">Forms</h4>\n  <div class=\"card-body\">\n    <nav class=\"navbar navbar-dark bg-dark\">\n      <span class=\"navbar-brand\" href=\"#\">\n        Bootstrap\n      </span>\n      <form class=\"form-row\">\n        <div class=\"col\">\n          <input class=\"form-control\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n        </div>\n        <div class=\"col-auto\">\n          <button class=\"btn btn-light\" type=\"submit\">Search</button>\n        </div>\n      </form>\n    </nav>\n    <exemplify [selector]=\"'#navbarFormsExample .navbar.navbar-dark.bg-dark'\"></exemplify>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/example/components/navbar/navbar.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/example/components/navbar/navbar.component.ts ***!
+  \***********************************************************/
+/*! exports provided: NavbarComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavbarComponent", function() { return NavbarComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var NavbarComponent = /** @class */ (function () {
+    function NavbarComponent() {
+    }
+    NavbarComponent.prototype.ngOnInit = function () {
+    };
+    NavbarComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-navbar',
+            template: __webpack_require__(/*! ./navbar.component.html */ "./src/example/components/navbar/navbar.component.html"),
+            styles: []
+        }),
+        __metadata("design:paramtypes", [])
+    ], NavbarComponent);
+    return NavbarComponent;
 }());
 
 
@@ -2341,12 +2399,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_datepicker_datepicker_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/datepicker/datepicker.component */ "./src/example/components/datepicker/datepicker.component.ts");
 /* harmony import */ var _components_datepicker_datepicker_simple_datepicker_simple_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/datepicker/datepicker-simple/datepicker-simple.component */ "./src/example/components/datepicker/datepicker-simple/datepicker-simple.component.ts");
 /* harmony import */ var _components_datepicker_datepicker_input_datepicker_input_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/datepicker/datepicker-input/datepicker-input.component */ "./src/example/components/datepicker/datepicker-input/datepicker-input.component.ts");
+/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/example/components/navbar/navbar.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -2418,7 +2478,8 @@ var ExampleModule = /** @class */ (function () {
                 _components_skeleton_loader_skeleton_loader_component__WEBPACK_IMPORTED_MODULE_28__["SkeletonLoaderComponent"],
                 _components_datepicker_datepicker_component__WEBPACK_IMPORTED_MODULE_29__["DatepickerComponent"],
                 _components_datepicker_datepicker_simple_datepicker_simple_component__WEBPACK_IMPORTED_MODULE_30__["DatepickerSimpleComponent"],
-                _components_datepicker_datepicker_input_datepicker_input_component__WEBPACK_IMPORTED_MODULE_31__["DatepickerInputComponent"]
+                _components_datepicker_datepicker_input_datepicker_input_component__WEBPACK_IMPORTED_MODULE_31__["DatepickerInputComponent"],
+                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_32__["NavbarComponent"]
             ],
             exports: [_components_buttons_buttons_component__WEBPACK_IMPORTED_MODULE_2__["ButtonsComponent"]]
         })
