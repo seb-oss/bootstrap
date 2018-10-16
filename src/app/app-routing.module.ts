@@ -24,6 +24,7 @@ import {TypographyComponent} from '../example/components/typography/typography.c
 import {AboutComponent} from './components/about/about.component';
 import {SkeletonLoaderComponent} from '../example/components/skeleton-loader/skeleton-loader.component';
 import {DatepickerComponent} from '../example/components/datepicker/datepicker.component';
+import {NavbarComponent} from '../example/components/navbar/navbar.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
@@ -52,6 +53,7 @@ const routes: Routes = [
     //{ path: 'wizard', component: WizardExampleComponent },
     { path: 'skeleton-loader', component: SkeletonLoaderComponent },
     { path: 'datepicker', component: DatepickerComponent },
+    { path: 'navbar', component: NavbarComponent },
     { path: '**', redirectTo: 'about' },
 ];
 

@@ -34,6 +34,7 @@ import { SkeletonLoaderComponent } from './components/skeleton-loader/skeleton-l
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
 import { DatepickerSimpleComponent } from './components/datepicker/datepicker-simple/datepicker-simple.component';
 import { DatepickerInputComponent } from './components/datepicker/datepicker-input/datepicker-input.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 library.add(faArrowAltRight);
 
 @NgModule({
@@ -70,7 +71,8 @@ library.add(faArrowAltRight);
       SkeletonLoaderComponent,
       DatepickerComponent,
       DatepickerSimpleComponent,
-      DatepickerInputComponent
+      DatepickerInputComponent,
+      NavbarComponent
   ],
   exports: [ButtonsComponent]
 })

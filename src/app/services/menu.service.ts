@@ -80,8 +80,11 @@ export class MenuService {
       name: 'Skeleton loaders',
       path: '/skeleton-loader'
     }, {
-      name: 'Datepicker',
-      path: '/datepicker'
+        name: 'Datepicker',
+        path: '/datepicker'
+    }, {
+        name: 'Navbar',
+        path: '/navbar'
     }];
 
   constructor() {
