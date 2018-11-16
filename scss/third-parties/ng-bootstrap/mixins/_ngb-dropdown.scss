@@ -4,8 +4,9 @@
   #{$selector} + .invalid-feedback,
   #{$selector} + .valid-feedback {
     &::before {
-      margin-top: -6px;
       border-radius: 0 0 4px 4px;
+      top: -7px;
+      margin-bottom: -4px;
     }
   }
   #{$selector}.is-invalid ~ .progress-feedback,

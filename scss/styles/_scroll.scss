@@ -1,38 +1,40 @@
-::-webkit-scrollbar-track
-{
-  -webkit-box-shadow: inset 0 0 $scrollbar-thickness rgba(0,0,0,0.25);
-  background-color: $scrollbar-track-bg;
-}
-
-::-webkit-scrollbar
-{
-  width: $scrollbar-thickness;
-  height: $scrollbar-thickness;
-  background-color: $scrollbar-track-bg;
-}
-
-::-webkit-scrollbar-thumb
-{
-  background-color: $scrollbar-thumb-bg;
-  &:active {
-    background-color: $scrollbar-thumb-active-bg;
-  }
-}
-
-.scrollbar-dark {
-  &::-webkit-scrollbar-track
+html:not(.native-scroll) {
+  ::-webkit-scrollbar-track
   {
-    -webkit-box-shadow: inset 0 0 $scrollbar-thickness rgba(0,0,0,0.5);
-    background-color: $scrollbar-track-dark-bg;
+    -webkit-box-shadow: inset 0 0 $scrollbar-thickness rgba(0,0,0,0.25);
+    background-color: $scrollbar-track-bg;
   }
 
-  &::-webkit-scrollbar
+  ::-webkit-scrollbar
   {
-    background-color: $scrollbar-track-dark-bg;
+    width: $scrollbar-thickness;
+    height: $scrollbar-thickness;
+    background-color: $scrollbar-track-bg;
   }
 
-  &::-webkit-scrollbar-thumb
+  ::-webkit-scrollbar-thumb
   {
-    background-color: $scrollbar-thumb-dark-bg;
+    background-color: $scrollbar-thumb-bg;
+    &:active {
+      background-color: $scrollbar-thumb-active-bg;
+    }
+  }
+
+  .scrollbar-dark {
+    &::-webkit-scrollbar-track
+    {
+      -webkit-box-shadow: inset 0 0 $scrollbar-thickness rgba(0,0,0,0.5);
+      background-color: $scrollbar-track-dark-bg;
+    }
+
+    &::-webkit-scrollbar
+    {
+      background-color: $scrollbar-track-dark-bg;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+      background-color: $scrollbar-thumb-dark-bg;
+    }
   }
 }
