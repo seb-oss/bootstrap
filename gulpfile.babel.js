@@ -6,6 +6,7 @@ const marked = require('marked');
 const jsoncombine = require("gulp-jsoncombine");
 const rename = require("gulp-rename");
 const jsonFormat = require('gulp-json-format');
+const log = require('fancy-log');
 const output = "./dist/bootstrap/sdl";
 const libraryName = "sdl-bootstrap";
 
@@ -16,16 +17,16 @@ marked.setOptions({
     smartypants: true
 });
 
-gulp.task('build-dsl', function() {
-    gulp.src(output + '/components/**/*.md')
+gulp.task('build-sdl', function() {
+    return gulp.src(output + '/components/**/*.md')
         // parse markdown file and return json
         .pipe(markdownToJSON(marked, (data, file) => {
-            file.path = file.path.replace(/\\/g, '/'); // convert windows file path to normal path
-            const filePathArray = file.path.split('/'); // get file path as an array
-            console.log(file.path);
+            const path = file.path.replace(/\\/g, '/'); // convert windows file path to normal path
+            const filePathArray = path.split('/'); // get file path as an array
+            log(path);
             delete data.body; // remove body
             delete data.updatedAt; // remove updated
-            const relativePath = file.path.split('/sdl/')[1];
+            const relativePath = path.split('/sdl/')[1];
             data.filename = filePathArray[filePathArray.length-1]; // set file name
             data.filepath = relativePath; // set file path
             data.shortpath = relativePath.slice(0,-3); // set short file path
