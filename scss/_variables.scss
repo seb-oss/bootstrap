@@ -379,6 +379,7 @@ $modal-footer-border-width:         0 !default;
 $alert-padding-x:                   .75rem !default;
 $alert-link-font-weight:            $font-weight-medium !default; //500
 $alert-border-width:                0 !default;
+$alert-icon-width:                  1.125rem !default; // SEB Specific
 
 
 // Progress bars
@@ -419,3 +420,4 @@ $accordion-border-width:    $table-border-width !default; // SEB specific
 $accordion-header-padding:  $table-cell-padding !default; // SEB specific
 $accordion-body-padding:    $table-cell-padding !default; // SEB specific
 $accordion-body-bg:         transparent !default; // SEB specific
+$accordion-size:            .875rem !default; // SEB specific

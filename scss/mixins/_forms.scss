@@ -145,8 +145,9 @@
   }
   input + .#{$state}-feedback, textarea + .#{$state}-feedback, select + .#{$state}-feedback, .input-group-append + .#{$state}-feedback {
     &::before {
-      margin-top: -6px;
       border-radius: 0 0 4px 4px;
+      top: -7px;
+      margin-bottom: -4px;
     }
   }
   .#{$state}-feedback {
