@@ -23,6 +23,10 @@
 .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
   background: $white;
 }
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+  background-size: 50%;
+}
 // SEB Specific style for slide toggle
 .custom-slide-toggle .custom-control-label::before {
   width: 2.5rem;
