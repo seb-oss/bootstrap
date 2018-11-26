@@ -44,6 +44,9 @@ export class MenuService {
         name: 'Checkboxes and slide toggles',
         path: '/checkboxes-and-slide-toggles'
     }, {
+        name: 'Radio buttons',
+        path: '/radio-buttons'
+    }, {
         name: 'Buttons',
         path: '/buttons'
     }, {

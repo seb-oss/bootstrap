@@ -25,6 +25,7 @@ import {AboutComponent} from './components/about/about.component';
 import {SkeletonLoaderComponent} from '../example/components/skeleton-loader/skeleton-loader.component';
 import {DatepickerComponent} from '../example/components/datepicker/datepicker.component';
 import {NavbarComponent} from '../example/components/navbar/navbar.component';
+import {RadioButtonsComponent} from '../example/components/radio-buttons/radio-buttons.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
@@ -37,6 +38,7 @@ const routes: Routes = [
     { path: 'input-group', component: InputGroupComponent },
     { path: 'forms', component: FormsComponent },
     { path: 'checkboxes-and-slide-toggles', component: CheckboxesAndSlideTogglesComponent },
+    { path: 'radio-buttons', component: RadioButtonsComponent },
     { path: 'pagination', component: PaginationComponent },
     { path: 'tabs', component: TabsComponent },
     { path: 'alerts', component: AlertsComponent },
