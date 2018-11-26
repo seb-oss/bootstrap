@@ -28,6 +28,7 @@
   width: 2.5rem;
   height:  1.25rem;
   border-radius:  10px;
+  pointer-events: auto;
 }
 .custom-slide-toggle .custom-control-input:checked ~ .custom-control-label::after {
   left: -4px;
