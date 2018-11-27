@@ -1,0 +1,48 @@
+<a name="radiobuttons"><h2 class="px-3 px-md-0 my-3">Radio buttons</h2></a>
+<p class="px-3 px-md-0">Below you'll find some examples of radio buttons and layout options using the grid (rows and columns), check the <a routerLink="/forms">forms</a> section for more form elements or head over to <a href="https://getbootstrap.com/docs/4.0/components/forms/#overview" target="_blank">bootstrap docs</a> for more info and examples.</p>
+<div class="card mb-4" id="checkboxExample">
+  <h4 class="card-header">Standard radio button</h4>
+  <div class="card-body">
+    <p>We use a standard input element with <code>type="radio"</code> for radio buttons but we need to wrap it in a div to get the right style for the different states.</p>
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" name="radio" id="customRadio1">
+      <label class="custom-control-label" for="customRadio1">Select this custom radio button</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" name="radio" id="customRadio2">
+      <label class="custom-control-label" for="customRadio2">Another option</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" name="radio" id="customRadioDisabled" disabled>
+      <label class="custom-control-label" for="customRadioDisabled">This option is disabled</label>
+    </div>
+    <exemplify [selector]="'#checkboxExample .custom-control'"></exemplify>
+  </div>
+</div>
+<div class="card mb-4" id="checkboxLayoutExample">
+  <h4 class="card-header">Horizontal layout</h4>
+  <div class="card-body">
+    <p>Use rows and columns to create a responsive layout, in the example below radio buttons will be placed inline on medium sized screens and up. On smaller screens the radio buttons will stack on top of each other, test by resizing the window. Use one of the following utility classes <code>.my-*</code>, <code>.mb-*</code> or <code>.mt-*</code> to add spacing between the different options, ie. <code>mb-2 mb-md-0</code> to get a small bottom margin on small screens and below.</p>
+    <div class="row">
+      <div class="col-12 col-md-auto mb-2 mb-md-0">
+        <div class="custom-control custom-radio">
+          <input type="radio" name="radioGrid" class="custom-control-input" id="customRadioInline">
+          <label class="custom-control-label" for="customRadioInline">Select this custom radio button</label>
+        </div>
+      </div>
+      <div class="col-12 col-md-auto mb-2 mb-md-0">
+        <div class="custom-control custom-radio">
+          <input type="radio" name="radioGrid" class="custom-control-input" id="customRadioInline1">
+          <label class="custom-control-label" for="customRadioInline1">And this one</label>
+        </div>
+      </div>
+      <div class="col-12 col-md-auto">
+        <div class="custom-control custom-radio">
+          <input type="radio" name="radioGrid" class="custom-control-input" id="customRadioInline2">
+          <label class="custom-control-label" for="customRadioInline2">Don't forget me</label>
+        </div>
+      </div>
+    </div>
+    <exemplify [selector]="'#checkboxLayoutExample .row'"></exemplify>
+  </div>
+</div>
