@@ -24,6 +24,9 @@ export class MenuService {
         name: 'Fonts and typography',
         path: '/typography'
     }, {
+        name: 'Colors',
+        path: '/colors'
+    }, {
         name: 'Icons',
         path: '/icons'
     }];

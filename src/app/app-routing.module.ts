@@ -26,12 +26,13 @@ import {SkeletonLoaderComponent} from '../example/components/skeleton-loader/ske
 import {DatepickerComponent} from '../example/components/datepicker/datepicker.component';
 import {NavbarComponent} from '../example/components/navbar/navbar.component';
 import {RadioButtonsComponent} from '../example/components/radio-buttons/radio-buttons.component';
+import {ColorsComponent} from '../example/components/colors/colors.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
     { path: 'typography', component: TypographyComponent },
     { path: 'tables', component: TablesComponent },
-    //{ path: 'colors', component: ColorsComponent },
+    { path: 'colors', component: ColorsComponent },
     { path: 'modals', component: ModalsComponent },
     { path: 'cards', component: CardsComponent },
     { path: 'buttons', component: ButtonsComponent },

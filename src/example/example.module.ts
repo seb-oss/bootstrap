@@ -36,6 +36,7 @@ import { DatepickerSimpleComponent } from './components/datepicker/datepicker-si
 import { DatepickerInputComponent } from './components/datepicker/datepicker-input/datepicker-input.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RadioButtonsComponent } from './components/radio-buttons/radio-buttons.component';
+import { ColorsComponent } from './components/colors/colors.component';
 library.add(faArrowAltRight);
 
 @NgModule({
@@ -74,7 +75,8 @@ library.add(faArrowAltRight);
       DatepickerSimpleComponent,
       DatepickerInputComponent,
       NavbarComponent,
-      RadioButtonsComponent
+      RadioButtonsComponent,
+      ColorsComponent
   ],
   exports: [ButtonsComponent]
 })

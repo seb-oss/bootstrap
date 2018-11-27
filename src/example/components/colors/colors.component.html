@@ -1,0 +1,67 @@
+<h2 class="px-3 px-md-0 my-3">Colors</h2>
+<p class="lead px-3 px-md-0">
+  Read more about our colors and how and when to use them in <a class="font-weight-normal" href="http://designlibrary.sebank.se/visual-identity/colours/" target="_blank">design library</a> and in our
+  <a class="font-weight-normal" href="https://seb.brandmanual.se/en/design-elements/colours" target="_blank">brand manual</a>.
+</p>
+<div class="card">
+  <h4 class="card-header pb-0">Colors in bootstrap</h4>
+  <div class="card-body">
+    <p>All colors listed on the sites above are available in bootstrap too, the names might differ and bootstrap includes additional colors not mentioned in design library. For example bootstrap contains a border color which happens to be gray and a primary color which happens to be blue, just to mention a few.</p>
+    <p>The idea is to add an abstraction layer on top of our design. We rarely need to specify things like borders should be gray (tables already inherit that style etc.) if we need to, we should instead use the <code>$table-border-color</code> variable provided by our theme for bootstrap. We also want to avoid using or inventing class names like <code>.seb-green</code> and instead use contextual class names like <code>.bg-success</code> which happens to be SEB:s green color and in this case we add <code>bg-</code> to denote that we're referring to a background color.</p>
+    <p>In most cases you should avoid using the classes below as they're often inherited, see <a routerLink="/alerts">alerts</a> or <a routerLink="/buttons">buttons</a> as an example. It's possible to override their appearance or create new "styles" using these utility classes but most of the time there's already a component or class that does that for you, i.e. use <a routerLink="/alerts">alerts</a> instead of adding the background color directly.</p>
+  </div>
+  <h4 class="card-header">Background colors</h4>
+  <div class="card-body">
+    <div class="row no-gutters">
+      <div class="col-12 col-sm-4" *ngFor="let color of colors">
+        <div class="{{'bg-' + color.name + ' p-3 ' + 'text-' + color.textColor}}">
+          <label class="{{'text-' + color.textColor}}">class:</label>
+          <p>{{'bg-' + color.name}}</p></div>
+      </div>
+    </div>
+  </div>
+  <h4 class="card-header">Text colors</h4>
+  <div class="card-body">
+    <div class="row no-gutters">
+      <div class="col-12 col-sm-4" *ngFor="let color of colors">
+        <div class="{{(color.textColor === 'dark' ? 'bg-dark ':'') + 'p-3 ' + 'text-' + color.name}}">
+          <label class="{{(color.textColor === 'dark' ? 'text-white':'')}}">class:</label>
+          <p>{{'text-' + color.name}}</p></div>
+      </div>
+    </div>
+  </div>
+  <h4 class="card-header pb-0">Background elements</h4>
+  <div class="card-body">
+    <p>Use the following classes to add the fifth element as a background image.</p>
+    <div class="bg-primary-element text-white">
+      <div class="p-3 mb-0"><label class="text-white">class:</label>
+      <p>bg-primary-element</p></div>
+      <p class="display-1 p-3">Primary Element</p>
+    </div>
+    <div class="bg-secondary-element">
+      <div class="p-3 mb-0"><label>class:</label>
+      <p>bg-secondary-element</p></div>
+      <p class="display-1 p-3">Secondary Element</p>
+    </div>
+    <div class="bg-success-element text-white">
+      <div class="p-3 mb-0"><label class="text-white">class:</label>
+      <p>bg-success-element</p></div>
+      <p class="display-1 p-3">Success Element</p>
+    </div>
+    <div class="bg-info-element text-white">
+      <div class="p-3 mb-0"><label class="text-white">class:</label>
+      <p>bg-info-element</p></div>
+      <p class="display-1 p-3">Info Element</p>
+    </div>
+    <div class="bg-warning-element">
+      <div class="p-3 mb-0"><label>class:</label>
+      <p>bg-warning-element</p></div>
+      <p class="display-1 p-3">Warning Element</p>
+    </div>
+    <div class="bg-danger-element text-white">
+      <div class="p-3 mb-0"><label class="text-white">class:</label>
+      <p>bg-danger-element</p></div>
+      <p class="display-1 p-3">Danger Element</p>
+    </div>
+  </div>
+</div>
