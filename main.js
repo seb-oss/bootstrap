@@ -7,7 +7,7 @@
 /*! exports provided: name, version, description, main, scripts, repository, publishConfig, author, license, bugs, homepage, dependencies, default */
 /***/ (function(module) {
 
-module.exports = {"name":"@sebgroup/bootstrap","version":"2.3.0","description":"A standalone bootstrap theme for SEB","main":"scss/bootstrap.scss","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"git+https://github.com/sebgroup/bootstrap.git"},"publishConfig":{"registry":"https://registry.npmjs.org/","access":"public"},"author":"Robert Hjalmers","license":"Apache-2.0","bugs":{"url":"https://github.com/sebgroup/bootstrap/issues"},"homepage":"https://sebgroup.github.io/bootstrap/","dependencies":{"@sebgroup/fonts":"^1.0.0"}};
+module.exports = {"name":"@sebgroup/bootstrap","version":"2.4.0","description":"A standalone bootstrap theme for SEB","main":"scss/bootstrap.scss","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"git+https://github.com/sebgroup/bootstrap.git"},"publishConfig":{"registry":"https://registry.npmjs.org/","access":"public"},"author":"Robert Hjalmers","license":"Apache-2.0","bugs":{"url":"https://github.com/sebgroup/bootstrap/issues"},"homepage":"https://sebgroup.github.io/bootstrap/","dependencies":{"@sebgroup/fonts":"^1.0.0"}};
 
 /***/ }),
 
@@ -90,6 +90,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _example_components_skeleton_loader_skeleton_loader_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../example/components/skeleton-loader/skeleton-loader.component */ "./src/example/components/skeleton-loader/skeleton-loader.component.ts");
 /* harmony import */ var _example_components_datepicker_datepicker_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../example/components/datepicker/datepicker.component */ "./src/example/components/datepicker/datepicker.component.ts");
 /* harmony import */ var _example_components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../example/components/navbar/navbar.component */ "./src/example/components/navbar/navbar.component.ts");
+/* harmony import */ var _example_components_radio_buttons_radio_buttons_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../example/components/radio-buttons/radio-buttons.component */ "./src/example/components/radio-buttons/radio-buttons.component.ts");
+/* harmony import */ var _example_components_colors_colors_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../example/components/colors/colors.component */ "./src/example/components/colors/colors.component.ts");
+/* harmony import */ var _example_components_toast_notifications_toast_notifications_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../example/components/toast-notifications/toast-notifications.component */ "./src/example/components/toast-notifications/toast-notifications.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -120,22 +123,27 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
 var routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
     { path: 'typography', component: _example_components_typography_typography_component__WEBPACK_IMPORTED_MODULE_19__["TypographyComponent"] },
     { path: 'tables', component: _example_components_tables_tables_component__WEBPACK_IMPORTED_MODULE_5__["TablesComponent"] },
-    //{ path: 'colors', component: ColorsComponent },
+    { path: 'colors', component: _example_components_colors_colors_component__WEBPACK_IMPORTED_MODULE_25__["ColorsComponent"] },
     { path: 'modals', component: _example_components_modals_modals_component__WEBPACK_IMPORTED_MODULE_15__["ModalsComponent"] },
     { path: 'cards', component: _example_components_cards_cards_component__WEBPACK_IMPORTED_MODULE_14__["CardsComponent"] },
     { path: 'buttons', component: _example_components_buttons_buttons_component__WEBPACK_IMPORTED_MODULE_2__["ButtonsComponent"] },
     { path: 'input-group', component: _example_components_input_group_input_group_component__WEBPACK_IMPORTED_MODULE_10__["InputGroupComponent"] },
     { path: 'forms', component: _example_components_forms_forms_component__WEBPACK_IMPORTED_MODULE_7__["FormsComponent"] },
     { path: 'checkboxes-and-slide-toggles', component: _example_components_checkboxes_and_slide_toggles_checkboxes_and_slide_toggles_component__WEBPACK_IMPORTED_MODULE_8__["CheckboxesAndSlideTogglesComponent"] },
+    { path: 'radio-buttons', component: _example_components_radio_buttons_radio_buttons_component__WEBPACK_IMPORTED_MODULE_24__["RadioButtonsComponent"] },
     { path: 'pagination', component: _example_components_pagination_pagination_component__WEBPACK_IMPORTED_MODULE_16__["PaginationComponent"] },
     { path: 'tabs', component: _example_components_tabs_tabs_component__WEBPACK_IMPORTED_MODULE_4__["TabsComponent"] },
     { path: 'alerts', component: _example_components_alerts_alerts_component__WEBPACK_IMPORTED_MODULE_3__["AlertsComponent"] },
     { path: 'breadcrumbs', component: _example_components_breadcrumbs_breadcrumbs_component__WEBPACK_IMPORTED_MODULE_6__["BreadcrumbsComponent"] },
     { path: 'tooltips', component: _example_components_tooltips_tooltips_component__WEBPACK_IMPORTED_MODULE_17__["TooltipsComponent"] },
+    { path: 'toast-notifications', component: _example_components_toast_notifications_toast_notifications_component__WEBPACK_IMPORTED_MODULE_26__["ToastNotificationsComponent"] },
     //{ path: 'example-page', component: ExamplePageComponent },
     { path: 'about', component: _components_about_about_component__WEBPACK_IMPORTED_MODULE_20__["AboutComponent"] },
     { path: 'dropdowns', component: _example_components_dropdowns_dropdowns_component__WEBPACK_IMPORTED_MODULE_13__["DropdownsComponent"] },
@@ -251,12 +259,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/header/header.component */ "./src/app/components/header/header.component.ts");
 /* harmony import */ var _components_about_about_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/about/about.component */ "./src/app/components/about/about.component.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -282,6 +292,15 @@ var AppModule = /** @class */ (function () {
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"],
+                ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastrModule"].forRoot({
+                    timeOut: 10000,
+                    closeButton: true,
+                    disableTimeOut: false,
+                    progressBar: true,
+                    positionClass: 'toast-bottom-right',
+                    enableHtml: true
+                }),
+                ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastContainerModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
                 _example_example_module__WEBPACK_IMPORTED_MODULE_3__["ExampleModule"]
             ],
@@ -718,12 +737,18 @@ var MenuService = /** @class */ (function () {
                 name: 'Fonts and typography',
                 path: '/typography'
             }, {
+                name: 'Colors',
+                path: '/colors'
+            }, {
                 name: 'Icons',
                 path: '/icons'
             }];
         this.components = [{
                 name: 'Alerts',
                 path: '/alerts'
+            }, {
+                name: 'Toast notifications',
+                path: '/toast-notifications'
             }, {
                 name: 'Breadcrumbs',
                 path: '/breadcrumbs'
@@ -736,6 +761,9 @@ var MenuService = /** @class */ (function () {
             }, {
                 name: 'Checkboxes and slide toggles',
                 path: '/checkboxes-and-slide-toggles'
+            }, {
+                name: 'Radio buttons',
+                path: '/radio-buttons'
             }, {
                 name: 'Buttons',
                 path: '/buttons'
@@ -896,7 +924,7 @@ var environment = {
         }
         return version;
     })(),
-    travis_build_number: '94'
+    travis_build_number: '105'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
@@ -1188,7 +1216,7 @@ var CardsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<a name=\"checkboxes\"><h2 class=\"px-3 px-md-0 my-3\">Checkboxes and slide toggles</h2></a>\n<p class=\"px-3 px-md-0\">Below you'll find some examples of checkboxes and layout options using the grid (rows and columns), check the <a routerLink=\"/forms\">forms</a> section for more form elements or head over to <a href=\"https://getbootstrap.com/docs/4.0/components/forms/#overview\" target=\"_blank\">bootstrap docs</a> for more info and examples.</p>\n<div class=\"card mb-4\" id=\"checkboxExample\">\n  <h4 class=\"card-header\">Standard checkbox</h4>\n  <div class=\"card-body\">\n    <p>We use a standard input element with <code>type=\"checkbox\"</code> for checkboxes but we need to wrap it in a div to get the right style for the different states.</p>\n    <div class=\"custom-control custom-checkbox\">\n      <input type=\"checkbox\" class=\"custom-control-input\" id=\"customCheck\">\n      <label class=\"custom-control-label\" for=\"customCheck\">Check this custom checkbox</label>\n    </div>\n    <div class=\"custom-control custom-checkbox\">\n      <input type=\"checkbox\" class=\"custom-control-input\" id=\"customCheckDisabled\" disabled>\n      <label class=\"custom-control-label\" for=\"customCheckDisabled\">This checkbox is disabled</label>\n    </div>\n    <exemplify [selector]=\"'#checkboxExample .custom-control'\"></exemplify>\n  </div>\n</div>\n<div class=\"card mb-4\" id=\"checkboxLayoutExample\">\n  <h4 class=\"card-header\">Horizontal layout</h4>\n  <div class=\"card-body\">\n    <p>Use rows and columns to create a responsive layout, in the example below checkboxes will be placed inline on medium sized screens and up. On smaller screens the checkboxes will stack on top of each other, test by resizing the window. Use one of the following utility classes <code>.my-*</code>, <code>.mb-*</code> or <code>.mt-*</code> to add spacing between the different options, ie. <code>mb-2 mb-md-0</code> to get a small bottom margin on small sreens and below.</p>\n    <div class=\"row\">\n      <div class=\"col-12 col-md-auto mb-2 mb-md-0\">\n        <div class=\"custom-control custom-checkbox\">\n          <input type=\"checkbox\" class=\"custom-control-input\" id=\"customCheckInline\">\n          <label class=\"custom-control-label\" for=\"customCheckInline\">Check this custom checkbox</label>\n        </div>\n      </div>\n      <div class=\"col-12 col-md-auto mb-2 mb-md-0\">\n        <div class=\"custom-control custom-checkbox\">\n          <input type=\"checkbox\" class=\"custom-control-input\" id=\"customCheckInline1\">\n          <label class=\"custom-control-label\" for=\"customCheckInline1\">And this one</label>\n        </div>\n      </div>\n      <div class=\"col-12 col-md-auto\">\n        <div class=\"custom-control custom-checkbox\">\n          <input type=\"checkbox\" class=\"custom-control-input\" id=\"customCheckInline2\">\n          <label class=\"custom-control-label\" for=\"customCheckInline2\">Don't forget me</label>\n        </div>\n      </div>\n    </div>\n    <exemplify [selector]=\"'#checkboxLayoutExample .row'\"></exemplify>\n  </div>\n</div>\n<div class=\"card mb-4\" id=\"slideToggleExample\">\n  <h4 class=\"card-header\">Slide toggle</h4>\n  <div class=\"card-body\">\n    <p>The slide toggle works just like a normal checkbox and uses the same markup and bindings, to make it look like a slide toggle just add the class <code>custom-slide-toggle</code>.</p>\n    <div class=\"custom-control custom-slide-toggle\">\n      <input type=\"checkbox\" class=\"custom-control-input\" id=\"customSlideToggle\">\n      <label class=\"custom-control-label\" for=\"customSlideToggle\">Toggle this input</label>\n    </div>\n    <div class=\"custom-control custom-slide-toggle\">\n      <input type=\"checkbox\" class=\"custom-control-input\" id=\"customSlideToggleDisabled\" disabled>\n      <label class=\"custom-control-label\" for=\"customSlideToggleDisabled\">Toggle disabled</label>\n    </div>\n    <exemplify [selector]=\"'#slideToggleExample .custom-control'\"></exemplify>\n  </div>\n</div>\n"
+module.exports = "<a name=\"checkboxes\"><h2 class=\"px-3 px-md-0 my-3\">Checkboxes and slide toggles</h2></a>\n<p class=\"px-3 px-md-0\">Below you'll find some examples of checkboxes and layout options using the grid (rows and columns), check the <a routerLink=\"/forms\">forms</a> section for more form elements or head over to <a href=\"https://getbootstrap.com/docs/4.0/components/forms/#overview\" target=\"_blank\">bootstrap docs</a> for more info and examples.</p>\n<div class=\"card mb-4\" id=\"checkboxExample\">\n  <h4 class=\"card-header\">Standard checkbox</h4>\n  <div class=\"card-body\">\n    <p>We use a standard input element with <code>type=\"checkbox\"</code> for checkboxes but we need to wrap it in a div to get the right style for the different states.</p>\n    <div class=\"custom-control custom-checkbox\">\n      <input type=\"checkbox\" class=\"custom-control-input\" id=\"customCheck\">\n      <label class=\"custom-control-label\" for=\"customCheck\">Check this custom checkbox</label>\n    </div>\n    <div class=\"custom-control custom-checkbox\">\n      <input type=\"checkbox\" class=\"custom-control-input\" id=\"customCheckDisabled\" disabled>\n      <label class=\"custom-control-label\" for=\"customCheckDisabled\">This checkbox is disabled</label>\n    </div>\n    <exemplify [selector]=\"'#checkboxExample .custom-control'\"></exemplify>\n  </div>\n</div>\n<div class=\"card mb-4\" id=\"checkboxLayoutExample\">\n  <h4 class=\"card-header\">Horizontal layout</h4>\n  <div class=\"card-body\">\n    <p>Use rows and columns to create a responsive layout, in the example below checkboxes will be placed inline on medium sized screens and up. On smaller screens the checkboxes will stack on top of each other, test by resizing the window. Use one of the following utility classes <code>.my-*</code>, <code>.mb-*</code> or <code>.mt-*</code> to add spacing between the different options, ie. <code>mb-2 mb-md-0</code> to get a small bottom margin on small screens and below.</p>\n    <div class=\"row\">\n      <div class=\"col-12 col-md-auto mb-2 mb-md-0\">\n        <div class=\"custom-control custom-checkbox\">\n          <input type=\"checkbox\" class=\"custom-control-input\" id=\"customCheckInline\">\n          <label class=\"custom-control-label\" for=\"customCheckInline\">Check this custom checkbox</label>\n        </div>\n      </div>\n      <div class=\"col-12 col-md-auto mb-2 mb-md-0\">\n        <div class=\"custom-control custom-checkbox\">\n          <input type=\"checkbox\" class=\"custom-control-input\" id=\"customCheckInline1\">\n          <label class=\"custom-control-label\" for=\"customCheckInline1\">And this one</label>\n        </div>\n      </div>\n      <div class=\"col-12 col-md-auto\">\n        <div class=\"custom-control custom-checkbox\">\n          <input type=\"checkbox\" class=\"custom-control-input\" id=\"customCheckInline2\">\n          <label class=\"custom-control-label\" for=\"customCheckInline2\">Don't forget me</label>\n        </div>\n      </div>\n    </div>\n    <exemplify [selector]=\"'#checkboxLayoutExample .row'\"></exemplify>\n  </div>\n</div>\n<div class=\"card mb-4\" id=\"slideToggleExample\">\n  <h4 class=\"card-header\">Slide toggle</h4>\n  <div class=\"card-body\">\n    <p>The slide toggle works just like a normal checkbox and uses the same markup and bindings, to make it look like a slide toggle just add the class <code>custom-slide-toggle</code>.</p>\n    <div class=\"custom-control custom-slide-toggle\">\n      <input type=\"checkbox\" class=\"custom-control-input\" id=\"customSlideToggle\">\n      <label class=\"custom-control-label\" for=\"customSlideToggle\">Toggle this input</label>\n    </div>\n    <div class=\"custom-control custom-slide-toggle\">\n      <input type=\"checkbox\" class=\"custom-control-input\" id=\"customSlideToggleDisabled\" disabled>\n      <label class=\"custom-control-label\" for=\"customSlideToggleDisabled\">Toggle disabled</label>\n    </div>\n    <exemplify [selector]=\"'#slideToggleExample .custom-control'\"></exemplify>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1226,6 +1254,86 @@ var CheckboxesAndSlideTogglesComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], CheckboxesAndSlideTogglesComponent);
     return CheckboxesAndSlideTogglesComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/example/components/colors/colors.component.html":
+/*!*************************************************************!*\
+  !*** ./src/example/components/colors/colors.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h2 class=\"px-3 px-md-0 my-3\">Colors</h2>\n<p class=\"lead px-3 px-md-0\">\n  Read more about our colors and how and when to use them in <a class=\"font-weight-normal\" href=\"http://designlibrary.sebank.se/visual-identity/colours/\" target=\"_blank\">design library</a> and in our\n  <a class=\"font-weight-normal\" href=\"https://seb.brandmanual.se/en/design-elements/colours\" target=\"_blank\">brand manual</a>.\n</p>\n<div class=\"card\">\n  <h4 class=\"card-header pb-0\">Colors in bootstrap</h4>\n  <div class=\"card-body\">\n    <p>All colors listed on the sites above are available in bootstrap too, the names might differ and bootstrap includes additional colors not mentioned in design library. For example bootstrap contains a border color which happens to be gray and a primary color which happens to be blue, just to mention a few.</p>\n    <p>The idea is to add an abstraction layer on top of our design. We rarely need to specify things like borders should be gray (tables already inherit that style etc.) if we need to, we should instead use the <code>$table-border-color</code> variable provided by our theme for bootstrap. We also want to avoid using or inventing class names like <code>.seb-green</code> and instead use contextual class names like <code>.bg-success</code> which happens to be SEB:s green color and in this case we add <code>bg-</code> to denote that we're referring to a background color.</p>\n    <p>In most cases you should avoid using the classes below as they're often inherited, see <a routerLink=\"/alerts\">alerts</a> or <a routerLink=\"/buttons\">buttons</a> as an example. It's possible to override their appearance or create new \"styles\" using these utility classes but most of the time there's already a component or class that does that for you, i.e. use <a routerLink=\"/alerts\">alerts</a> instead of adding the background color directly.</p>\n  </div>\n  <h4 class=\"card-header\">Background colors</h4>\n  <div class=\"card-body\">\n    <div class=\"row no-gutters\">\n      <div class=\"col-12 col-sm-4\" *ngFor=\"let color of colors\">\n        <div class=\"{{'bg-' + color.name + ' p-3 ' + 'text-' + color.textColor}}\">\n          <label class=\"{{'text-' + color.textColor}}\">class:</label>\n          <p>{{'bg-' + color.name}}</p></div>\n      </div>\n    </div>\n  </div>\n  <h4 class=\"card-header\">Text colors</h4>\n  <div class=\"card-body\">\n    <div class=\"row no-gutters\">\n      <div class=\"col-12 col-sm-4\" *ngFor=\"let color of colors\">\n        <div class=\"{{(color.textColor === 'dark' ? 'bg-dark ':'') + 'p-3 ' + 'text-' + color.name}}\">\n          <label class=\"{{(color.textColor === 'dark' ? 'text-white':'')}}\">class:</label>\n          <p>{{'text-' + color.name}}</p></div>\n      </div>\n    </div>\n  </div>\n  <h4 class=\"card-header pb-0\">Background elements</h4>\n  <div class=\"card-body\">\n    <p>Use the following classes to add the fifth element as a background image.</p>\n    <div class=\"bg-primary-element text-white\">\n      <div class=\"p-3 mb-0\"><label class=\"text-white\">class:</label>\n      <p>bg-primary-element</p></div>\n      <p class=\"display-1 p-3\">Primary Element</p>\n    </div>\n    <div class=\"bg-secondary-element\">\n      <div class=\"p-3 mb-0\"><label>class:</label>\n      <p>bg-secondary-element</p></div>\n      <p class=\"display-1 p-3\">Secondary Element</p>\n    </div>\n    <div class=\"bg-success-element text-white\">\n      <div class=\"p-3 mb-0\"><label class=\"text-white\">class:</label>\n      <p>bg-success-element</p></div>\n      <p class=\"display-1 p-3\">Success Element</p>\n    </div>\n    <div class=\"bg-info-element text-white\">\n      <div class=\"p-3 mb-0\"><label class=\"text-white\">class:</label>\n      <p>bg-info-element</p></div>\n      <p class=\"display-1 p-3\">Info Element</p>\n    </div>\n    <div class=\"bg-warning-element\">\n      <div class=\"p-3 mb-0\"><label>class:</label>\n      <p>bg-warning-element</p></div>\n      <p class=\"display-1 p-3\">Warning Element</p>\n    </div>\n    <div class=\"bg-danger-element text-white\">\n      <div class=\"p-3 mb-0\"><label class=\"text-white\">class:</label>\n      <p>bg-danger-element</p></div>\n      <p class=\"display-1 p-3\">Danger Element</p>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/example/components/colors/colors.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/example/components/colors/colors.component.ts ***!
+  \***********************************************************/
+/*! exports provided: ColorsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ColorsComponent", function() { return ColorsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ColorsComponent = /** @class */ (function () {
+    function ColorsComponent() {
+        this.colors = [{
+                name: 'primary',
+                textColor: 'white'
+            }, {
+                name: 'secondary',
+                textColor: 'dark'
+            }, {
+                name: 'info',
+                textColor: 'white'
+            }, {
+                name: 'success',
+                textColor: 'white'
+            }, {
+                name: 'warning',
+                textColor: 'dark'
+            }, {
+                name: 'danger',
+                textColor: 'white'
+            }, {
+                name: 'light',
+                textColor: 'dark'
+            }, {
+                name: 'dark',
+                textColor: 'white'
+            }, {
+                name: 'white',
+                textColor: 'dark'
+            }];
+    }
+    ColorsComponent.prototype.ngOnInit = function () {
+    };
+    ColorsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-colors',
+            template: __webpack_require__(/*! ./colors.component.html */ "./src/example/components/colors/colors.component.html"),
+            styles: []
+        }),
+        __metadata("design:paramtypes", [])
+    ], ColorsComponent);
+    return ColorsComponent;
 }());
 
 
@@ -2069,6 +2177,58 @@ var PaginationComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/example/components/radio-buttons/radio-buttons.component.html":
+/*!***************************************************************************!*\
+  !*** ./src/example/components/radio-buttons/radio-buttons.component.html ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<a name=\"radiobuttons\"><h2 class=\"px-3 px-md-0 my-3\">Radio buttons</h2></a>\n<p class=\"px-3 px-md-0\">Below you'll find some examples of radio buttons and layout options using the grid (rows and columns), check the <a routerLink=\"/forms\">forms</a> section for more form elements or head over to <a href=\"https://getbootstrap.com/docs/4.0/components/forms/#overview\" target=\"_blank\">bootstrap docs</a> for more info and examples.</p>\n<div class=\"card mb-4\" id=\"checkboxExample\">\n  <h4 class=\"card-header\">Standard radio button</h4>\n  <div class=\"card-body\">\n    <p>We use a standard input element with <code>type=\"radio\"</code> for radio buttons but we need to wrap it in a div to get the right style for the different states.</p>\n    <div class=\"custom-control custom-radio\">\n      <input type=\"radio\" class=\"custom-control-input\" name=\"radio\" id=\"customRadio1\">\n      <label class=\"custom-control-label\" for=\"customRadio1\">Select this custom radio button</label>\n    </div>\n    <div class=\"custom-control custom-radio\">\n      <input type=\"radio\" class=\"custom-control-input\" name=\"radio\" id=\"customRadio2\">\n      <label class=\"custom-control-label\" for=\"customRadio2\">Another option</label>\n    </div>\n    <div class=\"custom-control custom-radio\">\n      <input type=\"radio\" class=\"custom-control-input\" name=\"radio\" id=\"customRadioDisabled\" disabled>\n      <label class=\"custom-control-label\" for=\"customRadioDisabled\">This option is disabled</label>\n    </div>\n    <exemplify [selector]=\"'#checkboxExample .custom-control'\"></exemplify>\n  </div>\n</div>\n<div class=\"card mb-4\" id=\"checkboxLayoutExample\">\n  <h4 class=\"card-header\">Horizontal layout</h4>\n  <div class=\"card-body\">\n    <p>Use rows and columns to create a responsive layout, in the example below radio buttons will be placed inline on medium sized screens and up. On smaller screens the radio buttons will stack on top of each other, test by resizing the window. Use one of the following utility classes <code>.my-*</code>, <code>.mb-*</code> or <code>.mt-*</code> to add spacing between the different options, ie. <code>mb-2 mb-md-0</code> to get a small bottom margin on small screens and below.</p>\n    <div class=\"row\">\n      <div class=\"col-12 col-md-auto mb-2 mb-md-0\">\n        <div class=\"custom-control custom-radio\">\n          <input type=\"radio\" name=\"radioGrid\" class=\"custom-control-input\" id=\"customRadioInline\">\n          <label class=\"custom-control-label\" for=\"customRadioInline\">Select this custom radio button</label>\n        </div>\n      </div>\n      <div class=\"col-12 col-md-auto mb-2 mb-md-0\">\n        <div class=\"custom-control custom-radio\">\n          <input type=\"radio\" name=\"radioGrid\" class=\"custom-control-input\" id=\"customRadioInline1\">\n          <label class=\"custom-control-label\" for=\"customRadioInline1\">And this one</label>\n        </div>\n      </div>\n      <div class=\"col-12 col-md-auto\">\n        <div class=\"custom-control custom-radio\">\n          <input type=\"radio\" name=\"radioGrid\" class=\"custom-control-input\" id=\"customRadioInline2\">\n          <label class=\"custom-control-label\" for=\"customRadioInline2\">Don't forget me</label>\n        </div>\n      </div>\n    </div>\n    <exemplify [selector]=\"'#checkboxLayoutExample .row'\"></exemplify>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/example/components/radio-buttons/radio-buttons.component.ts":
+/*!*************************************************************************!*\
+  !*** ./src/example/components/radio-buttons/radio-buttons.component.ts ***!
+  \*************************************************************************/
+/*! exports provided: RadioButtonsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RadioButtonsComponent", function() { return RadioButtonsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var RadioButtonsComponent = /** @class */ (function () {
+    function RadioButtonsComponent() {
+    }
+    RadioButtonsComponent.prototype.ngOnInit = function () {
+    };
+    RadioButtonsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-radio-buttons',
+            template: __webpack_require__(/*! ./radio-buttons.component.html */ "./src/example/components/radio-buttons/radio-buttons.component.html"),
+            styles: []
+        }),
+        __metadata("design:paramtypes", [])
+    ], RadioButtonsComponent);
+    return RadioButtonsComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/example/components/skeleton-loader/skeleton-loader.component.html":
 /*!*******************************************************************************!*\
   !*** ./src/example/components/skeleton-loader/skeleton-loader.component.html ***!
@@ -2253,6 +2413,112 @@ var TabsComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/example/components/toast-notifications/toast-notifications.component.html":
+/*!***************************************************************************************!*\
+  !*** ./src/example/components/toast-notifications/toast-notifications.component.html ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<a name=\"modals\"><h2 class=\"px-3 px-md-0 my-3\">Toast notifications BETA!</h2></a>\n<div class=\"alert alert-info\"><strong>Framework needed!</strong> Please note that the examples below uses a third-party library. Toast notifications use the same style and appearance as alerts but you need a framework to control when and how to show them. If you're using angular, please take a look at <a class=\"alert-link\" href=\"https://scttcper.github.io/ngx-toastr/\" target=\"_blank\">ngx-toaster</a> for more info.</div>\n<div class=\"card my-3\">\n  <h4 class=\"card-header pb-0\">Standard toast notifications</h4>\n  <div class=\"card-body\"><p>By default toast notifications are positioned bottom right on desktop to avoid overlaying the navigation to the left. On tablets and smaller screens where the menu is hidden, they appear bottom left and on small screens (mobile devices) they use full width.</p>\n    <div class=\"row\">\n      <div class=\"col-6 col-md-auto mb-3 mb-md-0\">\n        <button class=\"btn btn-primary w-100\" (click)=\"showToast('info', true)\">Show info</button>\n      </div>\n      <div class=\"col-6 col-md-auto mb-3 mb-md-0\">\n        <button class=\"btn btn-primary w-100\" (click)=\"showToast('success', true)\">Show success</button>\n      </div>\n      <div class=\"col-6 col-md-auto\">\n        <button class=\"btn btn-primary w-100\" (click)=\"showToast('warning', true)\">Show warning</button>\n      </div>\n      <div class=\"col-6 col-md-auto\">\n        <button class=\"btn btn-primary w-100\" (click)=\"showToast('error', true)\">Show error</button>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"card my-3\">\n  <h4 class=\"card-header pb-0\">Toast notifications with timeout</h4>\n  <div class=\"card-body\"><p>These toasts will disappear after a set time.</p>\n    <div class=\"row\">\n      <div class=\"col-6 col-md-auto mb-3 mb-md-0\">\n        <button class=\"btn btn-primary w-100\" (click)=\"showToast('info')\">Show info</button>\n      </div>\n      <div class=\"col-6 col-md-auto mb-3 mb-md-0\">\n        <button class=\"btn btn-primary w-100\" (click)=\"showToast('success')\">Show success</button>\n      </div>\n      <div class=\"col-6 col-md-auto\">\n        <button class=\"btn btn-primary w-100\" (click)=\"showToast('warning')\">Show warning</button>\n      </div>\n      <div class=\"col-6 col-md-auto\">\n        <button class=\"btn btn-primary w-100\" (click)=\"showToast('error')\">Show error</button>\n      </div>\n    </div>\n  </div>\n</div>\n<!--\n<div class=\"card my-3\">\n  <h4 class=\"card-header\">Inline toast notifications</h4>\n  <div class=\"card-body\"><p>Below is a example of a standard modal opened with a backdrop.</p>\n    <div class=\"row\">\n      <div class=\"col-6 col-md-auto mb-3 mb-md-0\">\n        <button class=\"btn btn-primary w-100\" (click)=\"showToast('info', true, true)\">Show info</button>\n      </div>\n      <div class=\"col-6 col-md-auto mb-3 mb-md-0\">\n        <button class=\"btn btn-primary w-100\" (click)=\"showToast('success', true, true)\">Show success</button>\n      </div>\n      <div class=\"col-6 col-md-auto\">\n        <button class=\"btn btn-primary w-100\" (click)=\"showToast('warning', true, true)\">Show warning</button>\n      </div>\n      <div class=\"col-6 col-md-auto\">\n        <button class=\"btn btn-primary w-100\" (click)=\"showToast('error', true, true)\">Show error</button>\n      </div>\n      <div toastContainer></div>\n    </div>\n  </div>\n</div>-->"
+
+/***/ }),
+
+/***/ "./src/example/components/toast-notifications/toast-notifications.component.ts":
+/*!*************************************************************************************!*\
+  !*** ./src/example/components/toast-notifications/toast-notifications.component.ts ***!
+  \*************************************************************************************/
+/*! exports provided: ToastNotificationsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToastNotificationsComponent", function() { return ToastNotificationsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var toasts = [
+    {
+        title: 'Title',
+        message: 'Message',
+    },
+    {
+        message: 'Toast without title'
+    },
+    {
+        title: 'Toast without message'
+    },
+    {
+        title: 'Some title',
+        message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        Duis at est ut augue sodales laoreet.\n        Suspendisse tincidunt ultricies metus vel bibendum.",
+    },
+];
+var ToastNotificationsComponent = /** @class */ (function () {
+    function ToastNotificationsComponent(toastr) {
+        this.toastr = toastr;
+        this.title = '';
+        this.message = '';
+    }
+    ToastNotificationsComponent.prototype.ngOnInit = function () { };
+    ToastNotificationsComponent.prototype.getToast = function () {
+        var m = this.message;
+        var t = this.title;
+        if (!this.title.length && !this.message.length) {
+            var randomMessage = toasts[Math.floor(Math.random() * Math.floor(toasts.length))];
+            m = randomMessage.message;
+            t = randomMessage.title;
+        }
+        return {
+            message: m,
+            title: t,
+        };
+    };
+    ToastNotificationsComponent.prototype.showToast = function (type, disableTimeOut, inline) {
+        if (disableTimeOut === void 0) { disableTimeOut = false; }
+        if (inline === void 0) { inline = false; }
+        var config = {};
+        if (disableTimeOut) {
+            config = __assign({}, config, { disableTimeOut: true });
+        }
+        if (inline) {
+            config = __assign({}, config, { positionClass: 'inline' });
+        }
+        var toast = this.getToast();
+        this.toastr[type](toast.message, toast.title, config);
+        // this.toastr.show('test', type, {}, 'toast-' + type);
+    };
+    ToastNotificationsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-toast-notifications',
+            template: __webpack_require__(/*! ./toast-notifications.component.html */ "./src/example/components/toast-notifications/toast-notifications.component.html")
+        }),
+        __metadata("design:paramtypes", [ngx_toastr__WEBPACK_IMPORTED_MODULE_1__["ToastrService"]])
+    ], ToastNotificationsComponent);
+    return ToastNotificationsComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/example/components/tooltips/tooltips.component.html":
 /*!*****************************************************************!*\
   !*** ./src/example/components/tooltips/tooltips.component.html ***!
@@ -2400,12 +2666,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_datepicker_datepicker_simple_datepicker_simple_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/datepicker/datepicker-simple/datepicker-simple.component */ "./src/example/components/datepicker/datepicker-simple/datepicker-simple.component.ts");
 /* harmony import */ var _components_datepicker_datepicker_input_datepicker_input_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/datepicker/datepicker-input/datepicker-input.component */ "./src/example/components/datepicker/datepicker-input/datepicker-input.component.ts");
 /* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/example/components/navbar/navbar.component.ts");
+/* harmony import */ var _components_radio_buttons_radio_buttons_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./components/radio-buttons/radio-buttons.component */ "./src/example/components/radio-buttons/radio-buttons.component.ts");
+/* harmony import */ var _components_colors_colors_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./components/colors/colors.component */ "./src/example/components/colors/colors.component.ts");
+/* harmony import */ var _components_toast_notifications_toast_notifications_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./components/toast-notifications/toast-notifications.component */ "./src/example/components/toast-notifications/toast-notifications.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -2479,7 +2751,10 @@ var ExampleModule = /** @class */ (function () {
                 _components_datepicker_datepicker_component__WEBPACK_IMPORTED_MODULE_29__["DatepickerComponent"],
                 _components_datepicker_datepicker_simple_datepicker_simple_component__WEBPACK_IMPORTED_MODULE_30__["DatepickerSimpleComponent"],
                 _components_datepicker_datepicker_input_datepicker_input_component__WEBPACK_IMPORTED_MODULE_31__["DatepickerInputComponent"],
-                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_32__["NavbarComponent"]
+                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_32__["NavbarComponent"],
+                _components_radio_buttons_radio_buttons_component__WEBPACK_IMPORTED_MODULE_33__["RadioButtonsComponent"],
+                _components_colors_colors_component__WEBPACK_IMPORTED_MODULE_34__["ColorsComponent"],
+                _components_toast_notifications_toast_notifications_component__WEBPACK_IMPORTED_MODULE_35__["ToastNotificationsComponent"]
             ],
             exports: [_components_buttons_buttons_component__WEBPACK_IMPORTED_MODULE_2__["ButtonsComponent"]]
         })

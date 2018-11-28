@@ -30,6 +30,18 @@
                     "longpath": "src/components/alerts",
                     "items": [
                         {
+                            "title": "Alerts (icons)",
+                            "componentid": "component-alert",
+                            "variantid": "icons",
+                            "guid": "sdl-bootstrap-component-alert-icons",
+                            "filename": "alerts-icons.md",
+                            "filepath": "components/alerts/alerts-icons.md",
+                            "shortpath": "components/alerts/alerts-icons",
+                            "longpath": "components/alerts/alerts-icons.md",
+                            "type": "file",
+                            "private": false
+                        },
+                        {
                             "title": "Alerts (outline)",
                             "componentid": "component-alert",
                             "variantid": "outline",
@@ -248,6 +260,37 @@
                     ]
                 },
                 {
+                    "title": "Radio-buttons",
+                    "shortpath": "radio-buttons",
+                    "longpath": "src/components/radio-buttons",
+                    "items": [
+                        {
+                            "title": "Checkbox",
+                            "componentid": "component-checkbox",
+                            "variantid": "grid",
+                            "guid": "sdl-bootstrap-component-checkbox-grid",
+                            "filename": "radio-buttons-grid.md",
+                            "filepath": "components/radio-buttons/radio-buttons-grid.md",
+                            "shortpath": "components/radio-buttons/radio-buttons-grid",
+                            "longpath": "components/radio-buttons/radio-buttons-grid.md",
+                            "type": "file",
+                            "private": false
+                        },
+                        {
+                            "title": "Checkboxes",
+                            "componentid": "component-checkbox",
+                            "variantid": "primary",
+                            "guid": "sdl-bootstrap-component-checkbox-primary",
+                            "filename": "radio-buttons.md",
+                            "filepath": "components/radio-buttons/radio-buttons.md",
+                            "shortpath": "components/radio-buttons/radio-buttons",
+                            "longpath": "components/radio-buttons/radio-buttons.md",
+                            "type": "file",
+                            "private": false
+                        }
+                    ]
+                },
+                {
                     "title": "Skeleton-loader",
                     "shortpath": "skeleton-loader",
                     "longpath": "src/components/skeleton-loader",
@@ -353,6 +396,25 @@
                     ]
                 },
                 {
+                    "title": "Toast-notifications",
+                    "shortpath": "toast-notifications",
+                    "longpath": "src/components/toast-notifications",
+                    "items": [
+                        {
+                            "title": "Toast notifications",
+                            "componentid": "component-toast-notifications",
+                            "variantid": "standard",
+                            "guid": "sdl-bootstrap-component-toast-notifications-standard",
+                            "filename": "toast-notifications.md",
+                            "filepath": "components/toast-notifications/toast-notifications.md",
+                            "shortpath": "components/toast-notifications/toast-notifications",
+                            "longpath": "components/toast-notifications/toast-notifications.md",
+                            "type": "file",
+                            "private": false
+                        }
+                    ]
+                },
+                {
                     "title": "Tooltips",
                     "shortpath": "tooltips",
                     "longpath": "src/components/tooltips",
@@ -373,7 +435,7 @@
                 }
             ],
             "filecount": 0,
-            "directorycount": 15,
+            "directorycount": 17,
             "type": "directory"
         }
     ]
