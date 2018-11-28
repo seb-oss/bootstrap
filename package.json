@@ -73,6 +73,7 @@
     "@sebgroup/fonts": "^1.0.0",
     "angular-exemplify": "^3.1.2",
     "core-js": "^2.5.4",
+    "ngx-toastr": "^9.1.1",
     "rxjs": "^6.3.1",
     "scrollingelement": "^1.5.2",
     "swe-validation": "^1.0.1",

@@ -35,6 +35,9 @@ export class MenuService {
         name: 'Alerts',
         path: '/alerts'
     }, {
+        name: 'Toast notifications',
+        path: '/toast-notifications'
+    }, {
         name: 'Breadcrumbs',
         path: '/breadcrumbs'
     }, {

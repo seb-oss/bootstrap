@@ -97,6 +97,7 @@ $enable-responsive-gutters:     true !default; // SEB Specific
 $enable-button-variations:      false !default; // SEB Specific
 $enable-ng-bootstrap:           false !default; // SEB Specific
 $enable-angular-generic-table:  false !default; // SEB Specific
+$enable-ngx-toastr:             false !default; // SEB Specific
 
 // Spacing
 //
@@ -377,10 +378,20 @@ $modal-footer-border-width:         0 !default;
 // Define alert colors, border radius, and padding.
 
 $alert-padding-x:                   .75rem !default;
+$alert-border-radius:               $border-radius !default;
 $alert-link-font-weight:            $font-weight-medium !default; //500
 $alert-border-width:                0 !default;
 $alert-icon-width:                  1.125rem !default; // SEB Specific
 $alert-icon-height:                 1rem !default; // SEB Specific
+
+// Toast notifications
+$toast-border-radius:               $alert-border-radius !default; // SEB Specific
+$toast-margin-bottom:               .5rem !default; // SEB Specific
+$toast-padding:                     $alert-padding-x !default; // SEB Specific
+$toast-width:                       300px !default; // SEB Specific
+$toast-shadow:                      0 0 .5rem rgba(0, 0, 0, 0.15) !default; // SEB Specific
+$toast-transition:                  color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default; // SEB Specific
+
 
 // Progress bars
 
