@@ -27,6 +27,7 @@ import {DatepickerComponent} from '../example/components/datepicker/datepicker.c
 import {NavbarComponent} from '../example/components/navbar/navbar.component';
 import {RadioButtonsComponent} from '../example/components/radio-buttons/radio-buttons.component';
 import {ColorsComponent} from '../example/components/colors/colors.component';
+import {ToastNotificationsComponent} from '../example/components/toast-notifications/toast-notifications.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
@@ -45,6 +46,7 @@ const routes: Routes = [
     { path: 'alerts', component: AlertsComponent },
     { path: 'breadcrumbs', component: BreadcrumbsComponent },
     { path: 'tooltips', component: TooltipsComponent },
+    { path: 'toast-notifications', component: ToastNotificationsComponent },
     //{ path: 'example-page', component: ExamplePageComponent },
     { path: 'about', component: AboutComponent },
     { path: 'dropdowns', component: DropdownsComponent },

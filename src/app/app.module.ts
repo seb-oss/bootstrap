@@ -9,6 +9,7 @@ import { MobileNavigationComponent } from './components/mobile-navigation/mobile
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
+import {ToastContainerModule, ToastrModule} from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,15 @@ import { AboutComponent } from './components/about/about.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot({
+        timeOut: 10000,
+        closeButton: true,
+        disableTimeOut: false,
+        progressBar: true,
+        positionClass: 'toast-bottom-right',
+        enableHtml: true
+    }),
+    ToastContainerModule,
     AppRoutingModule,
     ExampleModule
   ],

@@ -1,0 +1,61 @@
+<a name="modals"><h2 class="px-3 px-md-0 my-3">Toast notifications BETA!</h2></a>
+<div class="alert alert-info"><strong>Framework needed!</strong> Please note that the examples below uses a third-party library. Toast notifications use the same style and appearance as alerts but you need a framework to control when and how to show them. If you're using angular, please take a look at <a class="alert-link" href="https://scttcper.github.io/ngx-toastr/" target="_blank">ngx-toaster</a> for more info.</div>
+<div class="card my-3">
+  <h4 class="card-header pb-0">Standard toast notifications</h4>
+  <div class="card-body"><p>By default toast notifications are positioned bottom right on desktop to avoid overlaying the navigation to the left. On tablets and smaller screens where the menu is hidden, they appear bottom left and on small screens (mobile devices) they use full width.</p>
+    <div class="row">
+      <div class="col-6 col-md-auto mb-3 mb-md-0">
+        <button class="btn btn-primary w-100" (click)="showToast('info', true)">Show info</button>
+      </div>
+      <div class="col-6 col-md-auto mb-3 mb-md-0">
+        <button class="btn btn-primary w-100" (click)="showToast('success', true)">Show success</button>
+      </div>
+      <div class="col-6 col-md-auto">
+        <button class="btn btn-primary w-100" (click)="showToast('warning', true)">Show warning</button>
+      </div>
+      <div class="col-6 col-md-auto">
+        <button class="btn btn-primary w-100" (click)="showToast('error', true)">Show error</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card my-3">
+  <h4 class="card-header pb-0">Toast notifications with timeout</h4>
+  <div class="card-body"><p>These toasts will disappear after a set time.</p>
+    <div class="row">
+      <div class="col-6 col-md-auto mb-3 mb-md-0">
+        <button class="btn btn-primary w-100" (click)="showToast('info')">Show info</button>
+      </div>
+      <div class="col-6 col-md-auto mb-3 mb-md-0">
+        <button class="btn btn-primary w-100" (click)="showToast('success')">Show success</button>
+      </div>
+      <div class="col-6 col-md-auto">
+        <button class="btn btn-primary w-100" (click)="showToast('warning')">Show warning</button>
+      </div>
+      <div class="col-6 col-md-auto">
+        <button class="btn btn-primary w-100" (click)="showToast('error')">Show error</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+<div class="card my-3">
+  <h4 class="card-header">Inline toast notifications</h4>
+  <div class="card-body"><p>Below is a example of a standard modal opened with a backdrop.</p>
+    <div class="row">
+      <div class="col-6 col-md-auto mb-3 mb-md-0">
+        <button class="btn btn-primary w-100" (click)="showToast('info', true, true)">Show info</button>
+      </div>
+      <div class="col-6 col-md-auto mb-3 mb-md-0">
+        <button class="btn btn-primary w-100" (click)="showToast('success', true, true)">Show success</button>
+      </div>
+      <div class="col-6 col-md-auto">
+        <button class="btn btn-primary w-100" (click)="showToast('warning', true, true)">Show warning</button>
+      </div>
+      <div class="col-6 col-md-auto">
+        <button class="btn btn-primary w-100" (click)="showToast('error', true, true)">Show error</button>
+      </div>
+      <div toastContainer></div>
+    </div>
+  </div>
+</div>-->
