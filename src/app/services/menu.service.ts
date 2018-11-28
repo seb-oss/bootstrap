@@ -24,6 +24,9 @@ export class MenuService {
         name: 'Fonts and typography',
         path: '/typography'
     }, {
+        name: 'Colors',
+        path: '/colors'
+    }, {
         name: 'Icons',
         path: '/icons'
     }];
@@ -31,6 +34,9 @@ export class MenuService {
     components: Array<MenuItem> = [{
         name: 'Alerts',
         path: '/alerts'
+    }, {
+        name: 'Toast notifications',
+        path: '/toast-notifications'
     }, {
         name: 'Breadcrumbs',
         path: '/breadcrumbs'
@@ -43,6 +49,9 @@ export class MenuService {
     }, {
         name: 'Checkboxes and slide toggles',
         path: '/checkboxes-and-slide-toggles'
+    }, {
+        name: 'Radio buttons',
+        path: '/radio-buttons'
     }, {
         name: 'Buttons',
         path: '/buttons'

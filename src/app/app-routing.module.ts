@@ -25,23 +25,28 @@ import {AboutComponent} from './components/about/about.component';
 import {SkeletonLoaderComponent} from '../example/components/skeleton-loader/skeleton-loader.component';
 import {DatepickerComponent} from '../example/components/datepicker/datepicker.component';
 import {NavbarComponent} from '../example/components/navbar/navbar.component';
+import {RadioButtonsComponent} from '../example/components/radio-buttons/radio-buttons.component';
+import {ColorsComponent} from '../example/components/colors/colors.component';
+import {ToastNotificationsComponent} from '../example/components/toast-notifications/toast-notifications.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
     { path: 'typography', component: TypographyComponent },
     { path: 'tables', component: TablesComponent },
-    //{ path: 'colors', component: ColorsComponent },
+    { path: 'colors', component: ColorsComponent },
     { path: 'modals', component: ModalsComponent },
     { path: 'cards', component: CardsComponent },
     { path: 'buttons', component: ButtonsComponent },
     { path: 'input-group', component: InputGroupComponent },
     { path: 'forms', component: FormsComponent },
     { path: 'checkboxes-and-slide-toggles', component: CheckboxesAndSlideTogglesComponent },
+    { path: 'radio-buttons', component: RadioButtonsComponent },
     { path: 'pagination', component: PaginationComponent },
     { path: 'tabs', component: TabsComponent },
     { path: 'alerts', component: AlertsComponent },
     { path: 'breadcrumbs', component: BreadcrumbsComponent },
     { path: 'tooltips', component: TooltipsComponent },
+    { path: 'toast-notifications', component: ToastNotificationsComponent },
     //{ path: 'example-page', component: ExamplePageComponent },
     { path: 'about', component: AboutComponent },
     { path: 'dropdowns', component: DropdownsComponent },
