@@ -165,7 +165,7 @@ $responsive-gutters: (
   sm:map-get($spacers, 2)*2,
   lg:map-get($spacers, 2)*2,
   xl:map-get($spacers, 3)*2
-)!default
+) !default;
 
 // Components
 //
