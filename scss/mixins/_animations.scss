@@ -1,0 +1,82 @@
+$animations: (
+  slideInLeft: slideInLeft $transition-slide-in-duration,
+  slideInRight: slideInRight $transition-slide-in-duration,
+  slideInUp: slideInUp $transition-slide-in-duration,
+  fadeIn: fadeIn $transition-fade-duration,
+  fadeInUp: fadeInUp $transition-fade-duration,
+);
+
+@mixin animations() {
+  @if $enable-transitions {
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translate3d(0,30px,0);
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+      }
+    }
+    @keyframes slideInRight {
+      0% {
+        transform: translate3d(100%,0,0);
+      }
+      100% {
+        transform: translate3d(0,0,0);
+      }
+    }
+    @keyframes slideInLeft {
+      0% {
+        transform: translate3d(-100%,0,0);
+      }
+      100% {
+        transform: translate3d(0,0,0);
+      }
+    }
+    @keyframes slideInUp {
+      0% {
+        transform: translate3d(0,100%,0);
+      }
+      100% {
+        transform: translate3d(0,0,0);
+      }
+    }
+  }
+}
+/**
+ * Add one or more transitions
+ *
+ * @example
+ * @include add-transition('slideInUp');
+ * @include add-transition(('slideInUp','fadeIn'))
+ */
+@mixin add-transition($list) {
+  $combined: '';
+  @if type-of($list) == 'string' {
+    animation: map_get($animations, $list);
+  } @else if type-of($list) == 'list' {
+    @for $i from 1 through length($list) {
+      $anim: map_get($animations, nth($list, $i));
+      @if $anim == null {
+        @warn nth($list, $i) unquote('not found, please use one of the following animations:') to-list($animations, 'keys');
+      }
+
+      @if $i == length($list) {
+        $combined: $combined + $anim;
+      }
+      @else {
+        $combined: $combined + $anim + ',';
+      }
+    }
+    animation: unquote($combined);
+  }
+}
