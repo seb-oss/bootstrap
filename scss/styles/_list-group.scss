@@ -1,15 +1,191 @@
-@import "../bootstrap-core/list-group";
-.list-group-check li {
-  content:'';
-  display: inline-block;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%2360cd18' d='M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z' class='st0'/%3E%3C/svg%3E");
-  background-size: 1rem 1rem;
-  background-position: 0 0.75rem;
-  background-repeat: no-repeat;
-  border: none;
-  padding: 0.5rem 2rem;
+//@import "../bootstrap-core/list-group";
+
+// Base class
+//
+// Easily usable on <ul>, <ol>, or <div>.
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+
+  // No need to set list-style: none; since .list-group-item is block level
+  padding-left: 0; // reset padding because ul and ol
+  margin-bottom: 0;
 }
 
-.list-group-check li p {
-  margin: 0;
+
+// Interactive list items
+//
+// Use anchor or button elements instead of `li`s or `div`s to create interactive
+// list items. Includes an extra `.active` modifier class for selected items.
+
+.list-group-item-action {
+  width: 100%; // For `<button>`s (anchors become 100% by default though)
+  color: $list-group-action-color;
+  position: relative;
+  display: block;
+  text-align: inherit; // For `<button>`s (anchors inherit)
+
+  &.active {
+    &::before {
+      background: $list-group-active-bg;
+      color: $list-group-active-color;
+    }
+  }
+
+  // Hover state
+  @include hover-focus {
+    &:not(.disabled):not(:disabled) {
+      cursor: pointer;
+      background-color: $list-group-action-hover-bg;
+    };
+    &::before {
+      color: $list-group-action-hover-color;
+      text-decoration: none;
+      background-color: $list-group-hover-bg;
+    }
+  }
+
+  &:active {
+    &::before {
+      color: $list-group-action-active-color;
+      background-color: $list-group-action-active-bg;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $list-group-disabled-color;
+  }
+}
+
+
+// Individual list items
+//
+// Use on `li`s or `div`s within the `.list-group` parent.
+
+.list-group-item {
+  position: relative;
+  display: block;
+
+  &:first-child {
+    @include border-top-radius($list-group-border-radius);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    @include border-bottom-radius($list-group-border-radius);
+  }
+
+  &.active::before {
+    background: $list-group-active-bg;
+    color: $list-group-active-color;
+  }
+
+  @include hover-focus {
+    z-index: 1; // Place hover/active items above their siblings for proper border styling
+    text-decoration: none;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $list-group-disabled-color;
+  }
+
+}
+
+
+// Flush list items
+//
+// Remove borders and border-radius to keep list group items edge-to-edge. Most
+// useful within other components (e.g., cards).
+
+.list-group-flush {
+  .list-group-item {
+    padding: $list-group-item-padding-y $list-group-item-padding-x;
+    border: $list-group-border-width solid $list-group-border-color;
+    margin-bottom: -$list-group-border-width;
+    border-right: 0;
+    border-left: 0;
+    @include border-radius(0);
+  }
+
+  &:first-child {
+    .list-group-item:first-child {
+      border-top: 0;
+    }
+  }
+
+  &:last-child {
+    .list-group-item:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+
+// Contextual variants
+//
+// Add modifier classes to change text and background color on individual items.
+// Organizationally, this must come after the `:hover` states.
+
+@each $color, $value in $theme-colors {
+  @include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
+}
+
+
+
+// SEB Specific
+.list-group-bullet {
+  margin-bottom: $list-group-margin-bottom;
+  li {
+    content: '';
+    display: inline-block;
+    background-size: 8px 8px;
+    background-position: 6px 16px;
+    background-repeat: no-repeat;
+    border: none;
+    padding: .5rem 2rem 0;
+    background-image: $list-group-bullet-icon;
+  }
+}
+.list-group-check {
+  margin-bottom: $list-group-margin-bottom;
+  li {
+    content:'';
+    display: inline-block;
+    background-image: $list-group-check-icon;
+    background-size: 1rem 1rem;
+    background-position: 0 0.75rem;
+    background-repeat: no-repeat;
+    border: none;
+    padding: .5rem 2rem 0;
+  }
+}
+
+.list-group {
+  li p {
+    margin: 0;
+  }
+}
+
+
+.list-group-ordered li {
+  counter-increment: list-order;
+  border: none;
+  padding: .5rem 2rem;
+  &::before {
+    content:counter(list-order);
+    position:absolute;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    text-align:center;
+    display:inline-block;
+    background: $list-group-bg;
+  }
+  &:disabled::before, &.disabled::before {
+    background: $list-group-disabled-bg;
+    color: $list-group-disabled-color;
+  }
 }
