@@ -27,46 +27,27 @@
 <div class="card my-3">
   <h4 class="card-header">Modal with backdrop</h4>
   <div class="card-body"><p>Below is a example of a standard modal opened with a backdrop.</p>
-    <button class="btn btn-primary" (click)="modal = !modal">Open modal</button>
-  </div>
-  <div  class="modal" *ngIf="modal" style="display: block;opacity: 1;position: fixed;top: 0;right: 0;bottom: 0; left: 0;z-index: 1050;" (click)="modal = !modal">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Modal title</h4>
-        </div>
-        <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
+    <div class="row">
+      <div class="col-12 col-sm col-md-auto"><button class="btn btn-primary w-100" (click)="open(content)">Open modal</button></div>
+      <div class="col-12 col-sm col-md-auto mt-3 mt-sm-0"><button class="btn btn-primary w-100" (click)="open(content, {size:'lg'})">Open large modal</button></div>
     </div>
   </div>
-  <div class="modal-backdrop fade show" *ngIf="modal"></div>
 </div>
 <div class="card my-3">
   <h4 class="card-header">Aside modal</h4>
   <div class="card-body">
     <p>Add <code>modal-aside</code> class to the modal element together with either <code>modal-aside-right</code> or <code>modal-aside-left</code> to get a modal that will slide in from the side.<br>Ex. <code>&lt;div  class=&quot;modal modal-aside modal-aside-right&quot;&gt;...&lt;/div&gt;</code></p>
-    <button class="btn btn-primary" (click)="slideModal = !slideModal">Open aside modal</button>
+    <div class="row">
+      <div class="col-12 col-sm col-md-auto"><button class="btn btn-primary w-100" (click)="open(content, {windowClass:'modal-aside modal-aside-right'})">Open aside modal</button></div>
+      <div class="col-12 col-sm col-md-auto mt-3 mt-sm-0"><button class="btn btn-primary w-100" (click)="open(content, {windowClass:'modal-aside modal-aside-left'})">Open left aside modal</button></div>
+    </div>
   </div>
-  <div  class="modal modal-aside modal-aside-right" [ngClass]="{'active': slideModal}">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Modal title</h4>
-        </div>
-        <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="slideModal = !slideModal">Close</button>
-          <button type="button" class="btn btn-primary" (click)="slideModal = !slideModal">Save changes</button>
-        </div>
-      </div>
+  <div class="card-body">
+    <h5>Large aside modal</h5>
+    <p>Add <code>modal-lg</code> class to the modal dialogue together with the above classes to get a larger modal that will slide in from the side.</p>
+    <div class="row">
+      <div class="col-12 col-sm col-md-auto"><button class="btn btn-primary w-100" (click)="open(content, {windowClass:'modal-aside modal-aside-right', size:'lg'})">Open aside modal</button></div>
+      <div class="col-12 col-sm col-md-auto mt-3 mt-sm-0"><button class="btn btn-primary w-100" (click)="open(content, {windowClass:'modal-aside modal-aside-left', size:'lg'})">Open left aside modal</button></div>
     </div>
   </div>
 </div>
@@ -74,22 +55,18 @@
   <h4 class="card-header">Fullscreen modal aka take-over</h4>
   <div class="card-body">
     <p>Add <code>modal-fullscreen</code> class to the modal element to get a fullscreen modal.<br>Ex. <code>&lt;div  class=&quot;modal modal-fullscreen&quot;&gt;...&lt;/div&gt;</code></p>
-    <button class="btn btn-primary" (click)="takeOverModal = !takeOverModal">Open fullscreen modal</button>
-  </div>
-  <div  class="modal modal-fullscreen" *ngIf="takeOverModal" style="display: block;opacity: 1;position: fixed;top: 0;right: 0;bottom: 0; left: 0;z-index: 1050;">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Modal title</h4>
-        </div>
-        <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="takeOverModal = !takeOverModal">Close</button>
-          <button type="button" class="btn btn-primary" (click)="takeOverModal = !takeOverModal">Save changes</button>
-        </div>
-      </div>
-    </div>
+    <button class="btn btn-primary" (click)="open(content, {windowClass:'modal-fullscreen'})">Open fullscreen modal</button>
   </div>
 </div>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+  </div>
+  <div class="modal-body">
+    <p>Modal body text goes here.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="modal.dismiss('Cross click')">Close</button>
+    <button type="button" class="btn btn-primary" (click)="modal.close('Save click')">Save changes</button>
+  </div>
+</ng-template>
