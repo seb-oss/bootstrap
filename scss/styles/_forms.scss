@@ -2,8 +2,7 @@
 
 // SEB Specific styles for labels
 label:not(.form-check-label,.custom-checkbox,.custom-radio,.custom-control-label), legend.col-form-legend {
-  font-size: $font-size-xs;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-medium;
   margin-bottom: 0.25rem;
 }
 label:not(.form-check-label) {

@@ -217,7 +217,7 @@ $h3-sm-font-size:                $font-size-base * 1.25 !default; // SEB specifi
 $headings-font-weight:        $font-weight-medium !default;
 $headings-color:              #222 !default;
 
-$small-font-size:             75% !default;
+$small-font-size:             $font-size-sm !default;
 
 // Links
 //
@@ -297,6 +297,7 @@ $custom-file-text: (
 
 
 // Form validation
+$form-feedback-font-size:           $font-size-sm !default;
 
 // Dropdowns
 //
