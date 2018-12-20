@@ -175,6 +175,11 @@ $border-radius:               0 !default;
 $border-radius-lg:            0 !default;
 $border-radius-sm:            0 !default;
 
+$transition-slide-in-duration:.4s ease-in-out !default; // SEB Specific
+$transition-fade-duration:    .15s linear !default; // SEB Specific
+$transition-fade:             opacity $transition-fade-duration !default;
+
+
 
 // Fonts
 //
@@ -371,6 +376,7 @@ $modal-content-border-color:        $white !default;
 $modal-content-border-radius:       0 !default;
 
 $modal-footer-border-width:         0 !default;
+$modal-aside-lg-width:              800px !default; // SEB Specific
 
 
 // Alerts
