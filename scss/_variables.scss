@@ -60,7 +60,7 @@ $primary:       $blue !default;
 $secondary:     $gray-300 !default;
 $success:       $green !default;
 $info:          $purple !default;
-$warning:       $yellow-darker !default;
+$warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
@@ -175,6 +175,11 @@ $border-radius:               0 !default;
 $border-radius-lg:            0 !default;
 $border-radius-sm:            0 !default;
 
+$transition-slide-in-duration:.4s ease-in-out !default; // SEB Specific
+$transition-fade-duration:    .15s linear !default; // SEB Specific
+$transition-fade:             opacity $transition-fade-duration !default;
+
+
 
 // Fonts
 //
@@ -212,7 +217,7 @@ $h3-sm-font-size:                $font-size-base * 1.25 !default; // SEB specifi
 $headings-font-weight:        $font-weight-medium !default;
 $headings-color:              #222 !default;
 
-$small-font-size:             75% !default;
+$small-font-size:             $font-size-sm !default;
 
 // Links
 //
@@ -292,6 +297,7 @@ $custom-file-text: (
 
 
 // Form validation
+$form-feedback-font-size:           $font-size-sm !default;
 
 // Dropdowns
 //
@@ -371,6 +377,7 @@ $modal-content-border-color:        $white !default;
 $modal-content-border-radius:       0 !default;
 
 $modal-footer-border-width:         0 !default;
+$modal-aside-lg-width:              800px !default; // SEB Specific
 
 
 // Alerts
@@ -396,6 +403,19 @@ $toast-transition:                  color .15s ease-in-out, background-color .15
 // Progress bars
 
 // List group
+$list-group-bullet-icon: str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect width='1' height='1' style='fill:#{$dark};' /%3E%3C/svg%3E"), "#", "%23") !default; // SEB Specific
+$list-group-check-icon: str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='#{$green}' d='M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z' class='st0'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB Specific
+$list-group-margin-bottom: 1rem !default; // SEB Specific
+$list-group-bg:                     $gray-400 !default;
+$list-group-hover-bg:               $blue !default;
+$list-group-action-hover-color:     $white !default;
+$list-group-action-hover-bg:        $gray-100 !default;
+$list-group-action-active-bg:       $blue-dark !default;
+$list-group-action-active-color:    $white !default;
+$list-group-active-bg:              $green !default;
+$list-group-disabled-color:         $gray-500 !default;
+$list-group-disabled-bg:            $gray-200 !default;
+
 
 // Image thumbnails
 

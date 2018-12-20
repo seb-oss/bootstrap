@@ -1,6 +1,29 @@
-<a name="listGroupCheck"><h2 class="px-3 px-md-0 my-3">List group</h2></a>
-<div class="card" #listGroupCheckExample>
+<a name="listGroup"><h2 class="px-3 px-md-0 my-3">List group</h2></a>
+<div class="card">
   <div class="card-body">
+    <h4 class="card-title">List (flush)</h4>
+    <p>To get a list group with flush or table style, just add the class <code>list-group-flush</code> to a normal list-group.</p>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-light font-weight-medium">Lorem ipsum</li>
+      <li class="list-group-item"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>
+      <li class="list-group-item">Dolar sit amet</li>
+    </ul>
+    <exemplify [selector]="'ul.list-group-flush'"></exemplify>
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">Bullet list</h4>
+    <p>To get a list group with bullets, just add the class <code>list-group-bullet</code> to a normal list-group.</p>
+    <ul class="list-group list-group-bullet">
+      <li class="list-group-item">Lorem ipsum</li>
+      <li class="list-group-item"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>
+      <li class="list-group-item">Dolar sit amet</li>
+      <li class="list-group-item"><strong class="mb-1 d-block">Lorem ipsum</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus.</p></li>
+      <li class="list-group-item"><strong class="mb-1 d-block">Dolar sit amet</strong><p class="text-muted small">Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>
+    </ul>
+    <exemplify [selector]="'ul.list-group-bullet'"></exemplify>
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">Check list</h4>
     <p>To get a list group with check icons, just add the class <code>list-group-check</code> to a normal list-group.</p>
     <ul class="list-group list-group-check">
       <li class="list-group-item">Lorem ipsum</li>
@@ -9,6 +32,28 @@
       <li class="list-group-item"><strong class="mb-1 d-block">Lorem ipsum</strong><p class="text-muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus.</p></li>
       <li class="list-group-item"><strong class="mb-1 d-block">Dolar sit amet</strong><p class="text-muted small">Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>
     </ul>
-    <exemplify [selector]="'ul.list-group'"></exemplify>
+    <exemplify [selector]="'ul.list-group-check'"></exemplify>
+  </div>
+  <div class="card-body" id="itemList">
+    <h4 class="card-title">Ordered list</h4>
+    <p>To get a ordered list, just add the class <code>list-group-ordered</code> to a normal list-group.</p>
+    <ol class="list-group list-group-ordered">
+      <li class="list-group-item">Lorem ipsum</li>
+      <li class="list-group-item">Dolar sit amet <a href="#">do something</a></li>
+      <li class="list-group-item active"><strong class="mb-1 d-block">This item is active</strong><p class="text-muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>
+      <li class="list-group-item disabled">Disabled list item </li>
+    </ol>
+    <exemplify [selector]="'#itemList ol.list-group-ordered'"></exemplify>
+  </div>
+  <div class="card-body" id="actionList">
+    <h4 class="card-title">Ordered action list</h4>
+    <p>To get a ordered action list group, just add the class <code>list-group-ordered</code> to a normal list-group and replace <code>list-group-item</code> with <code>list-group-item-action</code>.</p>
+    <ol class="list-group list-group-ordered">
+      <li class="list-group-item-action">Lorem ipsum</li>
+      <li class="list-group-item-action">Dolar sit amet <a href="#">do something</a></li>
+      <li class="list-group-item-action active"><strong class="mb-1 d-block">This item is active</strong><p class="text-muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>
+      <li class="list-group-item-action disabled">Disabled list item action</li>
+    </ol>
+    <exemplify [selector]="'#actionList ol.list-group-ordered'"></exemplify>
   </div>
 </div>
