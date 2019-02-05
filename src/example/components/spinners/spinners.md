@@ -1,14 +1,16 @@
 ---
-title: Toast notifications
-componentid: component-toast-notifications
+title: Spinners
+componentid: component-spinners
 variantid: standard
-guid: some-random-and-unique-string-toast-notifications
+guid: some-random-and-unique-string-spinners
 ---
 # Usage and description
-Framework needed! Please note that the examples below uses a third-party library. Toast notifications use the same style and appearance as alerts but you need a framework to control when and how to show them. If you're using angular, please take a look at ngx-toaster for more info.
+Just add `spinner` class to div element and optionally the class `light` to spinner element when placed against light (grey) background. Control sizing by adding `spinner-sm`, `spinner-md` or `spinners-lg`. No size class means default size which is between `spinner-sm` and `spinner-md`.  
 
 ## Base state
 This is the default state of the component
 ```html
-<a href="https://sebgroup.github.io/bootstrap/toast-notifications" target="_blank">Show live examples</a>
+<div class="spinner" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
 ```

@@ -1,8 +1,8 @@
 ---
-title: Modal
-componentid: component-dialogue
+title: Aside modal (slide out)
+componentid: component-slideout
 variantid: modal
-guid: some-random-and-unique-string-modal
+guid: some-random-and-unique-string-aside-modal
 ---
 # Usage and description
 **Framework needed!** Please note that the examples below is just a representation of how modals look and the needed markup. In order to use modals you need a framework to control when and how to show them. If you're using angular, please take a look at [ng-bootstrap](https://ng-bootstrap.github.io/) and their [modal component](https://ng-bootstrap.github.io/#/components/modal).
@@ -16,7 +16,7 @@ guid: some-random-and-unique-string-modal
 ## Base state
 This is the default state of the component
 ```html
-<div  class="modal">
+<div  class="modal modal-aside modal-aside-right">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
