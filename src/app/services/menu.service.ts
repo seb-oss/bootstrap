@@ -83,8 +83,8 @@ export class MenuService {
         name: 'Accordion',
         path: '/accordion'
     }, {
-        name: 'Loaders',
-        path: '/loaders'
+        name: 'Spinners',
+        path: '/spinners'
     }, {
       name: 'Skeleton loaders',
       path: '/skeleton-loader'

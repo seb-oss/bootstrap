@@ -1,0 +1,95 @@
+<h2 class="px-3 px-md-0 my-3">Spinners</h2>
+<div class="card">
+  <div class="card-body">
+    <p>Some experimental spinners</p>
+    <div class="row" id="loaders">
+      <div class="col-auto">
+        <div class="spinner spinner-sm" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="spinner" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="spinner spinner-md" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="spinner spinner-lg" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="spinner-sq spinner-sm" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="spinner-sq" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="spinner-sq spinner-md" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="spinner-sq spinner-lg" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+    <exemplify [selector]="'#loaders .col-auto > *'"></exemplify>
+    <div class="row mt-5" id="loadersButton">
+      <div class="col-auto">
+        <button class="btn btn-primary disabled"><span class="mr-2">Waiting</span>
+          <div class="spinner" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </button>
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-primary disabled"><span class="mr-2">Waiting</span>
+          <div class="spinner-sq" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </button>
+      </div>
+    </div>
+    <exemplify [selector]="'#loadersButton .btn'"></exemplify>
+  </div>
+</div>
+<h3 class="px-3 px-md-0 my-3">Spinners on light grey background</h3>
+<div class="card">
+  <div class="card-body bg-light">
+    <p>Add class <code>light</code> to spinner element when placed against light background.</p>
+    <div class="row" id="loadersLight">
+      <div class="col-auto">
+        <div class="spinner spinner-sm light" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="spinner spinner-lg light" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="spinner-sq spinner-sm" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="spinner-sq spinner-lg" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+    <exemplify [selector]="'#loadersLight .col-auto > *'"></exemplify>
+  </div>
+</div>
