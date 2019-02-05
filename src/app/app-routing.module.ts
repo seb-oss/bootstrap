@@ -28,6 +28,7 @@ import {RadioButtonsComponent} from '../example/components/radio-buttons/radio-b
 import {ColorsComponent} from '../example/components/colors/colors.component';
 import {ToastNotificationsComponent} from '../example/components/toast-notifications/toast-notifications.component';
 import {SpinnersComponent} from '../example/components/spinners/spinners.component';
+import {ButtonGroupComponent} from '../example/components/button-group/button-group.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
@@ -37,6 +38,7 @@ const routes: Routes = [
     { path: 'modals', component: ModalsComponent },
     { path: 'cards', component: CardsComponent },
     { path: 'buttons', component: ButtonsComponent },
+    { path: 'button-group', component: ButtonGroupComponent },
     { path: 'input-group', component: InputGroupComponent },
     { path: 'forms', component: FormsComponent },
     { path: 'checkboxes-and-slide-toggles', component: CheckboxesAndSlideTogglesComponent },

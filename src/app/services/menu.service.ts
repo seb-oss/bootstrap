@@ -53,8 +53,11 @@ export class MenuService {
         name: 'Radio buttons',
         path: '/radio-buttons'
     }, {
-        name: 'Buttons',
-        path: '/buttons'
+      name: 'Buttons',
+      path: '/buttons'
+    }, {
+      name: 'Button group',
+      path: '/button-group'
     }, {
         name: 'Input group',
         path: '/input-group'

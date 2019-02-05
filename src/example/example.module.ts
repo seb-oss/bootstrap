@@ -38,6 +38,7 @@ import { RadioButtonsComponent } from './components/radio-buttons/radio-buttons.
 import { ColorsComponent } from './components/colors/colors.component';
 import { ToastNotificationsComponent } from './components/toast-notifications/toast-notifications.component';
 import {SpinnersComponent} from './components/spinners/spinners.component';
+import { ButtonGroupComponent } from './components/button-group/button-group.component';
 library.add(faArrowAltRight);
 
 @NgModule({
@@ -78,7 +79,8 @@ library.add(faArrowAltRight);
       NavbarComponent,
       RadioButtonsComponent,
       ColorsComponent,
-      ToastNotificationsComponent
+      ToastNotificationsComponent,
+      ButtonGroupComponent
   ],
   exports: [ButtonsComponent]
 })
