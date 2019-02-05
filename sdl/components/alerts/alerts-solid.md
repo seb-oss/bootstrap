@@ -1,6 +1,6 @@
 ---
 title: Alerts (solid color)
-componentid: component-alert
+componentid: component-alertribbon
 variantid: solid
 guid: some-random-and-unique-string-alerts2
 ---

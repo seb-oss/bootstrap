@@ -1,6 +1,6 @@
 ---
 title: Alerts (icons)
-componentid: component-alert
+componentid: component-alertribbon
 variantid: icons
 guid: some-random-and-unique-string-alerts3
 ---

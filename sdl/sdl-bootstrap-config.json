@@ -31,9 +31,9 @@
                     "items": [
                         {
                             "title": "Alerts (icons)",
-                            "componentid": "component-alert",
+                            "componentid": "component-alertribbon",
                             "variantid": "icons",
-                            "guid": "sdl-bootstrap-component-alert-icons",
+                            "guid": "sdl-bootstrap-component-alertribbon-icons",
                             "filename": "alerts-icons.md",
                             "filepath": "components/alerts/alerts-icons.md",
                             "shortpath": "components/alerts/alerts-icons",
@@ -43,9 +43,9 @@
                         },
                         {
                             "title": "Alerts (outline)",
-                            "componentid": "component-alert",
+                            "componentid": "component-alertribbon",
                             "variantid": "outline",
-                            "guid": "sdl-bootstrap-component-alert-outline",
+                            "guid": "sdl-bootstrap-component-alertribbon-outline",
                             "filename": "alerts-outline.md",
                             "filepath": "components/alerts/alerts-outline.md",
                             "shortpath": "components/alerts/alerts-outline",
@@ -55,9 +55,9 @@
                         },
                         {
                             "title": "Alerts (solid color)",
-                            "componentid": "component-alert",
+                            "componentid": "component-alertribbon",
                             "variantid": "solid",
-                            "guid": "sdl-bootstrap-component-alert-solid",
+                            "guid": "sdl-bootstrap-component-alertribbon-solid",
                             "filename": "alerts-solid.md",
                             "filepath": "components/alerts/alerts-solid.md",
                             "shortpath": "components/alerts/alerts-solid",
@@ -87,6 +87,25 @@
                     ]
                 },
                 {
+                    "title": "Button-group",
+                    "shortpath": "button-group",
+                    "longpath": "src/components/button-group",
+                    "items": [
+                        {
+                            "title": "Button group",
+                            "componentid": "component-segmented-control",
+                            "variantid": "default",
+                            "guid": "sdl-bootstrap-component-segmented-control-default",
+                            "filename": "button-group.md",
+                            "filepath": "components/button-group/button-group.md",
+                            "shortpath": "components/button-group/button-group",
+                            "longpath": "components/button-group/button-group.md",
+                            "type": "file",
+                            "private": false
+                        }
+                    ]
+                },
+                {
                     "title": "Buttons",
                     "shortpath": "buttons",
                     "longpath": "src/components/buttons",
@@ -100,6 +119,30 @@
                             "filepath": "components/buttons/buttons-light.md",
                             "shortpath": "components/buttons/buttons-light",
                             "longpath": "components/buttons/buttons-light.md",
+                            "type": "file",
+                            "private": false
+                        },
+                        {
+                            "title": "Inline links",
+                            "componentid": "component-inlinelinks",
+                            "variantid": "default",
+                            "guid": "sdl-bootstrap-component-inlinelinks-default",
+                            "filename": "buttons-link.md",
+                            "filepath": "components/buttons/buttons-link.md",
+                            "shortpath": "components/buttons/buttons-link",
+                            "longpath": "components/buttons/buttons-link.md",
+                            "type": "file",
+                            "private": false
+                        },
+                        {
+                            "title": "Toggle button",
+                            "componentid": "component-togglebutton",
+                            "variantid": "outlined",
+                            "guid": "sdl-bootstrap-component-togglebutton-outlined",
+                            "filename": "buttons-toggle.md",
+                            "filepath": "components/buttons/buttons-toggle.md",
+                            "shortpath": "components/buttons/buttons-toggle",
+                            "longpath": "components/buttons/buttons-toggle.md",
                             "type": "file",
                             "private": false
                         },
@@ -154,6 +197,18 @@
                             "private": false
                         },
                         {
+                            "title": "Slide toggles (switch)",
+                            "componentid": "component-toggleswitch",
+                            "variantid": "slide-toggle",
+                            "guid": "sdl-bootstrap-component-toggleswitch-slide-toggle",
+                            "filename": "checkboxes-slide-toggle.md",
+                            "filepath": "components/checkboxes-and-slide-toggles/checkboxes-slide-toggle.md",
+                            "shortpath": "components/checkboxes-and-slide-toggles/checkboxes-slide-toggle",
+                            "longpath": "components/checkboxes-and-slide-toggles/checkboxes-slide-toggle.md",
+                            "type": "file",
+                            "private": false
+                        },
+                        {
                             "title": "Checkboxes",
                             "componentid": "component-checkbox",
                             "variantid": "primary",
@@ -168,10 +223,41 @@
                     ]
                 },
                 {
+                    "title": "Datepicker",
+                    "shortpath": "datepicker",
+                    "longpath": "src/components/datepicker",
+                    "items": [
+                        {
+                            "title": "Datepicker",
+                            "componentid": "component-datepicker",
+                            "variantid": "standard",
+                            "guid": "sdl-bootstrap-component-datepicker-standard",
+                            "filename": "datepicker.md",
+                            "filepath": "components/datepicker/datepicker.md",
+                            "shortpath": "components/datepicker/datepicker",
+                            "longpath": "components/datepicker/datepicker.md",
+                            "type": "file",
+                            "private": false
+                        }
+                    ]
+                },
+                {
                     "title": "Dropdowns",
                     "shortpath": "dropdowns",
                     "longpath": "src/components/dropdowns",
                     "items": [
+                        {
+                            "title": "Dropdown (fold out)",
+                            "componentid": "component-foldout",
+                            "variantid": "dropdown",
+                            "guid": "sdl-bootstrap-component-foldout-dropdown",
+                            "filename": "dropdowns-fold-out.md",
+                            "filepath": "components/dropdowns/dropdowns-fold-out.md",
+                            "shortpath": "components/dropdowns/dropdowns-fold-out",
+                            "longpath": "components/dropdowns/dropdowns-fold-out.md",
+                            "type": "file",
+                            "private": false
+                        },
                         {
                             "title": "Dropdown",
                             "componentid": "component-dropdown",
@@ -203,15 +289,125 @@
                     ]
                 },
                 {
+                    "title": "Input-group",
+                    "shortpath": "input-group",
+                    "longpath": "src/components/input-group",
+                    "items": [
+                        {
+                            "title": "Input group",
+                            "componentid": "component-stepper",
+                            "variantid": "default",
+                            "guid": "sdl-bootstrap-component-stepper-default",
+                            "filename": "input-group.md",
+                            "filepath": "components/input-group/input-group.md",
+                            "shortpath": "components/input-group/input-group",
+                            "longpath": "components/input-group/input-group.md",
+                            "type": "file",
+                            "private": false
+                        }
+                    ]
+                },
+                {
+                    "title": "List-group",
+                    "shortpath": "list-group",
+                    "longpath": "src/components/list-group",
+                    "items": [
+                        {
+                            "title": "List group",
+                            "componentid": "component-list",
+                            "variantid": "bullet",
+                            "guid": "sdl-bootstrap-component-list-bullet",
+                            "filename": "list-group-bullet.md",
+                            "filepath": "components/list-group/list-group-bullet.md",
+                            "shortpath": "components/list-group/list-group-bullet",
+                            "longpath": "components/list-group/list-group-bullet.md",
+                            "type": "file",
+                            "private": false
+                        },
+                        {
+                            "title": "List group",
+                            "componentid": "component-list",
+                            "variantid": "check",
+                            "guid": "sdl-bootstrap-component-list-check",
+                            "filename": "list-group-check.md",
+                            "filepath": "components/list-group/list-group-check.md",
+                            "shortpath": "components/list-group/list-group-check",
+                            "longpath": "components/list-group/list-group-check.md",
+                            "type": "file",
+                            "private": false
+                        },
+                        {
+                            "title": "List group",
+                            "componentid": "component-list",
+                            "variantid": "ordered-action",
+                            "guid": "sdl-bootstrap-component-list-ordered-action",
+                            "filename": "list-group-ordered-action.md",
+                            "filepath": "components/list-group/list-group-ordered-action.md",
+                            "shortpath": "components/list-group/list-group-ordered-action",
+                            "longpath": "components/list-group/list-group-ordered-action.md",
+                            "type": "file",
+                            "private": false
+                        },
+                        {
+                            "title": "List group",
+                            "componentid": "component-list",
+                            "variantid": "ordered",
+                            "guid": "sdl-bootstrap-component-list-ordered",
+                            "filename": "list-group-ordered.md",
+                            "filepath": "components/list-group/list-group-ordered.md",
+                            "shortpath": "components/list-group/list-group-ordered",
+                            "longpath": "components/list-group/list-group-ordered.md",
+                            "type": "file",
+                            "private": false
+                        },
+                        {
+                            "title": "List group",
+                            "componentid": "component-list",
+                            "variantid": "flush",
+                            "guid": "sdl-bootstrap-component-list-flush",
+                            "filename": "list-group.md",
+                            "filepath": "components/list-group/list-group.md",
+                            "shortpath": "components/list-group/list-group",
+                            "longpath": "components/list-group/list-group.md",
+                            "type": "file",
+                            "private": false
+                        }
+                    ]
+                },
+                {
                     "title": "Modals",
                     "shortpath": "modals",
                     "longpath": "src/components/modals",
                     "items": [
                         {
-                            "title": "Modal",
-                            "componentid": "component-modal",
+                            "title": "Aside modal (slide out)",
+                            "componentid": "component-slideout",
                             "variantid": "modal",
-                            "guid": "sdl-bootstrap-component-modal-modal",
+                            "guid": "sdl-bootstrap-component-slideout-modal",
+                            "filename": "modals-aside.md",
+                            "filepath": "components/modals/modals-aside.md",
+                            "shortpath": "components/modals/modals-aside",
+                            "longpath": "components/modals/modals-aside.md",
+                            "type": "file",
+                            "private": false
+                        },
+                        {
+                            "title": "Fullscreen modal (take over)",
+                            "componentid": "component-takeover",
+                            "variantid": "modal",
+                            "guid": "sdl-bootstrap-component-takeover-modal",
+                            "filename": "modals-fullscreen.md",
+                            "filepath": "components/modals/modals-fullscreen.md",
+                            "shortpath": "components/modals/modals-fullscreen",
+                            "longpath": "components/modals/modals-fullscreen.md",
+                            "type": "file",
+                            "private": false
+                        },
+                        {
+                            "title": "Modal",
+                            "componentid": "component-dialogue",
+                            "variantid": "modal",
+                            "guid": "sdl-bootstrap-component-dialogue-modal",
                             "filename": "modals.md",
                             "filepath": "components/modals/modals.md",
                             "shortpath": "components/modals/modals",
@@ -310,6 +506,37 @@
                     ]
                 },
                 {
+                    "title": "Spinners",
+                    "shortpath": "spinners",
+                    "longpath": "src/components/spinners",
+                    "items": [
+                        {
+                            "title": "Spinners",
+                            "componentid": "component-spinners",
+                            "variantid": "square",
+                            "guid": "sdl-bootstrap-component-spinners-square",
+                            "filename": "spinners-square.md",
+                            "filepath": "components/spinners/spinners-square.md",
+                            "shortpath": "components/spinners/spinners-square",
+                            "longpath": "components/spinners/spinners-square.md",
+                            "type": "file",
+                            "private": false
+                        },
+                        {
+                            "title": "Spinners",
+                            "componentid": "component-spinners",
+                            "variantid": "standard",
+                            "guid": "sdl-bootstrap-component-spinners-standard",
+                            "filename": "spinners.md",
+                            "filepath": "components/spinners/spinners.md",
+                            "shortpath": "components/spinners/spinners",
+                            "longpath": "components/spinners/spinners.md",
+                            "type": "file",
+                            "private": false
+                        }
+                    ]
+                },
+                {
                     "title": "Tables",
                     "shortpath": "tables",
                     "longpath": "src/components/tables",
@@ -383,9 +610,9 @@
                     "items": [
                         {
                             "title": "Tabs",
-                            "componentid": "component-tabs",
+                            "componentid": "component-tab",
                             "variantid": "primary",
-                            "guid": "sdl-bootstrap-component-tabs-primary",
+                            "guid": "sdl-bootstrap-component-tab-primary",
                             "filename": "tabs.md",
                             "filepath": "components/tabs/tabs.md",
                             "shortpath": "components/tabs/tabs",
@@ -435,7 +662,7 @@
                 }
             ],
             "filecount": 0,
-            "directorycount": 17,
+            "directorycount": 22,
             "type": "directory"
         }
     ]
