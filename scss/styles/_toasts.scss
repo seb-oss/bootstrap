@@ -1,0 +1,44 @@
+// @import "../bootstrap-core/toasts";
+.toast {
+  @include border-radius($toast-border-radius);
+  @include transition($toast-transition);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: $toast-margin-bottom;
+  padding: $toast-padding;
+  width: $toast-width;
+  box-shadow: $toast-shadow;
+  pointer-events: auto;
+  opacity: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.showing {
+    opacity: 1;
+  }
+
+  &.show {
+    display: block;
+    opacity: 1;
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+.toast-header {
+  display: flex;
+  align-items: center;
+  padding: $toast-padding-y $toast-padding-x;
+  color: $toast-header-color;
+  background-color: $toast-header-background-color;
+  background-clip: padding-box;
+  border-bottom: $toast-border-width solid $toast-header-border-color;
+}
+
+.toast-body {
+  padding: $toast-padding-x; // apply to both vertical and horizontal
+}

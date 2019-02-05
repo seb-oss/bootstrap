@@ -64,15 +64,7 @@
     bottom: 12px;
 
     .toast {
-      @include border-radius($toast-border-radius);
-      @include transition($toast-transition);
-      position: relative;
-      overflow: hidden;
-      margin-bottom: $toast-margin-bottom;
-      padding: $toast-padding;
-      width: $toast-width;
-      box-shadow: $toast-shadow;
-      pointer-events: auto;
+      opacity: 1;
       &:last-child {
         margin-bottom: 0;
       }

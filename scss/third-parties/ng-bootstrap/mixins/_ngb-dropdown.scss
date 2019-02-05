@@ -1,14 +1,5 @@
 @mixin ngb-dropdown-host($selector) {
 
-  #{$selector} + .progress-feedback,
-  #{$selector} + .invalid-feedback,
-  #{$selector} + .valid-feedback {
-    &::before {
-      border-radius: 0 0 4px 4px;
-      top: -7px;
-      margin-bottom: -4px;
-    }
-  }
   #{$selector}.is-invalid ~ .progress-feedback,
   #{$selector}.is-invalid ~ .invalid-feedback,
   #{$selector}.is-valid ~ .valid-feedback {

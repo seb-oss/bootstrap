@@ -22,7 +22,6 @@ import {library} from '@fortawesome/fontawesome-svg-core';
 import {faArrowAltRight} from '@fortawesome/pro-light-svg-icons';
 import { InputGroupComponent } from './components/input-group/input-group.component';
 import { ListGroupComponent } from './components/list-group/list-group.component';
-import { LoadersComponent } from './components/loaders/loaders.component';
 import { DropdownsComponent } from './components/dropdowns/dropdowns.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { ModalsComponent } from './components/modals/modals.component';
@@ -38,6 +37,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RadioButtonsComponent } from './components/radio-buttons/radio-buttons.component';
 import { ColorsComponent } from './components/colors/colors.component';
 import { ToastNotificationsComponent } from './components/toast-notifications/toast-notifications.component';
+import {SpinnersComponent} from './components/spinners/spinners.component';
 library.add(faArrowAltRight);
 
 @NgModule({
@@ -63,7 +63,7 @@ library.add(faArrowAltRight);
       IconsComponent,
       InputGroupComponent,
       ListGroupComponent,
-      LoadersComponent,
+      SpinnersComponent,
       DropdownsComponent,
       CardsComponent,
       ModalsComponent,

@@ -13,7 +13,6 @@ import {CheckboxesAndSlideTogglesComponent} from '../example/components/checkbox
 import {IconsComponent} from '../example/components/icons/icons.component';
 import {InputGroupComponent} from '../example/components/input-group/input-group.component';
 import {ListGroupComponent} from '../example/components/list-group/list-group.component';
-import {LoadersComponent} from '../example/components/loaders/loaders.component';
 import {DropdownsComponent} from '../example/components/dropdowns/dropdowns.component';
 import {CardsComponent} from '../example/components/cards/cards.component';
 import {ModalsComponent} from '../example/components/modals/modals.component';
@@ -28,6 +27,7 @@ import {NavbarComponent} from '../example/components/navbar/navbar.component';
 import {RadioButtonsComponent} from '../example/components/radio-buttons/radio-buttons.component';
 import {ColorsComponent} from '../example/components/colors/colors.component';
 import {ToastNotificationsComponent} from '../example/components/toast-notifications/toast-notifications.component';
+import {SpinnersComponent} from '../example/components/spinners/spinners.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
@@ -54,7 +54,7 @@ const routes: Routes = [
     //{ path: 'grid', component: GridComponent },
     { path: 'icons', component: IconsComponent },
     { path: 'list-group', component: ListGroupComponent },
-    { path: 'loaders', component: LoadersComponent },
+    { path: 'spinners', component: SpinnersComponent },
     //{ path: 'wizard', component: WizardExampleComponent },
     { path: 'skeleton-loader', component: SkeletonLoaderComponent },
     { path: 'datepicker', component: DatepickerComponent },
