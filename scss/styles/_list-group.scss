@@ -183,6 +183,7 @@
     text-align:center;
     display:inline-block;
     background: $list-group-bg;
+    font-weight: $font-weight-medium;
   }
   &:disabled::before, &.disabled::before {
     background: $list-group-disabled-bg;

@@ -8,6 +8,8 @@ export class InputGroupComponent implements OnInit {
 
   constructor() { }
 
+  step = 0;
+
   ngOnInit() {
   }
 

@@ -19,19 +19,10 @@ label {
 // SEB Specific styles for progress feedback
 .progress-feedback {
   width: 100%;
-  margin-top: $form-feedback-margin-top;
   font-size: $form-feedback-font-size;
   color: $text-muted;
   &::before {
-    content: '';
-    height: 3px;
-    width: 100%;
-    background: transparent;
-    display: block;
-    position: relative;
-    margin-bottom: 4px;
-    transition: background .6s ease-out, width .6s ease-out;
-    z-index: 2;
+    @include form-validation-line();
   }
   &.progress-0::before {
     width: 0;
@@ -39,28 +30,20 @@ label {
   &.progress-10, &.progress-20, &.progress-30 {
     color: $danger;;
     &::before {
-      background: $danger;
+      @include form-validation-line-color($danger);
     }
   }
   &.progress-40, &.progress-50, &.progress-60 {
     color: $warning;
     &::before {
-      background: $warning;
+      @include form-validation-line-color($warning);
     }
   }
   &.progress-70, &.progress-80, &.progress-90, &.progress-100 {
     color: $success;
     &::before {
-      background: $success;
+      @include form-validation-line-color($success);
     }
-  }
-}
-
-input + .progress-feedback, select + .progress-feedback, textarea + .progress-feedback, .input-group-append + .progress-feedback {
-  &::before {
-    border-radius: 0 0 4px 4px;
-    top: -7px;
-    margin-bottom: -4px;
   }
 }
 
@@ -68,11 +51,7 @@ input + .progress-feedback, select + .progress-feedback, textarea + .progress-fe
 .form-control ~ .form-control-help {
   font-size: $form-feedback-font-size;
   color: $text-muted;
-  margin-top: 5px;
   width: 100%;
-  &.valid-feedback {
-    margin-top: 4px;
-  }
 }
 
 // SEB Specific styles for validation progress bar
@@ -85,51 +64,41 @@ input + .progress-feedback, select + .progress-feedback, textarea + .progress-fe
   &.progress-0::before {
     width: 0;
     border-radius: 0 0 0 4px;
-    top: -7px;
-    margin-bottom: -4px;
   }
   @for $i from 1 through 9 {
     &.progress-#{$i}0::before {
       width: #{$i}0%;
       border-radius: 0 0 0 4px;
-      top: -7px;
-      margin-bottom: -4px;
     }
   }
   &.progress-100::before {
     width: 100%;
     border-radius: 0 0 4px 4px;
-    top: -7px;
-    margin-bottom: -4px;
   }
 }
 
 .progress-feedback.progress-success {
   color: $success;
-  &::before {
-    background: $success;
-  }
 }
 .progress-feedback.progress-warning {
   color: $warning;
-  &::before {
-    background: $warning;
-  }
 }
 .progress-feedback.progress-danger {
   color: $danger;
-  &::before {
-    background: $danger;
+}
+.custom-control-label {
+  + .valid-feedback, + .invalid-feedback {
+    margin-top: 4px;
   }
 }
 
 /* IE fix for input height */
 .form-control {
-  min-height: 40px;
+  min-height: 44px;
 }
 .form-control-sm {
-  min-height: 28px;
+  min-height: 32px;
 }
 .form-control-lg {
-  min-height: 48px;
+  min-height: 56px;
 }

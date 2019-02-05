@@ -38,7 +38,7 @@
         border-radius: $btn-border-radius;
       }
       &::after {
-        width: 2.5rem;
+        width: 2.75rem;
         margin-left: auto;
         margin-right: auto;
       }
@@ -57,9 +57,9 @@
     border: solid 1px map-get($theme-colors,'primary') !important;
 
     .ngb-dp-day, .ngb-dp-weekday, .ngb-dp-week-number, .btn-light {
-      width: 2.5rem !important;
-      height: 2.5rem !important;
-      line-height: 2.5rem !important;
+      width: 2.75rem !important;
+      height: 2.75rem !important;
+      line-height: 2.75rem !important;
     }
     .bg-primary {
       background-color: $blue-dark !important;
@@ -68,6 +68,9 @@
       background: transparent;
       color: $blue-dark;
       font-weight:bold;
+    }
+    ngb-datepicker-navigation-select select {
+      height: 32px !important;
     }
 
     // mobile
@@ -92,6 +95,10 @@
 
         ngb-datepicker-month-view {
           width:  100vw;
+        }
+
+        ngb-datepicker-navigation-select select {
+          height: 44px !important;
         }
 
         .ngb-dp-weekday, .ngb-dp-day {

@@ -53,8 +53,11 @@ export class MenuService {
         name: 'Radio buttons',
         path: '/radio-buttons'
     }, {
-        name: 'Buttons',
-        path: '/buttons'
+      name: 'Buttons',
+      path: '/buttons'
+    }, {
+      name: 'Button group',
+      path: '/button-group'
     }, {
         name: 'Input group',
         path: '/input-group'
@@ -83,8 +86,8 @@ export class MenuService {
         name: 'Accordion',
         path: '/accordion'
     }, {
-        name: 'Loaders',
-        path: '/loaders'
+        name: 'Spinners',
+        path: '/spinners'
     }, {
       name: 'Skeleton loaders',
       path: '/skeleton-loader'

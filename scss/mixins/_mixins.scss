@@ -15,7 +15,6 @@
 @import "../bootstrap-core/mixins/text-hide";
 @import "../bootstrap-core/mixins/text-truncate";
 @import "../bootstrap-core/mixins/visibility";
-@import "grid"; // SEB Specific
 
 // // Components
 @import "alert"; // "../../mixins/alert";
@@ -40,7 +39,7 @@
 
 // // Layout
 @import "../bootstrap-core/mixins/clearfix";
-// @import "../../mixins/navbar-align";
+@import "grid"; // SEB Specific
 @import "../bootstrap-core/mixins/grid-framework";
 @import "../bootstrap-core/mixins/grid";
 @import "../bootstrap-core/mixins/float";

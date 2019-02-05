@@ -1,6 +1,6 @@
 ---
 title: Modal
-componentid: component-modal
+componentid: component-dialogue
 variantid: modal
 guid: some-random-and-unique-string-modal
 ---

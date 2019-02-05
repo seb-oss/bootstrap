@@ -1,42 +1,44 @@
 /*!
- * Bootstrap v4.1.3 (https://getbootstrap.com/)
+ * Bootstrap v4.2.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-@import "bootstrap-core/functions";
-@import "bootstrap-core/variables";
-@import "bootstrap-core/mixinsins";
-@import "bootstrap-core/root";
-@import "bootstrap-core/reboot";
-@import "bootstrap-core/type";
-@import "bootstrap-core/images";
-@import "bootstrap-core/code";
-@import "bootstrap-core/grid";
-@import "bootstrap-core/tables";
-@import "bootstrap-core/forms";
-@import "bootstrap-core/buttons";
-@import "bootstrap-core/transitions";
-@import "bootstrap-core/dropdown";
-@import "bootstrap-core/button-group";
-@import "bootstrap-core/input-group";
-@import "bootstrap-core/custom-forms";
-@import "bootstrap-core/nav";
-@import "bootstrap-core/navbar";
-@import "bootstrap-core/card";
-@import "bootstrap-core/breadcrumb";
-@import "bootstrap-core/pagination";
-@import "bootstrap-core/badge";
-@import "bootstrap-core/jumbotron";
-@import "bootstrap-core/alert";
-@import "bootstrap-core/progress";
-@import "bootstrap-core/media";
-@import "bootstrap-core/list-group";
-@import "bootstrap-core/close";
-@import "bootstrap-core/modal";
-@import "bootstrap-core/tooltip";
-@import "bootstrap-core/popover";
-@import "bootstrap-core/carousel";
-@import "bootstrap-core/utilitiesies";
-@import "bootstrap-core/print";
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "utilities";
+@import "print";
