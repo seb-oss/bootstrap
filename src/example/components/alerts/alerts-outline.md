@@ -1,6 +1,6 @@
 ---
 title: Alerts (outline)
-componentid: component-alert
+componentid: component-alertribbon
 variantid: outline
 guid: some-random-and-unique-string-alerts1
 ---

@@ -1,6 +1,6 @@
 ---
 title: Tabs
-componentid: component-tabs
+componentid: component-tab
 variantid: primary
 guid: some-random-and-unique-string-tabs
 ---
