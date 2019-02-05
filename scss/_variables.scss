@@ -232,8 +232,8 @@ $link-weight:               $font-weight-medium !default; // SEB specific
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          .5rem .75rem !default;
-$table-cell-padding-sm:       .15rem .3rem !default;
+$table-cell-padding:          .625rem .75rem !default;
+$table-cell-padding-sm:       .275rem .3rem !default;
 
 $table-accent-bg:             $gray-100 !default;
 $table-hover-bg:              rgba($blue, .075) !default;
@@ -246,7 +246,9 @@ $table-expand-bg:               transparent !default; // SEB Specific
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .4375rem !default;
+$input-btn-padding-y:         .5625rem !default;
+$input-btn-padding-y-sm:      .28125rem !default;
+$input-btn-padding-y-lg:      .75rem !default;
 
 
 // Buttons
@@ -320,7 +322,7 @@ $dropdown-link-hover-bg:            $blue !default;
 $dropdown-link-active-bg:           $blue-dark !default;
 
 
-$dropdown-item-padding-y:           .5rem !default;
+$dropdown-item-padding-y:           .625rem !default;
 $dropdown-chevron-color:            $blue !default; // SEB specific
 $dropdown-chevron-active-color:     $white !default; // SEB specific
 
@@ -341,6 +343,7 @@ $zindex-popover:                    1060 !default;
 $zindex-tooltip:                    1070 !default;
 
 // Navs
+$nav-link-padding-y:                .5625rem !default;
 $nav-tabs-link-hover-color:                   $white !default; // SEB specific
 $nav-tabs-link-hover-bg:                      $blue !default; // SEB specific
 
@@ -455,7 +458,9 @@ $scrollbar-thickness:     10px;
 
 $accordion-border-color:    $table-border-color !default; // SEB specific
 $accordion-border-width:    $table-border-width !default; // SEB specific
-$accordion-header-padding:  $table-cell-padding !default; // SEB specific
+$accordion-header-padding:  0 .75rem !default; // SEB specific
 $accordion-body-padding:    $table-cell-padding !default; // SEB specific
+$accordion-item-padding-y:  .5625rem !default; // SEB specific
+$accordion-item-padding-x:  0 !default; // SEB specific
 $accordion-body-bg:         transparent !default; // SEB specific
 $accordion-size:            .875rem !default; // SEB specific
