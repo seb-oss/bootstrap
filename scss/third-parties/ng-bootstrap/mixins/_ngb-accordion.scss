@@ -49,7 +49,7 @@
       }
       button {
         color: $headings-color;
-        padding: 0;
+        padding: $accordion-item-padding-y $accordion-item-padding-x;
         &:hover {
           text-decoration: none;
           color: $link-hover-color
@@ -70,9 +70,4 @@
       padding: $accordion-body-padding;
     }
   }
-}
-
-ngb-accordion {
-
-
 }
