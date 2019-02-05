@@ -48,6 +48,22 @@
           </button>
         </div>
       </div>
+        <div style="max-width: 140px;">
+            <label for="appendPrependBtnIcon">Stepper</label>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="btn btn-secondary" type="button" (click)="step = step - 1">
+                  <i class="fal fa-minus"></i>
+                </button>
+              </div>
+            <input id="appendPrependBtnIcon" type="tel" class="form-control text-center" [value]="step">
+            <div class="input-group-append">
+              <button class="btn btn-secondary" type="button" (click)="step = step + 1">
+                <i class="fal fa-plus"></i>
+              </button>
+          </div>
+        </div>
+      </div>
     </div>
     <exemplify [selector]="'.card-body > div'"></exemplify>
   </div>
