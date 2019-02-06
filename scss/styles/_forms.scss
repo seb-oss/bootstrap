@@ -52,6 +52,14 @@ label {
   font-size: $form-feedback-font-size;
   color: $text-muted;
   width: 100%;
+  &::before {
+    content: '';
+    height: 4px;
+    width: 100%;
+    display: block;
+    position: relative;
+    top: -4px;
+  }
 }
 
 // SEB Specific styles for validation progress bar
