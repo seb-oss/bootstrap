@@ -31,7 +31,7 @@
       .modal-content {
         height: 100vh;
         border: none;
-        width: 320px;
+        width: $modal-aside-width;
       }
       @media (max-width: map-get($grid-breakpoints, 'sm')) {
         .modal-content {
@@ -44,7 +44,9 @@
       .modal-content {
         width: 100vw;
         @include media-breakpoint-up(md) {
-            width: $modal-aside-lg-width;
+          max-width: $modal-aside-lg-width;
+          width: auto;
+          min-width: $modal-aside-width;
         }
       }
     }
