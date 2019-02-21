@@ -19,7 +19,7 @@ label {
 // SEB Specific styles for progress feedback
 .progress-feedback {
   width: 100%;
-  font-size: $form-feedback-font-size;
+  @include font-size($form-feedback-font-size);
   color: $text-muted;
   &::before {
     @include form-validation-line();
@@ -49,7 +49,7 @@ label {
 
 // SEB Specific styles for form control help
 .form-control ~ .form-control-help {
-  font-size: $form-feedback-font-size;
+  @include font-size($form-feedback-font-size);
   color: $text-muted;
   width: 100%;
   &::before {
