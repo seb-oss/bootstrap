@@ -2,6 +2,7 @@
 .toast {
   @include border-radius($toast-border-radius);
   @include transition($toast-transition);
+  @include font-size($toast-font-size);
   position: relative;
   overflow: hidden;
   margin-bottom: $toast-margin-bottom;
@@ -10,6 +11,7 @@
   box-shadow: $toast-shadow;
   pointer-events: auto;
   opacity: 0;
+  @include border-radius($toast-border-radius);
 
   &:last-child {
     margin-bottom: 0;

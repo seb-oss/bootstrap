@@ -91,13 +91,16 @@ $enable-shadows:            false !default;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;
 $enable-grid-classes:       true !default;
+$enable-pointer-cursor-for-buttons:           true !default;
 $enable-print-styles:       true !default;
+$enable-responsive-font-sizes:                false !default;
 $enable-validation-icons:   false !default;
 $enable-responsive-gutters:     true !default; // SEB Specific
 $enable-button-variations:      false !default; // SEB Specific
 $enable-ng-bootstrap:           false !default; // SEB Specific
 $enable-angular-generic-table:  false !default; // SEB Specific
 $enable-ngx-toastr:             false !default; // SEB Specific
+$enable-deprecation-messages:                 true !default;
 
 // Spacing
 //
@@ -237,18 +240,13 @@ $external-link-hover-icon:        str-replace(url("data:image/svg+xml,%3Csvg ari
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
 
-$grid-breakpoints: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$grid-breakpoints: map-merge(
-                (
-                        xs: 0,
-                        sm: 576px,
-                        md: 768px,
-                        lg: 992px,
-                        xl: 1200px
-                ),
-                $grid-breakpoints
-);
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
 
 // Tables
 //
@@ -374,6 +372,7 @@ $nav-tabs-link-focus-color:                   $white !default; // SEB specific
 $nav-tabs-link-focus-bg:                      $blue-dark !default; // SEB specific
 
 // Navbar
+$navbar-padding-y:                  .4375rem !default;
 $navbar-brand-font-size:            $font-size-base !default;
 $navbar-brand-font-weight:          $font-weight-medium !default; // SEB specific
 
@@ -425,6 +424,7 @@ $alert-icon-width:                  1.125rem !default; // SEB Specific
 $alert-icon-height:                 1rem !default; // SEB Specific
 
 // Toast notifications
+$toast-font-size:                   $font-size-base !default;
 $toast-border-radius:               $alert-border-radius !default; // SEB Specific
 $toast-margin-bottom:               .5rem !default; // SEB Specific
 $toast-padding:                     $alert-padding-x !default; // SEB Specific
