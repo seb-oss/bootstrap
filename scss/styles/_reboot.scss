@@ -2,3 +2,17 @@
 a {
   font-weight: $link-weight;
 }
+
+.external {
+  &::after {
+    content: $external-link-icon;
+    height: 1rem;
+    width: 0.875em;
+    display: inline-block;
+    vertical-align: -2px;
+    margin-left: ($spacer * .5);
+  }
+  &:hover::after {
+    content: $external-link-hover-icon;
+  }
+}

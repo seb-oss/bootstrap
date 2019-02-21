@@ -46,8 +46,8 @@
     <h5>Large aside modal</h5>
     <p>Add <code>modal-lg</code> class to the modal dialogue together with the above classes to get a larger modal that will slide in from the side.</p>
     <div class="row">
-      <div class="col-12 col-sm col-md-auto"><button class="btn btn-primary w-100" (click)="open(content, {windowClass:'modal-aside modal-aside-right', size:'lg'})">Open aside modal</button></div>
-      <div class="col-12 col-sm col-md-auto mt-3 mt-sm-0"><button class="btn btn-primary w-100" (click)="open(content, {windowClass:'modal-aside modal-aside-left', size:'lg'})">Open left aside modal</button></div>
+      <div class="col-12 col-sm col-md-auto"><button class="btn btn-primary w-100" (click)="open(largeContent, {windowClass:'modal-aside modal-aside-right', size:'lg'})">Open aside modal</button></div>
+      <div class="col-12 col-sm col-md-auto mt-3 mt-sm-0"><button class="btn btn-primary w-100" (click)="open(largeContent, {windowClass:'modal-aside modal-aside-left', size:'lg'})">Open left aside modal</button></div>
     </div>
   </div>
 </div>
@@ -64,6 +64,24 @@
   </div>
   <div class="modal-body">
     <p>Modal body text goes here.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="modal.dismiss('Cross click')">Close</button>
+    <button type="button" class="btn btn-primary" (click)="modal.close('Save click')">Save changes</button>
+  </div>
+</ng-template>
+<ng-template #largeContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+  </div>
+  <div class="modal-body">
+    <p>Modal body text goes here.</p>
+    <div class="bg-primary-element text-white align-self-center p-3" style="width: 600px;">
+      <p class="lead font-weight-normal">The large aside modal will adjust it's width to the width of the content.<br/>
+      Max width = 768px<br/>
+      Min width = 320px
+      </p>
+    </div>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="modal.dismiss('Cross click')">Close</button>

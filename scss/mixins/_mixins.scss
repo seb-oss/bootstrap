@@ -2,6 +2,12 @@
 //
 // Used in conjunction with global variables to enable certain theme features.
 
+// Vendor
+@import "../bootstrap-core/vendor/rfs";
+
+// Deprecate
+@import "../bootstrap-core/mixins/deprecate";
+
 // Utilities
 @import "../bootstrap-core/mixins/breakpoints";
 @import "../bootstrap-core/mixins/hover";
