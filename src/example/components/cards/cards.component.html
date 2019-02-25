@@ -1,19 +1,15 @@
-<a name="cards"><h2 class="px-3 px-md-0 my-3">Cards</h2></a>
-<div class="row">
-  <div class="col mb-4">
+<a name="cards"><h2 class="my-3">Cards</h2></a>
+<div class="card mx-n3 mx-md-0">
+  <div class="card-body" id="cardExample">
+    <h4 class="card-title">Card with header and content</h4>
+    <p class="mb-3">For more info and examples please refer to Bootstraps <a href="http://getbootstrap.com/docs/4.1/components/card/" target="_blank">official documentation</a>.</p>
     <div class="card">
-      <div class="card-body" id="cardExample">
-        <h4 class="card-title">Card with header and content</h4>
-        <p class="mb-3">For more info and examples please refer to Bootstraps <a href="http://getbootstrap.com/docs/4.1/components/card/" target="_blank">official documentation</a>.</p>
-        <div class="card">
-          <h4 class="card-header">Card header</h4>
-          <div class="card-body">
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <exemplify [selector]="'#cardExample > .card'"></exemplify>
+      <h4 class="card-header">Card header</h4>
+      <div class="card-body">
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
+    <exemplify [selector]="'#cardExample > .card'"></exemplify>
   </div>
 </div>
