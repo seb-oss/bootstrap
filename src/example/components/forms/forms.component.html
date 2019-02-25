@@ -1,6 +1,6 @@
-<a name="forms"><h2 class="px-3 px-md-0 my-3">Forms</h2></a>
-<p class="px-3 px-md-0">Below you'll find some examples of forms and different form elements, check <a href="https://getbootstrap.com/docs/4.0/components/forms/#overview" target="_blank">bootstrap docs</a> for more info and examples.</p>
-<div class="card mb-4" id="formExample">
+<a name="forms"><h2 class="my-3">Forms</h2></a>
+<p class="lead">Below you'll find some examples of forms and different form elements, check <a href="https://getbootstrap.com/docs/4.0/components/forms/#overview" target="_blank">bootstrap docs</a> for more info and examples.</p>
+<div class="card mb-4 mx-n3 mx-md-0" id="formExample">
   <div class="card-body">
     <form>
       <div class="form-group">
@@ -49,10 +49,10 @@
     <exemplify [selector]="'#formExample form'"></exemplify>
   </div>
 </div>
-<h2 class="px-3 px-md-0">Form layouts</h2>
-<p class="px-3 px-md-0">Since Bootstrap applies <code>display: block</code> and <code>width: 100%</code> to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.
+<h2>Form layouts</h2>
+<p class="lead">Since Bootstrap applies <code>display: block</code> and <code>width: 100%</code> to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.
 </p>
-<div class="card mb-4" id="formExampleGroups">
+<div class="card mb-4 mx-n3 mx-md-0" id="formExampleGroups">
   <h4 class="card-header">Form groups</h4>
   <div class="card-body">
     <p>The <code>.form-group</code> class is the easiest way to add some structure to forms. Its only purpose is to provide <code>margin-bottom</code> around a label and control pairing. As a bonus, since it’s a class you can use it with <code>&lt;fieldset&gt;</code>s, <code>&lt;div&gt;</code>s, or nearly any other element.</p>
@@ -69,7 +69,7 @@
     <exemplify [selector]="'#formExampleGroups form'"></exemplify>
   </div>
 </div>
-<div class="card mb-4" id="formExampleGridSimple">
+<div class="card mb-4 mx-n3 mx-md-0" id="formExampleGridSimple">
   <h4 class="card-header">Form grid</h4>
   <div class="card-body">
     <p>More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options.</p>
@@ -86,7 +86,7 @@
     <exemplify [selector]="'#formExampleGridSimple form'"></exemplify>
   </div>
 </div>
-<div class="card mb-4" id="formExampleRowSimple">
+<div class="card mb-4 mx-n3 mx-md-0" id="formExampleRowSimple">
   <h4 class="card-header">Form row</h4>
   <div class="card-body">
     <p>You may also swap <code>.row</code> for <code>.form-row</code>, a variation of our standard grid row that overrides the default column gutters for tighter and more compact layouts.</p>
@@ -103,7 +103,7 @@
     <exemplify [selector]="'#formExampleRowSimple form'"></exemplify>
   </div>
 </div>
-<div class="card mb-4" id="formExampleGridAdvanced">
+<div class="card mb-4 mx-n3 mx-md-0" id="formExampleGridAdvanced">
   <h4 class="card-header">Using the grid system</h4>
   <div class="card-body">
     <p>More complex layouts can also be created with the grid system.</p>
@@ -156,8 +156,8 @@
     <exemplify [selector]="'#formExampleGridAdvanced form'"></exemplify>
   </div>
 </div>
-<h2 class="px-3 px-md-0 mb-3">Custom forms</h2>
-<div class="card mb-4" id="formExampleCustomCheckbox">
+<h2 class="mb-3">Custom forms</h2>
+<div class="card mb-4 mx-n3 mx-md-0" id="formExampleCustomCheckbox">
   <h4 class="card-header">Checkboxes</h4>
   <div class="card-body">
     <p>For even more customization and cross browser consistency, use custom form elements to replace the browser defaults. They’re built on top of semantic and accessible markup, so they’re solid replacements for any default form control.</p>
@@ -170,7 +170,7 @@
     <exemplify [selector]="'#formExampleCustomCheckbox .custom-control'"></exemplify>
   </div>
 </div>
-<div class="card mb-4" id="formExampleCustomRadio">
+<div class="card mb-4 mx-n3 mx-md-0" id="formExampleCustomRadio">
   <h4 class="card-header">Radios</h4>
   <div class="card-body">
     <form>
@@ -187,7 +187,7 @@
   </div>
 </div>
 <h2 class="px-3 px-md-0 mb-3">Control sizing</h2>
-<div class="card mb-4" id="formExampleSizing">
+<div class="card mb-4 mx-n3 mx-md-0" id="formExampleSizing">
   <div class="card-body">
     <p>Set heights using classes like <code>.form-control-lg</code>, and set widths using grid column classes like <code>.col-lg-*</code>.</p>
     <h4 class="mt-3">Inputs</h4>
@@ -208,8 +208,8 @@
       <exemplify [selector]="'#formExampleSizing select'"></exemplify>
   </div>
 </div>
-<h2 class="px-3 px-md-0 mb-3">Validation</h2>
-<div class="card mb-4">
+<h2 class="mb-3">Validation</h2>
+<div class="card mb-4 mx-n3 mx-md-0">
   <div class="card-body">
     <p>The example below is just a static example of different validation errors. In short bootstrap uses native <code>:invalid</code> and <code>:valid</code> form states together with <code>.was-validated</code> (usually applied to form) to apply the styles and it's also possible to use <code>.is-invalid</code>, <code>.is-valid</code> and <code>.invalid-feedback</code> when validated on the sever. More examples will be added in the future and in most cases validation will be enhanced through a framework like Angular or React which also complicates things a bit,, but we'll try to add real examples soon.</p>
     <form>
@@ -328,8 +328,8 @@
     </form>
   </div>
 </div>
-<h2 class="px-3 px-md-0 mb-3">Advanced validation with progress</h2>
-<div class="card mb-4 angular-validation">
+<h2 class="mb-3">Advanced validation with progress</h2>
+<div class="card mb-4 angular-validation mx-n3 mx-md-0">
   <div class="card-body">
     <p>Basic validation rules like <code>required</code>, <code>minlength</code> and <code>pattern</code> etc. provided by HTML and browsers natively for inputs are awesome for validation but they're not that user friendly or intuitive. Using a framework like Angular we can enhance the native behavior and extend it with our on validation rules. In the following example we've made it a bit more clever just showing one error at a time and we've also added custom validation for personal identity number.</p>
     <p>Validation progress can be shown by applying one of the following classes to the feedback element: <code>progress-0</code> for 0%, <code>progress-10</code> for 10%, <code>progress-20</code> for 20% and so on up till 100%. There's also another type of feedback besides <code>invalid-feedback</code> and <code>valid-feedback</code> called <code>progress-feedback</code> that will change color depending on the p value provided.</p>
