@@ -1,8 +1,10 @@
 @import "../bootstrap-core/grid";
 .container-content {
-  max-width: map-get($grid-breakpoints,'lg');
+  max-width: map-get($grid-breakpoints,'md');
   margin-right: auto;
   margin-left: auto;
+  padding-right: $grid-gutter-width / 2;
+  padding-left: $grid-gutter-width / 2;
 }
 
 @if ($enable-responsive-gutters) {
