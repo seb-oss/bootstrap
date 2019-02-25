@@ -53,7 +53,8 @@
       }
 
       &.show {
-        position: fixed;
+        transform: none !important;
+        position: fixed !important;
         left: 0 !important;
         bottom: 0 !important;
         top: auto !important;
@@ -83,7 +84,7 @@
     justify-content: space-between;
     align-items: baseline;
     &::after {
-      border: none;
+      border: none !important;
       content: '';
       display: inline-block;
       height: $font-size-base;
@@ -123,6 +124,7 @@
         background-size: cover;
         background-position-y: 2px;
         background-repeat: no-repeat;
+        border: none;
       }
     }
   }

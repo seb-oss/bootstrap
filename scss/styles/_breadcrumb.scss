@@ -1,4 +1,45 @@
 @import "../bootstrap-core/breadcrumb";
 .breadcrumb-item {
-  font-size: $font-size-sm;
+  &.active {
+    font-weight: $breadcrumb-active-font-weight;
+  }
+  + .breadcrumb-item::before {
+    width: $breadcrumb-divider-width;
+    vertical-align: middle;
+  }
+
+}
+
+
+@include media-breakpoint-down(xs) {
+  .breadcrumb {
+    padding:0;
+    margin-bottom: 0;
+  }
+  .breadcrumb-item {
+    display: none;
+
+    + .breadcrumb-item {
+      &::before {
+        display: none;
+      }
+
+      padding-left: 0;
+    }
+
+    &:nth-last-child(2) {
+      display: inline-block;
+      padding: $breadcrumb-padding-y 0;
+      margin-bottom: $breadcrumb-margin-bottom;
+
+      &::before {
+        display: inline-block;
+        padding-right: $breadcrumb-item-padding;
+        color: $breadcrumb-divider-color;
+        content: $breadcrumb-back-icon;
+        width: $breadcrumb-divider-width;
+        vertical-align: middle;
+      }
+    }
+  }
 }
