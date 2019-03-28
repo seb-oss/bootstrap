@@ -2,6 +2,7 @@ $animations: (
   slideInLeft: slideInLeft $transition-slide-in-duration,
   slideInRight: slideInRight $transition-slide-in-duration,
   slideInUp: slideInUp $transition-slide-in-duration,
+  slideInDown: slideInDown $transition-slide-in-duration,
   fadeIn: fadeIn $transition-fade-duration,
   fadeInUp: fadeInUp $transition-fade-duration,
 );
@@ -45,6 +46,14 @@ $animations: (
     @keyframes slideInUp {
       0% {
         transform: translate3d(0,100%,0);
+      }
+      100% {
+        transform: translate3d(0,0,0);
+      }
+    }
+    @keyframes slideInDown {
+      0% {
+        transform: translate3d(0,-100%,0);
       }
       100% {
         transform: translate3d(0,0,0);
