@@ -96,6 +96,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "backstopjs": "^3.8.8",
+    "body-scroll-lock": "^2.6.1",
     "bootstrap": "^4.3.1",
     "clean-css-cli": "^4.2.1",
     "codelyzer": "~4.2.1",

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ModalDismissReasons, NgbModal, NgbModalOptions} from '@ng-bootstrap/ng-bootstrap';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 @Component({
     selector: 'app-modals',
@@ -25,11 +26,22 @@ export class ModalsComponent implements OnInit {
     constructor(private modalService: NgbModal) {}
 
     open(content, options? : NgbModalOptions) {
-      this.modalService.open(content, {...options, ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+
+      const modal = this.modalService.open(content, {...options, ariaLabelledBy: 'modal-basic-title', beforeDismiss: () => {
+          enableBodyScroll(contentBody);
+        return true
+        }});
+
+      // workaround for iOS scroll
+      const contentBody = modal['_contentRef'].nodes[0][1];
+
+      modal.result.then((result) => {
         this.closeResult = `Closed with: ${result}`;
       }, (reason) => {
         this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
       });
+
+      disableBodyScroll(contentBody);
     }
 
     private getDismissReason(reason: any): string {
