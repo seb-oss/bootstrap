@@ -8,6 +8,7 @@
       .modal-dialog {
         right: 0;
         @include media-breakpoint-up(md) {
+          position: fixed;
           @include add-transition('slideInRight');
         }
       }
@@ -16,6 +17,7 @@
       .modal-dialog {
         left: 0;
         @include media-breakpoint-up(md) {
+          position: fixed;
           @include add-transition('slideInLeft');
         }
       }
@@ -24,16 +26,15 @@
     .modal-dialog {
       @include add-transition('slideInUp');
       margin: 0;
-      position: fixed;
       top: 0;
       height: 100vh;
 
       .modal-content {
-        height: 100vh;
+        height: 100%;
         border: none;
         width: $modal-aside-width;
       }
-      @media (max-width: map-get($grid-breakpoints, 'sm')) {
+      @include media-breakpoint-down('sm') {
         .modal-content {
           width: 100vw;
         }
@@ -51,7 +52,7 @@
       }
     }
   }
-  @media (max-width: map-get($grid-breakpoints, 'sm')) {
+  @include media-breakpoint-down('sm') {
     .modal-dialog, .modal-content {
       border: none;
       width: 100vw;
@@ -72,7 +73,10 @@
     }
   }
   .modal-dialog {
-    @include add-transition('fadeInUp');
+    @include add-transition('slideInDown');
+    @include media-breakpoint-up(md) {
+      @include add-transition('fadeInUp');
+    }
     //@include fade-in-up()
   }
 }
@@ -82,6 +86,17 @@
 }
 .modal-backdrop.fade.show {
   animation: fadeInBackdrop $transition-fade-duration;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .modal.modal-aside, .modal.modal-fullscreen {
+    .modal-dialog, .modal-content {
+      max-height: 100%;
+    }
+  }
+  .modal-body {
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 
