@@ -27,17 +27,15 @@ export class ModalsComponent implements OnInit {
 
     open(content, options? : NgbModalOptions) {
 
-      const modal = this.modalService.open(content, {...options, ariaLabelledBy: 'modal-basic-title', beforeDismiss: () => {
-          enableBodyScroll(contentBody);
-        return true
-        }});
+      const modalRef = this.modalService.open(content, {...options, ariaLabelledBy: 'modal-basic-title'});
 
-      // workaround for iOS scroll
-      const contentBody = modal['_contentRef'].nodes[0][1];
-
-      modal.result.then((result) => {
+      // workaround for iOS scroll that allows scroll in modal body
+      const contentBody = modalRef['_contentRef'].nodes[0][1];
+      modalRef.result.then((result) => {
+          clearAllBodyScrollLocks();
         this.closeResult = `Closed with: ${result}`;
       }, (reason) => {
+          clearAllBodyScrollLocks();
         this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
       });
 
