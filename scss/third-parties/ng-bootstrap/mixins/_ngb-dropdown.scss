@@ -6,8 +6,13 @@
     display: block;
   }
 
-  //dropdown style for mobile
+  // dropdown style for mobile
   @include media-breakpoint-down(xs) {
+    // placement fix for container body
+    body > .dropdown {
+      z-index: $zindex-modal;
+      transform: none !important;
+    }
     #{$selector}.show {
       [ngbdropdowntoggle] {
         z-index: $zindex-modal;

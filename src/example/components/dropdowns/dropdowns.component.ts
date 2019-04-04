@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import { MobileDetectService } from '../../services/mobile-detect.service';
 
 @Component({
   selector: 'app-dropdowns',
@@ -7,11 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DropdownsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mobileDetectService: MobileDetectService) { }
 
     options: Array<string> = ['First', 'Second', 'Third', 'Forth']; // available options, used by dropdown and multi-select example
     selected: string; // selected option for dropdown example
     selectedMulti: Array<string> = []; // selected options for multi-select example
+    useContainerBody = true;
 
     /**
      * Select
@@ -47,6 +50,20 @@ export class DropdownsComponent implements OnInit {
      */
     deselectAll() {
         this.selectedMulti = [];
+    }
+
+    toggleBodyLock(show: boolean, templateRef: any) {
+        if (this.mobileDetectService.isMobile()) {
+            if (show) {
+                disableBodyScroll(templateRef);
+            } else {
+                enableBodyScroll(templateRef);
+            }
+        }
+    }
+
+    toggleContainer(value: boolean) {
+        this.useContainerBody = !this.useContainerBody;
     }
 
     ngOnInit() {
