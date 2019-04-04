@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {ModalDismissReasons, NgbModal, NgbModalOptions} from '@ng-bootstrap/ng-bootstrap';
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import {DOCUMENT} from '@angular/common';
 
 @Component({
     selector: 'app-modals',
@@ -23,14 +24,15 @@ export class ModalsComponent implements OnInit {
     takeOverModal = false;
     closeResult: string;
 
-    constructor(private modalService: NgbModal) {}
+    constructor(@Inject(DOCUMENT) private document: Document,
+                private modalService: NgbModal) {}
 
     open(content, options? : NgbModalOptions) {
 
       const modalRef = this.modalService.open(content, {...options, ariaLabelledBy: 'modal-basic-title'});
 
       // workaround for iOS scroll that allows scroll in modal body
-      const contentBody = modalRef['_contentRef'].nodes[0][1];
+      const contentBody = document.getElementsByTagName('ngb-modal-window')[0];
       modalRef.result.then((result) => {
           clearAllBodyScrollLocks();
         this.closeResult = `Closed with: ${result}`;
