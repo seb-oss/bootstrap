@@ -35,7 +35,8 @@
     "e2e-ci": "ng e2e --protractor-config=e2e/protractor-ci.conf.js",
     "commit": "git-cz",
     "travis-deploy-once": "travis-deploy-once --pro",
-    "semantic-release": "semantic-release && npm run build && npm run build-sdl"
+    "semantic-release": "semantic-release && npm run build && npm run build-sdl",
+    "package-lock-sanitizer": "package-lock-sanitizer"
   },
   "config": {
     "commitizen": {
@@ -49,6 +50,7 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "npm run package-lock-sanitizer && git add package-lock.json",
       "commit-msg": "commitlint --edit"
     }
   },
@@ -120,6 +122,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "mobile-detect": "^1.4.3",
     "node-sass-tilde-importer": "^1.0.2",
+    "package-lock-sanitizer": "^1.0.0",
     "postcss-cli": "^6.1.1",
     "prismjs": "^1.15.0",
     "protractor": "^5.4.2",
