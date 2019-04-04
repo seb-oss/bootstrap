@@ -24,6 +24,14 @@
 <div class="alert alert-info mt-5">
   <strong>Framework needed!</strong> Please note that the examples below uses a framework for Angular called <a class="alert-link" href="https://ng-bootstrap.github.io/" target="_blank">ng-bootstrap</a> and their <a class="alert-link" href="https://ng-bootstrap.github.io/#/components/dropdown/" target="_blank">dropdown component</a>, so in order to use the components below you need to add ng-bootstrap to your project.
 </div>
+<div class="alert alert-warning mx-n3 mx-md-0">
+  <strong>Mobile development!</strong> To make the experience extra crisp on mobile devices and more specifically to avoid the issue with scrolling content behind the dropdown on mobile devices, you should consider adding <a class="alert-link" href="https://github.com/willmcpo/body-scroll-lock" target="_blank">body scroll lock</a> to your project when implementing dropdowns. An example implementation for angular can also be found on <a class="alert-link" href="https://stackblitz.com/edit/seb-dropdown-body-scroll-lock" target="_blank">stack blitz</a>.
+  <br><br><strong>Dropdown cut off?</strong> If the dropdown is placed inside a container with overflow set to auto or hidden you should consider adding container="body" to add the dropdown to the body element instead, this to avoid cutting off the dropdown menu.
+  <div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="customCheckInline" [checked]="useContainerBody" (change)="toggleContainer(useContainerBody)">
+    <label class="custom-control-label" for="customCheckInline">Use container='body'</label>
+  </div>
+</div>
 <div class="card mb-4 mx-n3 mx-md-0" id="dropdownExample">
   <h4 class="card-header">
     Angular dropdown select
@@ -33,9 +41,9 @@
       <div class="row">
         <div class="col-12 col-sm-auto">
           <label for="ngb_dropdown">Example dropdown select</label>
-          <div ngbDropdown>
+          <div ngbDropdown [container]="useContainerBody ? 'body' : 'null'" (openChange)="toggleBodyLock($event, dropdownMenu)">
             <button class="btn btn-outline-primary w-100" id="ngb_dropdown" ngbDropdownToggle>{{selected ? selected:'select...'}}</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownExample" class="w-100 mb-3">
+            <div ngbDropdownMenu aria-labelledby="dropdownExample" class="w-100 mb-3" #dropdownMenu>
               <button *ngFor="let option of options" class="dropdown-item" (click)="selected = option" [ngClass]="{'active':selected === option}">{{option}}</button>
             </div>
           </div>
@@ -57,7 +65,7 @@
       <div class="row">
         <div class="col-12 col-sm-auto">
           <label for="ngb_multiselect">Example multi-select</label>
-          <div ngbDropdown #multiSelect="ngbDropdown">
+          <div ngbDropdown #multiSelect="ngbDropdown" [container]="useContainerBody ? 'body' : 'null'">
             <button ngClass="{{classes ? classes:'btn btn-secondary w-100'}}" id="ngb_multiselect" ngbDropdownToggle>{{selectedMulti.length === 0 ? 'select...': selectedMulti.length === 1 ? selectedMulti[0]: selectedMulti.length + ' selected'}}</button>
             <div ngbDropdownMenu aria-labelledby="ngb_multiselect" class="w-100 mb-3">
               <div class="dropdown-control">
@@ -95,7 +103,7 @@
       <div class="row">
         <div class="col-12 col-sm-auto">
           <label for="dropdownSmall">Small dropdown select</label>
-          <div ngbDropdown>
+          <div ngbDropdown [container]="useContainerBody ? 'body' : 'null'">
             <button class="btn btn-secondary btn-sm w-100" id="dropdownSmall" ngbDropdownToggle>{{selected ? selected:'select...'}}</button>
             <div ngbDropdownMenu aria-labelledby="dropdownSmall" class="w-100 mb-3">
               <button *ngFor="let option of options" class="dropdown-item" (click)="selected = option" [ngClass]="{'active':selected === option}">{{option}}</button>
@@ -106,7 +114,7 @@
       <div class="row">
         <div class="col-12 col-sm-auto">
           <label for="dropdownNormal">Normal dropdown select</label>
-          <div ngbDropdown>
+          <div ngbDropdown [container]="useContainerBody ? 'body' : 'null'">
             <button class="btn btn-secondary w-100" id="dropdownNormal" ngbDropdownToggle>{{selected ? selected:'select...'}}</button>
             <div ngbDropdownMenu aria-labelledby="dropdownNormal" class="w-100 mb-3">
               <button *ngFor="let option of options" class="dropdown-item" (click)="selected = option" [ngClass]="{'active':selected === option}">{{option}}</button>
@@ -117,7 +125,7 @@
       <div class="row">
         <div class="col-12 col-sm-auto">
           <label for="dropdownLarge">Large dropdown select</label>
-          <div ngbDropdown>
+          <div ngbDropdown [container]="useContainerBody ? 'body' : 'null'">
             <button class="btn btn-secondary btn-lg w-100" id="dropdownLarge" ngbDropdownToggle>{{selected ? selected:'select...'}}</button>
             <div ngbDropdownMenu aria-labelledby="dropdownLarge" class="w-100 mb-3">
               <button *ngFor="let option of options" class="dropdown-item" (click)="selected = option" [ngClass]="{'active':selected === option}">{{option}}</button>
