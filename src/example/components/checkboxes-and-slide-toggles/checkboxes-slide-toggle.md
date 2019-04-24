@@ -1,6 +1,6 @@
 ---
-title: Slide toggles (switch)
-componentid: component-toggleswitch
+title: Slide toggles
+componentid: component-slidetoggle
 variantid: slide-toggle
 guid: some-random-and-unique-checkbox-slide-toggle
 ---
