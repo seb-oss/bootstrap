@@ -197,10 +197,10 @@
                             "private": false
                         },
                         {
-                            "title": "Slide toggles (switch)",
-                            "componentid": "component-toggleswitch",
+                            "title": "Slide toggles",
+                            "componentid": "component-slidetoggle",
                             "variantid": "slide-toggle",
-                            "guid": "sdl-bootstrap-component-toggleswitch-slide-toggle",
+                            "guid": "sdl-bootstrap-component-slidetoggle-slide-toggle",
                             "filename": "checkboxes-slide-toggle.md",
                             "filepath": "components/checkboxes-and-slide-toggles/checkboxes-slide-toggle.md",
                             "shortpath": "components/checkboxes-and-slide-toggles/checkboxes-slide-toggle",
