@@ -3,7 +3,7 @@ sudo: false
 addons:
   chrome: stable
 language: node_js
-node_js: node
+node_js: lts/*
 
 install:
 - npm run add-fa-config

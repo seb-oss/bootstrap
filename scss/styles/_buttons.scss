@@ -88,6 +88,13 @@ fieldset:disabled a.btn {
   }
 }
 
+.btn-outline-danger.border-transparent {
+  border: solid $btn-border-width transparent;
+  &:hover, &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    border: solid $btn-border-width inherit;
+  }
+}
 
 //
 // Link buttons
