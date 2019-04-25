@@ -7,16 +7,68 @@
 
   // store submitted background
   $submitted-bg: $background;
+  $color: $background;
 
-  // override colors SEB specific
-  @if not ($enable-button-variations) {
-    @if($submitted-bg == $light) {
-      $background: transparent;
-      $border: $white;
-    } @else {
-      $background: $blue-dark;
-      $border: $blue-dark;
-    }
+  // override light button
+  @if($submitted-bg == $light) {
+    $background: transparent;
+    $color: transparent;
+    $border: $white;
+    $hover-background: $white;
+    $hover-border: $white;
+    $active-background: rgba($white,.65);
+    $active-border: $white;
+  }
+
+  // override dark button
+  @if($submitted-bg == $dark) {
+    $background: transparent;
+    $color: $light;
+    $border: $black;
+    $hover-background: $black;
+    $hover-border: $black;
+    $active-background: rgba($black,.65);
+    $active-border: $black;
+  }
+
+  // override danger button
+  @if($submitted-bg == $danger) {
+    $background: $red-dark;
+    $color: $red-dark;
+    $border: $red-dark;
+    $hover-background: $red;
+    $hover-border: $red;
+    $active-background: $red-darker;
+    $active-border: $red-darker;
+  }
+
+  // override success button
+  @if($submitted-bg == $success) {
+    $background: $blue-dark;
+    $color: $blue-dark;
+    $border: $blue-dark;
+    $hover-background: $blue;
+    $hover-border: $blue;
+    $active-background: $blue-darker;
+    $active-border: $blue-darker;
+  }
+
+  // override warning button
+  @if($submitted-bg == $warning) {
+    $background: $blue-dark;
+    $color: $blue-dark;
+    $border: $blue-dark;
+    $hover-background: $blue;
+    $hover-border: $blue;
+    $active-background: $blue-darker;
+    $active-border: $blue-darker;
+  }
+
+  // override info button
+  @if($submitted-bg == $info) {
+    $background: $blue-dark;
+    $color: $blue-dark;
+    $border: $blue-dark;
     $hover-background: $blue;
     $hover-border: $blue;
     $active-background: $blue-darker;
@@ -24,15 +76,14 @@
   }
 
 
-
-  color: $white; //color-yiq($background);
+  color: color-yiq($color);
   @include gradient-bg($background);
   border-color: $border;
   @include box-shadow($btn-box-shadow);
 
   @include hover {
     @if($submitted-bg == $light) {
-      color: $white;
+      color: $black;
       background: $hover-background;
       border-color: $white !important;
     } @else {
@@ -91,20 +142,32 @@
 
   &:not([disabled]):not(.disabled):active,
   &:not([disabled]):not(.disabled).active {
-    color: $white;
+    color: color-yiq($active-background); //color: $white;
     background: $active-background;
   }
 }
 
 @mixin button-outline-variant($color, $color-hover: #fff) {
-  // override colors SEB specific
-  $color: $blue-dark;
+  // store submitted background
+  $submitted-color: $color;
   $bg-hover: $blue;
+  $active-bg: $blue-dark;
+  $color: $blue-dark;
+  $border-color: $submitted-color;
+
+  // override danger button
+  @if($submitted-color == $danger) {
+    $color: $red-dark;
+    $bg-hover: $red;
+    $active-bg: $red-darker;
+    $border-color: $red-dark;
+  }
+
 
   color: $color;
   background-color: transparent;
   background-image: none;
-  border-color: $color;
+  border-color: $border-color;
 
   @include hover {
     color: $color-hover;
@@ -144,7 +207,7 @@
   &:not([disabled]):not(.disabled):active,
   &:not([disabled]):not(.disabled).active {
     color: $white;
-    background: $blue-dark;
+    background: $active-bg;
   }
 }
 
