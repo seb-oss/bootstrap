@@ -108,15 +108,41 @@ $spinner-lg-size: 6rem;
   }
 }
 
-.btn .spinner {
-  //width: 1rem;
-  //height: 1rem;
-  color: $white;
-  display: inline-block;
-  vertical-align: -3px;
-  &:before,
-  &:after {
-    background: $btn-disabled-color;
+.btn {
+  .spinner {
+    //width: 1rem;
+    //height: 1rem;
+    color: $white;
+    display: inline-block;
+    vertical-align: -3px;
+    &:before,
+    &:after {
+      background: $btn-disabled-color;
+    }
+  }
+  &[class*=" btn-outline-"] {
+    .spinner-sq {
+      background-color: $btn-disabled-color;
+    }
+    .spinner {
+      color: $btn-disabled-color;
+      &:before,
+      &:after {
+        background: $gray-100;
+      }
+    }
+  }
+  &.btn-secondary {
+    .spinner-sq {
+      background-color: $btn-disabled-color;
+    }
+    .spinner {
+      color: $btn-disabled-color;
+      &:before,
+      &:after {
+        background: $white;
+      }
+    }
   }
 }
 
