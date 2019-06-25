@@ -75,7 +75,7 @@ label {
   }
   @for $i from 1 through 9 {
     &.progress-#{$i}0::before {
-      width: #{$i}0%;
+      width: 10% * $i;
       border-radius: 0 0 0 4px;
     }
   }
