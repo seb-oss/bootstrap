@@ -90,16 +90,6 @@
 }
 }
 
-// Alert outline styles
-//
-// Generate contextual modifier classes for colorizing the alert.
-
-@each $color, $value in $theme-colors {
-  .alert-outline-#{$color} {
-    @include alert-outline-variant($value, $value, theme-color-level($color, $alert-color-level));
-  }
-}
-
 // Alert icon styles
 //
 // Generate contextual modifier classes for alert icons.
