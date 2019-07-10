@@ -82,6 +82,10 @@
 // Generate contextual modifier classes for colorizing the alert.
 
 @each $color, $value in $theme-colors {
+  // override the style of primary and info alerts
+  @if ($color == 'primary') or ($color == 'info') {
+    $value: map-get($theme-colors, 'secondary');
+  }
   .alert-#{$color} {
     @include alert-variant($value, $value, theme-color-level($color, $alert-color-level));
   }
@@ -95,7 +99,11 @@
 // Generate contextual modifier classes for alert icons.
 
 @each $color, $value in $theme-colors {
-  @if index("danger" "warning" "success", $color) {
+  // override the style of primary and info alerts
+  @if ($color == 'primary') or ($color == 'info') {
+    $value: map-get($theme-colors, 'secondary');
+  }
+  @if index("danger" "warning" "success" "info", $color) {
     .alert.alert-icon {
       &.alert-#{$color} {
         @include alert-icon($value, $value, theme-color-level($color, $alert-color-level), $color);
@@ -103,3 +111,20 @@
     }
   }
 }
+
+.alert-icon {
+  padding-left: $alert-icon-padding;
+  > .row {
+    display: inline-flex;
+    @include media-breakpoint-down(xs) {
+      > .col-12 {
+        // margin-left: calc(-2.625rem + .75rem);
+        margin-left: -$alert-icon-padding + $alert-padding-x;
+        min-width: calc(100% + #{$alert-icon-padding - $alert-padding-x});
+      }
+    }
+  }
+
+}
+
+
