@@ -24,11 +24,11 @@
   @if($submitted-bg == $dark) {
     $background: transparent;
     $color: $light;
-    $border: $black;
-    $hover-background: $black;
-    $hover-border: $black;
-    $active-background: rgba($black,.65);
-    $active-border: $black;
+    $border: $dark;
+    $hover-background: $dark;
+    $hover-border: $dark;
+    $active-background: rgba($dark,.65);
+    $active-border: $dark;
   }
 
   // override danger button
