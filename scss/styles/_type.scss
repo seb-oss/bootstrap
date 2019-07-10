@@ -5,6 +5,10 @@ h1, .h1, h2, .h2, h3, .h3 {
   font-weight: $font-weight-bold;
 }
 
+h6, .h6 {
+  font-weight: $font-weight-normal;
+}
+
 /* Adjust heading sizes depending on screen size */
 @include media-breakpoint-down(md) {
   h1 {
