@@ -476,10 +476,12 @@ $breadcrumb-padding-x:              0 !default;
 $breadcrumb-bg:                     transparent !default;
 $breadcrumb-divider-color:          $black !default;
 $breadcrumb-active-color:           $black !default;
+$breadcrumb-divider-color-light:    $white !default; // SEB Specific
+$breadcrumb-active-color-light:     $white !default; // SEB Specific
 $breadcrumb-active-font-weight:     $font-weight-medium !default; // SEB Specific
 $breadcrumb-border-radius:          0 !default;
-$breadcrumb-divider:                str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$breadcrumb-divider-color}' viewBox='0 0 256 512'%3E%3Cpath d='M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10.454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4.686-4.687-12.284-4.687-16.97 0z'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB specific
-$breadcrumb-back-icon:              str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$breadcrumb-divider-color}' viewBox='0 0 256 512'%3E%3Cpath d='M238.475 475.535l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L50.053 256 245.546 60.506c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0L10.454 247.515c-4.686 4.686-4.686 12.284 0 16.971l211.051 211.05c4.686 4.686 12.284 4.686 16.97-.001z'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB specific
+$breadcrumb-divider:                str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512'%3E%3Cpath d='M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z' fill='#{$breadcrumb-divider-color}'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB specific
+$breadcrumb-back-icon:              str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512'%3E%3Cpath d='M231.293 473.899l19.799-19.799c4.686-4.686 4.686-12.284 0-16.971L70.393 256 251.092 74.87c4.686-4.686 4.686-12.284 0-16.971L231.293 38.1c-4.686-4.686-12.284-4.686-16.971 0L4.908 247.515c-4.686 4.686-4.686 12.284 0 16.971L214.322 473.9c4.687 4.686 12.285 4.686 16.971-.001z' fill='#{$breadcrumb-divider-color}'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB specific
 $breadcrumb-divider-width:          15px !default; // SEB Specific
 
 
