@@ -140,9 +140,14 @@
     // convert danger to error to match classes used by library
     $toast-color: if($color == 'danger', 'error', $color);
 
+    // override the style of primary and info toast to match alerts
+    @if ($color == 'primary') or ($color == 'info') {
+      $value: map-get($theme-colors, 'secondary');
+    }
+
     .toast.toast-#{$toast-color} {
       @include alert-variant($value, $value, theme-color-level($color, $alert-color-level));
-      @if index("danger" "warning" "success", $color) {
+      @if index("danger" "warning" "success" "info", $color) {
         @include alert-icon($value, $value, theme-color-level($color, $alert-color-level), $color);
       }
       &:hover {
