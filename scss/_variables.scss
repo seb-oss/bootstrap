@@ -246,8 +246,8 @@ $link-weight:               $font-weight-medium !default; // SEB specific
 
 $external-link-icon-color:        $link-color !default; // SEB specific
 $external-link-hover-icon-color:  $link-hover-color !default; // SEB specific
-$external-link-icon:              str-replace(url("data:image/svg+xml,%3Csvg aria-hidden='true' data-prefix='fal' data-icon='external-link-square' class='svg-inline--fa fa-external-link-square fa-w-14' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='#{$external-link-icon-color}' d='M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm16 400c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V80c0-8.822 7.178-16 16-16h352c8.822 0 16 7.178 16 16v352zM99.515 374.828c-4.686-4.686-4.686-12.284 0-16.971l195.15-195.15-.707-.707-89.958.342c-6.627 0-12-5.373-12-12v-9.999c0-6.628 5.372-12 12-12L340 128c6.627 0 12 5.372 12 12l-.343 136c0 6.627-5.373 12-12 12h-9.999c-6.627 0-12-5.373-12-12l.342-89.958-.707-.707-195.15 195.15c-4.686 4.686-12.284 4.686-16.971 0l-5.657-5.657z'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB specific
-$external-link-hover-icon:        str-replace(url("data:image/svg+xml,%3Csvg aria-hidden='true' data-prefix='fal' data-icon='external-link-square' class='svg-inline--fa fa-external-link-square fa-w-14' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='#{$external-link-hover-icon-color}' d='M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm16 400c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V80c0-8.822 7.178-16 16-16h352c8.822 0 16 7.178 16 16v352zM99.515 374.828c-4.686-4.686-4.686-12.284 0-16.971l195.15-195.15-.707-.707-89.958.342c-6.627 0-12-5.373-12-12v-9.999c0-6.628 5.372-12 12-12L340 128c6.627 0 12 5.372 12 12l-.343 136c0 6.627-5.373 12-12 12h-9.999c-6.627 0-12-5.373-12-12l.342-89.958-.707-.707-195.15 195.15c-4.686 4.686-12.284 4.686-16.971 0l-5.657-5.657z'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB specific
+$external-link-icon:              str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V86a6 6 0 0 1 6-6h340a6 6 0 0 1 6 6v340a6 6 0 0 1-6 6zm-54-304l-136 .145c-6.627 0-12 5.373-12 12V167.9c0 6.722 5.522 12.133 12.243 11.998l58.001-2.141L99.515 340.485c-4.686 4.686-4.686 12.284 0 16.971l23.03 23.029c4.686 4.686 12.284 4.686 16.97 0l162.729-162.729-2.141 58.001c-.136 6.721 5.275 12.242 11.998 12.242h27.755c6.628 0 12-5.373 12-12L352 140c0-6.627-5.373-12-12-12z' fill='#{$external-link-icon-color}' /%3E%3C/svg%3E"), "#", "%23") !default; // SEB specific
+$external-link-hover-icon:        str-replace($external-link-icon, str-replace(#{'fill=\'' + $external-link-icon-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $external-link-hover-icon-color + '\''}, "#", "%23"));
 
 // Grid breakpoints
 //
@@ -297,6 +297,25 @@ $btn-border-radius:           4px !default;
 $btn-border-radius-lg:        4px !default;
 $btn-border-radius-sm:        4px !default;
 
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+
+$dropdown-border-color:             $blue !default;
+$dropdown-border-radius:            4px !default;
+
+$dropdown-link-hover-color:         $white !default;
+$dropdown-link-hover-bg:            $blue !default;
+
+$dropdown-link-active-bg:           $blue-dark !default;
+
+
+$dropdown-item-padding-y:           .625rem !default;
+$dropdown-icon:                     str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z' fill='#{$blue}'/%3E%3C/svg%3E"), "#", "%23") !default;
+$dropdown-icon-active:              str-replace($dropdown-icon, str-replace(#{'fill=\'' + $blue + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $white + '\''}, "#", "%23")) !default; // SEB specific
+
+
 // Forms
 
 $label-color:                           $headings-color !default; // SEB Specific
@@ -319,11 +338,11 @@ $custom-control-indicator-disabled-bg:          $gray-100 !default;
 $custom-control-label-disabled-color:           $gray-400 !default;
 
 $custom-radio-indicator-icon-checked:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3.5' fill='#{$custom-control-indicator-checked-bg}'/%3E%3C/svg%3E"), "#", "%23") !default;
-$custom-slide-toggle-indicator-icon-checked:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3.5' fill='#{$custom-control-indicator-checked-bg}'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB Specific
+$custom-slide-toggle-indicator-icon-checked:    str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3.5' fill='#{$custom-control-indicator-checked-bg}'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB Specific
 
 $custom-select-indicator-color:     $blue;
 $custom-select-bg-size:             16px 16px !default; // In pixels because image dimensions
-$custom-select-indicator:           str-replace(url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M443.5 162.6l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 351 28.5 155.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.7 4.8-12.3.1-17z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$custom-select-indicator:           str-replace($dropdown-icon, str-replace(#{'fill=\'' + $blue + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $custom-select-indicator-color + '\''}, "#", "%23")) !default; // SEB specific
 $custom-select-border-radius:       4px !default;
 
 
@@ -337,29 +356,10 @@ $form-feedback-font-size:           $font-size-sm !default;
 $form-feedback-valid-color:         theme-color("success") !default;
 $form-feedback-invalid-color:       theme-color("danger") !default;
 $form-feedback-icon-valid-color:    $form-feedback-valid-color !default;
-$form-feedback-icon-valid:          str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z' fill='#{$form-feedback-icon-valid-color}'/%3E%3C/svg%3E"), "#", "%23") !default;
+$form-feedback-icon-valid:          str-replace(map-get($theme-icons, 'success'), str-replace(#{'fill=\'' + $icon-fill-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $form-feedback-icon-valid-color + '\''}, "#", "%23")) !default;
 $form-feedback-icon-invalid-color:  $form-feedback-invalid-color !default;
-$form-feedback-icon-invalid:        str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath d='M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.054-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.952 83.154 0l239.94 416.028zm-27.658 15.991l-240-416c-6.16-10.678-21.583-10.634-27.718 0l-240 416C27.983 466.678 35.731 480 48 480h480c12.323 0 19.99-13.369 13.859-23.996zM288 372c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28zm-11.49-212h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM288 372c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z' fill='#{$form-feedback-icon-invalid-color}'/%3E%3C/svg%3E"), "#", "%23") !default;
+$form-feedback-icon-invalid:        str-replace(map-get($theme-icons, 'danger'), str-replace(#{'fill=\'' + $icon-fill-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $form-feedback-icon-invalid-color + '\''}, "#", "%23")) !default;
 $form-feedback-line-thickness:      2px !default;
-
-// Dropdowns
-//
-// Dropdown menu container and contents.
-
-
-$dropdown-border-color:             $blue !default;
-$dropdown-border-radius:            4px !default;
-
-$dropdown-link-hover-color:         $white !default;
-$dropdown-link-hover-bg:            $blue !default;
-
-$dropdown-link-active-bg:           $blue-dark !default;
-
-
-$dropdown-item-padding-y:           .625rem !default;
-$dropdown-chevron-color:            $blue !default; // SEB specific
-$dropdown-chevron-active-color:     $white !default; // SEB specific
-
 
 
 // Z-index master list
@@ -505,6 +505,7 @@ $scrollbar-thickness:     10px;
 
 // Accordion
 
+$accordion-icon:            $dropdown-icon !default; // SEB specific
 $accordion-border-color:    $table-border-color !default; // SEB specific
 $accordion-border-width:    $table-border-width !default; // SEB specific
 $accordion-header-padding:  0 .75rem !default; // SEB specific

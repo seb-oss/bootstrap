@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faArrowAltRight } from '@fortawesome/pro-light-svg-icons';
 
 @Component({
   selector: 'app-icons',
@@ -73,7 +72,6 @@ export class IconsComponent implements OnInit {
         'times'
     ];
     filteredIcons: Array<string> = this.icons;
-    faArrowAltRight = faArrowAltRight;
 
 
     filterIcons(search: string) {
