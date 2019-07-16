@@ -48,7 +48,7 @@
       background: transparent !important;
     }
     .ngb-dp-navigation-chevron {
-      border-width: 1px 1px 0 0 !important;
+      border-width: 2px 2px 0 0 !important;
     }
     select.custom-select + select.custom-select {
       margin-left: 6px;
@@ -61,6 +61,10 @@
       height: 2.75rem !important;
       line-height: 2.75rem !important;
     }
+    .ngb-dp-today .btn-light {
+      box-shadow: $primary 0 0 0 1px inset;
+    }
+
     .bg-primary {
       background-color: $blue-dark !important;
     }
@@ -68,6 +72,15 @@
       background: transparent;
       color: $blue-dark;
       font-weight:bold;
+    }
+    .btn-light:hover {
+      $hover-background: $blue;
+      $hover-border: $blue;
+      @include hover {
+        color: color-yiq($hover-background);
+        @include gradient-bg($hover-background);
+        border-color: $hover-border;
+      }
     }
     ngb-datepicker-navigation-select select {
       height: 32px !important;
@@ -118,6 +131,7 @@
         .ngb-dp-arrow-btn {
           margin-right: auto !important;
           margin-left:  auto !important;
+          opacity: 1;
         }
       }
       .btn-light:not([disabled]):not(.disabled).active {
