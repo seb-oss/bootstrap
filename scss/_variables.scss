@@ -281,6 +281,7 @@ $table-expand-bg:               transparent !default; // SEB Specific
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 $input-btn-padding-y:         .5625rem !default;
+$input-btn-padding-x:         1rem !default;
 $input-btn-padding-y-sm:      .28125rem !default;
 $input-btn-padding-y-lg:      .75rem !default;
 
@@ -431,7 +432,7 @@ $modal-aside-lg-width:              map_get($grid-breakpoints, 'md'); // 800px !
 //
 // Define alert colors, border radius, and padding.
 
-$alert-padding-x:                   .75rem !default;
+$alert-padding-x:                   1rem !default;
 $alert-border-radius:               $border-radius !default;
 $alert-link-font-weight:            $font-weight-medium !default; //500
 $alert-border-width:                0 !default;
