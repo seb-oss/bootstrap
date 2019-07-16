@@ -5,6 +5,7 @@
   }
   + .breadcrumb-item::before {
     width: $breadcrumb-divider-width;
+    height: $breadcrumb-divider-height;
     vertical-align: middle;
   }
 
@@ -38,6 +39,7 @@
         color: $breadcrumb-divider-color;
         content: $breadcrumb-back-icon;
         width: $breadcrumb-divider-width;
+        height: $breadcrumb-divider-height;
         vertical-align: middle;
       }
     }
