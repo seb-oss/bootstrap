@@ -185,39 +185,3 @@ button.close {
     display: none;
   }
 }
-
-.input-group {
-  .input-group-prepend, .input-group-append {
-    .btn:not(:hover,:active,:focus) {
-      background: $input-bg;
-      color: $blue-dark;
-    }
-  }
-  .input-group-append .btn:not(:hover,:active,:focus) {
-    border-color: $input-border-color;
-    border-left:none;
-    padding-left: calc(#{$btn-padding-x} + 1px);
-  }
-  .input-group-prepend .btn:not(:hover,:active,:focus) {
-    border-color: $input-border-color;
-    border-right:none;
-    padding-right: calc(#{$btn-padding-x} + 1px);
-  }
-}
-.input-group-sm {
-  .input-group-append .btn:not(:hover,:active,:focus) {
-    padding-left: calc(#{$btn-padding-x-sm} + 1px);
-  }
-  .input-group-prepend .btn:not(:hover,:active,:focus) {
-    padding-right: calc(#{$btn-padding-x-sm} + 1px);
-  }
-}
-
-.input-group-lg {
-  .input-group-append .btn:not(:hover,:active,:focus) {
-    padding-left: calc(#{$btn-padding-x-lg} + 1px);
-  }
-  .input-group-prepend .btn:not(:hover,:active,:focus) {
-    padding-right: calc(#{$btn-padding-x-lg} + 1px);
-  }
-}
