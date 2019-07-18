@@ -1,7 +1,21 @@
 import { Injectable } from '@angular/core';
 import {MenuItem} from '../interfaces/menu-item';
 import {of, ReplaySubject} from 'rxjs';
+import {map, tap} from 'rxjs/operators';
+const compare = (a, b) => {
+  const nameA = a.name.toUpperCase();
+  const nameB = b.name.toUpperCase();
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
 
+  // names must be equal
+  return 0;
+
+};
 @Injectable({
   providedIn: 'root'
 })
@@ -9,95 +23,95 @@ export class MenuService {
 
   $activeTab: ReplaySubject<string> = new ReplaySubject<string>(1);
   $menuItems: ReplaySubject<Array<MenuItem>> = new ReplaySubject<Array<MenuItem>>(1);
-    start: Array<MenuItem> = [{
-        name: 'About',
-        path: '/about'
-    }, {
-        name: 'Issues',
-        path: 'https://github.com/sebgroup/bootstrap/issues'
-    }, {
-        name: 'Wiki',
-        path: 'https://github.com/sebgroup/bootstrap/wiki'
-    }];
+  start: Array<MenuItem> = [{
+    name: 'About',
+    path: '/about'
+  }, {
+    name: 'Issues',
+    path: 'https://github.com/sebgroup/bootstrap/issues'
+  }, {
+    name: 'Wiki',
+    path: 'https://github.com/sebgroup/bootstrap/wiki'
+  }];
 
-    base: Array<MenuItem> = [{
-        name: 'Fonts and typography',
-        path: '/typography'
-    }, {
-        name: 'Colors',
-        path: '/colors'
-    }, {
-        name: 'Icons',
-        path: '/icons'
-    }];
+  base: Array<MenuItem> = [{
+    name: 'Fonts and typography',
+    path: '/typography'
+  }, {
+    name: 'Colors',
+    path: '/colors'
+  }, {
+    name: 'Icons',
+    path: '/icons'
+  }];
 
-    components: Array<MenuItem> = [{
-        name: 'Alerts',
-        path: '/alerts'
-    }, {
-        name: 'Toast notifications',
-        path: '/toast-notifications'
-    }, {
-        name: 'Breadcrumbs',
-        path: '/breadcrumbs'
-    }, {
-        name: 'Tabs',
-        path: '/tabs'
-    }, {
-        name: 'Forms',
-        path: '/forms'
-    }, {
-        name: 'Checkboxes and slide toggles',
-        path: '/checkboxes-and-slide-toggles'
-    }, {
-        name: 'Radio buttons',
-        path: '/radio-buttons'
-    }, {
-      name: 'Buttons',
-      path: '/buttons'
-    }, {
-      name: 'Button group',
-      path: '/button-group'
-    }, {
-        name: 'Input group',
-        path: '/input-group'
-    }, {
-        name: 'List group',
-        path: '/list-group'
-    }, {
-        name: 'Dropdowns',
-        path: '/dropdowns'
-    }, {
-        name: 'Cards',
-        path: '/cards'
-    }, {
-        name: 'Tables',
-        path: '/tables'
-    }, {
-        name: 'Modals',
-        path: '/modals'
-    }, {
-        name: 'Pagination',
-        path: '/pagination'
-    }, {
-        name: 'Tooltips',
-        path: '/tooltips'
-    }, {
-        name: 'Accordion',
-        path: '/accordion'
-    }, {
-        name: 'Spinners',
-        path: '/spinners'
-    }, {
-      name: 'Skeleton loaders',
-      path: '/skeleton-loader'
-    }, {
-        name: 'Datepicker',
-        path: '/datepicker'
-    }, {
-        name: 'Navbar',
-        path: '/navbar'
-    }];
+  components: Array<MenuItem> = [{
+    name: 'Alerts',
+    path: '/alerts'
+  }, {
+    name: 'Toast notifications',
+    path: '/toast-notifications'
+  }, {
+    name: 'Breadcrumbs',
+    path: '/breadcrumbs'
+  }, {
+    name: 'Tabs',
+    path: '/tabs'
+  }, {
+    name: 'Forms',
+    path: '/forms'
+  }, {
+    name: 'Checkboxes and slide toggles',
+    path: '/checkboxes-and-slide-toggles'
+  }, {
+    name: 'Radio buttons',
+    path: '/radio-buttons'
+  }, {
+    name: 'Buttons',
+    path: '/buttons'
+  }, {
+    name: 'Button group',
+    path: '/button-group'
+  }, {
+    name: 'Input group',
+    path: '/input-group'
+  }, {
+    name: 'List group',
+    path: '/list-group'
+  }, {
+    name: 'Dropdowns',
+    path: '/dropdowns'
+  }, {
+    name: 'Cards',
+    path: '/cards'
+  }, {
+    name: 'Tables',
+    path: '/tables'
+  }, {
+    name: 'Modals',
+    path: '/modals'
+  }, {
+    name: 'Pagination',
+    path: '/pagination'
+  }, {
+    name: 'Tooltips',
+    path: '/tooltips'
+  }, {
+    name: 'Accordion',
+    path: '/accordion'
+  }, {
+    name: 'Spinners',
+    path: '/spinners'
+  }, {
+    name: 'Skeleton loaders',
+    path: '/skeleton-loader'
+  }, {
+    name: 'Datepicker',
+    path: '/datepicker'
+  }, {
+    name: 'Navbar',
+    path: '/navbar'
+  }];
 
   constructor() {
     this.updateMenu('start');
@@ -107,15 +121,24 @@ export class MenuService {
   }
 
   getStartItems() {
-    return of(this.start);
+    return of(this.start)
+      .pipe(
+        map((res: Array<any>) => res.sort(compare))
+      );
   }
 
-    getBaseItems() {
-        return of(this.base);
-    }
+  getBaseItems() {
+    return of(this.base)
+      .pipe(
+        map((res: Array<any>) => res.sort(compare))
+      );
+  }
 
   getComponents() {
-    return of(this.components);
+    return of(this.components)
+      .pipe(
+        map((res: Array<any>) => res.sort(compare))
+      );
   }
 
   getActiveTab() {
@@ -131,9 +154,9 @@ export class MenuService {
     if (menu === 'start') {
       this.$menuItems.next(this.start);
     } else if (menu === 'components') {
-        this.$menuItems.next(this.components);
+      this.$menuItems.next(this.components);
     } else {
-        this.$menuItems.next(this.base);
+      this.$menuItems.next(this.base);
     }
   }
 }
