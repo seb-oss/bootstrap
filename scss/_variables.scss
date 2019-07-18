@@ -507,11 +507,14 @@ $scrollbar-thickness:     10px;
 // Accordion
 
 $accordion-icon:            $dropdown-icon !default; // SEB specific
+$accordion-icon-disabled:   str-replace($accordion-icon, str-replace(#{'fill=\'' + $blue + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $gray-400 + '\''}, "#", "%23")) !default; // SEB specific
+$accordion-bg-hover:        $gray-100 !default; // SEB specific
 $accordion-border-color:    $table-border-color !default; // SEB specific
 $accordion-border-width:    $table-border-width !default; // SEB specific
-$accordion-header-padding:  0 .75rem !default; // SEB specific
-$accordion-body-padding:    $table-cell-padding !default; // SEB specific
-$accordion-item-padding-y:  .5625rem !default; // SEB specific
-$accordion-item-padding-x:  0 !default; // SEB specific
+$accordion-header-padding:  0 !default; // SEB specific
+$accordion-body-padding:    0 1rem 1rem 2.5rem !default; // SEB specific
+$accordion-item-padding-y:  .5rem !default; // SEB specific
+$accordion-item-padding-x:  1rem !default; // SEB specific
 $accordion-body-bg:         transparent !default; // SEB specific
+$accordion-body-bg-active:  $accordion-bg-hover !default; // SEB specific
 $accordion-size:            .875rem !default; // SEB specific
