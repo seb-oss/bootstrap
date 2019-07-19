@@ -42,18 +42,6 @@
                             "private": false
                         },
                         {
-                            "title": "Alerts (outline)",
-                            "componentid": "component-alertribbon",
-                            "variantid": "outline",
-                            "guid": "sdl-bootstrap-component-alertribbon-outline",
-                            "filename": "alerts-outline.md",
-                            "filepath": "components/alerts/alerts-outline.md",
-                            "shortpath": "components/alerts/alerts-outline",
-                            "longpath": "components/alerts/alerts-outline.md",
-                            "type": "file",
-                            "private": false
-                        },
-                        {
                             "title": "Alerts (solid color)",
                             "componentid": "component-alertribbon",
                             "variantid": "solid",

@@ -15,13 +15,13 @@ This is the default state of the component
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <button class="btn btn-secondary" type="button">
-        <i class="fal fa-minus"></i>
+        <i class="far fa-minus"></i>
       </button>
     </div>
     <input id="appendPrependBtnIcon" type="tel" class="form-control text-center" value="0">
     <div class="input-group-append">
       <button class="btn btn-secondary" type="button">
-        <i class="fal fa-plus"></i>
+        <i class="far fa-plus"></i>
       </button>
     </div>
   </div>
