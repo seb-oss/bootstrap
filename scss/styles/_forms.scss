@@ -1,7 +1,7 @@
 @import "../bootstrap-core/forms";
 
 // SEB Specific styles for labels
-label:not(.form-check-label,.custom-checkbox,.custom-radio,.custom-control-label), legend.col-form-legend {
+label:not(.form-check-label):not(.custom-checkbox):not(.custom-radio):not(.custom-control-label), legend.col-form-legend {
   font-weight: $font-weight-medium;
   margin-bottom: 0.25rem;
 }
@@ -104,9 +104,9 @@ label {
 .form-control {
   min-height: 44px;
 }
-.form-control-sm {
+.input-group-sm > .form-control, .form-control-sm {
   min-height: 32px;
 }
-.form-control-lg {
+.input-group-lg > .form-control, .form-control-lg {
   min-height: 56px;
 }

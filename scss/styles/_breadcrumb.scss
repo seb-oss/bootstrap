@@ -5,6 +5,7 @@
   }
   + .breadcrumb-item::before {
     width: $breadcrumb-divider-width;
+    height: $breadcrumb-divider-height;
     vertical-align: middle;
   }
 
@@ -38,8 +39,38 @@
         color: $breadcrumb-divider-color;
         content: $breadcrumb-back-icon;
         width: $breadcrumb-divider-width;
+        height: $breadcrumb-divider-height;
         vertical-align: middle;
       }
     }
+  }
+}
+
+.breadcrumb-light {
+  .breadcrumb-item {
+    + .breadcrumb-item {
+
+      &::before {
+        color: $breadcrumb-divider-color-light;
+        content: str-replace($breadcrumb-divider, str-replace(#{'fill=\'' + $breadcrumb-divider-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $breadcrumb-divider-color-light + '\''}, "#", "%23"));
+      }
+    }
+    &.active {
+      color: $breadcrumb-active-color-light;
+    }
+    a {
+      color: $breadcrumb-active-color-light;
+      @include hover {
+        color: $breadcrumb-active-color-light;
+      }
+    }
+    @include media-breakpoint-down(xs) {
+      &:nth-last-child(2) {
+        &::before {
+          content: str-replace($breadcrumb-back-icon, str-replace(#{'fill=\'' + $breadcrumb-divider-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $breadcrumb-divider-color-light + '\''}, "#", "%23"));
+        }
+      }
+    }
+
   }
 }

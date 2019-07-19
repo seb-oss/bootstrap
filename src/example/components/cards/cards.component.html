@@ -3,13 +3,15 @@
   <div class="card-body" id="cardExample">
     <h4 class="card-title">Card with header and content</h4>
     <p class="mb-3">For more info and examples please refer to Bootstraps <a href="http://getbootstrap.com/docs/4.1/components/card/" target="_blank">official documentation</a>.</p>
-    <div class="card">
-      <h4 class="card-header">Card header</h4>
-      <div class="card-body">
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="bg-light p-5">
+      <div class="card">
+        <h4 class="card-header">Card header</h4>
+        <div class="card-body">
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
       </div>
     </div>
-    <exemplify [selector]="'#cardExample > .card'"></exemplify>
+    <exemplify [selector]="'#cardExample .card'"></exemplify>
   </div>
 </div>

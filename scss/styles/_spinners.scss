@@ -15,7 +15,7 @@ $spinner-lg-size: 6rem;
   height: $spinner-size;
   box-shadow: inset 0 0 0 3.5px;
   transform: translateZ(0);
-  animation: rotate-circle 2s infinite linear .75s;
+  animation: rotate-circle 1s infinite linear;
   &:after {
     width: $spinner-size/2 + 0.2rem; //5.2em;
     height: $spinner-size + 0.2rem; // 10.2em;

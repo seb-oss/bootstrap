@@ -318,7 +318,7 @@
       </div>
       <div class="row">
         <div class="col-auto">
-          <div class="alert alert-outline-danger">
+          <div class="alert alert-danger alert-icon">
             <h5 class="alert-heading">Make sure you've entered the correct information</h5>
             Here's a perfect place to explain what's wrong!
           </div>
@@ -333,7 +333,7 @@
   <div class="card-body">
     <p>Basic validation rules like <code>required</code>, <code>minlength</code> and <code>pattern</code> etc. provided by HTML and browsers natively for inputs are awesome for validation but they're not that user friendly or intuitive. Using a framework like Angular we can enhance the native behavior and extend it with our on validation rules. In the following example we've made it a bit more clever just showing one error at a time and we've also added custom validation for personal identity number.</p>
     <p>Validation progress can be shown by applying one of the following classes to the feedback element: <code>progress-0</code> for 0%, <code>progress-10</code> for 10%, <code>progress-20</code> for 20% and so on up till 100%. There's also another type of feedback besides <code>invalid-feedback</code> and <code>valid-feedback</code> called <code>progress-feedback</code> that will change color depending on the p value provided.</p>
-    <div class="alert alert-info"><strong>Framework needed!</strong> Please note that the examples below uses angular but similar behavior can be achieved using other frameworks as well.</div>
+    <div class="alert alert-warning alert-icon"><strong>Framework needed!</strong> Please note that the examples below uses angular but similar behavior can be achieved using other frameworks as well.</div>
     <form #loginForm="ngForm" novalidate autocomplete="off">
       <div class="form-row">
         <div class="form-group col-12 col-sm-4 col-md-auto col-lg-3">

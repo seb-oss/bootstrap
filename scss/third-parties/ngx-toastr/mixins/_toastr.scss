@@ -114,12 +114,12 @@
         left: 0;
         bottom: 0;
         height: 4px;
-        background-color: #000000;
+        background-color: $black;
         opacity: 0.25;
       }
       .toast-close-button:hover,
       .toast-close-button:focus {
-        color: #000000;
+        color: $black;
         text-decoration: none;
         cursor: pointer;
         opacity: 0.75;
@@ -140,9 +140,14 @@
     // convert danger to error to match classes used by library
     $toast-color: if($color == 'danger', 'error', $color);
 
+    // override the style of primary and info toast to match alerts
+    @if ($color == 'primary') or ($color == 'info') {
+      $value: map-get($theme-colors, 'secondary');
+    }
+
     .toast.toast-#{$toast-color} {
       @include alert-variant($value, $value, theme-color-level($color, $alert-color-level));
-      @if index("danger" "warning" "success", $color) {
+      @if index("danger" "warning" "success" "info", $color) {
         @include alert-icon($value, $value, theme-color-level($color, $alert-color-level), $color);
       }
       &:hover {

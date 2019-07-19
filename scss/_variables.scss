@@ -58,10 +58,10 @@ $purple-darker:         #3F2587; // SEB specific
 
 $primary:       $blue !default;
 $secondary:     $gray-300 !default;
-$success:       $green !default;
+$success:       $green-darker !default;
 $info:          $purple !default;
 $warning:       $yellow !default;
-$danger:        $red !default;
+$danger:        $red-dark !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
@@ -79,6 +79,20 @@ $theme-colors: map-merge(
       "dark":       $dark
     ),
     $theme-colors
+);
+
+// theme icons // SEB specific
+$icon-fill-color: $black;
+$theme-icons: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-icons: map-merge(
+                (
+                        "success":    str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M435.848 83.466L172.804 346.51l-96.652-96.652c-4.686-4.686-12.284-4.686-16.971 0l-28.284 28.284c-4.686 4.686-4.686 12.284 0 16.971l133.421 133.421c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-28.284-28.284c-4.686-4.686-12.284-4.686-16.97 0z' fill='#{$icon-fill-color}'/%3E%3C/svg%3E"), "#", "%23"),
+                        "info":       str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-48 346V86a6 6 0 0 0-6-6H54a6 6 0 0 0-6 6v340a6 6 0 0 0 6 6h340a6 6 0 0 0 6-6zM224 118c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z' fill='#{$icon-fill-color}'/%3E%3C/svg%3E"), "#", "%23"),
+                        "warning":    str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath d='M248.747 204.705l6.588 112c.373 6.343 5.626 11.295 11.979 11.295h41.37a12 12 0 0 0 11.979-11.295l6.588-112c.405-6.893-5.075-12.705-11.979-12.705h-54.547c-6.903 0-12.383 5.812-11.978 12.705zM330 384c0 23.196-18.804 42-42 42s-42-18.804-42-42 18.804-42 42-42 42 18.804 42 42zm-.423-360.015c-18.433-31.951-64.687-32.009-83.154 0L6.477 440.013C-11.945 471.946 11.118 512 48.054 512H527.94c36.865 0 60.035-39.993 41.577-71.987L329.577 23.985zM53.191 455.002L282.803 57.008c2.309-4.002 8.085-4.002 10.394 0l229.612 397.993c2.308 4-.579 8.998-5.197 8.998H58.388c-4.617.001-7.504-4.997-5.197-8.997z' fill='#{$icon-fill-color}'/%3E%3C/svg%3E"), "#", "%23"),
+                        "danger":     str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath d='M248.747 204.705l6.588 112c.373 6.343 5.626 11.295 11.979 11.295h41.37a12 12 0 0 0 11.979-11.295l6.588-112c.405-6.893-5.075-12.705-11.979-12.705h-54.547c-6.903 0-12.383 5.812-11.978 12.705zM330 384c0 23.196-18.804 42-42 42s-42-18.804-42-42 18.804-42 42-42 42 18.804 42 42zm-.423-360.015c-18.433-31.951-64.687-32.009-83.154 0L6.477 440.013C-11.945 471.946 11.118 512 48.054 512H527.94c36.865 0 60.035-39.993 41.577-71.987L329.577 23.985zM53.191 455.002L282.803 57.008c2.309-4.002 8.085-4.002 10.394 0l229.612 397.993c2.308 4-.579 8.998-5.197 8.998H58.388c-4.617.001-7.504-4.997-5.197-8.997z' fill='#{$icon-fill-color}'/%3E%3C/svg%3E"), "#", "%23")
+                ),
+                $theme-icons
 );
 
 // Options
@@ -232,8 +246,8 @@ $link-weight:               $font-weight-medium !default; // SEB specific
 
 $external-link-icon-color:        $link-color !default; // SEB specific
 $external-link-hover-icon-color:  $link-hover-color !default; // SEB specific
-$external-link-icon:              str-replace(url("data:image/svg+xml,%3Csvg aria-hidden='true' data-prefix='fal' data-icon='external-link-square' class='svg-inline--fa fa-external-link-square fa-w-14' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='#{$external-link-icon-color}' d='M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm16 400c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V80c0-8.822 7.178-16 16-16h352c8.822 0 16 7.178 16 16v352zM99.515 374.828c-4.686-4.686-4.686-12.284 0-16.971l195.15-195.15-.707-.707-89.958.342c-6.627 0-12-5.373-12-12v-9.999c0-6.628 5.372-12 12-12L340 128c6.627 0 12 5.372 12 12l-.343 136c0 6.627-5.373 12-12 12h-9.999c-6.627 0-12-5.373-12-12l.342-89.958-.707-.707-195.15 195.15c-4.686 4.686-12.284 4.686-16.971 0l-5.657-5.657z'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB specific
-$external-link-hover-icon:        str-replace(url("data:image/svg+xml,%3Csvg aria-hidden='true' data-prefix='fal' data-icon='external-link-square' class='svg-inline--fa fa-external-link-square fa-w-14' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='#{$external-link-hover-icon-color}' d='M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm16 400c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V80c0-8.822 7.178-16 16-16h352c8.822 0 16 7.178 16 16v352zM99.515 374.828c-4.686-4.686-4.686-12.284 0-16.971l195.15-195.15-.707-.707-89.958.342c-6.627 0-12-5.373-12-12v-9.999c0-6.628 5.372-12 12-12L340 128c6.627 0 12 5.372 12 12l-.343 136c0 6.627-5.373 12-12 12h-9.999c-6.627 0-12-5.373-12-12l.342-89.958-.707-.707-195.15 195.15c-4.686 4.686-12.284 4.686-16.971 0l-5.657-5.657z'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB specific
+$external-link-icon:              str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V86a6 6 0 0 1 6-6h340a6 6 0 0 1 6 6v340a6 6 0 0 1-6 6zm-54-304l-136 .145c-6.627 0-12 5.373-12 12V167.9c0 6.722 5.522 12.133 12.243 11.998l58.001-2.141L99.515 340.485c-4.686 4.686-4.686 12.284 0 16.971l23.03 23.029c4.686 4.686 12.284 4.686 16.97 0l162.729-162.729-2.141 58.001c-.136 6.721 5.275 12.242 11.998 12.242h27.755c6.628 0 12-5.373 12-12L352 140c0-6.627-5.373-12-12-12z' fill='#{$external-link-icon-color}' /%3E%3C/svg%3E"), "#", "%23") !default; // SEB specific
+$external-link-hover-icon:        str-replace($external-link-icon, str-replace(#{'fill=\'' + $external-link-icon-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $external-link-hover-icon-color + '\''}, "#", "%23"));
 
 // Grid breakpoints
 //
@@ -267,6 +281,7 @@ $table-expand-bg:               transparent !default; // SEB Specific
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 $input-btn-padding-y:         .5625rem !default;
+$input-btn-padding-x:         1rem !default;
 $input-btn-padding-y-sm:      .28125rem !default;
 $input-btn-padding-y-lg:      .75rem !default;
 
@@ -282,6 +297,25 @@ $btn-disabled-color:          $gray-500 !default; // SEB specific
 $btn-border-radius:           4px !default;
 $btn-border-radius-lg:        4px !default;
 $btn-border-radius-sm:        4px !default;
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+
+$dropdown-border-color:             $blue !default;
+$dropdown-border-radius:            4px !default;
+
+$dropdown-link-hover-color:         $white !default;
+$dropdown-link-hover-bg:            $blue !default;
+
+$dropdown-link-active-bg:           $blue-dark !default;
+
+
+$dropdown-item-padding-y:           .625rem !default;
+$dropdown-icon:                     str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z' fill='#{$blue}'/%3E%3C/svg%3E"), "#", "%23") !default;
+$dropdown-icon-active:              str-replace($dropdown-icon, str-replace(#{'fill=\'' + $blue + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $white + '\''}, "#", "%23")) !default; // SEB specific
+
 
 // Forms
 
@@ -305,11 +339,11 @@ $custom-control-indicator-disabled-bg:          $gray-100 !default;
 $custom-control-label-disabled-color:           $gray-400 !default;
 
 $custom-radio-indicator-icon-checked:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3.5' fill='#{$custom-control-indicator-checked-bg}'/%3E%3C/svg%3E"), "#", "%23") !default;
-$custom-slide-toggle-indicator-icon-checked:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3.5' fill='#{$custom-control-indicator-checked-bg}'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB Specific
+$custom-slide-toggle-indicator-icon-checked:    str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3.5' fill='#{$custom-control-indicator-checked-bg}'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB Specific
 
 $custom-select-indicator-color:     $blue;
 $custom-select-bg-size:             16px 16px !default; // In pixels because image dimensions
-$custom-select-indicator:           str-replace(url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M443.5 162.6l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 351 28.5 155.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.7 4.8-12.3.1-17z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$custom-select-indicator:           str-replace($dropdown-icon, str-replace(#{'fill=\'' + $blue + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $custom-select-indicator-color + '\''}, "#", "%23")) !default; // SEB specific
 $custom-select-border-radius:       4px !default;
 
 
@@ -323,29 +357,10 @@ $form-feedback-font-size:           $font-size-sm !default;
 $form-feedback-valid-color:         theme-color("success") !default;
 $form-feedback-invalid-color:       theme-color("danger") !default;
 $form-feedback-icon-valid-color:    $form-feedback-valid-color !default;
-$form-feedback-icon-valid:          str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z' fill='#{$form-feedback-icon-valid-color}'/%3E%3C/svg%3E"), "#", "%23") !default;
+$form-feedback-icon-valid:          str-replace(map-get($theme-icons, 'success'), str-replace(#{'fill=\'' + $icon-fill-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $form-feedback-icon-valid-color + '\''}, "#", "%23")) !default;
 $form-feedback-icon-invalid-color:  $form-feedback-invalid-color !default;
-$form-feedback-icon-invalid:        str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath d='M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.054-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.952 83.154 0l239.94 416.028zm-27.658 15.991l-240-416c-6.16-10.678-21.583-10.634-27.718 0l-240 416C27.983 466.678 35.731 480 48 480h480c12.323 0 19.99-13.369 13.859-23.996zM288 372c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28zm-11.49-212h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM288 372c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z' fill='#{$form-feedback-icon-invalid-color}'/%3E%3C/svg%3E"), "#", "%23") !default;
+$form-feedback-icon-invalid:        str-replace(map-get($theme-icons, 'danger'), str-replace(#{'fill=\'' + $icon-fill-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $form-feedback-icon-invalid-color + '\''}, "#", "%23")) !default;
 $form-feedback-line-thickness:      2px !default;
-
-// Dropdowns
-//
-// Dropdown menu container and contents.
-
-
-$dropdown-border-color:             $blue !default;
-$dropdown-border-radius:            4px !default;
-
-$dropdown-link-hover-color:         $white !default;
-$dropdown-link-hover-bg:            $blue !default;
-
-$dropdown-link-active-bg:           $blue-dark !default;
-
-
-$dropdown-item-padding-y:           .625rem !default;
-$dropdown-chevron-color:            $blue !default; // SEB specific
-$dropdown-chevron-active-color:     $white !default; // SEB specific
-
 
 
 // Z-index master list
@@ -392,6 +407,7 @@ $pagination-active-border-color:    $blue-dark !default;
 // Cards
 
 // Tooltips
+$tooltip-bg:                        $gray-900 !default;
 
 // Popovers
 
@@ -416,12 +432,13 @@ $modal-aside-lg-width:              map_get($grid-breakpoints, 'md'); // 800px !
 //
 // Define alert colors, border radius, and padding.
 
-$alert-padding-x:                   .75rem !default;
+$alert-padding-x:                   1rem !default;
 $alert-border-radius:               $border-radius !default;
 $alert-link-font-weight:            $font-weight-medium !default; //500
 $alert-border-width:                0 !default;
 $alert-icon-width:                  1.125rem !default; // SEB Specific
 $alert-icon-height:                 1rem !default; // SEB Specific
+$alert-icon-padding: $alert-icon-width + ($alert-padding-x*2); // SEB Specific
 
 // Toast notifications
 $toast-font-size:                   $font-size-base !default;
@@ -437,7 +454,7 @@ $toast-transition:                  color .15s ease-in-out, background-color .15
 
 // List group
 $list-group-bullet-icon: str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect width='1' height='1' style='fill:#{$dark};' /%3E%3C/svg%3E"), "#", "%23") !default; // SEB Specific
-$list-group-check-icon: str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='#{$green}' d='M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z' class='st0'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB Specific
+$list-group-check-icon: str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M435.848 83.466L172.804 346.51l-96.652-96.652c-4.686-4.686-12.284-4.686-16.971 0l-28.284 28.284c-4.686 4.686-4.686 12.284 0 16.971l133.421 133.421c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-28.284-28.284c-4.686-4.686-12.284-4.686-16.97 0z' fill='#{$green}'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB Specific
 $list-group-margin-bottom: 1rem !default; // SEB Specific
 $list-group-bg:                     $gray-400 !default;
 $list-group-hover-bg:               $blue !default;
@@ -445,7 +462,7 @@ $list-group-action-hover-color:     $white !default;
 $list-group-action-hover-bg:        $gray-100 !default;
 $list-group-action-active-bg:       $blue-dark !default;
 $list-group-action-active-color:    $white !default;
-$list-group-active-bg:              $green !default;
+$list-group-active-bg:              $dark !default;
 $list-group-disabled-color:         $gray-500 !default;
 $list-group-disabled-bg:            $gray-200 !default;
 
@@ -460,11 +477,14 @@ $breadcrumb-padding-x:              0 !default;
 $breadcrumb-bg:                     transparent !default;
 $breadcrumb-divider-color:          $black !default;
 $breadcrumb-active-color:           $black !default;
+$breadcrumb-divider-color-light:    $white !default; // SEB Specific
+$breadcrumb-active-color-light:     $white !default; // SEB Specific
 $breadcrumb-active-font-weight:     $font-weight-medium !default; // SEB Specific
 $breadcrumb-border-radius:          0 !default;
-$breadcrumb-divider:                str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$breadcrumb-divider-color}' viewBox='0 0 256 512'%3E%3Cpath d='M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10.454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4.686-4.687-12.284-4.687-16.97 0z'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB specific
-$breadcrumb-back-icon:              str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$breadcrumb-divider-color}' viewBox='0 0 256 512'%3E%3Cpath d='M238.475 475.535l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L50.053 256 245.546 60.506c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0L10.454 247.515c-4.686 4.686-4.686 12.284 0 16.971l211.051 211.05c4.686 4.686 12.284 4.686 16.97-.001z'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB specific
+$breadcrumb-divider:                str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512'%3E%3Cpath d='M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z' fill='#{$breadcrumb-divider-color}'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB specific
+$breadcrumb-back-icon:              str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512'%3E%3Cpath d='M231.293 473.899l19.799-19.799c4.686-4.686 4.686-12.284 0-16.971L70.393 256 251.092 74.87c4.686-4.686 4.686-12.284 0-16.971L231.293 38.1c-4.686-4.686-12.284-4.686-16.971 0L4.908 247.515c-4.686 4.686-4.686 12.284 0 16.971L214.322 473.9c4.687 4.686 12.285 4.686 16.971-.001z' fill='#{$breadcrumb-divider-color}'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB specific
 $breadcrumb-divider-width:          15px !default; // SEB Specific
+$breadcrumb-divider-height:         1.5rem !default; // SEB Specific
 
 
 // Close
@@ -486,11 +506,15 @@ $scrollbar-thickness:     10px;
 
 // Accordion
 
+$accordion-icon:            $dropdown-icon !default; // SEB specific
+$accordion-icon-disabled:   str-replace($accordion-icon, str-replace(#{'fill=\'' + $blue + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $gray-400 + '\''}, "#", "%23")) !default; // SEB specific
+$accordion-bg-hover:        $gray-100 !default; // SEB specific
 $accordion-border-color:    $table-border-color !default; // SEB specific
 $accordion-border-width:    $table-border-width !default; // SEB specific
-$accordion-header-padding:  0 .75rem !default; // SEB specific
-$accordion-body-padding:    $table-cell-padding !default; // SEB specific
-$accordion-item-padding-y:  .5625rem !default; // SEB specific
-$accordion-item-padding-x:  0 !default; // SEB specific
+$accordion-header-padding:  0 !default; // SEB specific
+$accordion-body-padding:    0 1rem 1rem 2.5rem !default; // SEB specific
+$accordion-item-padding-y:  .5rem !default; // SEB specific
+$accordion-item-padding-x:  1rem !default; // SEB specific
 $accordion-body-bg:         transparent !default; // SEB specific
+$accordion-body-bg-active:  $accordion-bg-hover !default; // SEB specific
 $accordion-size:            .875rem !default; // SEB specific

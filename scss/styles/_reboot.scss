@@ -10,7 +10,8 @@ a {
     width: 0.875em;
     display: inline-block;
     vertical-align: -2px;
-    margin-left: ($spacer * .5);
+    margin-left: map-get($spacers, 1);
+    margin-right: map-get($spacers, 1);
   }
   &:hover::after {
     content: $external-link-hover-icon;

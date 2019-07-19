@@ -1,5 +1,5 @@
 <a name="accordion"><h2 class="my-3">Accordion</h2></a>
-<div class="alert alert-info mx-n3 mx-md-0">
+<div class="alert alert-warning alert-icon mx-n3 mx-md-0">
   <strong>Framework needed!</strong> Please note that the example below is just a representation of how accordions look and the needed markup. In order to use accordion you need a framework to control when and how to toggle between active states. If you're using angular, please take a look at <a class="alert-link" href="https://ng-bootstrap.github.io/" target="_blank">ng-bootstrap</a> and their <a class="alert-link" href="https://ng-bootstrap.github.io/#/components/accordion" target="_blank">accordion component</a>.</div>
 
 <div class="card mx-n3 mx-md-0">
@@ -17,15 +17,24 @@
       </ngb-panel>
       <ngb-panel id="static-2">
         <ng-template ngbPanelTitle>
-          <strong>Custom title</strong><i class="fal fa-heart ml-2"></i>
+          <span class="text-info">Custom title<i class="far fa-heart ml-2"></i></span>
         </ng-template>
         <ng-template ngbPanelContent>
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+          <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
           aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
           sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
           craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
           occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-          labore sustainable VHS.
+            labore sustainable VHS.</p>
+          <div class="form-row justify-content-end">
+            <div class="col-6 col-sm-auto">
+              <button class="btn btn-outline-primary w-100">Secondary</button>
+            </div>
+            <div class="col-6 col-sm-auto">
+              <button class="btn btn-primary w-100">Primary</button>
+            </div>
+          </div>
+
         </ng-template>
       </ngb-panel>
       <ngb-panel id="static-3" title="Disabled" [disabled]="true">
