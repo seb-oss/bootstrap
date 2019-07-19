@@ -1,7 +1,7 @@
 @import "../bootstrap-core/forms";
 
 // SEB Specific styles for labels
-label:not(.form-check-label,.custom-checkbox,.custom-radio,.custom-control-label), legend.col-form-legend {
+label:not(.form-check-label):not(.custom-checkbox):not(.custom-radio):not(.custom-control-label), legend.col-form-legend {
   font-weight: $font-weight-medium;
   margin-bottom: 0.25rem;
 }
