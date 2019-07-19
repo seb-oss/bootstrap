@@ -4,7 +4,7 @@
 
 // tabs
 
-.nav-tabs > .nav-item > .nav-link:not(.active, .disabled){
+.nav-tabs > .nav-item > .nav-link:not(.active):not(.disabled){
   &:hover {
     background: $nav-tabs-link-hover-bg;
     border-color: $nav-tabs-link-hover-bg;
