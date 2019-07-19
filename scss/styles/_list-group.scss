@@ -13,6 +13,24 @@
   margin-bottom: 0;
 }
 
+// States for ordered list groups
+
+.list-group-ordered > {
+  .list-group-item-success::before {
+    background: $success;
+    color: color-yiq($success);
+  }
+
+  .list-group-item-warning::before {
+    background: $warning;
+    color: color-yiq($warning);
+  }
+
+  .list-group-item-danger::before {
+    background: $danger;
+    color: color-yiq($danger);
+  }
+}
 
 // Interactive list items
 //
@@ -27,6 +45,7 @@
   text-align: inherit; // For `<button>`s (anchors inherit)
 
   &.active {
+    background: $list-group-action-hover-bg;
     &::before {
       background: $list-group-active-bg;
       color: $list-group-active-color;
@@ -93,6 +112,7 @@
   }
 
 }
+
 
 //Currently not in use
 //
@@ -161,9 +181,9 @@
 // Add modifier classes to change text and background color on individual items.
 // Organizationally, this must come after the `:hover` states.
 
-@each $color, $value in $theme-colors {
-  @include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
-}
+//@each $color, $value in $theme-colors {
+//  @include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
+//}
 
 
 
@@ -206,12 +226,19 @@
   counter-increment: list-order;
   border: none;
   padding: .5rem 2rem;
+  &.active {
+    background: $list-group-action-hover-bg;
+  }
+  &:focus {
+    outline: 0;
+    // box-shadow: 0 0 0 $input-btn-focus-width rgba($blue, .5) inset;
+  }
   &::before {
     content:counter(list-order);
     position:absolute;
     left: 0;
-    height: 24px;
-    width: 24px;
+    height: 1.5rem;
+    width: 1.5rem;
     text-align:center;
     display:inline-block;
     background: $list-group-bg;

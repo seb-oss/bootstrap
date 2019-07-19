@@ -20,16 +20,14 @@ button.btn.dropdown-toggle {
 
 
 .dropdown, .dropup {
-  &.is-valid, &.is-invalid {
-    .dropdown-toggle {
-      @if $enable-validation-icons {
+  @if $enable-validation-icons {
+    &.is-valid, &.is-invalid {
+      .dropdown-toggle {
         background-repeat: no-repeat;
         background-position: center right calc(#{$input-height-inner});
         background-size: calc(#{$input-height-inner} / 2) calc(#{$input-height-inner} / 2);
       }
     }
-  }
-  @if $enable-validation-icons {
     &.is-valid .dropdown-toggle {
       background-image: $form-feedback-icon-valid;
     }

@@ -17,3 +17,24 @@
     <exemplify [selector]="'.breadcrumb'"></exemplify>
   </div>
 </div>
+<div class="card mb-4 mx-n3 mx-md-0">
+  <h4 class="card-header">Breadcrumbs on dark or colored backgrounds</h4>
+  <div class="card-body">
+    <p>For better contrast against dark and colored backgrounds add the <code>.breadcrumbs-light</code> class to the breadcrumb element.</p>
+    <div class="alert bg-info-element">
+      <ol class="breadcrumb breadcrumb-light">
+        <li class="breadcrumb-item active">Home</li>
+      </ol>
+      <ol class="breadcrumb breadcrumb-light">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Library</li>
+      </ol>
+      <ol class="breadcrumb breadcrumb-light">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Library</a></li>
+        <li class="breadcrumb-item active">Data</li>
+      </ol>
+    </div>
+    <exemplify [selector]="'.breadcrumb'"></exemplify>
+  </div>
+</div>

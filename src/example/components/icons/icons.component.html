@@ -1,11 +1,14 @@
 <h2 class="my-3">Icons</h2>
 <div class="card">
   <div class="card-body">
-    <div class="alert alert-info">
-      <strong>Framework needed!</strong> This library doesn't include any icons so you need to install Font Awesome 5, which is the icon framework we're using, separately. We're using the light version which requires a pro version, if you're on SEB:s network you can read more about our license <a class="alert-link" href="https://github.sebank.se/seb-common/licenses/blob/master/font-awesome.md" target="_blank">here</a> otherwise contact <a class="alert-link" href="mailto:robert.hjalmers@seb.se">Robert Hjalmers</a> for more info.
+    <div class="alert alert-warning alert-icon">
+      <strong>Framework needed!</strong> This library doesn't include any icons so you need to install Font Awesome 5, which is the icon framework we're using, separately. We're using the regular version (previously we use the light version), if you're on SEB:s network you can read more about our license <a class="alert-link external" href="https://github.sebank.se/seb-common/licenses/blob/master/font-awesome.md" target="_blank">here</a> otherwise contact <a class="alert-link" href="mailto:robert.hjalmers@seb.se">Robert Hjalmers</a> for more info.
     </div>
-    <p>In order to try out Font Awesome 5 you need to install the icon framework . Once you've added the framework, you'll be able to use the icons with the following markup: <code>&lt;i class=&quot;fal fa-print&quot;&gt;&lt;/i&gt;</code> and change <code>print</code> to the name of the icon you'd like to use (see some of the available icons below).</p>
-    <h5>Icons</h5>
+    <div class="alert alert-info alert-icon">
+      <strong>Using angular?</strong> Great! Then you should follow <a class="alert-link external" href="https://github.sebank.se/seb-common/licenses/wiki/Install-and-use-with-Angular" target="_blank">these instructions</a> (if you're on SEB:s network) on how to use Font Awesome's Angular lib. If you don't have access to SEB:s network you can read more about how to get started with the Font Awesome framework for Angular <a class="alert-link external" href="https://github.com/FortAwesome/angular-fontawesome" target="_blank">here</a>.
+    </div>
+    <p>In order to try out Font Awesome 5 you need to install the icon framework. Once you've added the framework, you'll be able to use the icons with the following markup: <code>&lt;i class=&quot;far fa-print&quot;&gt;&lt;/i&gt;</code> and change <code>print</code> to the name of the icon you'd like to use (see some of the available icons below).</p>
+    <h4>Icons</h4>
     <div class="form-group row">
       <div class="col-12 col-md-auto">
         <label for="search_icon_input">Search</label>
@@ -14,16 +17,16 @@
     </div>
     <div class="row icon-list">
       <div class="col-6 col-md-4" *ngFor="let icon of filteredIcons">
-        <i class="{{'fal fa-' + icon}}"></i> <span class="ml-2">{{icon}}</span>
+        <i class="{{'far fa-' + icon}}"></i> <span class="ml-2">{{icon}}</span>
       </div>
     </div>
     <h5 class="mt-4">Sizing</h5>
     <p>Icons are available in 4 different sizes, add <code>fa-xx</code>(replace with one of the classes below) to adjust icon size. Even though bigger sizes are available we should avoid using them and consider using pictograms instead.</p>
     <div class="sizes">
-      <div><i class="fal fa-heart fa-xs"></i><span>fa-xs </span><small class="text-muted">(extra small, 12 px)</small></div>
-      <div><i class="fal fa-heart"></i><small class="text-muted">(normal, 16 px)</small></div>
-      <div><i class="fal fa-heart fa-lg"></i><span>fa-lg </span><small class="text-muted">(large, 24 px)</small></div>
-      <div><i class="fal fa-heart fa-2x"></i><span>fa-2x </span><small class="text-muted">(2x, 32 px)</small></div>
+      <div><i class="far fa-heart fa-xs"></i><span>fa-xs </span><small class="text-muted">(extra small, 12 px)</small></div>
+      <div><i class="far fa-heart"></i><small class="text-muted">(normal, 16 px)</small></div>
+      <div><i class="far fa-heart fa-lg"></i><span>fa-lg </span><small class="text-muted">(large, 24 px)</small></div>
+      <div><i class="far fa-heart fa-2x"></i><span>fa-2x </span><small class="text-muted">(2x, 32 px)</small></div>
     </div>
     <h5 class="mt-4">Do's and don'ts</h5>
     <label>Do</label>
@@ -38,7 +41,4 @@
       <li>Add colors to icons other than <span class="text-success">text-success</span>, <span class="text-warning">text-warning</span> or <span class="text-danger">text-danger</span> when applicable</li>
     </ul>
   </div>
-</div>
-<div style="text-align:center">
-  <fa-icon [icon]="faArrowAltRight"></fa-icon>
 </div>

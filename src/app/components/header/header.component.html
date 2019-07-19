@@ -9,16 +9,16 @@
           </svg>
         </div>
         <div class="col-auto align-self-center text-center px-3" (click)="toggleMenu()">
-          <i class="fal fa-bars fa-1x d-block"></i>
+          <i class="far fa-bars fa-1x d-block"></i>
           <div>Menu</div>
         </div>
       </div>
     </div>
     <div class="col d-md-none px-0" *ngIf="activeTab">
       <div class="row mobile-header h-100 align-items-center text-center no-gutters">
-        <div class="col" ngClass="{{activeTab === 'start' ? 'active':''}}" (click)="showMenu('start')"><i class="fal fa-home fa-1x d-block"></i>Start</div>
-        <div class="col" ngClass="{{activeTab === 'base' ? 'active':''}}" (click)="showMenu('base')"><i class="fal fa-font fa-1x d-block"></i>Base</div>
-        <div class="col" ngClass="{{activeTab === 'components' ? 'active':''}}" (click)="showMenu('components')"><i class="fal fa-bookmark fa-1x d-block"></i>Components</div>
+        <div class="col" ngClass="{{activeTab === 'start' ? 'active':''}}" (click)="showMenu('start')"><i class="far fa-home fa-1x d-block"></i>Start</div>
+        <div class="col" ngClass="{{activeTab === 'base' ? 'active':''}}" (click)="showMenu('base')"><i class="far fa-font fa-1x d-block"></i>Base</div>
+        <div class="col" ngClass="{{activeTab === 'components' ? 'active':''}}" (click)="showMenu('components')"><i class="far fa-bookmark fa-1x d-block"></i>Components</div>
       </div>
     </div>
     <div class="col align-self-center pl-3 d-none d-sm-flex">

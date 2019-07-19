@@ -79,7 +79,7 @@ export class MobileNavigationComponent implements OnInit {
 
   ngOnInit() {
     this.$activeTab = this.menuService.$activeTab;
-    this.$activeState = this.menuService.$menuItems
+    this.$activeState = this.menuService.$menuItems;
 
   }
 
