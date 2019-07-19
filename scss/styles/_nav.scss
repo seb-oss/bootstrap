@@ -16,3 +16,10 @@
     color: $nav-tabs-link-focus-color;
   }
 }
+
+.nav-tabs > .nav-item > .nav-link {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 $input-btn-focus-width rgba($blue, .5);
+  }
+}
