@@ -32,6 +32,27 @@
   }
 }
 
+@each $color, $value in $theme-colors {
+
+  // override the style of primary and info toast to match alerts
+  @if ($color == 'primary') or ($color == 'info') {
+    $value: map-get($theme-colors, 'secondary');
+  }
+
+  .toast.toast-#{$color} {
+    @include alert-variant($value, $value, theme-color-level($color, $alert-color-level));
+    @if index("danger" "warning" "success" "info", $color) {
+      @include alert-icon($value, $value, theme-color-level($color, $alert-color-level), $color);
+    }
+    &:hover {
+      @include gradient-bg(lighten($value, 7.5%));
+    }
+    .toast-close-button {
+      @include close($value);
+    }
+  }
+}
+
 .toast-header {
   display: flex;
   align-items: center;
