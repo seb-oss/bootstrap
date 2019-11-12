@@ -27,6 +27,7 @@ import {ToastContainerModule, ToastrModule} from 'ngx-toastr';
         closeButton: true,
         disableTimeOut: false,
         progressBar: true,
+        toastClass: 'toast',
         positionClass: 'toast-bottom-right',
         enableHtml: true
     }),
