@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {ToastrService} from 'ngx-toastr';
+import {Component, OnInit, QueryList, ViewChildren} from '@angular/core';
+import {ToastContainerDirective, ToastrService} from 'ngx-toastr';
 
 const toasts: Array<any> = [
     {
@@ -22,41 +22,51 @@ const toasts: Array<any> = [
 
 @Component({
     selector: 'app-toast-notifications',
-    templateUrl: './toast-notifications.component.html'
+    templateUrl: './toast-notifications.component.html',
+    styles: [`
+        code {
+          white-space: nowrap;
+        }
+    `]
 })
 export class ToastNotificationsComponent implements OnInit {
-    title = '';
-    message = '';
-    constructor(private toastr: ToastrService) { }
+  title = '';
+  message = '';
+  @ViewChildren(ToastContainerDirective) inlineContainers: QueryList<ToastContainerDirective>;
 
-    ngOnInit() {}
+  constructor(private toastr: ToastrService) { }
 
-    getToast() {
-        let m: string | undefined = this.message;
-        let t: string | undefined = this.title;
-        if (!this.title.length && !this.message.length) {
-            const randomMessage = toasts[Math.floor(Math.random() * Math.floor(toasts.length))];
-            m = randomMessage.message;
-            t = randomMessage.title;
-        }
-        return {
-            message: m,
-            title: t,
-        };
+  ngOnInit() {}
+
+  // generate random toast content
+  getToast() {
+    let m: string | undefined = this.message;
+    let t: string | undefined = this.title;
+    if (!this.title.length && !this.message.length) {
+      const randomMessage = toasts[Math.floor(Math.random() * Math.floor(toasts.length))];
+      m = randomMessage.message;
+      t = randomMessage.title;
     }
+    return {
+      message: m,
+      title: t,
+    };
+  }
 
-    showToast(type: 'info'| 'error' | 'warning' | 'success', disableTimeOut: boolean = false, inline: boolean = false ) {
-        let config = {};
-        if (disableTimeOut) {
-            config = {...config, disableTimeOut: true};
-        }
-        if (inline) {
-            config = {...config, positionClass: 'inline'};
-        }
-        const toast = this.getToast();
-
-        this.toastr[type](toast.message, toast.title, config);
-        // this.toastr.show('test', type, {}, 'toast-' + type);
+  // show toast
+  showToast(type: 'info'| 'error' | 'warning' | 'success', disableTimeOut: boolean = false, inline: boolean = false ) {
+    let config = {};
+    if (disableTimeOut) {
+      config = {...config, disableTimeOut: true};
     }
+    if (inline) {
+      this.toastr.overlayContainer = this.inlineContainers.toArray()[0];
+      config = {...config, positionClass: 'inline'};
+
+    }
+    const toast = this.getToast();
+
+    this.toastr[type](toast.message, toast.title, config);
+  }
 
 }

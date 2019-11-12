@@ -4,6 +4,7 @@ $enable-ng-bootstrap: true;
 $enable-ngx-toastr: true;
 
 @import "../scss/bootstrap";
+@import "~@sebgroup/ngx-toastr/scss/ngx-toastr";
 @import '~angular-exemplify/scss/prism-exemplify';
 
 exemplify > ul {

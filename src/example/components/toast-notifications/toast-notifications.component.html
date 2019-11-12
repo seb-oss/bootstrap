@@ -1,8 +1,59 @@
-<a name="modals"><h2 class="my-3">Toast notifications BETA!</h2></a>
-<div class="alert alert-warning alert-icon mx-n3 mx-md-0"><strong>Framework needed!</strong> Please note that the examples below uses a third-party library. Toast notifications use the same style and appearance as alerts but you need a framework to control when and how to show them. If you're using angular, please take a look at <a class="alert-link" href="https://scttcper.github.io/ngx-toastr/" target="_blank">ngx-toastr</a> for more info.</div>
+<h2 class="my-3">Toast notifications</h2>
+<div class="card my-3 mx-n3 mx-md-0">
+  <h4 class="card-header pb-o">Basic usage</h4>
+  <div class="card-body">
+    <p>Bootstrap provides classes for toasts i.e. you can just add <code>.toast</code> to an element get the basic appearance of a toast, however SEB:s take on toast notifications and their design is a bit simplified and inherits the style from alerts so the <a href="https://getbootstrap.com/docs/4.3/components/toasts/" target="_blank">bootstrap toast examples</a> need to be altered a bit. Just add <code>.toast</code> together with one of the following contextual classes.</p>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Context</th>
+        <th>Usage</th>
+        <th>Class name</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Info</td>
+        <td>Content that holds neutral information that we find useful for users and that we want to inform them about.</td>
+        <td><code>.toast-info</code></td>
+      </tr>
+      <tr>
+        <td>Success</td>
+        <td>Should be used as a response to an action or something that is considered to be positive or a success.</td>
+        <td><code>.toast-success</code></td>
+      </tr>
+      <tr>
+        <td>Warning</td>
+        <td>Not an error but important information for a user to consider or be aware of.</td>
+        <td><code>.toast-warning</code></td>
+      </tr>
+      <tr>
+        <td>Danger</td>
+        <td>Used for errors or when something goes wrong.</td>
+        <td><code>.toast-danger</code></td>
+      </tr>
+      </tbody>
+    </table>
+    <h4 class="mb-3 mt-4">Examples</h4>
+    <div class="toast toast-info show" role="alert" aria-live="assertive" aria-atomic="true">
+      A neutral toast message.
+    </div>
+    <div class="toast toast-success show" role="alert" aria-live="assertive" aria-atomic="true">
+      A success toast.
+    </div>
+    <div class="toast toast-warning show" role="alert" aria-live="assertive" aria-atomic="true">
+      A warning message.
+    </div>
+    <div class="toast toast-danger show" role="alert" aria-live="assertive" aria-atomic="true">
+      A toast for when something went wrong.
+    </div>
+    <exemplify [selector]="'.toast'"></exemplify>
+  </div>
+</div>
+<div class="alert alert-warning alert-icon mx-n3 mx-md-0"><strong>Framework needed!</strong> Please note that the examples above are just used to illustrate the appearance of toast notifications, and the markup could be reused with any framework or toast component as long as they use the toast class. Toast notifications use the same style and appearance as alerts but you need a framework to control when and how to show them. The examples below uses a third-party library for angular called ngx-toastr, if you're using angular, please take a look at <a class="alert-link" href="https://sebgroup.github.io/ngx-toastr/" target="_blank">@sebgroup/ngx-toastr</a> for more info on installation and usage.</div>
 <div class="card my-3 mx-n3 mx-md-0">
   <h4 class="card-header pb-0">Standard toast notifications</h4>
-  <div class="card-body"><p>By default toast notifications are positioned bottom right on desktop to avoid overlaying the navigation to the left. On tablets and smaller screens where the menu is hidden, they appear bottom left and on small screens (mobile devices) they use full width.</p>
+  <div class="card-body" id="standard"><p>By default toast notifications are positioned bottom right on desktop to avoid overlaying the navigation to the left. On tablets and smaller screens where the menu is hidden, they appear bottom left and on small screens (mobile devices) they use full width.</p>
     <div class="row">
       <div class="col-6 col-md-auto mb-3 mb-md-0">
         <button class="btn btn-primary w-100" (click)="showToast('info', true)">Show info</button>
@@ -17,11 +68,12 @@
         <button class="btn btn-primary w-100" (click)="showToast('error', true)">Show error</button>
       </div>
     </div>
+    <exemplify [selector]="'#standard > *:not(exemplify)'"></exemplify>
   </div>
 </div>
 <div class="card my-3 mx-n3 mx-md-0">
   <h4 class="card-header pb-0">Toast notifications with timeout</h4>
-  <div class="card-body"><p>These toasts will disappear after a set time.</p>
+  <div class="card-body" id="timeout"><p>These toasts will disappear after a set time.</p>
     <div class="row">
       <div class="col-6 col-md-auto mb-3 mb-md-0">
         <button class="btn btn-primary w-100" (click)="showToast('info')">Show info</button>
@@ -36,12 +88,13 @@
         <button class="btn btn-primary w-100" (click)="showToast('error')">Show error</button>
       </div>
     </div>
+    <exemplify [selector]="'#timeout > *:not(exemplify)'"></exemplify>
   </div>
 </div>
-<!--
-<div class="card my-3">
-  <h4 class="card-header">Inline toast notifications</h4>
-  <div class="card-body"><p>Below is a example of a standard modal opened with a backdrop.</p>
+<!--<div class="card my-3 mx-n3 mx-md-0">
+  <h4 class="card-header pb-0">Inline Toast notifications</h4>
+  <div class="card-body" id="inline"><p>These toasts will be added inline.</p>
+    <div toastContainer class="mb-3"></div>
     <div class="row">
       <div class="col-6 col-md-auto mb-3 mb-md-0">
         <button class="btn btn-primary w-100" (click)="showToast('info', true, true)">Show info</button>
@@ -55,7 +108,7 @@
       <div class="col-6 col-md-auto">
         <button class="btn btn-primary w-100" (click)="showToast('error', true, true)">Show error</button>
       </div>
-      <div toastContainer></div>
     </div>
+    <exemplify [selector]="'#inline > *:not(exemplify)'"></exemplify>
   </div>
 </div>-->
