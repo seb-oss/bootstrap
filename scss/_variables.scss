@@ -279,6 +279,12 @@ $table-head-color:            $headings-color !default;
 
 $table-expand-bg:               transparent !default; // SEB Specific
 
+$table-sort-active-color: $blue-dark !default; // SEB Specific
+$table-sort-active-hover-color: $link-hover-color !default; // SEB Specific
+$table-sort-hover-color: $gray-400 !default; // SEB Specific
+$table-sort-disabled-color: $gray-300 !default; // SEB Specific
+$table-sort-color: $gray-500 !default; // SEB Specific
+
 // Buttons + Forms
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
