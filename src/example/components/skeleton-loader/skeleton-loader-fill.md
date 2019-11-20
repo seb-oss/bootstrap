@@ -1,8 +1,8 @@
 ---
 title: Skeleton loader
 componentid: component-skeleton-loader
-variantid: default
-guid: some-random-and-unique-string
+variantid: fill
+guid: skeleton-loader-fill
 ---
 # Usage and description
 Use the skeleton loader as a placeholder for content that is still loading.
@@ -22,5 +22,9 @@ Why not just import skeleton-loader? Well in order for the styles to build we ne
 ## Base state
 This is the default state of the component
 ```html
-       <div class="skeleton-loader"></div>
+       <div class="skeleton-loader skeleton-loader-fill-sm"></div>
+
+       <div class="skeleton-loader skeleton-loader-fill"></div>
+
+       <div class="skeleton-loader skeleton-loader-fill-full"></div>
    ```
