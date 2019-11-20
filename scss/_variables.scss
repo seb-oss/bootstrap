@@ -191,6 +191,9 @@ $responsive-gutters: (
 $border-radius:               0 !default;
 $border-radius-lg:            0 !default;
 $border-radius-sm:            0 !default;
+$border-radius-utility:               .25rem !default; // SEB Specific
+$border-radius-utility-lg:            .3rem !default; // SEB Specific
+$border-radius-utility-sm:            .2rem !default; // SEB Specific
 
 $transition-slide-in-duration:.4s ease-in-out !default; // SEB Specific
 $transition-fade-duration:    .15s linear !default; // SEB Specific
