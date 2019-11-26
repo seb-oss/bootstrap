@@ -66,4 +66,6 @@
     // border-bottom: solid $table-border-color 2px;
   }
   border-bottom: solid $table-border-width $table-border-color;
+
+  @include table-sort();
 }

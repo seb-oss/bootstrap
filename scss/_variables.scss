@@ -101,7 +101,7 @@ $theme-icons: map-merge(
 
 $enable-caret:              true !default;
 $enable-rounded:            true !default;
-$enable-shadows:            false !default;
+$enable-shadows:            true !default;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;
 $enable-grid-classes:       true !default;
@@ -191,6 +191,9 @@ $responsive-gutters: (
 $border-radius:               0 !default;
 $border-radius-lg:            0 !default;
 $border-radius-sm:            0 !default;
+$border-radius-utility:               .25rem !default; // SEB Specific
+$border-radius-utility-lg:            .3rem !default; // SEB Specific
+$border-radius-utility-sm:            .2rem !default; // SEB Specific
 
 $transition-slide-in-duration:.4s ease-in-out !default; // SEB Specific
 $transition-fade-duration:    .15s linear !default; // SEB Specific
@@ -276,6 +279,12 @@ $table-head-color:            $headings-color !default;
 
 $table-expand-bg:               transparent !default; // SEB Specific
 
+$table-sort-active-color: $blue-dark !default; // SEB Specific
+$table-sort-active-hover-color: $link-hover-color !default; // SEB Specific
+$table-sort-hover-color: $gray-400 !default; // SEB Specific
+$table-sort-disabled-color: $gray-300 !default; // SEB Specific
+$table-sort-color: $gray-500 !default; // SEB Specific
+
 // Buttons + Forms
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
@@ -283,8 +292,9 @@ $table-expand-bg:               transparent !default; // SEB Specific
 $input-btn-padding-y:         .5625rem !default;
 $input-btn-padding-x:         1rem !default;
 $input-btn-padding-y-sm:      .28125rem !default;
+$input-btn-padding-x-sm:      .5rem !default;
 $input-btn-padding-y-lg:      .75rem !default;
-
+$input-btn-padding-x-lg:      1rem !default;
 
 // Buttons
 //
@@ -294,9 +304,17 @@ $btn-font-weight:             $font-weight-medium !default;
 $btn-disabled-opacity:        1 !default;
 $btn-disabled-color:          $gray-500 !default; // SEB specific
 
+$btn-box-shadow:              0 0 0 0 !default;
+$btn-active-box-shadow:       0 0 0 0 !default;
+
+
 $btn-border-radius:           4px !default;
 $btn-border-radius-lg:        4px !default;
 $btn-border-radius-sm:        4px !default;
+
+// Forms
+$input-box-shadow:                      0 0 0 0 !default;
+
 
 // Dropdowns
 //
@@ -316,12 +334,14 @@ $dropdown-item-padding-y:           .625rem !default;
 $dropdown-icon:                     str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z' fill='#{$blue}'/%3E%3C/svg%3E"), "#", "%23") !default;
 $dropdown-icon-active:              str-replace($dropdown-icon, str-replace(#{'fill=\'' + $blue + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $white + '\''}, "#", "%23")) !default; // SEB specific
 
+$dropdown-box-shadow:               0 .5rem 1rem rgba($black, .1) !default;
 
 // Forms
 
 $label-color:                           $headings-color !default; // SEB Specific
 
 $input-bg:                              $white !default;
+$input-border-color:                    $gray-400 !default;
 
 $input-border-radius:                   4px !default;
 $input-border-radius-lg:                4px !default;
@@ -346,6 +366,7 @@ $custom-select-bg-size:             16px 16px !default; // In pixels because ima
 $custom-select-indicator:           str-replace($dropdown-icon, str-replace(#{'fill=\'' + $blue + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $custom-select-indicator-color + '\''}, "#", "%23")) !default; // SEB specific
 $custom-select-border-radius:       4px !default;
 
+$custom-select-box-shadow:          $input-box-shadow !default;
 
 $custom-file-text: (
   en: "Browse"
@@ -392,6 +413,13 @@ $navbar-brand-font-size:            $font-size-base !default;
 $navbar-brand-font-weight:          $font-weight-medium !default; // SEB specific
 
 // Pagination
+$pagination-padding-y:              $input-btn-padding-y !default;// .5rem !default;
+$pagination-padding-x:              $input-btn-padding-x !default;
+$pagination-padding-y-sm:           $input-btn-padding-y-sm !default;//.25rem !default;
+$pagination-padding-x-sm:           $input-btn-padding-x-sm !default;
+$pagination-padding-y-lg:           $input-btn-padding-y-lg !default;//.75rem !default;
+$pagination-padding-x-lg:           $input-btn-padding-x-lg !default;
+$pagination-line-height:            1.5 !default;
 
 $pagination-hover-color:            $white !default;
 $pagination-hover-bg:               $blue !default;
@@ -400,11 +428,15 @@ $pagination-hover-border-color:     $blue !default;
 $pagination-active-bg:              $blue-dark !default;
 $pagination-active-border-color:    $blue-dark !default;
 
+$pagination-border-radius:          4px !default; // SEB Specific
+$pagination-border-color:           $input-border-color !default;
+
 
 
 // Jumbotron
 
 // Cards
+$card-box-shadow:                   0 1px 2px 0 rgba($black, .05) !default; // SEB specific
 
 // Tooltips
 $tooltip-bg:                        $gray-900 !default;
@@ -422,11 +454,18 @@ $badge-border-radius:               0 !default;
 
 $modal-content-border-color:        $white !default;
 $modal-content-border-radius:       0 !default;
+$modal-content-border-width:        0 !default;
+$modal-header-border-width:         1px !default;
+$modal-footer-border-width:         0 !default;
+
+
 
 $modal-footer-border-width:         0 !default;
 $modal-aside-width:                 320px !default; // SEB Specific
 $modal-aside-lg-width:              map_get($grid-breakpoints, 'md'); // 800px !default; // SEB Specific
 
+$modal-content-box-shadow-xs:       0 0 0 0 !default;
+$modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($black, .1) !default;
 
 // Alerts
 //
@@ -436,7 +475,7 @@ $alert-padding-x:                   1rem !default;
 $alert-border-radius:               $border-radius !default;
 $alert-link-font-weight:            $font-weight-medium !default; //500
 $alert-border-width:                0 !default;
-$alert-icon-width:                  1.125rem !default; // SEB Specific
+$alert-icon-width:                  1rem !default; // SEB Specific
 $alert-icon-height:                 1rem !default; // SEB Specific
 $alert-icon-padding: $alert-icon-width + ($alert-padding-x*2); // SEB Specific
 
@@ -446,7 +485,7 @@ $toast-border-radius:               $alert-border-radius !default; // SEB Specif
 $toast-margin-bottom:               .5rem !default; // SEB Specific
 $toast-padding:                     $alert-padding-x !default; // SEB Specific
 $toast-width:                       300px !default; // SEB Specific
-$toast-shadow:                      0 0 .5rem rgba(0, 0, 0, 0.15) !default; // SEB Specific
+$toast-box-shadow:                  0 0 .5rem rgba($black, .2) !default;
 $toast-transition:                  color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default; // SEB Specific
 
 

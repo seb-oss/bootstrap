@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="332" viewBox="0 0 768 332">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="content-mask">
+    <path id="content" class="cls-1" d="M768,688h768v332H768V688Zm0,0H988v48H768V688Zm0,64h308v96H768V752Zm0,112h418v96H768V864Zm324-112h444v96H1092V752Zm110,112h304v96H1202V864ZM768,976H956v44H768V976Zm204,0h154v44H972V976Z" transform="translate(-768 -688)"/>
+  </g>
+</svg>

@@ -1,4 +1,22 @@
 <a name="tables"><h2 class="my-3">Tables</h2></a>
+<div class="card mb-4 mx-n3 mx-md-0">
+  <h4 class="card-header">Include styles in your project</h4>
+  <div class="card-body">
+    <p>The styles are included by default if you import <code>'~@sebgroup/bootstrap/scss/bootstrap'</code> in your project (import to styles.scss if you're using angular-cli), to optimize your app you should however only import the parts you need (see import with minimal dependencies below).</p>
+    <exemplify [sources]="[{
+        'name':'default import',
+        'src':'@import \'~@sebgroup/bootstrap/scss/bootstrap\';\n','lang':'css'
+        },{
+        'name':'import with minimal dependencies',
+        'src':'/* functions, variables and mixins don\'t add css/size to project */\n' +
+        '@import \'~@sebgroup/bootstrap/scss/styles/functions\';\n'+
+        '@import \'~@sebgroup/bootstrap/scss/variables\';\n'+
+        '@import \'~@sebgroup/bootstrap/scss/mixins/mixins\';\n'+
+        '@import \'~@sebgroup/bootstrap/scss/styles/tables\'; /* <-- ADD THIS */\n'
+        ,'lang':'css'
+        }]"></exemplify>
+  </div>
+</div>
 <div class="alert alert-info alert-icon mx-n3 mx-md-0"><strong>Want more table features?</strong> The examples below shows the markup and classes needed when using standard html tables, if you're using angular and want support for sorting, filtering, search, export to CSV etc. please check out <a class="alert-link" href="https://hjalmers.github.io/angular-generic-table/" target="_blank">Angular Generic Table</a>.</div>
 <div class="row">
   <div class="col-md-6 mb-4">
@@ -246,5 +264,71 @@
         <exemplify [sources]="[{name:'markup', src: '<table class=&quot;table table-expandable&quot;>...</table>', lang:'markup'}]"></exemplify>
       </div>
     </div>
+  </div>
+</div>
+<div class="card mx-n3 mx-md-0" id="sortIcons">
+  <h4 class="card-header">Table sorting</h4>
+  <div class="card-body">
+    <p>You can add icons in two different ways:</p>
+    <ul class="list-group list-group-bullet mb-4">
+      <li class="list-group-item">Using predefined classes</li>
+      <li class="list-group-item">Custom class names with table-sort mixin</li>
+    </ul>
+    <h5>Using sort class</h5>
+    <p>To let the user know that a column is sortable you can add <code>sort</code> to the column header (<code>&lt;th&gt;</code> element) together with <code>sort-asc</code> or <code>sort-desc</code> to indicate how it's sorted. If sorting for some reason is disabled you can also add <code>disabled</code> to the column header.</p>
+    <div class="alert alert-info alert-icon">Please note that the table below is not really sortable (it's just plain html) and that it's just an example with the classes you need to add to get the icons.</div>
+    <table class="table">
+      <thead>
+      <tr>
+        <th class="sort">Sort enabled</th>
+        <th class="sort sort-asc">Sort ascending</th>
+        <th class="sort sort-desc">Sort descending</th>
+        <th class="sort disabled">Sort disabled</th>
+        <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Not sorted</td>
+        <td>Anthon</td>
+        <td>30</td>
+        <td>disabled</td>
+        <td>Normal column</td>
+      </tr>
+      <tr>
+        <td>Sort me</td>
+        <td>Bruno</td>
+        <td>20</td>
+        <td>not sortable right now</td>
+        <td>Not sortable</td>
+      </tr>
+      <tr>
+        <td>I'm sortable</td>
+        <td>Caesar</td>
+        <td>10</td>
+        <td>I'm disabled</td>
+        <td>Fixed order</td>
+      </tr>
+      </tbody>
+    </table>
+    <exemplify [selector]="'#sortIcons .table thead tr'"></exemplify>
+  </div>
+  <div class="card-body">
+    <h5>Using mixin and custom class names</h5>
+    <p>Perhaps you're using something else than boostrap or the table component you're using has a different markup. Then you can make use of our mixin.</p>
+    <exemplify [sources]="[{
+        'name':'mixin usage',
+        'src':'/* functions, variables and mixins don\'t add css/size to project */\n' +
+        '@import \'~@sebgroup/bootstrap/scss/styles/functions\';\n'+
+        '@import \'~@sebgroup/bootstrap/scss/variables\';\n'+
+        '@import \'~@sebgroup/bootstrap/scss/mixins/mixins\';\n'+
+        '\n'+
+        '/* class to wrap table sort (i.e. table class name) */\n' +
+        '.custom-table-class {\n' +
+        '/* include mixin\n@include table-sort(\n  $selector: \'.sort\',\n  $asc-selector: \'.sort-asc\',\n  $desc-selector: \'.sort-desc\',\n  $disabled-selector: \'.disabled\'\n) */\n' +
+        '  @include table-sort(\'.sort-class\', \'.sort-asc-class\', \'.sort-desc-class\',\'.sort-disabled-class\');\n' +
+        '}'
+        ,'lang':'css'
+        }]"></exemplify>
   </div>
 </div>
