@@ -482,6 +482,30 @@
                         {
                             "title": "Skeleton loader",
                             "componentid": "component-skeleton-loader",
+                            "variantid": "fill",
+                            "guid": "sdl-bootstrap-component-skeleton-loader-fill",
+                            "filename": "skeleton-loader-fill.md",
+                            "filepath": "components/skeleton-loader/skeleton-loader-fill.md",
+                            "shortpath": "components/skeleton-loader/skeleton-loader-fill",
+                            "longpath": "components/skeleton-loader/skeleton-loader-fill.md",
+                            "type": "file",
+                            "private": false
+                        },
+                        {
+                            "title": "Skeleton loader",
+                            "componentid": "component-skeleton-loader",
+                            "variantid": "skeleton-loader-table",
+                            "guid": "sdl-bootstrap-component-skeleton-loader-skeleton-loader-table",
+                            "filename": "skeleton-loader-table.md",
+                            "filepath": "components/skeleton-loader/skeleton-loader-table.md",
+                            "shortpath": "components/skeleton-loader/skeleton-loader-table",
+                            "longpath": "components/skeleton-loader/skeleton-loader-table.md",
+                            "type": "file",
+                            "private": false
+                        },
+                        {
+                            "title": "Skeleton loader",
+                            "componentid": "component-skeleton-loader",
                             "variantid": "default",
                             "guid": "sdl-bootstrap-component-skeleton-loader-default",
                             "filename": "skeleton-loader.md",
