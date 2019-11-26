@@ -9,7 +9,7 @@
   padding: $toast-padding;
   padding-left: 3rem;
   width: $toast-width;
-  box-shadow: $toast-shadow;
+  @include box-shadow($toast-box-shadow);
   pointer-events: auto;
   opacity: 0;
   @include border-radius($toast-border-radius);
