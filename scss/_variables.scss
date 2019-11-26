@@ -101,7 +101,7 @@ $theme-icons: map-merge(
 
 $enable-caret:              true !default;
 $enable-rounded:            true !default;
-$enable-shadows:            false !default;
+$enable-shadows:            true !default;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;
 $enable-grid-classes:       true !default;
@@ -304,9 +304,17 @@ $btn-font-weight:             $font-weight-medium !default;
 $btn-disabled-opacity:        1 !default;
 $btn-disabled-color:          $gray-500 !default; // SEB specific
 
+$btn-box-shadow:              0 0 0 0 !default;
+$btn-active-box-shadow:       0 0 0 0 !default;
+
+
 $btn-border-radius:           4px !default;
 $btn-border-radius-lg:        4px !default;
 $btn-border-radius-sm:        4px !default;
+
+// Forms
+$input-box-shadow:                      0 0 0 0 !default;
+
 
 // Dropdowns
 //
@@ -326,6 +334,7 @@ $dropdown-item-padding-y:           .625rem !default;
 $dropdown-icon:                     str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z' fill='#{$blue}'/%3E%3C/svg%3E"), "#", "%23") !default;
 $dropdown-icon-active:              str-replace($dropdown-icon, str-replace(#{'fill=\'' + $blue + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $white + '\''}, "#", "%23")) !default; // SEB specific
 
+$dropdown-box-shadow:               0 .5rem 1rem rgba($black, .1) !default;
 
 // Forms
 
@@ -357,6 +366,7 @@ $custom-select-bg-size:             16px 16px !default; // In pixels because ima
 $custom-select-indicator:           str-replace($dropdown-icon, str-replace(#{'fill=\'' + $blue + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $custom-select-indicator-color + '\''}, "#", "%23")) !default; // SEB specific
 $custom-select-border-radius:       4px !default;
 
+$custom-select-box-shadow:          $input-box-shadow !default;
 
 $custom-file-text: (
   en: "Browse"
@@ -426,6 +436,7 @@ $pagination-border-color:           $input-border-color !default;
 // Jumbotron
 
 // Cards
+$card-box-shadow:                   0 1px 2px 0 rgba($black, .05) !default; // SEB specific
 
 // Tooltips
 $tooltip-bg:                        $gray-900 !default;
@@ -443,11 +454,18 @@ $badge-border-radius:               0 !default;
 
 $modal-content-border-color:        $white !default;
 $modal-content-border-radius:       0 !default;
+$modal-content-border-width:        0 !default;
+$modal-header-border-width:         1px !default;
+$modal-footer-border-width:         0 !default;
+
+
 
 $modal-footer-border-width:         0 !default;
 $modal-aside-width:                 320px !default; // SEB Specific
 $modal-aside-lg-width:              map_get($grid-breakpoints, 'md'); // 800px !default; // SEB Specific
 
+$modal-content-box-shadow-xs:       0 0 0 0 !default;
+$modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($black, .1) !default;
 
 // Alerts
 //
@@ -467,7 +485,7 @@ $toast-border-radius:               $alert-border-radius !default; // SEB Specif
 $toast-margin-bottom:               .5rem !default; // SEB Specific
 $toast-padding:                     $alert-padding-x !default; // SEB Specific
 $toast-width:                       300px !default; // SEB Specific
-$toast-shadow:                      0 0 .5rem rgba(0, 0, 0, 0.15) !default; // SEB Specific
+$toast-box-shadow:                  0 0 .5rem rgba($black, .2) !default;
 $toast-transition:                  color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default; // SEB Specific
 
 
