@@ -65,7 +65,7 @@
     "@angular/core": "^8.2.13",
     "@angular/forms": "^8.2.13",
     "@angular/platform-browser": "^8.2.13",
-    "@angular/platform-browser-dynamic": "^8.2.13",
+    "@angular/platform-browser-dynamic": "^8.2.14",
     "@angular/router": "^8.2.13",
     "@fortawesome/angular-fontawesome": "^0.1.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
