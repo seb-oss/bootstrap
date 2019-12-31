@@ -42,30 +42,11 @@
     $active-border: $red-darker;
   }
 
-  // override success button
-  @if($submitted-bg == $success) {
-    $background: $blue-dark;
-    $color: $blue-dark;
-    $border: $blue-dark;
-    $hover-background: $blue;
-    $hover-border: $blue;
-    $active-background: $blue-darker;
-    $active-border: $blue-darker;
-  }
-
-  // override warning button
-  @if($submitted-bg == $warning) {
-    $background: $blue-dark;
-    $color: $blue-dark;
-    $border: $blue-dark;
-    $hover-background: $blue;
-    $hover-border: $blue;
-    $active-background: $blue-darker;
-    $active-border: $blue-darker;
-  }
-
-  // override info button
-  @if($submitted-bg == $info) {
+  @if($submitted-bg == $info) or  // override info button
+    ($submitted-bg == $warning) or // override warning button
+    ($submitted-bg == $success) or // override success button
+    ($submitted-bg == $primary) // override primary button
+  {
     $background: $blue-dark;
     $color: $blue-dark;
     $border: $blue-dark;
