@@ -8,7 +8,7 @@
       .modal-dialog {
         right: 0;
         position: fixed;
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(sm) {
           @include add-transition('slideInRight');
         }
       }
@@ -17,7 +17,7 @@
       .modal-dialog {
         left: 0;
         position: fixed;
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(sm) {
           @include add-transition('slideInLeft');
         }
       }
@@ -34,13 +34,13 @@
         border: none;
         width: $modal-aside-width;
       }
-      @include media-breakpoint-down('sm') {
+      @include media-breakpoint-down('xs') {
         .modal-content {
           width: 100vw;
         }
       }
     }
-    .modal-lg.modal-dialog {
+    .modal-dialog.modal-lg {
       max-width: 100vw;
       .modal-content {
         width: 100vw;
@@ -52,7 +52,7 @@
       }
     }
   }
-  @include media-breakpoint-down('sm') {
+  @include media-breakpoint-down('xs') {
     .modal-dialog, .modal-content {
       border: none;
       width: 100vw;
@@ -75,7 +75,7 @@
   }
   .modal-dialog {
     @include add-transition('slideInDown');
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
       @include add-transition('fadeInUp');
     }
     //@include fade-in-up()
