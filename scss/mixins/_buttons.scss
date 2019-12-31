@@ -132,9 +132,9 @@
   // store submitted background
   $submitted-color: $color;
   $bg-hover: $blue;
-  $active-bg: $blue-dark;
-  $color: $blue-dark;
-  $border-color: $submitted-color;
+  $active-bg: $blue-darker;
+  $color: $blue-darker;
+  $border-color: $blue-dark;
 
   // override danger button
   @if($submitted-color == $danger) {
@@ -143,7 +143,6 @@
     $active-bg: $red-darker;
     $border-color: $red-dark;
   }
-
 
   color: $color;
   background-color: transparent;
