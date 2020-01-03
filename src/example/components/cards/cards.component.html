@@ -1,8 +1,9 @@
 <a name="cards"><h2 class="my-3">Cards</h2></a>
-<div class="card mx-n3 mx-md-0">
+<app-include [components]="components"></app-include>
+<div class="card mb-4 mx-n3 mx-md-0">
   <div class="card-body" id="cardExample">
     <h4 class="card-title">Card with header and content</h4>
-    <p class="mb-3">For more info and examples please refer to Bootstraps <a href="http://getbootstrap.com/docs/4.1/components/card/" target="_blank">official documentation</a>.</p>
+    <p class="mb-3">For more info and examples please refer to Bootstraps <a href="http://getbootstrap.com/docs/4.4/components/card/" target="_blank">official documentation</a>.</p>
     <div class="bg-light p-5">
       <div class="card">
         <h4 class="card-header">Card header</h4>
@@ -13,5 +14,186 @@
       </div>
     </div>
     <exemplify [selector]="'#cardExample .card'"></exemplify>
+  </div>
+</div>
+<div class="card mb-4 mx-n3 mx-md-0">
+  <div class="card-body" id="cardGridExample">
+    <h4 class="card-title">Cards in grid with equal height and card footer</h4>
+    <p class="mb-3">For more info and examples please refer to Bootstraps <a href="http://getbootstrap.com/docs/4.4/components/card/" target="_blank">official documentation</a>.</p>
+    <div class="bg-light p-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+        <div class="col mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer border-top-0">
+              <div class="form-row justify-content-between">
+                <div class="col-12 col-sm-auto mb-3 mb-sm-0">
+                  <button class="btn btn-secondary w-100">Secondary</button>
+                </div>
+                <div class="col-12 col-sm-auto">
+                  <button class="btn btn-primary w-100">Primary</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">This is a short card.</p>
+            </div>
+            <div class="card-footer border-top-0">
+              <div class="form-row justify-content-between">
+                <div class="col-12 col-sm-auto mb-3 mb-sm-0">
+                  <button class="btn btn-secondary w-100">Secondary</button>
+                </div>
+                <div class="col-12 col-sm-auto">
+                  <button class="btn btn-primary w-100">Primary</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <div class="card-footer border-top-0">
+              <div class="form-row justify-content-between">
+                <div class="col-12 col-sm-auto mb-3 mb-sm-0">
+                  <button class="btn btn-secondary w-100">Secondary</button>
+                </div>
+                <div class="col-12 col-sm-auto">
+                  <button class="btn btn-primary w-100">Primary</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer border-top-0">
+              <div class="form-row justify-content-between">
+                <div class="col-12 col-sm-auto mb-3 mb-sm-0">
+                  <button class="btn btn-secondary w-100">Secondary</button>
+                </div>
+                <div class="col-12 col-sm-auto">
+                  <button class="btn btn-primary w-100">Primary</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <exemplify [selector]="'#cardGridExample .row.row-cols-1.row-cols-md-2.row-cols-xl-3'"></exemplify>
+  </div>
+</div>
+<div class="card mb-4 mx-n3 mx-md-0">
+  <div class="card-body" id="cardColumnExample">
+    <h4 class="card-title">Cards in columns</h4>
+    <p>Flex-box container with column layout will layout all items from top to bottom and left to right by default and create a masonry-like layout. By default <code>.card-columns</code> use 3 columns for screen sizes <code>sm</code> and up. You can make the layout responsive by adding custom css as seen in the example below.</p>
+    <p class="mb-3">For more info and examples please refer to Bootstraps <a href="http://getbootstrap.com/docs/4.4/components/card/" target="_blank">official documentation</a>.</p>
+    <div class="bg-light p-5">
+      <div class="card-columns">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="form-row justify-content-between">
+                <div class="col-12 col-sm-auto mb-3 mb-sm-0">
+                  <button class="btn btn-secondary w-100">Secondary</button>
+                </div>
+                <div class="col-12 col-sm-auto">
+                  <button class="btn btn-primary w-100">Primary</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">This is a short card.</p>
+              <div class="form-row justify-content-between">
+                <div class="col-12 col-sm-auto mb-3 mb-sm-0">
+                  <button class="btn btn-secondary w-100">Secondary</button>
+                </div>
+                <div class="col-12 col-sm-auto">
+                  <button class="btn btn-primary w-100">Primary</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+              <div class="form-row justify-content-between">
+                <div class="col-12 col-sm-auto mb-3 mb-sm-0">
+                  <button class="btn btn-secondary w-100">Secondary</button>
+                </div>
+                <div class="col-12 col-sm-auto">
+                  <button class="btn btn-primary w-100">Primary</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="form-row justify-content-between">
+                <div class="col-12 col-sm-auto mb-3 mb-sm-0">
+                  <button class="btn btn-secondary w-100">Secondary</button>
+                </div>
+                <div class="col-12 col-sm-auto">
+                  <button class="btn btn-primary w-100">Primary</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="form-row justify-content-between">
+              <div class="col-12 col-sm-auto mb-3 mb-sm-0">
+                <button class="btn btn-secondary w-100">Secondary</button>
+              </div>
+              <div class="col-12 col-sm-auto">
+                <button class="btn btn-primary w-100">Primary</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <exemplify [selector]="'#cardGridExample .row.row-cols-1.row-cols-md-2.row-cols-xl-3'" [sources]="[{
+          'name':'scss for responsive grid columns',
+          'src':
+          '/* custom scss for responsive column count */\n' +
+          '/* adjust to fit your use case and add to your project/component */\n' +
+          '@import \'~@sebgroup/bootstrap/scss/core\';\n'+
+          '.card-columns {\n'+
+          '  column-count: 1;\n'+
+          '  @include media-breakpoint-up(md) {\n'+
+          '    column-count: 2;\n'+
+          '  }\n'+
+          '  @include media-breakpoint-only(xl) {\n'+
+          '    column-count: 3;\n'+
+          '  }\n'+
+          '}'
+          ,'lang':'css'
+          }]"></exemplify>
   </div>
 </div>

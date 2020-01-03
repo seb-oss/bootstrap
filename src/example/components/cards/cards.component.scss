@@ -1,0 +1,10 @@
+@import '../../../../scss/core';
+.card-columns {
+  column-count: 1;
+  @include media-breakpoint-up(md) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 3;
+  }
+}
