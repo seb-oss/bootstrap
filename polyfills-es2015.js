@@ -6496,4 +6496,3 @@ module.exports = __webpack_require__(/*! /home/travis/build/sebgroup/bootstrap/n
 /***/ })
 
 },[[2,"runtime"]]]);
-//# sourceMappingURL=polyfills-es2015.js.map
