@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ScssImport} from '../../../app/interfaces/scss-import';
 
 @Component({
   selector: 'app-skeleton-loader',
@@ -10,15 +11,16 @@ import { Component, OnInit } from '@angular/core';
           z-index: 10;
           opacity: 0.5;
       }
-  `]
+  `],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SkeletonLoaderComponent implements OnInit {
+export class SkeletonLoaderComponent {
 
   showOverlay: boolean = false;
-  constructor() { }
-
-  ngOnInit() {
-
-  }
+  components: Array<ScssImport> = [{
+    title: 'skeleton loaders',
+    fileName: 'skeleton-loader',
+    comment: 'skeleton loaders'
+  }];
 
 }

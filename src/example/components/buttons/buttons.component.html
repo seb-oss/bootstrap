@@ -1,23 +1,36 @@
 <a name="buttons"><h2 class="my-3">Buttons</h2></a>
+<app-include [components]="components"></app-include>
 <div class="card mb-4 mx-n3 mx-md-0" id="buttonsExample">
   <h4 class="card-header">Button styles and modifiers</h4>
   <div class="card-body">
     <p>Bootstrap have a few different modifiers that can be used with buttons, we primarily use <code>.btn-primary</code>, <code>.btn-secondary</code> and <code>.btn-link</code>, use the latter to give buttons the same behavior as normal links (used for links placed outside text segments and paragraphs as well as actions similar to "go to" or regular links). You can also use the outline version if you want an "inverted" button with border. Note that we only support <code>.btn-primary</code>,<code>.btn-secondary</code>,<code>.btn-light</code>,<code>.btn-danger</code> and <code>.btn-dark</code> from bootstrap, if you use any of the others they will fall back to the primary style.</p>
     <label class="d-block">Standard</label>
     <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-danger">Danger (delete)</button>
     <button type="button" class="btn btn-secondary">Secondary</button>
     <button type="button" class="btn btn-link">Link</button>
+    <label class="d-block mt-3">Outlined</label>
     <button type="button" class="btn btn-outline-primary">Primary outlined</button>
-    <button type="button" class="btn btn-danger">Danger (delete)</button>
     <button type="button" class="btn btn-outline-danger">Danger outlined</button>
-    <button type="button" class="btn btn-outline-danger border-transparent">Danger no border</button>
+    <button type="button" class="btn btn-outline-danger border-transparent">Danger without border</button>
     <label class="d-block mt-3">Disabled</label>
     <button type="button" class="btn btn-primary disabled">Primary</button>
+    <button type="button" class="btn btn-outline-primary disabled">Primary outlined</button>
     <button type="button" class="btn btn-secondary disabled">Secondary</button>
     <button type="button" class="btn btn-link disabled">Link</button>
-    <button type="button" class="btn btn-outline-primary disabled">Primary-outlined</button>
     <exemplify [selector]="'#buttonsExample .btn:not(.disabled)'"></exemplify>
+    <h4 class="card-header mt-3">Close button</h4>
+    <div class="card-body" id="buttonCloseExample">
+      <p>Add <code>.close</code> to a button to get correct style and icon for a close button. The button will be right aligned by default. Use inside modals and other components that can be closed.</p>
+      <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <exemplify [selector]="'#buttonCloseExample .close'"></exemplify>
+    </div>
   </div>
+</div>
+<div class="card mb-4 mx-n3 mx-md-0">
+
 </div>
 <div class="card mb-4 mx-n3 mx-md-0" id="buttonsLightExample">
   <h4 class="card-header">Buttons and colored backgrounds</h4>
