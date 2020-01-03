@@ -29,10 +29,10 @@ button.btn.dropdown-toggle {
       }
     }
     &.is-valid .dropdown-toggle {
-      background-image: $form-feedback-icon-valid;
+      background-image: escape-svg($form-feedback-icon-valid);
     }
     &.is-invalid .dropdown-toggle {
-      background-image: $form-feedback-icon-invalid;
+      background-image: escape-svg($form-feedback-icon-invalid);
     }
   }
 }
