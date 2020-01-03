@@ -12,29 +12,29 @@
   .input-group-append .btn:not(:hover):not(:active):not(:focus){
     border-color: $input-border-color;
     border-left:none;
-    padding-left: calc(#{$btn-padding-x} + 1px);
+    padding-left: add(#{$btn-padding-x}, 1px);
   }
   .input-group-prepend .btn:not(:hover):not(:active):not(:focus) {
     border-color: $input-border-color;
     border-right:none;
-    padding-right: calc(#{$btn-padding-x} + 1px);
+    padding-right: add(#{$btn-padding-x}, 1px);
   }
 }
 .input-group-sm {
   .input-group-append .btn:not(:hover):not(:active):not(:focus) {
-    padding-left: calc(#{$btn-padding-x-sm} + 1px);
+    padding-left: add(#{$btn-padding-x-sm}, 1px);
   }
   .input-group-prepend .btn:not(:hover):not(:active):not(:focus) {
-    padding-right: calc(#{$btn-padding-x-sm} + 1px);
+    padding-right: add(#{$btn-padding-x-sm}, 1px);
   }
 }
 
 .input-group-lg {
   .input-group-append .btn:not(:hover):not(:active):not(:focus) {
-    padding-left: calc(#{$btn-padding-x-lg} + 1px);
+    padding-left: add(#{$btn-padding-x-lg}, 1px);
   }
   .input-group-prepend .btn:not(:hover):not(:active):not(:focus) {
-    padding-right: calc(#{$btn-padding-x-lg} + 1px);
+    padding-right: add(#{$btn-padding-x-lg}, 1px);
   }
 }
 

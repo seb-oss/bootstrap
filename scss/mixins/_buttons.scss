@@ -42,30 +42,11 @@
     $active-border: $red-darker;
   }
 
-  // override success button
-  @if($submitted-bg == $success) {
-    $background: $blue-dark;
-    $color: $blue-dark;
-    $border: $blue-dark;
-    $hover-background: $blue;
-    $hover-border: $blue;
-    $active-background: $blue-darker;
-    $active-border: $blue-darker;
-  }
-
-  // override warning button
-  @if($submitted-bg == $warning) {
-    $background: $blue-dark;
-    $color: $blue-dark;
-    $border: $blue-dark;
-    $hover-background: $blue;
-    $hover-border: $blue;
-    $active-background: $blue-darker;
-    $active-border: $blue-darker;
-  }
-
-  // override info button
-  @if($submitted-bg == $info) {
+  @if($submitted-bg == $info) or  // override info button
+    ($submitted-bg == $warning) or // override warning button
+    ($submitted-bg == $success) or // override success button
+    ($submitted-bg == $primary) // override primary button
+  {
     $background: $blue-dark;
     $color: $blue-dark;
     $border: $blue-dark;
@@ -96,6 +77,9 @@
 
   &:focus,
   &.focus {
+    color: color-yiq($hover-background);
+    @include gradient-bg($hover-background);
+    border-color: $hover-border;
     // Avoid using mixin so we can pass custom focus shadow properly
     @if $enable-shadows {
       box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
@@ -151,9 +135,9 @@
   // store submitted background
   $submitted-color: $color;
   $bg-hover: $blue;
-  $active-bg: $blue-dark;
-  $color: $blue-dark;
-  $border-color: $submitted-color;
+  $active-bg: $blue-darker;
+  $color: $blue-darker;
+  $border-color: $blue-dark;
 
   // override danger button
   @if($submitted-color == $danger) {
@@ -163,13 +147,12 @@
     $border-color: $red-dark;
   }
 
-
   color: $color;
   background-color: transparent;
   background-image: none;
   border-color: $border-color;
 
-  @include hover {
+  @include hover() {
     color: $color-hover;
     background-color: $bg-hover; // $color;
     border-color: $bg-hover; // $color;

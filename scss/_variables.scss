@@ -302,6 +302,7 @@ $input-btn-padding-x-lg:      1rem !default;
 
 $btn-font-weight:             $font-weight-medium !default;
 $btn-disabled-opacity:        1 !default;
+$btn-white-space:             nowrap !default; // Set to `nowrap` to prevent text wrapping
 $btn-disabled-color:          $gray-500 !default; // SEB specific
 
 $btn-box-shadow:              0 0 0 0 !default;
@@ -437,6 +438,7 @@ $pagination-border-color:           $input-border-color !default;
 
 // Cards
 $card-box-shadow:                   0 1px 2px 0 rgba($black, .05) !default; // SEB specific
+$card-columns-margin:               $spacer !default;
 
 // Tooltips
 $tooltip-bg:                        $gray-900 !default;
@@ -504,6 +506,8 @@ $list-group-action-active-color:    $white !default;
 $list-group-active-bg:              $dark !default;
 $list-group-disabled-color:         $gray-500 !default;
 $list-group-disabled-bg:            $gray-200 !default;
+$list-group-border-color:           $gray-300 !default;
+
 
 
 // Image thumbnails

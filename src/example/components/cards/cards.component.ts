@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ScssImport} from '../../../app/interfaces/scss-import';
 
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
-  styles: []
+  styleUrls: ['./cards.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CardsComponent implements OnInit {
+export class CardsComponent {
 
+  components: Array<ScssImport> = [{
+    title: 'cards',
+    fileName: 'card',
+    comment: 'cards'
+  }];
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }
