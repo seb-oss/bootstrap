@@ -103,7 +103,7 @@
     "codelyzer": "^5.2.1",
     "commitizen": "^2.10.1",
     "copyfiles": "^2.1.0",
-    "cz-conventional-changelog": "^2.1.0",
+    "cz-conventional-changelog": "^3.1.0",
     "eyes.selenium": "0.0.83",
     "fancy-log": "^1.3.3",
     "gulp": "^4.0.0",
