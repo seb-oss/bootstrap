@@ -4,7 +4,9 @@
  */
 
 // set font path
-$seb-font-path: "../fonts" !default;
+// $seb-font-path: "../fonts" !default;
+$seb-font-path: "https://unpkg.com/browse/@sebgroup/fonts/fonts/" !default;
+
 
 // load bootstrap
 @import "load-bootstrap";
