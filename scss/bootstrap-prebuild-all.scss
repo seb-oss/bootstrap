@@ -1,7 +1,7 @@
 // set font path
-$seb-font-path: "../fonts" !default;
+// $seb-font-path: "../fonts" !default;
+$seb-font-path: "https://unpkg.com/browse/@sebgroup/fonts/fonts/" !default;
 
-$enable-ng-bootstrap:           true; // SEB Specific
 $enable-angular-generic-table:  true; // SEB Specific
 
 // load bootstrap
