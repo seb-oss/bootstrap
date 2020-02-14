@@ -128,7 +128,7 @@
     "protractor": "^5.4.2",
     "raw-loader": "^0.5.1",
     "renamer": "^1.1.4",
-    "replace": "^1.1.3",
+    "replace": "^1.1.5",
     "rimraf": "^2.7.1",
     "semantic-release": "^15.14.0",
     "start-server-and-test": "^1.10.6",
