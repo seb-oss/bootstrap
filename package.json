@@ -134,7 +134,7 @@
     "start-server-and-test": "^1.10.6",
     "travis-deploy-once": "^5.0.11",
     "ts-node": "~7.0.0",
-    "tslint": "~5.9.1",
+    "tslint": "~6.1.0",
     "typescript": "~3.5.3"
   },
   "repository": {
