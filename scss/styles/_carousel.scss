@@ -1,1 +1,17 @@
 @import "../bootstrap-core/carousel";
+
+.carousel-item-next:not(.carousel-item-left),
+.active.carousel-item-right {
+  z-index: 1;
+}
+
+.carousel-item-prev:not(.carousel-item-right),
+.active.carousel-item-left {
+  z-index: 1;
+}
+
+.carousel-fade {
+    .carousel-item {
+        display: block;
+    }
+}
