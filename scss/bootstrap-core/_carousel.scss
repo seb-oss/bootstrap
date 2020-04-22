@@ -45,11 +45,13 @@
 .carousel-item-next:not(.carousel-item-left),
 .active.carousel-item-right {
   transform: translateX(100%);
+  z-index: 1;
 }
 
 .carousel-item-prev:not(.carousel-item-right),
 .active.carousel-item-left {
   transform: translateX(-100%);
+  z-index: 1;
 }
 
 
@@ -67,15 +69,12 @@
   .carousel-item.active,
   .carousel-item-next.carousel-item-left,
   .carousel-item-prev.carousel-item-right {
-    z-index: 1;
     opacity: 1;
   }
 
   .active.carousel-item-left,
   .active.carousel-item-right {
-    z-index: 0;
     opacity: 0;
-    @include transition(opacity 0s $carousel-transition-duration);
   }
 }
 
