@@ -1,15 +1,20 @@
 @import "../bootstrap-core/carousel";
 
+/**
+ * TODO: This fixes the default `slide` transition, should be removed when it's fixed in Bootstrap
+ * See Pull request [#315](https://github.com/sebgroup/bootstrap/pull/315)
+ */
 .carousel-item-next:not(.carousel-item-left),
-.active.carousel-item-right {
-  z-index: 1;
-}
-
 .carousel-item-prev:not(.carousel-item-right),
+.active.carousel-item-right,
 .active.carousel-item-left {
   z-index: 1;
 }
 
+/**
+ * TODO: This fixes the `fade` transition, should be removed when it's fixed in Bootstrap
+ * See Pull request [#315](https://github.com/sebgroup/bootstrap/pull/315)
+ */
 .carousel-fade {
     .carousel-item {
         display: block;
