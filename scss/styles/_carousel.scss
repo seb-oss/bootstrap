@@ -16,7 +16,25 @@
  * See Pull request [#315](https://github.com/sebgroup/bootstrap/pull/315)
  */
 .carousel-fade {
-    .carousel-item {
-        display: block;
+  .carousel-item {
+    &.carousel-item-next.carousel-item-left,
+    &.carousel-item-prev.carousel-item-right {
+      animation: fade-in $carousel-transition-duration forwards;
     }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
 }
