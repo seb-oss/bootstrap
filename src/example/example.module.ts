@@ -19,7 +19,7 @@ import {RouterModule} from '@angular/router';
 import { IconsComponent } from './components/icons/icons.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faArrowAltRight } from '@fortawesome/pro-light-svg-icons';
+import { faArrowAltRight } from '@fortawesome/pro-regular-svg-icons';
 import { InputGroupComponent } from './components/input-group/input-group.component';
 import { ListGroupComponent } from './components/list-group/list-group.component';
 import { DropdownsComponent } from './components/dropdowns/dropdowns.component';
