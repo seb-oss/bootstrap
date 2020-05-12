@@ -17,9 +17,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CheckboxesAndSlideTogglesComponent } from './components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component';
 import {RouterModule} from '@angular/router';
 import { IconsComponent } from './components/icons/icons.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faArrowAltRight } from '@fortawesome/pro-light-svg-icons';
 import { InputGroupComponent } from './components/input-group/input-group.component';
 import { ListGroupComponent } from './components/list-group/list-group.component';
 import { DropdownsComponent } from './components/dropdowns/dropdowns.component';
@@ -40,7 +37,6 @@ import { ToastNotificationsComponent } from './components/toast-notifications/to
 import {SpinnersComponent} from './components/spinners/spinners.component';
 import { ButtonGroupComponent } from './components/button-group/button-group.component';
 import {IncludeComponent} from '../app/components/include/include.component';
-library.add(faArrowAltRight);
 
 @NgModule({
   imports: [
@@ -49,8 +45,7 @@ library.add(faArrowAltRight);
     HttpClientModule,
     ExemplifyModule,
     RouterModule,
-    NgbModule,
-    FontAwesomeModule
+    NgbModule
   ],
   declarations: [
       ButtonsComponent,
