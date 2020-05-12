@@ -1,14 +1,7 @@
 dist: trusty
 sudo: false
 addons:
-  chrome: stable
-  apt:
-    update: true
-    sources:
-      - google-chrome
-    packages:
-      - dpkg
-      - google-chrome-stable
+  chrome: beta
 language: node_js
 node_js: lts/*
 
