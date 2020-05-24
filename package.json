@@ -92,7 +92,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
-    "backstopjs": "^3.8.8",
+    "backstopjs": "^5.0.1",
     "body-scroll-lock": "^2.7.1",
     "bootstrap": "^4.4.1",
     "clean-css-cli": "^4.2.1",
