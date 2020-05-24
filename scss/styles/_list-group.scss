@@ -11,6 +11,7 @@
   // No need to set list-style: none; since .list-group-item is block level
   padding-left: 0; // reset padding because ul and ol
   margin-bottom: 0;
+  @include border-radius($list-group-border-radius);
 }
 
 // States for ordered list groups
@@ -88,12 +89,12 @@
   display: block;
 
   &:first-child {
-    @include border-top-radius($list-group-border-radius);
+    @include border-top-radius(inherit);
   }
 
   &:last-child {
     margin-bottom: 0;
-    @include border-bottom-radius($list-group-border-radius);
+    @include border-bottom-radius(inherit);
   }
 
   &.active::before {
@@ -127,7 +128,7 @@
 //    .list-group-horizontal#{$infix} {
 //      flex-direction: row;
 //
-//      .list-group-item {
+//      > .list-group-item {
 //        margin-right: -$list-group-border-width;
 //        margin-bottom: 0;
 //
