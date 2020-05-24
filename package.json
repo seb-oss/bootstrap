@@ -94,7 +94,7 @@
     "babel-register": "^6.26.0",
     "backstopjs": "^5.0.1",
     "body-scroll-lock": "^2.7.1",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.5.0",
     "clean-css-cli": "^4.2.1",
     "codelyzer": "^5.2.2",
     "commitizen": "^2.10.1",
