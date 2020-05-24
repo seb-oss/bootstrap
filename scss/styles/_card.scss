@@ -278,7 +278,6 @@
 .card {
   @include box-shadow($card-box-shadow);//rgba(0,0,0,.05) 0 1px 2px 0;
   border: none;
-  border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 .card-header + .card-body {
