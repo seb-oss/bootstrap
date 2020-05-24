@@ -11,7 +11,7 @@
     color: color-yiq($background);
     text-decoration: underline;
     &:hover {
-      color: $link-hover-color;
+      color: transparentize(color-yiq($background), 0.25);
     }
     &.external:not(:hover):after {
       content: str-replace($external-link-icon, str-replace(#{'fill=\'' + $external-link-icon-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + color-yiq($background) + '\''}, "#", "%23"));
