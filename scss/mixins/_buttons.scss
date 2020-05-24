@@ -166,7 +166,7 @@
   &.disabled,
   &:disabled {
     color: $btn-disabled-color;
-    background-color: $gray-100;
+    background-color: transparent;
     border-color: $btn-disabled-color;
   }
 
