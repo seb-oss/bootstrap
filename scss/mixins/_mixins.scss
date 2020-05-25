@@ -9,6 +9,7 @@
 @import "../bootstrap-core/mixins/deprecate";
 
 // Utilities
+@import "focus"; // SEB Specific
 @import "../bootstrap-core/mixins/breakpoints";
 @import "../bootstrap-core/mixins/hover";
 @import "../bootstrap-core/mixins/image";

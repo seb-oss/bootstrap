@@ -1,0 +1,3 @@
+@mixin focus($color) {
+  box-shadow: 0 0 .25rem 1px transparentize(darken($color, 1), .25);
+}

@@ -84,7 +84,8 @@
       @include box-shadow($btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5));
     } @else {
       // Avoid using mixin so we can pass custom focus shadow properly
-      box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+      // box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+      @include focus($border);
     }
   }
 
@@ -160,7 +161,8 @@
 
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 $input-btn-focus-width rgba($color, .5);
+    //box-shadow: 0 0 0 $input-btn-focus-width rgba($color, .5);
+    @include focus($color);
   }
 
   &.disabled,
