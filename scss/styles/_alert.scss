@@ -86,7 +86,7 @@
 
 @each $color, $value in $theme-colors {
   // override the style of primary and info alerts
-  @if ($color == 'primary') or ($color == 'info') {
+  @if ($color == 'primary') {
     $value: map-get($theme-colors, 'secondary');
   }
   .alert-#{$color} {
@@ -103,7 +103,7 @@
 
 @each $color, $value in $theme-colors {
   // override the style of primary and info alerts
-  @if ($color == 'primary') or ($color == 'info') {
+  @if ($color == 'primary') {
     $value: map-get($theme-colors, 'secondary');
   }
   @if index("danger" "warning" "success" "info", $color) {

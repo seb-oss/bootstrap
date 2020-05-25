@@ -17,6 +17,11 @@
 // States for ordered list groups
 
 .list-group-ordered > {
+  .list-group-item-info::before {
+    background: $info;
+    color: color-yiq($info);
+  }
+
   .list-group-item-success::before {
     background: $success;
     color: color-yiq($success);
@@ -240,7 +245,7 @@
     width: 1.5rem;
     text-align:center;
     display:inline-block;
-    background: $list-group-bg;
+    // background: $list-group-bg;
     font-weight: $font-weight-medium;
   }
   &:disabled::before, &.disabled::before {
