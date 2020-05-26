@@ -1,5 +1,52 @@
 @import "../bootstrap-core/dropdown";
 
+.dropdown.show, .dropdown.active, .dropup.show, .dropup.active {
+  .dropdown-toggle {
+    color: $dropdown-toggle-active-color;
+    background: $dropdown-toggle-active-bg;
+  }
+  .dropdown-toggle::after {
+    background: $dropdown-icon-active;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.dropdown.show, .dropdown.active {
+  .dropdown-toggle::after {
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+}
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &::after {
+    border: none !important;
+    content: '';
+    display: inline-block;
+    height: $font-size-base;
+    width: $font-size-base;
+    background: $dropdown-icon;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 400ms ease-in-out;
+  }
+  &:active::after, &.active::after {
+    background: $dropdown-icon-active;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  &:hover {
+    &::after {
+      background-size: cover;
+      background-repeat: no-repeat;
+      border: none;
+    }
+  }
+}
+
 // SEB Specific styles for dropdowns
 button.btn.dropdown-toggle {
   border-color: $input-border-color;
@@ -11,7 +58,7 @@ button.btn.dropdown-toggle {
   }
 }
 .dropdown-menu {
-  margin-top: 0.35rem;
+  margin-top: .25rem;
 }
 
 .dropdown-control {
