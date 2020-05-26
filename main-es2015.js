@@ -7,7 +7,7 @@
 /*! exports provided: name, version, description, main, scripts, repository, publishConfig, author, license, bugs, homepage, dependencies, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"name\":\"@sebgroup/bootstrap\",\"version\":\"5.1.1\",\"description\":\"A standalone bootstrap theme for SEB\",\"main\":\"scss/bootstrap.scss\",\"scripts\":{\"test\":\"echo \\\"Error: no test specified\\\" && exit 1\"},\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/sebgroup/bootstrap.git\"},\"publishConfig\":{\"registry\":\"https://registry.npmjs.org/\",\"access\":\"public\"},\"author\":\"Robert Hjalmers\",\"license\":\"Apache-2.0\",\"bugs\":{\"url\":\"https://github.com/sebgroup/bootstrap/issues\"},\"homepage\":\"https://sebgroup.github.io/bootstrap/\",\"dependencies\":{\"@sebgroup/fonts\":\"^1.0.0\"}}");
+module.exports = JSON.parse("{\"name\":\"@sebgroup/bootstrap\",\"version\":\"5.2.0\",\"description\":\"A standalone bootstrap theme for SEB\",\"main\":\"scss/bootstrap.scss\",\"scripts\":{\"test\":\"echo \\\"Error: no test specified\\\" && exit 1\"},\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/sebgroup/bootstrap.git\"},\"publishConfig\":{\"registry\":\"https://registry.npmjs.org/\",\"access\":\"public\"},\"author\":\"Robert Hjalmers\",\"license\":\"Apache-2.0\",\"bugs\":{\"url\":\"https://github.com/sebgroup/bootstrap/issues\"},\"homepage\":\"https://sebgroup.github.io/bootstrap/\",\"dependencies\":{\"@sebgroup/fonts\":\"^1.0.0\"}}");
 
 /***/ }),
 
@@ -51,7 +51,7 @@ module.exports = "<header class=\"col-12 d-lg-none bg-white\">\n  <div class=\"r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card mb-4 mx-n3 mx-md-0\">\n  <h4 class=\"card-header\">Include {{component.title}} in your project</h4>\n  <div class=\"card-body\">\n    <p>The {{component.fileName}} styles are included by default if you import <code>'~@sebgroup/bootstrap/scss/bootstrap'</code> in your project (import to styles.scss if you're using angular-cli), to optimize your app you should however only import the parts you need (see import with minimal dependencies below).</p>\n    <exemplify [sources]=\"[{\n          'name':'default import',\n          'src':'@import \\'~@sebgroup/bootstrap/scss/bootstrap\\';\\n','lang':'css'\n          },{\n          'name':'import with minimal dependencies',\n          'src':\n          '@import \\'~@sebgroup/bootstrap/scss/core\\'; /* mixins, functions and variables */\\n'+\n          scssImports\n          ,'lang':'css'\n          }]\"></exemplify>\n  </div>\n</div>\n"
+module.exports = "<div class=\"card mb-4 mx-n3 mx-md-0\">\n  <h4 class=\"card-header\">Include {{component.title}} in your project</h4>\n  <div class=\"card-body\">\n    <p>The {{component.fileName}} {{type}} {{type === 'styles' ? 'are' : 'is'}} included by default if you import <code>'~@sebgroup/bootstrap/scss/bootstrap'</code> in your project (import to styles.scss if you're using angular-cli), to optimize your app you should however only import the parts you need (see import with minimal dependencies below).</p>\n    <exemplify [sources]=\"[{\n          'name':'default import',\n          'src':'@import \\'~@sebgroup/bootstrap/scss/bootstrap\\';\\n','lang':'css'\n          },{\n          'name':'import with minimal dependencies',\n          'src':\n          '@import \\'~@sebgroup/bootstrap/scss/core\\'; /* mixins, functions and variables */\\n'+\n          scssImports\n          ,'lang':'css'\n          }]\"></exemplify>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -96,6 +96,17 @@ module.exports = "<a name=\"accordion\"><h2 class=\"my-3\">Accordion</h2></a>\n<
 /***/ (function(module, exports) {
 
 module.exports = "<a name=\"alerts\"><h2 class=\"my-3\">Alerts</h2></a>\n<div class=\"card mb-4 mx-n3 mx-md-0\">\n  <div class=\"card-body\">\n    <h5>When to use alerts?</h5>\n    <p>Alerts are available for any length of text and can be used for more than traditional alerts. Ideally they should be used when we want content or information to stand out, be separated from the \"normal\" state, highlight a change, make the user aware of important information or simply to convey the response from an action.</p>\n    <h5>What context should I use?</h5>\n    <p>For proper styling, use one of the required contextual classes described below. Avoid using different contexts/colors as a means of separating categories and content of the same type as it might confuse users and make the real context less obvious.</p>\n    <h5>Why have primary, secondary and info when they all look the same?</h5>\n    <p>The appearance might be the same but the semantic meaning is different. This theme is built on bootstrap which has alerts for different semantic contexts, i.e secondary content is not the same as information content, secondary content could be more information or details about a specific service or function while info should be treated as more temporary and is typically added dynamically to a page based on some event or a trigger, ex. information about cookies. Our design however has the same style for these alerts but you should still think about which one is more appropriate for you based on the context and semantic meaning. </p>\n    <table class=\"table\">\n      <thead>\n      <tr>\n        <th>Context</th>\n        <th>Usage</th>\n        <th>Class name</th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr>\n        <td>Primary</td>\n        <td>For content that should stand out but lacks obvious meaning/context and is not a response to an action. <strong>Note:</strong> most of the time you don't want to use this class instead use <code>alert-secondary</code> when you just want the content to stick out from main content and <code>alert-info</code> when you want to inform the user about something neutral.</td>\n        <td><code>.alert-primary</code></td>\n      </tr>\n      <tr>\n        <td>Secondary</td>\n        <td>For secondary content that should stand out but lacks obvious meaning/context and is not a response to an action.</td>\n        <td><code>.alert-secondary</code></td>\n      </tr>\n      <tr>\n        <td>Info</td>\n        <td>Content that holds neutral information that we find useful for users and that we want to inform them about.</td>\n        <td><code>.alert-info</code></td>\n      </tr>\n      <tr>\n        <td>Success</td>\n        <td>Should be used as a response to an action or something that is considered to be positive or a success.</td>\n        <td><code>.alert-success</code></td>\n      </tr>\n      <tr>\n        <td>Warning</td>\n        <td>Not an error but important information for a user to consider or be aware of.</td>\n        <td><code>.alert-warning</code></td>\n      </tr>\n      <tr>\n        <td>Danger</td>\n        <td>Used for errors or when something goes wrong.</td>\n        <td><code>.alert-danger</code></td>\n      </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n<div class=\"card mb-4 mx-n3 mx-md-0\" id=\"alertExample\">\n  <h4 class=\"card-header\">Alert</h4>\n  <div class=\"card-body\">\n    <p>The examples below use the traditional <code>.alert-*</code> class (replace * with context), for use cases where the message is really important and needs to stand out.</p>\n    <div class=\"alert alert-primary\" role=\"alert\">\n      <strong>Primary content</strong> This message just needs to stand out.\n    </div>\n    <div class=\"alert alert-secondary\" role=\"alert\">\n      <strong>Secondary content</strong> This message just needs to stand out.\n    </div>\n    <div class=\"alert alert-info\" role=\"alert\">\n      <strong>Heads up!</strong> This alert needs your attention, but it's not super important.\n    </div>\n    <div class=\"alert alert-success\" role=\"alert\">\n      <strong>Well done!</strong> You successfully read this important alert message.\n    </div>\n    <div class=\"alert alert-warning\" role=\"alert\">\n      <strong>Warning!</strong> Better check yourself, you're not looking too good.\n    </div>\n    <div class=\"alert alert-danger\" role=\"alert\">\n      <strong>Oh snap!</strong> Change a few things up and try submitting again.\n    </div>\n    <exemplify [selector]=\"'#alertExample .alert'\"></exemplify>\n  </div>\n</div>\n<div class=\"card mb-4 mx-n3 mx-md-0\" id=\"alertIconExample\">\n  <h4 class=\"card-header\">Alert with icons</h4>\n  <div class=\"card-body\">\n    <p>The examples below use the traditional <code>.alert-*</code> class (replace * with context), together with <code>.alert-icon</code> to add extra emphasis by displaying an icon next to the message. Note that only <code>info</code>, <code>warning</code> and <code>danger</code> alerts have icons at the moment.</p>\n    <div class=\"alert alert-primary alert-icon\" role=\"alert\">\n      <strong>Primary content</strong> This message just needs to stand out.\n    </div>\n    <div class=\"alert alert-secondary alert-icon\" role=\"alert\">\n      <strong>Secondary content</strong> This message just needs to stand out.\n    </div>\n    <div class=\"alert alert-info alert-icon\" role=\"alert\">\n      <strong>Heads up!</strong> This alert needs your attention, but it's not super important.\n    </div>\n    <div class=\"alert alert-success alert-icon\" role=\"alert\">\n      <strong>Well done!</strong> You successfully read this important alert message.\n    </div>\n    <div class=\"alert alert-warning alert-icon\" role=\"alert\">\n      <strong>Warning!</strong> Better check yourself, you're not looking too good.\n    </div>\n    <div class=\"alert alert-danger alert-icon\" role=\"alert\">\n      <strong>Oh snap!</strong> Change a few things up and try submitting again. Look it works with really long texts too. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu purus in odio finibus dignissim. Pellentesque nibh tortor, lacinia a dapibus et, scelerisque quis dui.\n    </div>\n    <exemplify [selector]=\"'#alertIconExample .alert'\"></exemplify>\n  </div>\n</div>\n<div class=\"card mb-4 mx-n3 mx-md-0\" id=\"alertLinkExample\">\n  <h4 class=\"card-header\">Alert with link</h4>\n  <div class=\"card-body\">\n    <p>Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>\n    <div class=\"alert alert-info\" role=\"alert\">\n      This is a info alert with <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like.\n    </div>\n    <div class=\"alert alert-success\" role=\"alert\">\n      This is a success alert with <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like.\n    </div>\n    <div class=\"alert alert-warning\" role=\"alert\">\n      This is a warning alert with <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like.\n    </div>\n    <div class=\"alert alert-danger\" role=\"alert\">\n      This is a danger alert with <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like.\n    </div>\n    <exemplify [selector]=\"'#alertLinkExample .alert'\"></exemplify>\n  </div>\n</div>\n<div class=\"card mb-4 mx-n3 mx-md-0\" id=\"alertButtonExample\">\n  <h4 class=\"card-header\">Responsive alerts with buttons in grid</h4>\n  <div class=\"card-body\">\n    <p>Use a grid to create responsive alert layouts, note that <code>.btn-light</code> and <code>.btn-dark</code> should be used for buttons in alerts. Try and resize the page to see how they behave.</p>\n    <div class=\"row\">\n      <div class=\"col-12 col-sm-auto\">\n        <div class=\"alert alert-info alert-icon w-100\" role=\"alert\">\n          <div class=\"row no-gutters\">\n            <div class=\"col\">\n              <p class=\"mb-0 \"><strong>Heads up!</strong> This is a info alert with two small buttons.</p>\n            </div>\n            <div class=\"col-12 col-sm-auto pl-sm-3 mt-2 mt-sm-0\">\n              <div class=\"form-row\">\n                <div class=\"col\">\n                  <button class=\"btn btn-sm btn-dark w-100\">Dark button</button>\n                </div>\n                <div class=\"col\">\n                  <button class=\"btn btn-sm btn-dark w-100\">Dark button</button>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-12 col-sm-auto\">\n        <div class=\"alert alert-success alert-icon w-100\" role=\"alert\">\n          <div class=\"row no-gutters\">\n            <div class=\"col\">\n              <p class=\"mb-0 \"><strong>Well done!</strong> This is a success alert with a small button.</p>\n            </div>\n            <div class=\"col-12 col-sm-auto pl-sm-3 mt-2 mt-sm-0\">\n              <button class=\"btn btn-sm btn-light w-100\">Light button</button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-12 col-sm-auto\">\n        <div class=\"alert alert-warning alert-icon w-100\" role=\"alert\">\n          <div class=\"row no-gutters\">\n            <div class=\"col\">\n              <p class=\"mb-0 \"><strong>Warning!</strong> This is a warning alert with two small buttons.</p>\n            </div>\n            <div class=\"col-12 col-sm-auto pl-sm-3 mt-2 mt-sm-0\">\n              <div class=\"form-row\">\n                <div class=\"col\">\n                  <button class=\"btn btn-sm btn-dark w-100\">Dark button</button>\n                </div>\n                <div class=\"col\">\n                  <button class=\"btn btn-sm btn-dark w-100\">Dark button</button>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-12 col-sm-auto\">\n        <div class=\"alert alert-danger alert-icon w-100\" role=\"alert\">\n          <div class=\"row no-gutters\">\n            <div class=\"col\">\n              <p class=\"mb-0 \"><strong>Oh snap!</strong> This is a danger alert with a small button.</p>\n            </div>\n            <div class=\"col-12 col-sm-auto pl-sm-3 mt-2 mt-sm-0\">\n              <button class=\"btn btn-sm btn-light w-100\">Light button</button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <exemplify [selector]=\"'#alertButtonExample .card-body > .row'\"></exemplify>\n  </div>\n</div>\n<div class=\"card mb-4 mx-n3 mx-md-0\" id=\"alertAdvancedExample\">\n  <h4 class=\"card-header\">Alert that can be dismissed</h4>\n  <div class=\"card-body\">\n    <p>A more complex alert that can be dismissed (please note that JavaScript or framework is needed to dismiss alert messages!).</p>\n    <button class=\"btn btn-primary\" (click)=\"active = true\" *ngIf=\"!active\">Show alerts</button>\n    <div class=\"alert alert-danger fade\" role=\"alert\" [ngClass]=\"{'show':active}\">\n      <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" (click)=\"active = !active\">\n        <span aria-hidden=\"true\">&times;</span>\n      </button>\n      <h4 class=\"alert-heading\">Error!</h4>\n      <p>Opps, looks like you've encountered an error with an important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n      <hr>\n      <p class=\"mb-0\">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n    </div>\n    <div class=\"alert alert-success fade\" role=\"alert\" [ngClass]=\"{'show':active}\">\n      <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\" (click)=\"active = !active\">\n        <span aria-hidden=\"true\">&times;</span>\n      </button>\n      <h4 class=\"alert-heading\">Well done!</h4>\n      <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n      <hr>\n      <p class=\"mb-0\">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n    </div>\n    <exemplify [selector]=\"'#alertAdvancedExample .alert'\"></exemplify>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/example/components/animations/animations.component.html":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/example/components/animations/animations.component.html ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<a name=\"animations\"><h2 class=\"my-3\">Animations</h2></a>\n<app-include [components]=\"components\" [type]=\"'mixin'\"></app-include>\n<div class=\"card mx-n3 mx-md-0\">\n  <h4 class=\"card-header\">Use animations</h4>\n  <div class=\"card-body\">\n    <p>Once the animations mixin has been imported you can add animations like this in your scss file:<br>\n    <code>@include add-transition('fadeIn');</code></p>\n    E.g.<br>\n    <code>\n      .fade-in-element {{'{'}}\n        @include add-transition('fadeIn');\n      {{'}'}}\n    </code>\n    <p class=\"mt-3\">Below is a list of animations currently available.</p>\n    <table class=\"table\">\n      <tr>\n        <th>Animation</th>\n        <th>Usage</th>\n      </tr>\n      <tr *ngFor=\"let animation of animations\">\n        <td>{{animation.name | titlecase}}</td>\n        <td><code>@include add-transition('{{animation.importName}}');</code></td>\n      </tr>\n    </table>\n    <h4>Demo</h4>\n    <p>Hover \"buttons\" to show animation.</p>\n    <div class=\"row\">\n    <ng-container *ngFor=\"let animation of animations\">\n      <div class=\"col-12 col-sm-6 col-md-3\">\n        <button class=\"btn btn-sm btn-dark\">{{animation.name}}</button>\n        <div class=\"animation-wrapper mt-3\">\n          <div class=\"bg-primary animate-example animate-{{animation.class}}\"></div>\n        </div>\n      </div>\n    </ng-container>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -271,7 +282,7 @@ module.exports = "<a name=\"inputGroup\"><h2 class=\"my-3\">Input group</h2></a>
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<a name=\"listGroup\"><h2 class=\"my-3\">List group</h2></a>\n<div class=\"card mx-n3 mx-md-0\">\n  <div class=\"card-body\">\n    <h4 class=\"card-title\">List (flush)</h4>\n    <p>To get a list group with flush or table style, just add the class <code>list-group-flush</code> to a normal list-group.</p>\n    <ul class=\"list-group list-group-flush\">\n      <li class=\"list-group-item bg-light font-weight-medium\">Lorem ipsum</li>\n      <li class=\"list-group-item\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>\n      <li class=\"list-group-item\">Dolar sit amet</li>\n    </ul>\n    <exemplify [selector]=\"'ul.list-group-flush'\"></exemplify>\n  </div>\n  <div class=\"card-body\">\n    <h4 class=\"card-title\">Bullet list</h4>\n    <p>To get a list group with bullets, just add the class <code>list-group-bullet</code> to a normal list-group.</p>\n    <ul class=\"list-group list-group-bullet\">\n      <li class=\"list-group-item\">Lorem ipsum</li>\n      <li class=\"list-group-item\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>\n      <li class=\"list-group-item\">Dolar sit amet</li>\n      <li class=\"list-group-item\"><strong class=\"mb-1 d-block\">Lorem ipsum</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus.</p></li>\n      <li class=\"list-group-item\"><strong class=\"mb-1 d-block\">Dolar sit amet</strong><p class=\"text-muted small\">Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>\n    </ul>\n    <exemplify [selector]=\"'ul.list-group-bullet'\"></exemplify>\n  </div>\n  <div class=\"card-body\">\n    <h4 class=\"card-title\">Check list</h4>\n    <p>To get a list group with check icons, just add the class <code>list-group-check</code> to a normal list-group.</p>\n    <ul class=\"list-group list-group-check\">\n      <li class=\"list-group-item\">Lorem ipsum</li>\n      <li class=\"list-group-item\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>\n      <li class=\"list-group-item\">Dolar sit amet</li>\n      <li class=\"list-group-item\"><strong class=\"mb-1 d-block\">Lorem ipsum</strong><p class=\"text-muted small\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus.</p></li>\n      <li class=\"list-group-item\"><strong class=\"mb-1 d-block\">Dolar sit amet</strong><p class=\"text-muted small\">Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>\n    </ul>\n    <exemplify [selector]=\"'ul.list-group-check'\"></exemplify>\n  </div>\n  <div class=\"card-body\" id=\"itemList\">\n    <h4 class=\"card-title\">Ordered list</h4>\n    <p>To get a ordered list, just add the class <code>list-group-ordered</code> to a normal list-group.</p>\n    <ol class=\"list-group list-group-ordered\">\n      <li class=\"list-group-item\">Lorem ipsum</li>\n      <li class=\"list-group-item\">Dolar sit amet <a href=\"#\">do something</a></li>\n      <li class=\"list-group-item active\"><strong class=\"mb-1 d-block\">This item is active</strong><p class=\"text-muted small\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>\n      <li class=\"list-group-item disabled\">Disabled list item </li>\n    </ol>\n    <exemplify [selector]=\"'#itemList ol.list-group-ordered'\"></exemplify>\n  </div>\n  <div class=\"card-body\" id=\"itemListStates\">\n    <h4 class=\"card-title\">States for ordered list</h4>\n    <p>To set a state for a list item, just add one of the following classes to the list group item <code>list-group-item-success</code>, <code>list-group-item-warning</code> or <code>list-group-item-danger</code>.</p>\n    <ol class=\"list-group list-group-ordered\">\n      <li class=\"list-group-item list-group-item-success\">This is something successful or completed perhaps</li>\n      <li class=\"list-group-item list-group-item-warning\">This is something that's pending or incomplete</li>\n      <li class=\"list-group-item list-group-item-danger\">Here we have an error</li>\n    </ol>\n    <exemplify [selector]=\"'#itemListStates ol.list-group-ordered'\"></exemplify>\n  </div>\n  <div class=\"card-body\" id=\"actionList\">\n    <h4 class=\"card-title\">Ordered action list</h4>\n    <p>To get a ordered action list group, just add the class <code>list-group-ordered</code> to a normal list-group and replace <code>list-group-item</code> with <code>list-group-item-action</code>.</p>\n    <ol class=\"list-group list-group-ordered\">\n      <li class=\"list-group-item-action list-group-item-success\" tabindex=\"1\">Lorem ipsum</li>\n      <li class=\"list-group-item-action list-group-item-success\" tabindex=\"2\">Dolar sit amet <a href=\"#\">do something</a></li>\n      <li class=\"list-group-item-action active\" tabindex=\"3\"><strong class=\"mb-1 d-block\">This item is active</strong><p class=\"text-muted small\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>\n      <li class=\"list-group-item-action disabled\">Disabled list item action</li>\n    </ol>\n    <exemplify [selector]=\"'#actionList ol.list-group-ordered'\"></exemplify>\n  </div>\n</div>\n"
+module.exports = "<a name=\"listGroup\"><h2 class=\"my-3\">List group</h2></a>\n<div class=\"card mx-n3 mx-md-0\">\n  <div class=\"card-body\">\n    <h4 class=\"card-title\">List (flush)</h4>\n    <p>To get a list group with flush or table style, just add the class <code>list-group-flush</code> to a normal list-group.</p>\n    <ul class=\"list-group list-group-flush\">\n      <li class=\"list-group-item bg-light font-weight-medium\">Lorem ipsum</li>\n      <li class=\"list-group-item\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>\n      <li class=\"list-group-item\">Dolar sit amet</li>\n    </ul>\n    <exemplify [selector]=\"'ul.list-group-flush'\"></exemplify>\n  </div>\n  <div class=\"card-body\">\n    <h4 class=\"card-title\">Bullet list</h4>\n    <p>To get a list group with bullets, just add the class <code>list-group-bullet</code> to a normal list-group.</p>\n    <ul class=\"list-group list-group-bullet\">\n      <li class=\"list-group-item\">Lorem ipsum</li>\n      <li class=\"list-group-item\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>\n      <li class=\"list-group-item\">Dolar sit amet</li>\n      <li class=\"list-group-item\"><strong class=\"mb-1 d-block\">Lorem ipsum</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus.</p></li>\n      <li class=\"list-group-item\"><strong class=\"mb-1 d-block\">Dolar sit amet</strong><p class=\"text-muted small\">Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>\n    </ul>\n    <exemplify [selector]=\"'ul.list-group-bullet'\"></exemplify>\n  </div>\n  <div class=\"card-body\">\n    <h4 class=\"card-title\">Check list</h4>\n    <p>To get a list group with check icons, just add the class <code>list-group-check</code> to a normal list-group.</p>\n    <ul class=\"list-group list-group-check\">\n      <li class=\"list-group-item\">Lorem ipsum</li>\n      <li class=\"list-group-item\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>\n      <li class=\"list-group-item\">Dolar sit amet</li>\n      <li class=\"list-group-item\"><strong class=\"mb-1 d-block\">Lorem ipsum</strong><p class=\"text-muted small\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus.</p></li>\n      <li class=\"list-group-item\"><strong class=\"mb-1 d-block\">Dolar sit amet</strong><p class=\"text-muted small\">Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>\n    </ul>\n    <exemplify [selector]=\"'ul.list-group-check'\"></exemplify>\n  </div>\n  <div class=\"card-body\" id=\"itemList\">\n    <h4 class=\"card-title\">Ordered list</h4>\n    <p>To get a ordered list, just add the class <code>list-group-ordered</code> to a normal list-group.</p>\n    <ol class=\"list-group list-group-ordered\">\n      <li class=\"list-group-item\">Lorem ipsum</li>\n      <li class=\"list-group-item\">Consectetur adipiscing elit</li>\n      <li class=\"list-group-item\">Ut efficitur ante</li>\n      <li class=\"list-group-item\">Dolar sit amet <a href=\"#\">do something</a></li>\n    </ol>\n    <exemplify [selector]=\"'#itemList ol.list-group-ordered'\"></exemplify>\n  </div>\n  <div class=\"card-body\" id=\"itemListStates\">\n    <h4 class=\"card-title\">States for ordered list</h4>\n    <p>To set a state for a list item, just add one of the following classes to the list group item <code>list-group-item-info</code>, <code>list-group-item-success</code>, <code>list-group-item-warning</code>, <code>list-group-item-danger</code>, <code>active</code> or <code>disabled</code>.</p>\n    <ol class=\"list-group list-group-ordered\">\n      <li class=\"list-group-item list-group-item-info\">This is a info item</li>\n      <li class=\"list-group-item list-group-item-success\">This is something successful or completed perhaps</li>\n      <li class=\"list-group-item list-group-item-warning\">This is something that's pending or incomplete</li>\n      <li class=\"list-group-item list-group-item-danger\">Here we have an error</li>\n      <li class=\"list-group-item active\"><strong class=\"mb-1 d-block\">This item is active</strong><p class=\"text-muted small\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>\n      <li class=\"list-group-item disabled\">Disabled list item </li>\n    </ol>\n    <exemplify [selector]=\"'#itemListStates ol.list-group-ordered'\"></exemplify>\n  </div>\n  <div class=\"card-body\" id=\"actionList\">\n    <h4 class=\"card-title\">Ordered action list</h4>\n    <p>To get a ordered action list group, just add the class <code>list-group-ordered</code> to a normal list-group and replace <code>list-group-item</code> with <code>list-group-item-action</code>.</p>\n    <ol class=\"list-group list-group-ordered\">\n      <li class=\"list-group-item-action list-group-item-success\" tabindex=\"1\">Lorem ipsum</li>\n      <li class=\"list-group-item-action list-group-item-success\" tabindex=\"2\">Dolar sit amet <a href=\"#\">do something</a></li>\n      <li class=\"list-group-item-action active\" tabindex=\"3\"><strong class=\"mb-1 d-block\">This item is active</strong><p class=\"text-muted small\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>\n      <li class=\"list-group-item-action disabled\">Disabled list item action</li>\n    </ol>\n    <exemplify [selector]=\"'#actionList ol.list-group-ordered'\"></exemplify>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -400,7 +411,7 @@ module.exports = "<a name=\"typography\"><h2 class=\"my-3\">Fonts and typography
 /*!*****************************************!*\
   !*** ./node_modules/tslib/tslib.es6.js ***!
   \*****************************************/
-/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault */
+/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -425,19 +436,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function() { return __classPrivateFieldGet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function() { return __classPrivateFieldSet; });
 /*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
+Copyright (c) Microsoft Corporation.
 
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
 
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 /* global Reflect, Promise */
 
@@ -493,10 +506,11 @@ function __metadata(metadataKey, metadataValue) {
 }
 
 function __awaiter(thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 }
@@ -534,14 +548,15 @@ function __exportStar(m, exports) {
 }
 
 function __values(o) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
     if (m) return m.call(o);
-    return {
+    if (o && typeof o.length === "number") return {
         next: function () {
             if (o && i >= o.length) o = void 0;
             return { value: o && o[i++], done: !o };
         }
     };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 }
 
 function __read(o, n) {
@@ -622,6 +637,21 @@ function __importDefault(mod) {
     return (mod && mod.__esModule) ? mod : { default: mod };
 }
 
+function __classPrivateFieldGet(receiver, privateMap) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to get private field on non-instance");
+    }
+    return privateMap.get(receiver);
+}
+
+function __classPrivateFieldSet(receiver, privateMap, value) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to set private field on non-instance");
+    }
+    privateMap.set(receiver, value);
+    return value;
+}
+
 
 /***/ }),
 
@@ -687,6 +717,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _example_components_toast_notifications_toast_notifications_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../example/components/toast-notifications/toast-notifications.component */ "./src/example/components/toast-notifications/toast-notifications.component.ts");
 /* harmony import */ var _example_components_spinners_spinners_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../example/components/spinners/spinners.component */ "./src/example/components/spinners/spinners.component.ts");
 /* harmony import */ var _example_components_button_group_button_group_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../example/components/button-group/button-group.component */ "./src/example/components/button-group/button-group.component.ts");
+/* harmony import */ var _example_components_animations_animations_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../example/components/animations/animations.component */ "./src/example/components/animations/animations.component.ts");
+
 
 
 
@@ -719,6 +751,7 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
     { path: 'typography', component: _example_components_typography_typography_component__WEBPACK_IMPORTED_MODULE_19__["TypographyComponent"] },
+    { path: 'animations', component: _example_components_animations_animations_component__WEBPACK_IMPORTED_MODULE_29__["AnimationsComponent"] },
     { path: 'tables', component: _example_components_tables_tables_component__WEBPACK_IMPORTED_MODULE_6__["TablesComponent"] },
     { path: 'colors', component: _example_components_colors_colors_component__WEBPACK_IMPORTED_MODULE_25__["ColorsComponent"] },
     { path: 'modals', component: _example_components_modals_modals_component__WEBPACK_IMPORTED_MODULE_15__["ModalsComponent"] },
@@ -918,7 +951,7 @@ AboutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/**\n * Add one or more transitions\n *\n * @example\n * @include add-transition('slideInUp');\n * @include add-transition(('slideInUp','fadeIn'))\n */\nheader {\n  height: 56px;\n  position: fixed;\n  z-index: 1020;\n  left: 0; }\n.brand, .profile, .mobile-header {\n  background: #333;\n  color: #fff;\n  height: 56px; }\n.seb-logo {\n  height: 56px;\n  width: 56px; }\n@media (min-width: 576px) {\n  header {\n    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15); } }\n@media (min-width: 992px) {\n  header {\n    width: calc(100% - 256px);\n    left: 256px; } }\n.mobile-header .col {\n  padding-top: .65rem;\n  padding-bottom: .35rem; }\n.mobile-header .active {\n  background: #60cd18; }\n.dropdown-toggle {\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  cursor: pointer; }\n.dropdown-toggle::after {\n  display: none; }\n.dropdown.show {\n  background: #41B0EE; }\n.dropdown-item-link {\n  padding: 0.5rem 1.5rem; }\n.breadcrumb-container {\n  height: 56px; }\n.dropdown-header {\n  color: #343434;\n  background: #dedede; }\n.dropdown-menu .dropdown-header:first-child {\n  border-radius: 4px 4px 0 0; }\n"
+module.exports = "/**\n * Add one or more transitions\n *\n * @example\n * @include add-transition('slideInUp');\n * @include add-transition(('slideInUp','fadeIn'))\n */\nheader {\n  height: 56px;\n  position: fixed;\n  z-index: 1020;\n  left: 0; }\n.brand, .profile, .mobile-header {\n  background: #333;\n  color: #fff;\n  height: 56px; }\n.seb-logo {\n  height: 56px;\n  width: 56px; }\n@media (min-width: 576px) {\n  header {\n    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15); } }\n@media (min-width: 992px) {\n  header {\n    width: calc(100% - 256px);\n    left: 256px; } }\n.mobile-header .col {\n  padding-top: .65rem;\n  padding-bottom: .35rem; }\n.mobile-header .active {\n  background: #60cd18; }\n.dropdown-toggle {\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  cursor: pointer; }\n.dropdown-toggle::after {\n  display: none; }\n.dropdown.show {\n  background: #41B0EE; }\n.dropdown-item-link {\n  padding: 0.5rem 1.5rem; }\n.breadcrumb-container {\n  height: 56px; }\n.dropdown-header {\n  color: #333333;\n  background: #dedede; }\n.dropdown-menu .dropdown-header:first-child {\n  border-radius: 4px 4px 0 0; }\n"
 
 /***/ }),
 
@@ -1039,6 +1072,13 @@ __webpack_require__.r(__webpack_exports__);
 let IncludeComponent = class IncludeComponent {
     constructor() {
         this._scssImports = '';
+        this._type = 'styles';
+    }
+    get type() {
+        return this._type;
+    }
+    set type(value) {
+        this._type = value;
     }
     get component() {
         return this._component;
@@ -1047,7 +1087,7 @@ let IncludeComponent = class IncludeComponent {
         this._component = value;
     }
     get scssImports() {
-        return this._scssImports;
+        return this.type === 'styles' ? this._scssImports : '';
     }
     set components(value) {
         if (!value) {
@@ -1055,9 +1095,14 @@ let IncludeComponent = class IncludeComponent {
         }
         this._component = value[0];
         this._scssImports = value
-            .reduce((previous, current) => (previous += '@import \'~@sebgroup/bootstrap/scss/styles/' + current.fileName + '\'; /* styles for ' + current.comment + ' */\n'), '');
+            .reduce((previous, current) => (previous += `@import \'~@sebgroup/bootstrap/scss/styles/${current.fileName}\'; /* styles for ${current.comment} */\n`), '');
     }
 };
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [String])
+], IncludeComponent.prototype, "type", null);
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array),
@@ -1084,7 +1129,7 @@ IncludeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/**\n * Add one or more transitions\n *\n * @example\n * @include add-transition('slideInUp');\n * @include add-transition(('slideInUp','fadeIn'))\n */\n.mobile-nav {\n  position: fixed;\n  top: 56px;\n  left: 0;\n  z-index: 1030;\n  height: calc(100% - 56px);\n  overflow-y: auto;\n  overflow-x: hidden; }\n.mobile-nav .nav-link {\n    color: #343434;\n    padding: 1rem; }\n@media (min-width: 768px) {\n  .mobile-nav {\n    display: none; } }\n.mobile-header .col {\n  padding-top: .65rem;\n  padding-bottom: .35rem; }\n.mobile-header .active {\n  background: #60cd18; }\nheader {\n  height: 56px;\n  position: fixed;\n  z-index: 2;\n  left: 0; }\n.mobile-header {\n  background: #333;\n  color: #fff;\n  height: 56px;\n  position: fixed;\n  z-index: 2;\n  left: 0; }\n.mobile-breadcrumb {\n  background: #fff;\n  height: 56px; }\n"
+module.exports = "/**\n * Add one or more transitions\n *\n * @example\n * @include add-transition('slideInUp');\n * @include add-transition(('slideInUp','fadeIn'))\n */\n.mobile-nav {\n  position: fixed;\n  top: 56px;\n  left: 0;\n  z-index: 1030;\n  height: calc(100% - 56px);\n  overflow-y: auto;\n  overflow-x: hidden; }\n.mobile-nav .nav-link {\n    color: #333333;\n    padding: 1rem; }\n@media (min-width: 768px) {\n  .mobile-nav {\n    display: none; } }\n.mobile-header .col {\n  padding-top: .65rem;\n  padding-bottom: .35rem; }\n.mobile-header .active {\n  background: #60cd18; }\nheader {\n  height: 56px;\n  position: fixed;\n  z-index: 2;\n  left: 0; }\n.mobile-header {\n  background: #333;\n  color: #fff;\n  height: 56px;\n  position: fixed;\n  z-index: 2;\n  left: 0; }\n.mobile-breadcrumb {\n  background: #fff;\n  height: 56px; }\n"
 
 /***/ }),
 
@@ -1311,6 +1356,9 @@ let MenuService = class MenuService {
                 path: '/icons'
             }];
         this.components = [{
+                name: 'Animations',
+                path: '/animations'
+            }, {
                 name: 'Alerts',
                 path: '/alerts'
             }, {
@@ -1490,7 +1538,7 @@ const environment = {
         }
         return version;
     })(),
-    travis_build_number: '249'
+    travis_build_number: '368'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
@@ -1563,6 +1611,67 @@ AlertsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
 ], AlertsComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/example/components/animations/animations.component.scss":
+/*!*********************************************************************!*\
+  !*** ./src/example/components/animations/animations.component.scss ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/**\n * Add one or more transitions\n *\n * @example\n * @include add-transition('slideInUp');\n * @include add-transition(('slideInUp','fadeIn'))\n */\n.animation-wrapper {\n  height: 120px;\n  pointer-events: none; }\n.btn:hover + .animation-wrapper > .animate-example {\n  width: 100px;\n  height: 100px; }\n.btn:hover + .animation-wrapper > .animate-example.animate-fade-in {\n    -webkit-animation: fadeIn 0.15s linear;\n            animation: fadeIn 0.15s linear; }\n.btn:hover + .animation-wrapper > .animate-example.animate-fade-in-up {\n    -webkit-animation: fadeInUp 0.15s linear;\n            animation: fadeInUp 0.15s linear; }\n.btn:hover + .animation-wrapper > .animate-example.animate-fade-in-down {\n    -webkit-animation: fadeInDown 0.15s linear;\n            animation: fadeInDown 0.15s linear; }\n.btn:hover + .animation-wrapper > .animate-example.animate-slide-in-left {\n    -webkit-animation: slideInLeft 0.4s ease-in-out;\n            animation: slideInLeft 0.4s ease-in-out; }\n.btn:hover + .animation-wrapper > .animate-example.animate-slide-in-right {\n    -webkit-animation: slideInRight 0.4s ease-in-out;\n            animation: slideInRight 0.4s ease-in-out; }\n.btn:hover + .animation-wrapper > .animate-example.animate-slide-in-up {\n    -webkit-animation: slideInUp 0.4s ease-in-out;\n            animation: slideInUp 0.4s ease-in-out; }\n.btn:hover + .animation-wrapper > .animate-example.animate-slide-in-down {\n    -webkit-animation: slideInDown 0.4s ease-in-out;\n            animation: slideInDown 0.4s ease-in-out; }\n.btn:hover + .animation-wrapper > .animate-example.animate-expand-x {\n    -webkit-animation: expandX 0.15s linear;\n            animation: expandX 0.15s linear; }\n.btn:hover + .animation-wrapper > .animate-example.animate-expand-y {\n    -webkit-animation: expandY 0.15s linear;\n            animation: expandY 0.15s linear; }\n.btn:hover + .animation-wrapper > .animate-example.animate-rotate-180 {\n    -webkit-animation: rotate180 0.4s ease-in-out;\n            animation: rotate180 0.4s ease-in-out; }\n"
+
+/***/ }),
+
+/***/ "./src/example/components/animations/animations.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/example/components/animations/animations.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: AnimationsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnimationsComponent", function() { return AnimationsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let AnimationsComponent = class AnimationsComponent {
+    constructor() {
+        this.components = [{
+                title: 'animations',
+                fileName: 'animations',
+                comment: 'animations'
+            }];
+        this.animations = [
+            { name: 'fade in', class: 'fade-in', importName: 'fadeIn' },
+            { name: 'fade in up', class: 'fade-in-up', importName: 'fadeInUp' },
+            { name: 'fade in down', class: 'fade-in-down', importName: 'fadeInDown' },
+            { name: 'slide in left', class: 'slide-in-left', importName: 'slideInLeft' },
+            { name: 'slide in right', class: 'slide-in-right', importName: 'slideInRight' },
+            { name: 'slide in down', class: 'slide-in-down', importName: 'slideInDown' },
+            { name: 'slide in up', class: 'slide-in-up', importName: 'slideInUp' },
+            { name: 'expand x', class: 'expand-x', importName: 'expandX' },
+            { name: 'expand y', class: 'expand-y', importName: 'expandY' },
+            { name: 'rotate 180', class: 'rotate-180', importName: 'rotate180' },
+        ];
+    }
+    ngOnInit() {
+    }
+};
+AnimationsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-animation',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./animations.component.html */ "./node_modules/raw-loader/index.js!./src/example/components/animations/animations.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./animations.component.scss */ "./src/example/components/animations/animations.component.scss")).default]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+], AnimationsComponent);
 
 
 
@@ -1785,7 +1894,7 @@ let ColorsComponent = class ColorsComponent {
                 textColor: 'dark'
             }, {
                 name: 'info',
-                textColor: 'white'
+                textColor: 'dark'
             }, {
                 name: 'success',
                 textColor: 'white'
@@ -2816,29 +2925,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_checkboxes_and_slide_toggles_checkboxes_and_slide_toggles_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component */ "./src/example/components/checkboxes-and-slide-toggles/checkboxes-and-slide-toggles.component.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _components_icons_icons_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/icons/icons.component */ "./src/example/components/icons/icons.component.ts");
-/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm2015/angular-fontawesome.js");
-/* harmony import */ var _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @fortawesome/fontawesome-svg-core */ "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js");
-/* harmony import */ var _fortawesome_pro_light_svg_icons__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @fortawesome/pro-light-svg-icons */ "./node_modules/@fortawesome/pro-light-svg-icons/index.es.js");
-/* harmony import */ var _components_input_group_input_group_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/input-group/input-group.component */ "./src/example/components/input-group/input-group.component.ts");
-/* harmony import */ var _components_list_group_list_group_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/list-group/list-group.component */ "./src/example/components/list-group/list-group.component.ts");
-/* harmony import */ var _components_dropdowns_dropdowns_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/dropdowns/dropdowns.component */ "./src/example/components/dropdowns/dropdowns.component.ts");
-/* harmony import */ var _components_cards_cards_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/cards/cards.component */ "./src/example/components/cards/cards.component.ts");
-/* harmony import */ var _components_modals_modals_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/modals/modals.component */ "./src/example/components/modals/modals.component.ts");
-/* harmony import */ var _components_pagination_pagination_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/pagination/pagination.component */ "./src/example/components/pagination/pagination.component.ts");
-/* harmony import */ var _components_tooltips_tooltips_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/tooltips/tooltips.component */ "./src/example/components/tooltips/tooltips.component.ts");
-/* harmony import */ var _components_accordion_accordion_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/accordion/accordion.component */ "./src/example/components/accordion/accordion.component.ts");
-/* harmony import */ var _components_typography_typography_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/typography/typography.component */ "./src/example/components/typography/typography.component.ts");
-/* harmony import */ var _components_skeleton_loader_skeleton_loader_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/skeleton-loader/skeleton-loader.component */ "./src/example/components/skeleton-loader/skeleton-loader.component.ts");
-/* harmony import */ var _components_datepicker_datepicker_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/datepicker/datepicker.component */ "./src/example/components/datepicker/datepicker.component.ts");
-/* harmony import */ var _components_datepicker_datepicker_simple_datepicker_simple_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/datepicker/datepicker-simple/datepicker-simple.component */ "./src/example/components/datepicker/datepicker-simple/datepicker-simple.component.ts");
-/* harmony import */ var _components_datepicker_datepicker_input_datepicker_input_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/datepicker/datepicker-input/datepicker-input.component */ "./src/example/components/datepicker/datepicker-input/datepicker-input.component.ts");
-/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/example/components/navbar/navbar.component.ts");
-/* harmony import */ var _components_radio_buttons_radio_buttons_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./components/radio-buttons/radio-buttons.component */ "./src/example/components/radio-buttons/radio-buttons.component.ts");
-/* harmony import */ var _components_colors_colors_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./components/colors/colors.component */ "./src/example/components/colors/colors.component.ts");
-/* harmony import */ var _components_toast_notifications_toast_notifications_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./components/toast-notifications/toast-notifications.component */ "./src/example/components/toast-notifications/toast-notifications.component.ts");
-/* harmony import */ var _components_spinners_spinners_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./components/spinners/spinners.component */ "./src/example/components/spinners/spinners.component.ts");
-/* harmony import */ var _components_button_group_button_group_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./components/button-group/button-group.component */ "./src/example/components/button-group/button-group.component.ts");
-/* harmony import */ var _app_components_include_include_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ../app/components/include/include.component */ "./src/app/components/include/include.component.ts");
+/* harmony import */ var _components_input_group_input_group_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/input-group/input-group.component */ "./src/example/components/input-group/input-group.component.ts");
+/* harmony import */ var _components_list_group_list_group_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/list-group/list-group.component */ "./src/example/components/list-group/list-group.component.ts");
+/* harmony import */ var _components_dropdowns_dropdowns_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/dropdowns/dropdowns.component */ "./src/example/components/dropdowns/dropdowns.component.ts");
+/* harmony import */ var _components_cards_cards_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/cards/cards.component */ "./src/example/components/cards/cards.component.ts");
+/* harmony import */ var _components_modals_modals_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/modals/modals.component */ "./src/example/components/modals/modals.component.ts");
+/* harmony import */ var _components_pagination_pagination_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/pagination/pagination.component */ "./src/example/components/pagination/pagination.component.ts");
+/* harmony import */ var _components_tooltips_tooltips_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/tooltips/tooltips.component */ "./src/example/components/tooltips/tooltips.component.ts");
+/* harmony import */ var _components_accordion_accordion_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/accordion/accordion.component */ "./src/example/components/accordion/accordion.component.ts");
+/* harmony import */ var _components_typography_typography_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/typography/typography.component */ "./src/example/components/typography/typography.component.ts");
+/* harmony import */ var _components_skeleton_loader_skeleton_loader_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/skeleton-loader/skeleton-loader.component */ "./src/example/components/skeleton-loader/skeleton-loader.component.ts");
+/* harmony import */ var _components_datepicker_datepicker_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/datepicker/datepicker.component */ "./src/example/components/datepicker/datepicker.component.ts");
+/* harmony import */ var _components_datepicker_datepicker_simple_datepicker_simple_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/datepicker/datepicker-simple/datepicker-simple.component */ "./src/example/components/datepicker/datepicker-simple/datepicker-simple.component.ts");
+/* harmony import */ var _components_datepicker_datepicker_input_datepicker_input_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/datepicker/datepicker-input/datepicker-input.component */ "./src/example/components/datepicker/datepicker-input/datepicker-input.component.ts");
+/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/example/components/navbar/navbar.component.ts");
+/* harmony import */ var _components_radio_buttons_radio_buttons_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/radio-buttons/radio-buttons.component */ "./src/example/components/radio-buttons/radio-buttons.component.ts");
+/* harmony import */ var _components_colors_colors_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/colors/colors.component */ "./src/example/components/colors/colors.component.ts");
+/* harmony import */ var _components_toast_notifications_toast_notifications_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./components/toast-notifications/toast-notifications.component */ "./src/example/components/toast-notifications/toast-notifications.component.ts");
+/* harmony import */ var _components_spinners_spinners_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./components/spinners/spinners.component */ "./src/example/components/spinners/spinners.component.ts");
+/* harmony import */ var _components_button_group_button_group_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./components/button-group/button-group.component */ "./src/example/components/button-group/button-group.component.ts");
+/* harmony import */ var _app_components_include_include_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ../app/components/include/include.component */ "./src/app/components/include/include.component.ts");
+/* harmony import */ var _components_animations_animations_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./components/animations/animations.component */ "./src/example/components/animations/animations.component.ts");
 
 
 
@@ -2876,9 +2983,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_17__["library"].add(_fortawesome_pro_light_svg_icons__WEBPACK_IMPORTED_MODULE_18__["faArrowAltRight"]);
 let ExampleModule = class ExampleModule {
 };
 ExampleModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -2889,10 +2993,10 @@ ExampleModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
             angular_exemplify__WEBPACK_IMPORTED_MODULE_9__["ExemplifyModule"],
             _angular_router__WEBPACK_IMPORTED_MODULE_14__["RouterModule"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_12__["NgbModule"],
-            _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_16__["FontAwesomeModule"]
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_12__["NgbModule"]
         ],
         declarations: [
+            _components_animations_animations_component__WEBPACK_IMPORTED_MODULE_36__["AnimationsComponent"],
             _components_buttons_buttons_component__WEBPACK_IMPORTED_MODULE_3__["ButtonsComponent"],
             _components_alerts_alerts_component__WEBPACK_IMPORTED_MODULE_5__["AlertsComponent"],
             _components_tabs_tabs_component__WEBPACK_IMPORTED_MODULE_6__["TabsComponent"],
@@ -2903,26 +3007,26 @@ ExampleModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _components_forms_forms_component__WEBPACK_IMPORTED_MODULE_11__["ValidationMessagePipe"],
             _components_checkboxes_and_slide_toggles_checkboxes_and_slide_toggles_component__WEBPACK_IMPORTED_MODULE_13__["CheckboxesAndSlideTogglesComponent"],
             _components_icons_icons_component__WEBPACK_IMPORTED_MODULE_15__["IconsComponent"],
-            _components_input_group_input_group_component__WEBPACK_IMPORTED_MODULE_19__["InputGroupComponent"],
-            _components_list_group_list_group_component__WEBPACK_IMPORTED_MODULE_20__["ListGroupComponent"],
-            _components_spinners_spinners_component__WEBPACK_IMPORTED_MODULE_36__["SpinnersComponent"],
-            _components_dropdowns_dropdowns_component__WEBPACK_IMPORTED_MODULE_21__["DropdownsComponent"],
-            _components_cards_cards_component__WEBPACK_IMPORTED_MODULE_22__["CardsComponent"],
-            _components_modals_modals_component__WEBPACK_IMPORTED_MODULE_23__["ModalsComponent"],
-            _components_pagination_pagination_component__WEBPACK_IMPORTED_MODULE_24__["PaginationComponent"],
-            _components_tooltips_tooltips_component__WEBPACK_IMPORTED_MODULE_25__["TooltipsComponent"],
-            _components_accordion_accordion_component__WEBPACK_IMPORTED_MODULE_26__["AccordionComponent"],
-            _components_typography_typography_component__WEBPACK_IMPORTED_MODULE_27__["TypographyComponent"],
-            _components_skeleton_loader_skeleton_loader_component__WEBPACK_IMPORTED_MODULE_28__["SkeletonLoaderComponent"],
-            _components_datepicker_datepicker_component__WEBPACK_IMPORTED_MODULE_29__["DatepickerComponent"],
-            _components_datepicker_datepicker_simple_datepicker_simple_component__WEBPACK_IMPORTED_MODULE_30__["DatepickerSimpleComponent"],
-            _components_datepicker_datepicker_input_datepicker_input_component__WEBPACK_IMPORTED_MODULE_31__["DatepickerInputComponent"],
-            _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_32__["NavbarComponent"],
-            _components_radio_buttons_radio_buttons_component__WEBPACK_IMPORTED_MODULE_33__["RadioButtonsComponent"],
-            _components_colors_colors_component__WEBPACK_IMPORTED_MODULE_34__["ColorsComponent"],
-            _components_toast_notifications_toast_notifications_component__WEBPACK_IMPORTED_MODULE_35__["ToastNotificationsComponent"],
-            _components_button_group_button_group_component__WEBPACK_IMPORTED_MODULE_37__["ButtonGroupComponent"],
-            _app_components_include_include_component__WEBPACK_IMPORTED_MODULE_38__["IncludeComponent"]
+            _components_input_group_input_group_component__WEBPACK_IMPORTED_MODULE_16__["InputGroupComponent"],
+            _components_list_group_list_group_component__WEBPACK_IMPORTED_MODULE_17__["ListGroupComponent"],
+            _components_spinners_spinners_component__WEBPACK_IMPORTED_MODULE_33__["SpinnersComponent"],
+            _components_dropdowns_dropdowns_component__WEBPACK_IMPORTED_MODULE_18__["DropdownsComponent"],
+            _components_cards_cards_component__WEBPACK_IMPORTED_MODULE_19__["CardsComponent"],
+            _components_modals_modals_component__WEBPACK_IMPORTED_MODULE_20__["ModalsComponent"],
+            _components_pagination_pagination_component__WEBPACK_IMPORTED_MODULE_21__["PaginationComponent"],
+            _components_tooltips_tooltips_component__WEBPACK_IMPORTED_MODULE_22__["TooltipsComponent"],
+            _components_accordion_accordion_component__WEBPACK_IMPORTED_MODULE_23__["AccordionComponent"],
+            _components_typography_typography_component__WEBPACK_IMPORTED_MODULE_24__["TypographyComponent"],
+            _components_skeleton_loader_skeleton_loader_component__WEBPACK_IMPORTED_MODULE_25__["SkeletonLoaderComponent"],
+            _components_datepicker_datepicker_component__WEBPACK_IMPORTED_MODULE_26__["DatepickerComponent"],
+            _components_datepicker_datepicker_simple_datepicker_simple_component__WEBPACK_IMPORTED_MODULE_27__["DatepickerSimpleComponent"],
+            _components_datepicker_datepicker_input_datepicker_input_component__WEBPACK_IMPORTED_MODULE_28__["DatepickerInputComponent"],
+            _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_29__["NavbarComponent"],
+            _components_radio_buttons_radio_buttons_component__WEBPACK_IMPORTED_MODULE_30__["RadioButtonsComponent"],
+            _components_colors_colors_component__WEBPACK_IMPORTED_MODULE_31__["ColorsComponent"],
+            _components_toast_notifications_toast_notifications_component__WEBPACK_IMPORTED_MODULE_32__["ToastNotificationsComponent"],
+            _components_button_group_button_group_component__WEBPACK_IMPORTED_MODULE_34__["ButtonGroupComponent"],
+            _app_components_include_include_component__WEBPACK_IMPORTED_MODULE_35__["IncludeComponent"]
         ],
         exports: [_components_buttons_buttons_component__WEBPACK_IMPORTED_MODULE_3__["ButtonsComponent"]]
     })

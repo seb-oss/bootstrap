@@ -56,6 +56,25 @@
                     ]
                 },
                 {
+                    "title": "Animations",
+                    "shortpath": "animations",
+                    "longpath": "src/components/animations",
+                    "items": [
+                        {
+                            "title": "Animations",
+                            "componentid": "component-animation",
+                            "variantid": "animation",
+                            "guid": "sdl-bootstrap-component-animation-animation",
+                            "filename": "animations.md",
+                            "filepath": "components/animations/animations.md",
+                            "shortpath": "components/animations/animations",
+                            "longpath": "components/animations/animations.md",
+                            "type": "file",
+                            "private": false
+                        }
+                    ]
+                },
+                {
                     "title": "Breadcrumbs",
                     "shortpath": "breadcrumbs",
                     "longpath": "src/components/breadcrumbs",
@@ -674,7 +693,7 @@
                 }
             ],
             "filecount": 0,
-            "directorycount": 22,
+            "directorycount": 23,
             "type": "directory"
         }
     ]
