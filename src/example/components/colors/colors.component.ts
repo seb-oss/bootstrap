@@ -16,7 +16,7 @@ export class ColorsComponent implements OnInit {
         textColor: 'dark'
     }, {
         name: 'info',
-        textColor: 'white'
+        textColor: 'dark'
     }, {
         name: 'success',
         textColor: 'white'

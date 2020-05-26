@@ -1,0 +1,39 @@
+@import "scss/core.scss";
+.animation-wrapper {
+  height: 120px;
+  pointer-events: none;
+}
+.btn:hover + .animation-wrapper > .animate-example {
+  width: 100px;
+  height: 100px;
+  &.animate-fade-in {
+    @include add-transition('fadeIn');
+  }
+  &.animate-fade-in-up {
+    @include add-transition('fadeInUp');
+  }
+  &.animate-fade-in-down {
+    @include add-transition('fadeInDown');
+  }
+  &.animate-slide-in-left {
+    @include add-transition('slideInLeft');
+  }
+  &.animate-slide-in-right {
+    @include add-transition('slideInRight');
+  }
+  &.animate-slide-in-up {
+    @include add-transition('slideInUp');
+  }
+  &.animate-slide-in-down {
+    @include add-transition('slideInDown');
+  }
+  &.animate-expand-x {
+    @include add-transition('expandX');
+  }
+  &.animate-expand-y {
+    @include add-transition('expandY');
+  }
+  &.animate-rotate-180 {
+    @include add-transition('rotate180');
+  }
+}

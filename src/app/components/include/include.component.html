@@ -1,7 +1,7 @@
 <div class="card mb-4 mx-n3 mx-md-0">
   <h4 class="card-header">Include {{component.title}} in your project</h4>
   <div class="card-body">
-    <p>The {{component.fileName}} styles are included by default if you import <code>'~@sebgroup/bootstrap/scss/bootstrap'</code> in your project (import to styles.scss if you're using angular-cli), to optimize your app you should however only import the parts you need (see import with minimal dependencies below).</p>
+    <p>The {{component.fileName}} {{type}} {{type === 'styles' ? 'are' : 'is'}} included by default if you import <code>'~@sebgroup/bootstrap/scss/bootstrap'</code> in your project (import to styles.scss if you're using angular-cli), to optimize your app you should however only import the parts you need (see import with minimal dependencies below).</p>
     <exemplify [sources]="[{
           'name':'default import',
           'src':'@import \'~@sebgroup/bootstrap/scss/bootstrap\';\n','lang':'css'

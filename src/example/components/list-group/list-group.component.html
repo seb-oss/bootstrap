@@ -39,19 +39,22 @@
     <p>To get a ordered list, just add the class <code>list-group-ordered</code> to a normal list-group.</p>
     <ol class="list-group list-group-ordered">
       <li class="list-group-item">Lorem ipsum</li>
+      <li class="list-group-item">Consectetur adipiscing elit</li>
+      <li class="list-group-item">Ut efficitur ante</li>
       <li class="list-group-item">Dolar sit amet <a href="#">do something</a></li>
-      <li class="list-group-item active"><strong class="mb-1 d-block">This item is active</strong><p class="text-muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>
-      <li class="list-group-item disabled">Disabled list item </li>
     </ol>
     <exemplify [selector]="'#itemList ol.list-group-ordered'"></exemplify>
   </div>
   <div class="card-body" id="itemListStates">
     <h4 class="card-title">States for ordered list</h4>
-    <p>To set a state for a list item, just add one of the following classes to the list group item <code>list-group-item-success</code>, <code>list-group-item-warning</code> or <code>list-group-item-danger</code>.</p>
+    <p>To set a state for a list item, just add one of the following classes to the list group item <code>list-group-item-info</code>, <code>list-group-item-success</code>, <code>list-group-item-warning</code>, <code>list-group-item-danger</code>, <code>active</code> or <code>disabled</code>.</p>
     <ol class="list-group list-group-ordered">
+      <li class="list-group-item list-group-item-info">This is a info item</li>
       <li class="list-group-item list-group-item-success">This is something successful or completed perhaps</li>
       <li class="list-group-item list-group-item-warning">This is something that's pending or incomplete</li>
       <li class="list-group-item list-group-item-danger">Here we have an error</li>
+      <li class="list-group-item active"><strong class="mb-1 d-block">This item is active</strong><p class="text-muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nulla sed lobortis maximus, nisl massa vestibulum lectus, in tincidunt tellus elit vel neque. Vivamus ullamcorper auctor dignissim. Maecenas placerat, odio nec vestibulum pulvinar, tortor tellus cursus quam, sit amet vulputate est diam in justo.</p></li>
+      <li class="list-group-item disabled">Disabled list item </li>
     </ol>
     <exemplify [selector]="'#itemListStates ol.list-group-ordered'"></exemplify>
   </div>

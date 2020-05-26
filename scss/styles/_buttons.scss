@@ -13,9 +13,9 @@
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
   text-align: center;
+  text-decoration: if($link-decoration == none, null, none);
   white-space: $btn-white-space;
   vertical-align: middle;
-  cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
   user-select: none;
   border: $btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
@@ -39,13 +39,17 @@
     @include box-shadow(none);
   }
 
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
-    background-image: none;
-    @include box-shadow($btn-active-box-shadow);
+  &:not(:disabled):not(.disabled) {
+    cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
 
-    &:focus {
-      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    &:active,
+    &.active {
+      background-image: none;
+      @include box-shadow($btn-active-box-shadow);
+
+      &:focus {
+        @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+      }
     }
   }
 }
@@ -119,7 +123,6 @@ fieldset:disabled a.btn {
   &.focus {
     text-decoration: $link-hover-decoration;
     border-color: transparent;
-    box-shadow: none;
   }
 
   &:disabled,

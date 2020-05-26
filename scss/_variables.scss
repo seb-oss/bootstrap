@@ -16,8 +16,8 @@ $gray-400: #cecece !default;
 $gray-500: #adadad !default;
 $gray-600: #868686 !default;
 $gray-700: #494949 !default;
-$gray-800: #343434 !default;
-$gray-900: #212121 !default;
+$gray-800: #333333 !default;
+$gray-900: #1a1a1a !default;
 $black:    #000 !default;
 
 
@@ -59,7 +59,7 @@ $purple-darker:         #3F2587; // SEB specific
 $primary:       $blue !default;
 $secondary:     $gray-300 !default;
 $success:       $green-darker !default;
-$info:          $purple !default;
+$info:          $gray-300 !default;
 $warning:       $yellow !default;
 $danger:        $red-dark !default;
 $light:         $gray-100 !default;
@@ -151,8 +151,8 @@ $sizes: map-merge(
 // Body
 //
 // Settings for the `<body>` element.
-
-$body-color:                #444 !default;
+$body-bg:                   $gray-100 !default;
+$body-color:                $dark !default;
 
 
 // Paragraphs
@@ -270,7 +270,7 @@ $table-cell-padding:          .625rem .75rem !default;
 $table-cell-padding-sm:       .275rem .3rem !default;
 
 $table-accent-bg:             $gray-100 !default;
-$table-hover-bg:              rgba($blue, .075) !default;
+$table-hover-bg:              $gray-200 !default;
 
 $table-head-color:            $headings-color !default;
 
@@ -318,9 +318,12 @@ $input-box-shadow:                      0 0 0 0 !default;
 //
 // Dropdown menu container and contents.
 
-
-$dropdown-border-color:             $blue !default;
+$dropdown-padding-y:                0 !default;
+$dropdown-border-color:             $blue-darker !default;
 $dropdown-border-radius:            4px !default;
+
+$dropdown-toggle-active-bg:         $blue-darker !default; // SEB specific
+$dropdown-toggle-active-color:      $white !default; // SEB specific
 
 $dropdown-link-hover-color:         $white !default;
 $dropdown-link-hover-bg:            $blue !default;
@@ -434,7 +437,7 @@ $pagination-border-color:           $input-border-color !default;
 // Jumbotron
 
 // Cards
-$card-box-shadow:                   0 1px 2px 0 rgba($black, .05) !default; // SEB specific
+$card-box-shadow:                   0 2px 6px rgba($black, .15) !default; // SEB specific
 $card-columns-margin:               $spacer !default;
 
 // Tooltips
@@ -494,10 +497,10 @@ $toast-transition:                  color .15s ease-in-out, background-color .15
 $list-group-bullet-icon: str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect width='1' height='1' style='fill:#{$dark};' /%3E%3C/svg%3E"), "#", "%23") !default; // SEB Specific
 $list-group-check-icon: str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M435.848 83.466L172.804 346.51l-96.652-96.652c-4.686-4.686-12.284-4.686-16.971 0l-28.284 28.284c-4.686 4.686-4.686 12.284 0 16.971l133.421 133.421c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-28.284-28.284c-4.686-4.686-12.284-4.686-16.97 0z' fill='#{$green}'/%3E%3C/svg%3E"), "#", "%23") !default; // SEB Specific
 $list-group-margin-bottom: 1rem !default; // SEB Specific
-$list-group-bg:                     $gray-400 !default;
+$list-group-bg:                     transparent !default;
 $list-group-hover-bg:               $blue !default;
 $list-group-action-hover-color:     $white !default;
-$list-group-action-hover-bg:        $gray-100 !default;
+$list-group-action-hover-bg:        $gray-200 !default;
 $list-group-action-active-bg:       $blue-dark !default;
 $list-group-action-active-color:    $white !default;
 $list-group-active-bg:              $dark !default;
