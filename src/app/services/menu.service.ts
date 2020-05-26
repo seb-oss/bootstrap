@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {MenuItem} from '../interfaces/menu-item';
 import {of, ReplaySubject} from 'rxjs';
-import {map, tap} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 const compare = (a, b) => {
   const nameA = a.name.toUpperCase();
   const nameB = b.name.toUpperCase();
@@ -46,6 +46,9 @@ export class MenuService {
   }];
 
   components: Array<MenuItem> = [{
+    name: 'Animations',
+    path: '/animations'
+  },{
     name: 'Alerts',
     path: '/alerts'
   }, {
