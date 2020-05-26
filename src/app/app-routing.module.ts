@@ -29,10 +29,12 @@ import {ColorsComponent} from '../example/components/colors/colors.component';
 import {ToastNotificationsComponent} from '../example/components/toast-notifications/toast-notifications.component';
 import {SpinnersComponent} from '../example/components/spinners/spinners.component';
 import {ButtonGroupComponent} from '../example/components/button-group/button-group.component';
+import {AnimationsComponent} from '../example/components/animations/animations.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'about', pathMatch: 'full' },
     { path: 'typography', component: TypographyComponent },
+    { path: 'animations', component: AnimationsComponent },
     { path: 'tables', component: TablesComponent },
     { path: 'colors', component: ColorsComponent },
     { path: 'modals', component: ModalsComponent },

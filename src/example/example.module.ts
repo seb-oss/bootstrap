@@ -37,6 +37,7 @@ import { ToastNotificationsComponent } from './components/toast-notifications/to
 import {SpinnersComponent} from './components/spinners/spinners.component';
 import { ButtonGroupComponent } from './components/button-group/button-group.component';
 import {IncludeComponent} from '../app/components/include/include.component';
+import {AnimationsComponent} from './components/animations/animations.component';
 
 @NgModule({
   imports: [
@@ -48,6 +49,7 @@ import {IncludeComponent} from '../app/components/include/include.component';
     NgbModule
   ],
   declarations: [
+      AnimationsComponent,
       ButtonsComponent,
       AlertsComponent,
       TabsComponent,
