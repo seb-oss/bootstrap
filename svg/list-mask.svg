@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1" height="40" viewBox="0 0 1 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="list-mask">
+    <rect id="content" class="cls-1" y="24" width="1" height="16"/>
+  </g>
+</svg>

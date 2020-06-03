@@ -23,6 +23,14 @@
   </div>
 </div>
 <div class="card mb-4 mx-n3 mx-md-0">
+  <h4 class="card-header">Skeleton for list content</h4>
+  <div class="card-body" id="skeletonLoaderList">
+    <p>The skeleton loader for list content will use the full width of its container, however the mask will never be wider than 320px.</p>
+    <div class="skeleton-loader skeleton-loader-list"></div>
+    <exemplify [selector]="'#skeletonLoaderList .skeleton-loader'"></exemplify>
+  </div>
+</div>
+<div class="card mb-4 mx-n3 mx-md-0">
   <h4 class="card-header">Skeleton fill</h4>
   <div class="card-body">
     <p>If you have a single field, label or small content that you want to use a skeleton loader for, the <code>skeleton-loader-fill</code> class is what you're looking for. It's available in three different versions that all use the full width of the container but the height reflects the size for input fields, labels and buttons.</p>
