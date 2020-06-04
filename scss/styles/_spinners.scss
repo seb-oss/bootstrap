@@ -1,7 +1,7 @@
-$spinner-sm-size: 1rem;
-$spinner-size: 2rem;
-$spinner-md-size: 4rem;
-$spinner-lg-size: 6rem;
+$spinner-xs-size: 1rem !default;
+$spinner-sm-size: 2rem !default;
+$spinner-md-size: 4rem !default;
+$spinner-lg-size: 6rem !default;
 
 .spinner,
 .spinner:before,
@@ -10,69 +10,71 @@ $spinner-lg-size: 6rem;
 }
 .spinner {
   color: $green;
+  background: $white;
   position: relative;
-  width: $spinner-size;
-  height: $spinner-size;
-  box-shadow: inset 0 0 0 3.5px;
+  width: $spinner-md-size;
+  height: $spinner-md-size;
+  box-shadow: inset 0 0 0 5px;
   transform: translateZ(0);
   animation: rotate-circle 1s infinite linear;
   &:after {
-    width: $spinner-size/2 + 0.2rem; //5.2em;
-    height: $spinner-size + 0.2rem; // 10.2em;
+    width: $spinner-md-size/2; //5.2em;
+    height: $spinner-md-size; // 10.2em;
     background: $white;
-    border-radius: 0 $spinner-size + 0.2rem $spinner-size + 0.2rem 0;//0 10.2em 10.2em 0;
-    top: -0.1rem;
-    left: $spinner-size/2 + 0.1rem;//5.1em;
-    transform-origin: 0 $spinner-size/2 + 0.1rem;//0 5.1em;
+    border-radius: 0 $spinner-md-size $spinner-md-size 0;//0 10.2em 10.2em 0;
+    //top: -0.1rem;
+    left: $spinner-md-size/2;//5.1em;
+    transform-origin: 0 $spinner-md-size/2;//0 5.1em;
     animation: rotate-circle 2s infinite ease;
   }
   &:before {
-    width: $spinner-size/2 + 0.2rem; //5.2em;
-    height: $spinner-size + 0.2rem; //10.2em;
-    background: $white;
-    border-radius: $spinner-size + 0.2rem 0 0 $spinner-size + 0.2rem; // 10.2em 0 0 10.2em;
-    top: -0.1rem;
-    left: -0.1rem;
-    transform-origin: $spinner-size/2 + 0.2rem $spinner-size/2 + 0.1rem; // 5.2em 5.1em;
+    width: $spinner-md-size/2; //5.2em;
+    height: $spinner-md-size; //10.2em;
+    background: $spinner-fill-color;
+    border-radius: $spinner-md-size 0 0 $spinner-md-size; // 10.2em 0 0 10.2em;
+    //top: -0.1rem;
+    //left: -0.1rem;
+    left: 0;
+    transform-origin: $spinner-md-size/2 $spinner-md-size/2; // 5.2em 5.1em;
     animation: rotate-circle 2s infinite ease 1.5s;
   }
 }
 
-.spinner.spinner-sm, .btn .spinner {
-  width: $spinner-sm-size;
-  height: $spinner-sm-size;
+.spinner.spinner-xs, .btn .spinner {
+  width: $spinner-xs-size;
+  height: $spinner-xs-size;
   box-shadow: inset 0 0 0 2px;
   &:before {
-    width: $spinner-sm-size/2 + 0.2rem;
-    height: $spinner-sm-size + 0.2rem;
-    border-radius: $spinner-sm-size + 0.2rem 0 0 $spinner-sm-size + 0.2rem;
-    transform-origin: $spinner-sm-size/2 + 0.2rem $spinner-sm-size/2 + 0.1rem;
+    width: $spinner-xs-size/2;
+    height: $spinner-xs-size;
+    border-radius: $spinner-xs-size 0 0 $spinner-xs-size;
+    transform-origin: $spinner-xs-size/2 $spinner-xs-size/2;
   }
   &:after {
-    width: $spinner-sm-size/2 + 0.2rem; //5.2em;
-    height: $spinner-sm-size + 0.2rem; // 10.2em;
-    border-radius: 0 $spinner-sm-size + 0.2rem $spinner-sm-size + 0.2rem 0;//0 10.2em 10.2em 0;
-    left: $spinner-sm-size/2 + 0.1rem;//5.1em;
-    transform-origin: 0 $spinner-sm-size/2 + 0.1rem;//0 5.1em;
+    width: $spinner-xs-size/2; //5.2em;
+    height: $spinner-xs-size; // 10.2em;
+    border-radius: 0 $spinner-xs-size $spinner-xs-size 0;//0 10.2em 10.2em 0;
+    left: $spinner-xs-size/2;//5.1em;
+    transform-origin: 0 $spinner-xs-size/2;//0 5.1em;
   }
 }
 
-.spinner.spinner-md {
-  width: $spinner-md-size;
-  height: $spinner-md-size;
-  box-shadow: inset 0 0 0 5px;
+.spinner.spinner-sm {
+  width: $spinner-sm-size;
+  height: $spinner-sm-size;
+  box-shadow: inset 0 0 0 3.5px;
   &:before {
-    width: $spinner-md-size/2 + 0.2rem;
-    height: $spinner-md-size + 0.2rem;
-    border-radius: $spinner-md-size + 0.2rem 0 0 $spinner-md-size + 0.2rem;
-    transform-origin: $spinner-md-size/2 + 0.2rem $spinner-md-size/2 + 0.1rem;
+    width: $spinner-sm-size/2;
+    height: $spinner-sm-size;
+    border-radius: $spinner-sm-size 0 0 $spinner-sm-size;
+    transform-origin: $spinner-sm-size/2 $spinner-sm-size/2;
   }
   &:after {
-    width: $spinner-md-size/2 + 0.2rem; //5.2em;
-    height: $spinner-md-size + 0.2rem; // 10.2em;
-    border-radius: 0 $spinner-md-size + 0.2rem $spinner-md-size + 0.2rem 0;//0 10.2em 10.2em 0;
-    left: $spinner-md-size/2 + 0.1rem;//5.1em;
-    transform-origin: 0 $spinner-md-size/2 + 0.1rem;//0 5.1em;
+    width: $spinner-sm-size/2; //5.2em;
+    height: $spinner-sm-size; // 10.2em;
+    border-radius: 0 $spinner-sm-size $spinner-sm-size 0;//0 10.2em 10.2em 0;
+    left: $spinner-sm-size/2;//5.1em;
+    transform-origin: 0 $spinner-sm-size/2;//0 5.1em;
   }
 }
 
@@ -81,43 +83,40 @@ $spinner-lg-size: 6rem;
   height: $spinner-lg-size;
   box-shadow: inset 0 0 0 7px;
   &:before {
-    width: $spinner-lg-size/2 + 0.2rem;
-    height: $spinner-lg-size + 0.2rem;
-    border-radius: $spinner-lg-size + 0.2rem 0 0 $spinner-lg-size + 0.2rem;
-    transform-origin: $spinner-lg-size/2 + 0.2rem $spinner-lg-size/2 + 0.1rem;
+    width: $spinner-lg-size/2;
+    height: $spinner-lg-size;
+    border-radius: $spinner-lg-size 0 0 $spinner-lg-size;
+    transform-origin: $spinner-lg-size/2  $spinner-lg-size/2;
   }
   &:after {
-    width: $spinner-lg-size/2 + 0.2rem; //5.2em;
-    height: $spinner-lg-size + 0.2rem; // 10.2em;
-    border-radius: 0 $spinner-lg-size + 0.2rem $spinner-lg-size + 0.2rem 0;//0 10.2em 10.2em 0;
-    left: $spinner-lg-size/2 + 0.1rem;//5.1em;
-    transform-origin: 0 $spinner-lg-size/2 + 0.1rem;//0 5.1em;
+    width: $spinner-lg-size/2; //5.2em;
+    height: $spinner-lg-size; // 10.2em;
+    border-radius: 0 $spinner-lg-size $spinner-lg-size 0;//0 10.2em 10.2em 0;
+    left: $spinner-lg-size/2;//5.1em;
+    transform-origin: 0 $spinner-lg-size/2;//0 5.1em;
   }
 }
-
-.spinner:before,
-.spinner:after {
+.spinner::before,
+.spinner::after {
   position: absolute;
   content: '';
+  box-shadow: $white 0 0 0 1px;
 }
 
 .spinner.light {
-  &:before,
-  &:after {
-    background: $light;
-  }
+  background: $light
 }
 
 .btn {
   .spinner {
+    background: $btn-disabled-color;
     //width: 1rem;
     //height: 1rem;
     color: $white;
     display: inline-block;
     vertical-align: -3px;
-    &:before,
-    &:after {
-      background: $btn-disabled-color;
+    &::before, &::after {
+      box-shadow: $btn-disabled-color 0 0 0 1px;
     }
   }
   &[class*=" btn-outline-"] {
@@ -126,9 +125,9 @@ $spinner-lg-size: 6rem;
     }
     .spinner {
       color: $btn-disabled-color;
-      &:before,
-      &:after {
-        background: $gray-100;
+      background: $white;
+      &::before, &::after {
+        box-shadow: $white 0 0 0 1px;
       }
     }
   }
@@ -138,9 +137,9 @@ $spinner-lg-size: 6rem;
     }
     .spinner {
       color: $btn-disabled-color;
-      &:before,
-      &:after {
-        background: $white;
+      background: $white;
+      &::before, &::after {
+        box-shadow: $white 0 0 0 1px;
       }
     }
   }
@@ -156,14 +155,14 @@ $spinner-lg-size: 6rem;
 }
 
 .spinner-sq {
-  width: $spinner-size;
-  height: $spinner-size;
+  width: $spinner-md-size;
+  height: $spinner-md-size;
   background-color: $green;
   -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
   animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
 
-.spinner-sq.spinner-sm,.btn > .spinner-sq {
+.spinner-sq.spinner-xs,.btn > .spinner-sq {
   width: 1rem;
   height: 1rem;
 }
