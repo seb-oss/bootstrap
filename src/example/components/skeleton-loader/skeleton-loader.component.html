@@ -7,6 +7,7 @@
     <h5>We currently have templates for the following:</h5>
     <ul class="list-group list-group-bullet">
       <li class="list-group-item">Content (default)</li>
+      <li class="list-group-item">List group</li>
       <li class="list-group-item">Single field</li>
       <li class="list-group-item">Table</li>
     </ul>
@@ -114,6 +115,23 @@
     <exemplify [selector]="'#delayExample > .row'"></exemplify>
   </div>
 </div>
+<div class="card mb-4 mx-n3 mx-md-0" id="bgExample">
+  <h4 class="card-header">Custom fill background</h4>
+  <div class="card-body">
+    By default the skeleton loader uses white as fill color (for use against white backgrounds) but it's also possible to use skeleton loaders against dark (<code>.bg-dark</code>) and light (<code>.bg-light</code>). All skeleton loaders support custom fill colors.
+  </div>
+  <div class="card-body bg-dark text-white">
+    <h5 class="text-white pt-3">With dark background</h5>
+    <p>Just add <code>bg-dark</code> to the skeleton loader element.</p>
+    <div class="skeleton-loader bg-dark"></div>
+  </div>
+  <div class="card-body bg-light">
+    <h5>With light background</h5>
+    <p>Just add <code>bg-light</code> to the skeleton loader element.</p>
+    <div class="skeleton-loader bg-light"></div>
+    <exemplify [selector]="'#bgExample .skeleton-loader'"></exemplify>
+  </div>
+</div>
 <div class="card mb-4 mx-n3 mx-md-0">
   <h4 class="card-header">More examples</h4>
   <div class="card-body" id="tableExample">
@@ -215,39 +233,39 @@
 <h3 class="mb-3">Example with cards</h3>
 <div class="row mt-3 mt-xl-4">
     <div class="col-12 col-sm">
-        <div class="card mx-n3 mx-md-0">
+        <div class="card mx-n3 mr-sm-n2 mx-md-0">
             <div class="card-body">
                 <div class="skeleton-loader"></div>
             </div>
         </div>
     </div>
     <div class="col-12 col-sm mt-3 mt-sm-0">
-        <div class="card mx-n3 mx-md-0">
+        <div class="card mx-n3 ml-sm-n2 mx-md-0">
             <div class="card-body">
-                <div class="skeleton-loader"></div>
+                <div class="skeleton-loader delay-3"></div>
             </div>
         </div>
     </div>
 </div>
-<div class="row mt-3 mt-xl-4">
+<div class="row mt-3 mt-md-4">
     <div class="col-12 col-sm">
-        <div class="card mx-n3 mx-md-0">
+        <div class="card mx-n3 mr-sm-n2 mx-md-0">
             <div class="card-body">
                 <div class="skeleton-loader"></div>
             </div>
         </div>
     </div>
     <div class="col-12 col-sm mt-3 mt-sm-0">
-        <div class="card mx-n3 mx-md-0">
-            <div class="card-body">
-                <div class="skeleton-loader"></div>
+        <div class="card mx-n3 mx-sm-n2 mx-md-0">
+            <div class="card-body bg-light">
+                <div class="skeleton-loader bg-light delay-2"></div>
             </div>
         </div>
     </div>
     <div class="col-12 col-sm mt-3 mt-sm-0">
-        <div class="card mx-n3 mx-md-0">
-            <div class="card-body">
-                <div class="skeleton-loader"></div>
+        <div class="card mx-n3 ml-sm-n2 mx-md-0">
+            <div class="card-body bg-dark">
+                <div class="skeleton-loader bg-dark delay-3"></div>
             </div>
         </div>
     </div>
