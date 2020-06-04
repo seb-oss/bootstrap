@@ -1,8 +1,13 @@
 <h2 class="my-3">Spinners</h2>
 <div class="card mx-n3 mx-md-0">
   <div class="card-body">
-    <p>Some experimental spinners</p>
+    <p>Some experimental spinners intended to be used on solid backgrounds.</p>
     <div class="row" id="loaders">
+      <div class="col-auto">
+        <div class="spinner spinner-xs" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
       <div class="col-auto">
         <div class="spinner spinner-sm" role="status">
           <span class="sr-only">Loading...</span>
@@ -14,17 +19,12 @@
         </div>
       </div>
       <div class="col-auto">
-        <div class="spinner spinner-md" role="status">
-          <span class="sr-only">Loading...</span>
-        </div>
-      </div>
-      <div class="col-auto">
         <div class="spinner spinner-lg" role="status">
           <span class="sr-only">Loading...</span>
         </div>
       </div>
       <!--<div class="col-auto">
-        <div class="spinner-sq spinner-sm" role="status">
+        <div class="spinner-sq spinner-xs" role="status">
           <span class="sr-only">Loading...</span>
         </div>
       </div>
@@ -92,32 +92,121 @@
     <exemplify [selector]="'#loadersButton .btn'"></exemplify>
   </div>
 </div>
-<h3 class="my-3">Spinners on light grey background</h3>
+<h3 class="my-3">Spinners on other backgrounds</h3>
 <div class="card mx-n3 mx-md-0">
-  <div class="card-body bg-light">
-    <p>Add class <code>light</code> to spinner element when placed against light background.</p>
-    <div class="row" id="loadersLight">
-      <div class="col-auto">
-        <div class="spinner spinner-sm light" role="status">
-          <span class="sr-only">Loading...</span>
+  <div class="card-body"  id="loaderBackgrounds">
+    <p>Add class <code>bg-light</code> to spinner element when placed against light background.</p>
+    <div class="bg-light p-3">
+      <h5 class="mb-3">Light background <code>.bg-light</code></h5>
+      <div class="row">
+        <div class="col-auto">
+          <div class="spinner spinner-xs bg-light" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="spinner spinner-sm bg-light" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="spinner bg-light" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="spinner spinner-lg bg-light" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
         </div>
       </div>
-      <div class="col-auto">
-        <div class="spinner spinner-lg light" role="status">
-          <span class="sr-only">Loading...</span>
-        </div>
-      </div>
-      <!--<div class="col-auto">
-        <div class="spinner-sq spinner-sm" role="status">
-          <span class="sr-only">Loading...</span>
-        </div>
-      </div>
-      <div class="col-auto">
-        <div class="spinner-sq spinner-lg" role="status">
-          <span class="sr-only">Loading...</span>
-        </div>
-      </div>-->
     </div>
-    <exemplify [selector]="'#loadersLight .col-auto > *'"></exemplify>
+    <div class="bg-dark p-3">
+      <h5 class="text-white mb-3">Light background <code>.bg-dark</code></h5>
+      <div class="row">
+        <div class="col-auto">
+          <div class="spinner spinner-xs bg-dark" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="spinner spinner-sm bg-dark" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="spinner bg-dark" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="spinner spinner-lg bg-dark" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-warning p-3">
+      <h5 class="mb-3">Warning background <code>.bg-warning</code></h5>
+      <div class="row">
+        <div class="col-auto">
+          <div class="spinner spinner-xs bg-warning" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="spinner spinner-sm bg-warning" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="spinner bg-warning" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="spinner spinner-lg bg-warning" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary p-3">
+      <h5 class="mb-3 text-white">Primary background <code>.bg-primary</code></h5>
+      <div class="row">
+        <div class="col-auto">
+          <div class="spinner spinner-xs bg-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="spinner spinner-sm bg-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="spinner bg-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="spinner spinner-lg bg-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mt-3">And so on... spinners can be used on any solid background by adding a <code>bg-*</code> class either to the spinner element itself or to it's parent container. See available bg classes under the <a [routerLink]="'/colors'">colors section</a>.</p>
+    <!--<div class="col-auto">
+      <div class="spinner-sq spinner-xs" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <div class="col-auto">
+      <div class="spinner-sq spinner-lg" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>-->
+    <exemplify [selector]="'#loaderBackgrounds .spinner'"></exemplify>
   </div>
 </div>
