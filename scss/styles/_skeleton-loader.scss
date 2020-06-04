@@ -1,7 +1,19 @@
-$skeleton-loader-mask-color: $white;
-$skeleton-loader-mask: escape-svg(str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='768' height='332'%3E%3Cpath d='M0 0h768v332H0V0zm0 0h220v48H0V0zm0 64h308v96H0V64zm0 112h418v96H0v-96zM324 64h444v96H324V64zm110 112h304v96H434v-96zM0 288h188v44H0v-44zm204 0h154v44H204v-44z' fill='#{$skeleton-loader-mask-color}' fill-rule='evenodd' /%3E%3C/svg%3E"), "#", "%23"));
-$skeleton-loader-mask-fill-pixel: escape-svg(str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Cpath fill='#{$skeleton-loader-mask-color}' d='M0 0h1v1H0z'/%3E%3C/svg%3E"), "#", "%23"));
-$skeleton-loader-mask-table: escape-svg(str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='768' height='180'%3E%3Cpath d='M0 0h768v180H0V0zm0 10h90v24H0V10zm0 45h70v24H0V55zm0 45h80v24H0v-24zm0 45h90v24H0v-24zM114 10h100v24H114V10zm0 45h120v24H114V55zm0 45h130v24H114v-24zm0 45h110v24H114v-24zM268 10h100v24H268V10zm0 45h80v24h-80V55zm0 45h100v24H268v-24zm0 45h110v24H268v-24zM402 10h90v24h-90V10zm0 45h70v24h-70V55zm0 45h80v24h-80v-24zm0 45h90v24h-90v-24zM516 10h90v24h-90V10zm0 45h110v24H516V55zm0 45h120v24H516v-24zm0 45h100v24H516v-24zm144 0h84v24h-84v-24zm0-45h74v24h-74v-24zm0-45h64v24h-64V55zm0-45h84v24h-84V10zM0 44h768v1H0v-1zm0 45h768v1H0v-1zm0 45h768v1H0v-1zm0 45h768v1H0v-1z' fill='#{$skeleton-loader-mask-color}' fill-rule='evenodd' /%3E%3C/svg%3E"), "#", "%23"));
+$skeleton-loader-mask-color: $white !default;
+$skeleton-loader-mask-color-dark: $dark !default;
+$skeleton-loader-mask-color-light: $light !default;
+$skeleton-loader-mask: escape-svg(str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='768' height='332'%3E%3Cpath d='M0 0h768v332H0V0zm0 0h220v48H0V0zm0 64h308v96H0V64zm0 112h418v96H0v-96zM324 64h444v96H324V64zm110 112h304v96H434v-96zM0 288h188v44H0v-44zm204 0h154v44H204v-44z' fill='#{$skeleton-loader-mask-color}' fill-rule='evenodd' /%3E%3C/svg%3E"), "#", "%23")) !default;
+$skeleton-loader-mask-dark: str-replace($skeleton-loader-mask, str-replace(#{'fill=\'' + $skeleton-loader-mask-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $skeleton-loader-mask-color-dark + '\''}, "#", "%23")) !default;
+$skeleton-loader-mask-light: str-replace($skeleton-loader-mask, str-replace(#{'fill=\'' + $skeleton-loader-mask-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $skeleton-loader-mask-color-light + '\''}, "#", "%23")) !default;
+$skeleton-loader-mask-fill-pixel: escape-svg(str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Cpath fill='#{$skeleton-loader-mask-color}' d='M0 0h1v1H0z'/%3E%3C/svg%3E"), "#", "%23")) !default;
+$skeleton-loader-mask-fill-pixel-dark: str-replace($skeleton-loader-mask-fill-pixel, str-replace(#{'fill=\'' + $skeleton-loader-mask-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $skeleton-loader-mask-color-dark + '\''}, "#", "%23")) !default;
+$skeleton-loader-mask-fill-pixel-light: str-replace($skeleton-loader-mask-fill-pixel, str-replace(#{'fill=\'' + $skeleton-loader-mask-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $skeleton-loader-mask-color-light + '\''}, "#", "%23")) !default;
+$skeleton-loader-mask-table: escape-svg(str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='768' height='180'%3E%3Cpath d='M0 0h768v180H0V0zm0 10h90v24H0V10zm0 45h70v24H0V55zm0 45h80v24H0v-24zm0 45h90v24H0v-24zM114 10h100v24H114V10zm0 45h120v24H114V55zm0 45h130v24H114v-24zm0 45h110v24H114v-24zM268 10h100v24H268V10zm0 45h80v24h-80V55zm0 45h100v24H268v-24zm0 45h110v24H268v-24zM402 10h90v24h-90V10zm0 45h70v24h-70V55zm0 45h80v24h-80v-24zm0 45h90v24h-90v-24zM516 10h90v24h-90V10zm0 45h110v24H516V55zm0 45h120v24H516v-24zm0 45h100v24H516v-24zm144 0h84v24h-84v-24zm0-45h74v24h-74v-24zm0-45h64v24h-64V55zm0-45h84v24h-84V10zM0 44h768v1H0v-1zm0 45h768v1H0v-1zm0 45h768v1H0v-1zm0 45h768v1H0v-1z' fill='#{$skeleton-loader-mask-color}' fill-rule='evenodd' /%3E%3C/svg%3E"), "#", "%23")) !default;
+$skeleton-loader-mask-table-dark: str-replace($skeleton-loader-mask-table, str-replace(#{'fill=\'' + $skeleton-loader-mask-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $skeleton-loader-mask-color-dark + '\''}, "#", "%23")) !default;
+$skeleton-loader-mask-table-light: str-replace($skeleton-loader-mask-table, str-replace(#{'fill=\'' + $skeleton-loader-mask-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $skeleton-loader-mask-color-light + '\''}, "#", "%23")) !default;
+$skeleton-loader-mask-list: escape-svg(str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='40'%3E%3Cpath fill='#{$skeleton-loader-mask-color}' d='M0 24h1v16H0z'/%3E%3C/svg%3E"), "#", "%23")) !default;
+$skeleton-loader-mask-list-dark: str-replace($skeleton-loader-mask-list, str-replace(#{'fill=\'' + $skeleton-loader-mask-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $skeleton-loader-mask-color-dark + '\''}, "#", "%23")) !default;
+$skeleton-loader-mask-list-light: str-replace($skeleton-loader-mask-list, str-replace(#{'fill=\'' + $skeleton-loader-mask-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $skeleton-loader-mask-color-light + '\''}, "#", "%23")) !default;
+
 .skeleton-loader {
   position: relative;
   overflow: hidden;
@@ -36,6 +48,15 @@ $skeleton-loader-mask-table: escape-svg(str-replace(url("data:image/svg+xml,%3Cs
     width: 100vw;
     top: 0;
   }
+  &.skeleton-loader-list {
+    max-width: 320px;
+    height: 224px;
+    &::before {
+      background-size: 1px 40px;
+      background-repeat: repeat;
+      background-image: $skeleton-loader-mask-list;
+    }
+  }
   &.skeleton-loader-table {
     max-height: 100%;
     height: 181px;
@@ -62,6 +83,62 @@ $skeleton-loader-mask-table: escape-svg(str-replace(url("data:image/svg+xml,%3Cs
     height: 100%;
     &::before {
       background: none;
+    }
+  }
+  &.bg-dark {
+    &::before {
+      background-size: 768px 332px, 100% 100%;
+      background-repeat:no-repeat;
+      background-image: $skeleton-loader-mask-dark, $skeleton-loader-mask-fill-pixel-dark;
+      background-position-x: 0, 768px;
+    }
+    &::after {
+      background: linear-gradient(80deg, lighten($dark, 5%) 10%, lighten($dark, 10%) 80%, transparent 90%), lighten($dark, 5%);
+      background-size: 50% 100%;
+      background-repeat: no-repeat;
+    }
+    &.skeleton-loader-list {
+      &::before {
+        background-size: 1px 40px;
+        background-repeat: repeat;
+        background-image: $skeleton-loader-mask-list-dark;
+      }
+    }
+    &.skeleton-loader-table {
+      &::before {
+        background-size: 768px 180px;
+        background-position-y: 1px;
+        background-repeat: repeat;
+        background-image: $skeleton-loader-mask-table-dark;
+      }
+    }
+  }
+  &.bg-light {
+    &::before {
+      background-size: 768px 332px, 100% 100%;
+      background-repeat:no-repeat;
+      background-image: $skeleton-loader-mask-light, $skeleton-loader-mask-fill-pixel-light;
+      background-position-x: 0, 768px;
+    }
+    &::after {
+      background: linear-gradient(80deg, darken($light, 5%) 10%, darken($light, 10%) 80%, transparent 90%), darken($light, 5%);
+      background-size: 50% 100%;
+      background-repeat: no-repeat;
+    }
+    &.skeleton-loader-list {
+      &::before {
+        background-size: 1px 40px;
+        background-repeat: repeat;
+        background-image: $skeleton-loader-mask-list-light;
+      }
+    }
+    &.skeleton-loader-table {
+      &::before {
+        background-size: 768px 180px;
+        background-position-y: 1px;
+        background-repeat: repeat;
+        background-image: $skeleton-loader-mask-table-light;
+      }
     }
   }
 }
