@@ -2,6 +2,7 @@ $spinner-xs-size: 1rem !default;
 $spinner-sm-size: 2rem !default;
 $spinner-md-size: 4rem !default;
 $spinner-lg-size: 6rem !default;
+$spinner-fill-color: inherit !default;
 
 .spinner,
 .spinner:before,
@@ -20,7 +21,7 @@ $spinner-lg-size: 6rem !default;
   &:after {
     width: $spinner-md-size/2; //5.2em;
     height: $spinner-md-size; // 10.2em;
-    background: $white;
+    background: $spinner-fill-color;
     border-radius: 0 $spinner-md-size $spinner-md-size 0;//0 10.2em 10.2em 0;
     //top: -0.1rem;
     left: $spinner-md-size/2;//5.1em;
@@ -94,6 +95,15 @@ $spinner-lg-size: 6rem !default;
     border-radius: 0 $spinner-lg-size $spinner-lg-size 0;//0 10.2em 10.2em 0;
     left: $spinner-lg-size/2;//5.1em;
     transform-origin: 0 $spinner-lg-size/2;//0 5.1em;
+  }
+}
+.spinner {
+  @each $color, $value in $theme-colors {
+    &.bg-#{$color} {
+      &::before, &::after {
+        box-shadow: $value 0 0 0 1px;
+      }
+    }
   }
 }
 .spinner::before,
