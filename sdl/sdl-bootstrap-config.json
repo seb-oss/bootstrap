@@ -75,25 +75,6 @@
                     ]
                 },
                 {
-                    "title": "Breadcrumbs",
-                    "shortpath": "breadcrumbs",
-                    "longpath": "src/components/breadcrumbs",
-                    "items": [
-                        {
-                            "title": "Breadcrumbs",
-                            "componentid": "component-breadcrumbs",
-                            "variantid": "primary",
-                            "guid": "sdl-bootstrap-component-breadcrumbs-primary",
-                            "filename": "breadcrumbs.md",
-                            "filepath": "components/breadcrumbs/breadcrumbs.md",
-                            "shortpath": "components/breadcrumbs/breadcrumbs",
-                            "longpath": "components/breadcrumbs/breadcrumbs.md",
-                            "type": "file",
-                            "private": false
-                        }
-                    ]
-                },
-                {
                     "title": "Button-group",
                     "shortpath": "button-group",
                     "longpath": "src/components/button-group",
@@ -107,6 +88,25 @@
                             "filepath": "components/button-group/button-group.md",
                             "shortpath": "components/button-group/button-group",
                             "longpath": "components/button-group/button-group.md",
+                            "type": "file",
+                            "private": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Breadcrumbs",
+                    "shortpath": "breadcrumbs",
+                    "longpath": "src/components/breadcrumbs",
+                    "items": [
+                        {
+                            "title": "Breadcrumbs",
+                            "componentid": "component-breadcrumbs",
+                            "variantid": "primary",
+                            "guid": "sdl-bootstrap-component-breadcrumbs-primary",
+                            "filename": "breadcrumbs.md",
+                            "filepath": "components/breadcrumbs/breadcrumbs.md",
+                            "shortpath": "components/breadcrumbs/breadcrumbs",
+                            "longpath": "components/breadcrumbs/breadcrumbs.md",
                             "type": "file",
                             "private": false
                         }
