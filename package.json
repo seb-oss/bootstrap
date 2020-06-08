@@ -123,7 +123,7 @@
     "prismjs": "^1.20.0",
     "protractor": "^5.4.4",
     "raw-loader": "^0.5.1",
-    "renamer": "^1.1.4",
+    "renamer": "^2.0.1",
     "replace": "^1.2.0",
     "rimraf": "^2.7.1",
     "semantic-release": "^15.14.0",
