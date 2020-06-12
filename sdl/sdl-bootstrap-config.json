@@ -75,25 +75,6 @@
                     ]
                 },
                 {
-                    "title": "Button-group",
-                    "shortpath": "button-group",
-                    "longpath": "src/components/button-group",
-                    "items": [
-                        {
-                            "title": "Button group",
-                            "componentid": "component-segmented-control",
-                            "variantid": "default",
-                            "guid": "sdl-bootstrap-component-segmented-control-default",
-                            "filename": "button-group.md",
-                            "filepath": "components/button-group/button-group.md",
-                            "shortpath": "components/button-group/button-group",
-                            "longpath": "components/button-group/button-group.md",
-                            "type": "file",
-                            "private": false
-                        }
-                    ]
-                },
-                {
                     "title": "Breadcrumbs",
                     "shortpath": "breadcrumbs",
                     "longpath": "src/components/breadcrumbs",
@@ -107,6 +88,25 @@
                             "filepath": "components/breadcrumbs/breadcrumbs.md",
                             "shortpath": "components/breadcrumbs/breadcrumbs",
                             "longpath": "components/breadcrumbs/breadcrumbs.md",
+                            "type": "file",
+                            "private": false
+                        }
+                    ]
+                },
+                {
+                    "title": "Button-group",
+                    "shortpath": "button-group",
+                    "longpath": "src/components/button-group",
+                    "items": [
+                        {
+                            "title": "Button group",
+                            "componentid": "component-segmented-control",
+                            "variantid": "default",
+                            "guid": "sdl-bootstrap-component-segmented-control-default",
+                            "filename": "button-group.md",
+                            "filepath": "components/button-group/button-group.md",
+                            "shortpath": "components/button-group/button-group",
+                            "longpath": "components/button-group/button-group.md",
                             "type": "file",
                             "private": false
                         }
