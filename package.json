@@ -126,7 +126,7 @@
     "renamer": "^1.1.4",
     "replace": "^1.2.0",
     "rimraf": "^2.7.1",
-    "semantic-release": "^15.14.0",
+    "semantic-release": "^17.1.1",
     "start-server-and-test": "^1.11.0",
     "travis-deploy-once": "^5.0.11",
     "ts-node": "~7.0.0",
