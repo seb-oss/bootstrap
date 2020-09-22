@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { environment } from '../environments/environment';
+import {FaConfig} from '@fortawesome/angular-fontawesome';
 
 
 @Component({
@@ -16,4 +17,8 @@ export class AppComponent {
   scroll($event) {
     this.scrollPosition = $event.target.scrollingElement.scrollTop;
   }
+  constructor(private faConfig: FaConfig) {
+    this.faConfig.defaultPrefix = 'far';
+  }
+
 }
