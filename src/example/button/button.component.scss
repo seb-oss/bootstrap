@@ -1,0 +1,4 @@
+// add margin for example only
+::ng-deep :not(.markup-controls) > .btn + .btn {
+  margin-left: .5rem;
+}

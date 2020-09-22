@@ -36,8 +36,10 @@ import { ColorsComponent } from './components/colors/colors.component';
 import { ToastNotificationsComponent } from './components/toast-notifications/toast-notifications.component';
 import {SpinnersComponent} from './components/spinners/spinners.component';
 import { ButtonGroupComponent } from './components/button-group/button-group.component';
-import {IncludeComponent} from '../app/components/include/include.component';
+import {IncludeComponent} from '../app/shared/include/include.component';
 import {AnimationsComponent} from './components/animations/animations.component';
+import {ExampleRoutingModule} from './example-routing.module';
+import {SharedModule} from '../app/shared/shared.module';
 
 @NgModule({
   imports: [
@@ -46,6 +48,8 @@ import {AnimationsComponent} from './components/animations/animations.component'
     HttpClientModule,
     ExemplifyModule,
     RouterModule,
+    ExampleRoutingModule,
+    SharedModule,
     NgbModule
   ],
   declarations: [
@@ -79,7 +83,6 @@ import {AnimationsComponent} from './components/animations/animations.component'
       ColorsComponent,
       ToastNotificationsComponent,
       ButtonGroupComponent,
-    IncludeComponent
   ],
   exports: [ButtonsComponent]
 })
