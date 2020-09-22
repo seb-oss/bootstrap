@@ -66,7 +66,7 @@
         <div class="col-12 col-sm-auto">
           <label for="ngb_multiselect">Example multi-select</label>
           <div ngbDropdown #multiSelect="ngbDropdown" [container]="useContainerBody ? 'body' : 'null'">
-            <button ngClass="{{classes ? classes:'btn btn-secondary w-100'}}" id="ngb_multiselect" ngbDropdownToggle>{{selectedMulti.length === 0 ? 'select...': selectedMulti.length === 1 ? selectedMulti[0]: selectedMulti.length + ' selected'}}</button>
+            <button class="btn btn-secondary w-100" id="ngb_multiselect" ngbDropdownToggle>{{selectedMulti.length === 0 ? 'select...': selectedMulti.length === 1 ? selectedMulti[0]: selectedMulti.length + ' selected'}}</button>
             <div ngbDropdownMenu aria-labelledby="ngb_multiselect" class="w-100 mb-3">
               <div class="dropdown-control">
                 <div class="row mb-2 d-sm-none">
