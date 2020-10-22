@@ -15,11 +15,14 @@ import {faEyeSlash} from '@fortawesome/pro-regular-svg-icons/faEyeSlash';
 import {CodeSnippetComponent} from './code-snippet/code-snippet.component';
 import {ExampleComponent} from './example/example.component';
 import {IncludeComponent} from './include/include.component';
+import { AnchorHeadingComponent } from './anchor-heading/anchor-heading.component';
+import {faLink} from '@fortawesome/pro-regular-svg-icons/faLink';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
-  declarations: [CodeSnippetComponent, ExampleComponent, IncludeComponent],
-  imports: [CommonModule, FontAwesomeModule],
-  exports: [CommonModule, FontAwesomeModule, CodeSnippetComponent, ExampleComponent, IncludeComponent],
+  declarations: [CodeSnippetComponent, ExampleComponent, IncludeComponent, AnchorHeadingComponent],
+  imports: [CommonModule, FontAwesomeModule, RouterModule],
+  exports: [CommonModule, FontAwesomeModule, CodeSnippetComponent, ExampleComponent, IncludeComponent, AnchorHeadingComponent],
 })
 export class SharedModule {
   constructor(library: FaIconLibrary) {
@@ -35,6 +38,7 @@ export class SharedModule {
       faCheckCircle,
       faExclamationTriangle,
       faQuestionSquare,
+      faLink,
       <any>faGithub,
     );
   }

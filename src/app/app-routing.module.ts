@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import {
-    RouterModule,
-    Routes
+  ExtraOptions,
+  RouterModule,
+  Routes
 } from '@angular/router';
 import {ButtonsComponent} from '../example/components/buttons/buttons.component';
 import {AlertsComponent} from '../example/components/alerts/alerts.component';
@@ -68,8 +69,12 @@ const routes: Routes = [
   { path: '**', redirectTo: 'about' },
 ];
 
+const routerOptions: ExtraOptions = {
+  anchorScrolling: 'enabled',
+};
+
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, routerOptions)],
     exports: [RouterModule]
 })
 export class AppRoutingModule {
