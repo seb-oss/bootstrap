@@ -36,7 +36,11 @@
     "commit": "git-cz",
     "travis-deploy-once": "travis-deploy-once --pro",
     "semantic-release": "semantic-release && npm run build && npm run build-sdl",
-    "package-lock-sanitizer": "package-lock-sanitizer"
+    "package-lock-sanitizer": "package-lock-sanitizer",
+    "format-all": "prettier --config ./.prettierrc --write \"src/{app,environments,assets}/**/*{.ts,.js,.json,.css,.scss}\"",
+    "format-staged": "pretty-quick --staged",
+    "format-check": "prettier --config ./.prettierrc --list-different \"src/{app,environments,assets}/**/*{.ts,.js,.json,.css,.scss}\"",
+    "precommit": "run-s format-staged lint"
   },
   "config": {
     "commitizen": {
@@ -51,7 +55,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run package-lock-sanitizer && git add package-lock.json",
-      "commit-msg": "commitlint --edit"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "release": {
@@ -71,6 +75,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/pro-regular-svg-icons": "^5.11.2",
+    "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "@sebgroup/fonts": "^1.0.0",
     "@sebgroup/ng-bootstrap": "^1.0.1",
     "@sebgroup/ngx-toastr": "^1.0.0",
@@ -125,6 +130,8 @@
     "node-sass-tilde-importer": "^1.0.2",
     "package-lock-sanitizer": "^1.0.1",
     "postcss-cli": "^6.1.1",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.0.2",
     "prismjs": "^1.20.0",
     "protractor": "~7.0.0",
     "raw-loader": "^0.5.1",
