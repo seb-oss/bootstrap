@@ -1,0 +1,22 @@
+<button class="btn btn-primary" (click)="alerts.error = true; alerts.success = true" *ngIf="!alerts.error && !alerts.success">Show alerts</button>
+<div class="alert alert-danger fade" role="alert"
+     [class.show]="alerts.error">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="alerts.error = false">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h4 class="alert-heading">Error!</h4>
+  <p>Opps, looks like you've encountered an error with an important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+  <hr>
+  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+</div>
+<div class="alert alert-success fade"
+     role="alert"
+     [class.show]="alerts.success">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="alerts.success = false">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h4 class="alert-heading">Well done!</h4>
+  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+  <hr>
+  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+</div>

@@ -1,8 +1,8 @@
-@import "../../../../scss/variables";
-@import "../../../../scss/mixins/mixins";
+@import '../../../../scss/variables';
+@import '../../../../scss/mixins/mixins';
 
 .side-nav {
-  transform: translate3d(-256px,0,0);
+  transform: translate3d(-256px, 0, 0);
   transition: transform 400ms ease-in-out;
   background: #333;
   width: 256px;
@@ -11,7 +11,7 @@
   z-index: $zindex-fixed;
   left: 0;
   &.active {
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
     display: block;
     z-index: $zindex-fixed;
   }
@@ -24,23 +24,22 @@
 
 @include media-breakpoint-up(lg) {
   .side-nav {
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 .seb-logo {
-  height:56px;
+  height: 56px;
   width: 56px;
 }
 
 .nav-link {
   color: #fff;
   font-weight: normal;
-
 }
 
 .menu-item:hover {
-  background: rgba($green,.25);
+  background: rgba($green, 0.25);
   //background: $light;
   /*.nav-link {
     color: $dark;
@@ -59,15 +58,15 @@
       font-weight: $font-weight-medium;
       &::after {
         display: block;
-        content: "";
+        content: '';
         left: 0;
         width: 5px;
         background: $green;
         top: 0;
         position: absolute;
         height: 100%;
-        animation: expand ease-out .2s;
-        transition: transform .2s ease-in-out;
+        animation: expand ease-out 0.2s;
+        transition: transform 0.2s ease-in-out;
       }
     }
   }

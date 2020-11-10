@@ -1,28 +1,32 @@
-import {Component, Input, OnInit} from '@angular/core';
-const temp = (path: string) => require(`../../../example/${path}`);
+import { Component, Input, OnInit } from '@angular/core';
 import 'prismjs';
 declare var Prism: any;
 
-
 @Component({
-  selector: 'app-code-snippet',
+  selector: ' app-code-snippet',
   templateUrl: './code-snippet.component.html',
-  styleUrls: ['./code-snippet.component.scss']
+  styleUrls: ['./code-snippet.component.scss'],
 })
 export class CodeSnippetComponent implements OnInit {
-  get path(): any {
+  get language(): string {
+    return this._language;
+  }
+
+  get path(): string {
     return this._path;
   }
 
-  @Input() set path(value: any) {
-    this._path = Prism.highlight(temp(value).trim(), Prism.languages['markup']);
+  @Input() set language(value: string) {
+    this._language = value;
+  }
+
+  @Input() set path(value: string) {
+    this._path = Prism.highlight(value.trim(), Prism.languages[this.language]);
   }
 
   private _path: string;
-  constructor() { }
+  private _language: string = 'markup';
+  constructor() {}
 
-  ngOnInit(): void {
-    console.log('dsfsdfsdf', this._path);
-  }
-
+  ngOnInit(): void {}
 }

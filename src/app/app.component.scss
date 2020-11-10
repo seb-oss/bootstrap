@@ -1,5 +1,5 @@
-@import "../../scss/variables";
-@import "../../scss/mixins/mixins";
+@import '../../scss/variables';
+@import '../../scss/mixins/mixins';
 @include media-breakpoint-up(lg) {
   .content {
     margin-left: 256px;

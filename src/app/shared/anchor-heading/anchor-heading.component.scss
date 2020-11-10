@@ -1,9 +1,9 @@
-@import "scss/core";
+@import 'scss/core';
 h4 {
   cursor: pointer;
   display: inline-block;
   fa-icon {
-    opacity: 0
+    opacity: 0;
   }
   &:hover {
     fa-icon {

@@ -8,6 +8,10 @@ $enable-ngx-toastr: true;
 @import "~@sebgroup/ng-bootstrap/scss/ng-bootstrap";
 @import '~angular-exemplify/scss/prism-exemplify';
 
+app-anchor-heading + .card-body {
+  padding-top: 0;
+}
+
 exemplify > ul {
   margin-top: 2rem;
 }

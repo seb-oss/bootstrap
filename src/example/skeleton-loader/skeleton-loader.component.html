@@ -1,0 +1,152 @@
+<a name="buttons"><h2 class="my-3">Skeleton loader</h2></a>
+<app-include [components]="components"></app-include>
+<div class="card mb-4 mx-n3 mx-md-0">
+  <app-anchor-heading heading="When and how to use them?"></app-anchor-heading>
+  <div class="card-body">
+    <p>Skeleton loaders are great placeholders for content that haven't finished loading yet, i.e. when you're waiting for the data to load, instead of just showing a blank page or a spinner, consider showing a skeleton (empty placeholder for content).</p>
+    <h5>We currently have templates for the following:</h5>
+    <ul class="list-group list-group-bullet">
+      <li class="list-group-item">Content (default)</li>
+      <li class="list-group-item">List group</li>
+      <li class="list-group-item">Single field</li>
+      <li class="list-group-item">Table</li>
+    </ul>
+    <p>Want another template? Please create an issue <a href="https://github.com/sebgroup/bootstrap/issues" target="_blank">here</a></p>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Skeleton for content (default)"></app-anchor-heading>
+  <div class="card-body">
+    <p>The skeleton loader for content will use the full width of its container, however the mask will never be wider than 768px (content should in general not be too wide otherwise it will be hard to read).</p>
+    <app-example source="skeleton-loader/standard/standard.component.html">
+      <app-standard class="ex-example"></app-standard>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Skeleton for list content"></app-anchor-heading>
+  <div class="card-body">
+    <p>The skeleton loader for list content will use the full width of its container, however the mask will never be wider than 320px.</p>
+    <app-example source="skeleton-loader/list/list.component.html">
+      <app-list class="ex-example"></app-list>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Skeleton fill"></app-anchor-heading>
+  <div class="card-body">
+    <p>If you have a single field, label or small content that you want to use a skeleton loader for, the <code>skeleton-loader-fill</code> class is what you're looking for. It's available in three different versions that all use the full width of the container but the height reflects the size for input fields, labels and buttons.</p>
+    <h5>Small skeleton fill</h5>
+    <p>Perfect for labels and as a placeholder for content inside tables etc.</p>
+    <app-example source="skeleton-loader/small/small.component.html">
+      <app-small class="ex-example"></app-small>
+    </app-example>
+    <h5>Standard skeleton fill</h5>
+    <p>Perfect for input fields and buttons.</p>
+    <app-example source="skeleton-loader/fill/fill.component.html">
+      <app-fill class="ex-example"></app-fill>
+    </app-example>
+    <h5>Full skeleton fill</h5>
+    <p>Perfect when you want to mask something bigger like a chart or diagram, you can also combine it with utility classes like <code>rounded-circle</code> to create more creative skeletons, and maybe use it as a placeholder for a pie chart or a profile picture?</p>
+    <app-example source="skeleton-loader/full/full.component.html">
+      <app-full class="ex-example"></app-full>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Skeleton loader for table"></app-anchor-heading>
+  <div class="card-body">
+    <p>Use <code>skeleton-loader-table</code> if you're loading or waiting for table data. The template uses the full width of it's container and the height will by default adjust it self according to the screen width unless you set a fixed height.</p>
+    <app-example source="skeleton-loader/table/table.component.html">
+      <app-table class="ex-example"></app-table>
+    </app-example>
+    <h5 class="mt-4">Match size of container</h5>
+    <p>If you want to define a custom size by putting the skeleton loader in an element with a fixed height and/or width try to stick to even numbers of 45 px for the height and add 1 px for the top border, i.e. <code>46</code>, <code>91</code>, <code>136</code> and so on.</p>
+    <app-example source="skeleton-loader/match/match.component.html">
+      <app-match class="ex-example"></app-match>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Delay animation"></app-anchor-heading>
+  <div class="card-body">
+    <p>If you're using multiple skeleton loaders on a page and they're spread across the screen horizontally you might want to consider adding a delay to the animation to get that smooth transition. There are three delay classes that can be added <code>delay-1</code>, <code>delay-2</code> and <code>delay-3</code>.</p>
+    <app-example source="skeleton-loader/delay/delay.component.html">
+      <app-delay class="ex-example"></app-delay>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Custom fill background"></app-anchor-heading>
+  <div class="card-body">
+    <p>By default the skeleton loader uses white as fill color (for use against white backgrounds) but it's also possible to use skeleton loaders against dark (<code>.bg-dark</code>) and light (<code>.bg-light</code>). All skeleton loaders support custom fill colors.</p>
+  </div>
+  <div class="card-body bg-dark text-white">
+    <h5 class="text-white pt-3">With dark background</h5>
+    <p>Just add <code>bg-dark</code> to the skeleton loader element.</p>
+    <div class="skeleton-loader bg-dark"></div>
+  </div>
+  <div class="card-body bg-light">
+    <h5>With light background</h5>
+    <p>Just add <code>bg-light</code> to the skeleton loader element.</p>
+    <div class="skeleton-loader bg-light"></div>
+  </div>
+  <div class="card-body">
+    <app-example
+      source="skeleton-loader/background/background.component.html">
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="More use cases and examples"></app-anchor-heading>
+  <div class="card-body">
+    <app-example title="Table with table header"
+      source="skeleton-loader/advanced/advanced.component.html">
+      <app-advanced class="ex-example"></app-advanced>
+    </app-example>
+    <app-example title="Form with input fields and button"
+                 source="skeleton-loader/form/form.component.html">
+      <app-form class="ex-example"></app-form>
+    </app-example>
+  </div>
+</div>
+<h3 class="mb-3">Example with cards</h3>
+<div class="row mt-3 mt-xl-4">
+  <div class="col-12 col-sm">
+    <div class="card mx-n3 mr-sm-n2 mx-md-0">
+      <div class="card-body">
+        <div class="skeleton-loader"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm mt-3 mt-sm-0">
+    <div class="card mx-n3 ml-sm-n2 mx-md-0">
+      <div class="card-body">
+        <div class="skeleton-loader delay-3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mt-3 mt-md-4">
+  <div class="col-12 col-sm">
+    <div class="card mx-n3 mr-sm-n2 mx-md-0">
+      <div class="card-body">
+        <div class="skeleton-loader"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm mt-3 mt-sm-0">
+    <div class="card mx-n3 mx-sm-n2 mx-md-0">
+      <div class="card-body bg-light">
+        <div class="skeleton-loader bg-light delay-2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm mt-3 mt-sm-0">
+    <div class="card mx-n3 ml-sm-n2 mx-md-0">
+      <div class="card-body bg-dark">
+        <div class="skeleton-loader bg-dark delay-3"></div>
+      </div>
+    </div>
+  </div>
+</div>

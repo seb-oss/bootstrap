@@ -1,0 +1,7 @@
+@import "scss/core";
+.spinner {
+  display: inline-block;
+  & + .spinner{
+    margin-left: map-get($spacers, 4);
+  }
+}

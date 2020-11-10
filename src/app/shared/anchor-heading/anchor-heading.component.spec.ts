@@ -8,9 +8,8 @@ describe('AnchorHeadingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AnchorHeadingComponent ]
-    })
-    .compileComponents();
+      declarations: [AnchorHeadingComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

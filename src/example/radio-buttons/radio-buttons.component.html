@@ -1,0 +1,22 @@
+<a name="buttons"><h2 class="my-3">Radio buttons</h2></a>
+<app-include [components]="components"></app-include>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Standard radio buttons"></app-anchor-heading>
+  <div class="card-body">
+    <p>We use a standard input element with <code>type="radio"</code> for radio buttons but we need to wrap it in a div to get the right style for the different states.</p>
+    <app-example title="Standard"
+                 source="radio-buttons/standard/standard.component.html">
+      <app-standard class="ex-example"></app-standard>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Horizontal layout"></app-anchor-heading>
+  <div class="card-body">
+    <p>Use rows and columns to create a responsive layout, in the example below radio buttons will be placed inline on medium sized screens and up. On smaller screens the radio buttons will stack on top of each other, test by resizing the window. Use one of the following utility classes <code>.my-*</code>, <code>.mb-*</code> or <code>.mt-*</code> to add spacing between the different options, ie. <code>mb-2 mb-md-0</code> to get a small bottom margin on small screens and below.</p>
+    <app-example title="Standard"
+                 source="radio-buttons/horizontal/horizontal.component.html">
+      <app-horizontal class="ex-example"></app-horizontal>
+    </app-example>
+  </div>
+</div>

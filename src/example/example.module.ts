@@ -24,7 +24,6 @@ import { CardsComponent } from './components/cards/cards.component';
 import { ModalsComponent } from './components/modals/modals.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { TooltipsComponent } from './components/tooltips/tooltips.component';
-import { AccordionComponent } from './components/accordion/accordion.component';
 import { TypographyComponent } from './components/typography/typography.component';
 import { SkeletonLoaderComponent } from './components/skeleton-loader/skeleton-loader.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
@@ -36,7 +35,6 @@ import { ColorsComponent } from './components/colors/colors.component';
 import { ToastNotificationsComponent } from './components/toast-notifications/toast-notifications.component';
 import {SpinnersComponent} from './components/spinners/spinners.component';
 import { ButtonGroupComponent } from './components/button-group/button-group.component';
-import {IncludeComponent} from '../app/shared/include/include.component';
 import {AnimationsComponent} from './components/animations/animations.component';
 import {ExampleRoutingModule} from './example-routing.module';
 import {SharedModule} from '../app/shared/shared.module';
@@ -72,7 +70,6 @@ import {SharedModule} from '../app/shared/shared.module';
       ModalsComponent,
       PaginationComponent,
       TooltipsComponent,
-      AccordionComponent,
       TypographyComponent,
       SkeletonLoaderComponent,
       DatepickerComponent,

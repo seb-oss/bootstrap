@@ -1,18 +1,23 @@
 import { Component } from '@angular/core';
 import { environment } from '../environments/environment';
-import {FaConfig} from '@fortawesome/angular-fontawesome';
-
+import { FaConfig } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   scrollPosition: number;
   travis_build_number: string = environment.travis_build_number;
-  version: string = (environment.version === '0.0.0-semantically-released' || environment.version === 'n/a') ? 'unreleased dev version' : environment.version;
-  versionLink: string = (environment.version === '0.0.0-semantically-released' || environment.version === 'n/a') ? 'latest' : 'tag/v' + environment.version;
+  version: string =
+    environment.version === '0.0.0-semantically-released' || environment.version === 'n/a'
+      ? 'unreleased dev version'
+      : environment.version;
+  versionLink: string =
+    environment.version === '0.0.0-semantically-released' || environment.version === 'n/a'
+      ? 'latest'
+      : 'tag/v' + environment.version;
 
   scroll($event) {
     this.scrollPosition = $event.target.scrollingElement.scrollTop;
@@ -20,5 +25,4 @@ export class AppComponent {
   constructor(private faConfig: FaConfig) {
     this.faConfig.defaultPrefix = 'far';
   }
-
 }

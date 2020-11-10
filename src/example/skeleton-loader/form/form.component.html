@@ -1,0 +1,38 @@
+<div class="custom-control custom-checkbox mb-3">
+  <input type="checkbox" class="custom-control-input" id="showOverlayForm" [(ngModel)]="showOverlay" name="showOverlay">
+  <label class="custom-control-label" for="showOverlayForm">Show real content overlay</label>
+</div>
+<form class="overlay-content" *ngIf="showOverlay">
+  <div class="row">
+    <div class="form-group col-12 col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    </div>
+    <div class="form-group col-12 col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <button class="btn btn-primary">Save profile</button>
+</form>
+<div class="row">
+  <div class="col-12 col-md-6">
+    <div class="skeleton-loader skeleton-loader-fill-sm mb-1 rounded" style="max-width: 100px;"></div>
+    <div class="skeleton-loader skeleton-loader-fill rounded"></div>
+  </div>
+  <div class="col-12 col-md-6">
+    <div class="skeleton-loader skeleton-loader-fill-sm mb-1 rounded delay-2" style="max-width: 100px;"></div>
+    <div class="skeleton-loader skeleton-loader-fill rounded delay-2"></div>
+  </div>
+  <div class="col-12 mt-3">
+    <div class="skeleton-loader skeleton-loader-fill-sm mb-1 rounded" style="max-width: 140px;"></div>
+    <div class="skeleton-loader skeleton-loader-fill rounded"></div>
+  </div>
+  <div class="col-12 col-sm-auto">
+    <div class="skeleton-loader skeleton-loader-fill rounded mt-3 w-100" style="min-width: 120px;"></div>
+  </div>
+</div>

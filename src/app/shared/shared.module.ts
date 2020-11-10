@@ -10,19 +10,26 @@ import { faExclamationTriangle } from '@fortawesome/pro-regular-svg-icons/faExcl
 import { faQuestionSquare } from '@fortawesome/pro-regular-svg-icons/faQuestionSquare';
 import { faSave } from '@fortawesome/pro-regular-svg-icons/faSave';
 import { faCopy } from '@fortawesome/pro-regular-svg-icons/faCopy';
-import {faEye} from '@fortawesome/pro-regular-svg-icons/faEye';
-import {faEyeSlash} from '@fortawesome/pro-regular-svg-icons/faEyeSlash';
-import {CodeSnippetComponent} from './code-snippet/code-snippet.component';
-import {ExampleComponent} from './example/example.component';
-import {IncludeComponent} from './include/include.component';
+import { faEye } from '@fortawesome/pro-regular-svg-icons/faEye';
+import { faEyeSlash } from '@fortawesome/pro-regular-svg-icons/faEyeSlash';
+import { CodeSnippetComponent } from './code-snippet/code-snippet.component';
+import { ExampleComponent } from './example/example.component';
+import { IncludeComponent } from './include/include.component';
 import { AnchorHeadingComponent } from './anchor-heading/anchor-heading.component';
-import {faLink} from '@fortawesome/pro-regular-svg-icons/faLink';
-import {RouterModule} from '@angular/router';
+import { faLink } from '@fortawesome/pro-regular-svg-icons/faLink';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [CodeSnippetComponent, ExampleComponent, IncludeComponent, AnchorHeadingComponent],
   imports: [CommonModule, FontAwesomeModule, RouterModule],
-  exports: [CommonModule, FontAwesomeModule, CodeSnippetComponent, ExampleComponent, IncludeComponent, AnchorHeadingComponent],
+  exports: [
+    CommonModule,
+    FontAwesomeModule,
+    CodeSnippetComponent,
+    ExampleComponent,
+    IncludeComponent,
+    AnchorHeadingComponent,
+  ],
 })
 export class SharedModule {
   constructor(library: FaIconLibrary) {
@@ -39,7 +46,7 @@ export class SharedModule {
       faExclamationTriangle,
       faQuestionSquare,
       faLink,
-      <any>faGithub,
+      <any>faGithub
     );
   }
 }

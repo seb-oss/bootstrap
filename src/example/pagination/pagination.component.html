@@ -1,0 +1,32 @@
+<a name="buttons"><h2 class="my-3">Pagination</h2></a>
+<app-include [components]="components"></app-include>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Standard pagination"></app-anchor-heading>
+  <div class="card-body">
+    <div class="alert alert-warning alert-icon"><strong>Javascript needed!</strong> Please note that the example below is just a representation of how the pagination looks and the needed markup for it. In order to use pagination you need a framework to control when and how to show different pages. If you're using angular, please take a look at <a class="alert-link" href="https://ng-bootstrap.github.io/" target="_blank">ng-bootstrap</a> and their <a class="alert-link" href="https://ng-bootstrap.github.io/#/components/pagination" target="_blank">pagination component</a>.</div>
+    <app-example title="Standard"
+                 source="pagination/standard/standard.component.html">
+      <app-standard class="ex-example"></app-standard>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Sizes"></app-anchor-heading>
+  <div class="card-body">
+    <p>Add <code>.pagination-sm</code> or <code>.pagination-lg</code> modifier class to the base <code>.pagination</code> class to adjust the size.</p>
+    <app-example title="Example"
+                 source="pagination/sizes/sizes.component.html">
+      <app-sizes class="ex-example"></app-sizes>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="With responsive controls"></app-anchor-heading>
+  <div class="card-body">
+    <p>Use a grid to align the pagination controls nicely with other controls or information related to whatever is paginated.</p>
+    <app-example title="Example"
+                 source="pagination/responsive/responsive.component.html">
+      <app-responsive class="ex-example"></app-responsive>
+    </app-example>
+  </div>
+</div>

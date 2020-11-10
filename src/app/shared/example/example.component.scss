@@ -1,0 +1,4 @@
+@import 'scss/core.scss';
+.animate-fade-in {
+  @include add-transition('fadeIn');
+}

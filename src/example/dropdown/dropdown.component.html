@@ -1,0 +1,31 @@
+<a name="buttons"><h2 class="my-3">Selects and dropdowns</h2></a>
+<app-include [components]="components"></app-include>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Native select"></app-anchor-heading>
+  <div class="card-body">
+    <p>The native html select element looks and behaves a bit differently depending on the browser and the device a user is on but it will always work and iOS and Android devices will use their own native components in it's place.</p>
+    <app-example title="Standard"
+                 source="dropdown/standard/standard.component.html">
+      <app-standard class="ex-example"></app-standard>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Angular dropdown"></app-anchor-heading>
+  <div class="card-body">
+    <p>The preferred way of implementing dropdowns and selects involves javascript. It not only allows us to cater for things like object selection and custom templates for options, multi-select, search and filter with typeahead but it also allows us to deliver a cross browser and device coherent look and feel!</p>
+    <div class="alert alert-warning alert-icon">
+      <strong>Framework needed!</strong> Please note that the examples below uses a framework for Angular called ng-boostrap, if you'd like to use it please check out <a class="alert-link" href="https://sebgroup.github.io/ng-bootstrap/" target="_blank">@sebgroup/ng-bootstrap</a> which is a theme for <a class="alert-link" href="https://ng-bootstrap.github.io/" target="_blank">ng-bootstrap</a>.
+      <p class="mt-3"><strong>Mobile development!</strong> To make the experience extra crisp on mobile devices and more specifically to avoid the issue with scrolling content behind the dropdown on mobile devices, you should consider adding <a class="alert-link" href="https://github.com/willmcpo/body-scroll-lock" target="_blank">body scroll lock</a> to your project when implementing dropdowns. An example implementation for angular can also be found on <a class="alert-link" href="https://stackblitz.com/edit/seb-dropdown-body-scroll-lock" target="_blank">stack blitz</a>.</p>
+      <p><strong>Dropdown cut off?</strong> If the dropdown is placed inside a container with overflow set to auto or hidden you should consider adding container="body" to add the dropdown to the body element instead, this to avoid cutting off the dropdown menu.</p>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheckInline" [checked]="useContainerBody" (change)="toggleContainer(useContainerBody)">
+        <label class="custom-control-label" for="customCheckInline">Use container='body'</label>
+      </div>
+    </div>
+    <app-example title="Dropdown using @sebgroup/ng-bootstrap"
+                 source="dropdown/angular/angular.component.html">
+      <app-angular class="ex-example"></app-angular>
+    </app-example>
+  </div>
+</div>

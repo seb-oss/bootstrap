@@ -1,0 +1,44 @@
+<a name="buttons"><h2 class="my-3">Checkboxes and slide toggles</h2></a>
+<app-include [components]="components"></app-include>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Standard checkbox"></app-anchor-heading>
+  <div class="card-body">
+    <p>We use a standard input element with <code>type="checkbox"</code> for checkboxes but we need to wrap it in a div to get the right style for the different states.</p>
+    <app-example title="Standard"
+                 source="checkboxes-and-slide-toggles/standard/standard.component.html">
+      <app-standard class="ex-example"></app-standard>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Horizontal layout"></app-anchor-heading>
+  <div class="card-body">
+    <p>Use rows and columns to create a responsive layout, in the example below checkboxes will be placed inline on medium sized screens and up. On smaller screens the checkboxes will stack on top of each other, test by resizing the window. Use one of the following utility classes <code>.my-*</code>, <code>.mb-*</code> or <code>.mt-*</code> to add spacing between the different options, ie. <code>mb-2 mb-md-0</code> to get a small bottom margin on small screens and below.</p>
+    <app-example title="Horizontal layout"
+                 source="checkboxes-and-slide-toggles/horizontal/horizontal.component.html">
+      <app-horizontal class="ex-example"></app-horizontal>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Slide toggle"></app-anchor-heading>
+  <div class="card-body">
+    <p>The slide toggle works just like a normal checkbox and uses the same markup and bindings, to make it look like a slide toggle just add the class <code>custom-slide-toggle</code>.</p>
+    <app-example title="Slide toggle"
+                 source="checkboxes-and-slide-toggles/slide-toggle/slide-toggle.component.html">
+      <app-slide-toggle class="ex-example"></app-slide-toggle>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Errors and highlighting groups"></app-anchor-heading>
+  <div class="card-body">
+    <p>Checkboxes, slide toggles, radio buttons and other grouped form elements should be highlighted as a group when one of the controls has an error. However, since each input has it's own validation we need to wrap them in a div and add a border when the group has an error. There's a utility class we can use for this <code>.border-*</code>, so when there's an error we can use <code>.border</code>, <code>.rounded</code> and <code>.border-danger</code> and once the issue has been addressed we can switch to <code>.border-success</code>.</p>
+    <p>More examples and info regarding form errors can be found under the <a routerLink="/examples/forms">forms section</a>.</p>
+    <div class="alert alert-warning mb-4"><strong>Framework needed!</strong> Please note that the implementation and logic for how and when to show errors in forms depends on both the js framework that is used and possibly even code style too.</div>
+    <app-example title="Highlight groups"
+                 source="checkboxes-and-slide-toggles/highlight-error/highlight-error.component.html">
+      <app-highlight-error class="ex-example"></app-highlight-error>
+    </app-example>
+  </div>
+</div>

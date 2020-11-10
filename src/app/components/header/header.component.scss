@@ -1,5 +1,5 @@
-@import "../../../../scss/variables";
-@import "../../../../scss/mixins/mixins";
+@import '../../../../scss/variables';
+@import '../../../../scss/mixins/mixins';
 header {
   height: 56px;
   position: fixed;
@@ -7,35 +7,37 @@ header {
   left: 0;
   //padding-left: 0;
 }
-.brand, .profile, .mobile-header {
+.brand,
+.profile,
+.mobile-header {
   background: #333;
   color: #fff;
-  height:56px;
+  height: 56px;
 }
 
 .seb-logo {
-  height:56px;
+  height: 56px;
   width: 56px;
 }
 @include media-breakpoint-up(sm) {
   header {
     //width:calc(100vw - 17px);
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
   }
 }
 @include media-breakpoint-up(lg) {
   header {
     //width:calc(100vw - 256px - 17px);
     //width:calc(100vw - 256px);
-    width:calc(100% - 256px);
+    width: calc(100% - 256px);
     left: 256px;
   }
 }
 
 .mobile-header {
   .col {
-    padding-top: .65rem;
-    padding-bottom: .35rem;
+    padding-top: 0.65rem;
+    padding-bottom: 0.35rem;
     //padding: .375em 0;
   }
   .active {
@@ -65,7 +67,7 @@ header {
 }
 
 .dropdown-header {
-  color:$dark;
+  color: $dark;
   background: $gray-300;
 }
 

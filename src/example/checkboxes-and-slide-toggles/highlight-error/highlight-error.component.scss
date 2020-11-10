@@ -1,0 +1,4 @@
+@import "scss/core";
+.border ~ .border {
+  margin-top: map-get($spacers, 4);
+}

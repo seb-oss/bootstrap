@@ -1,7 +1,7 @@
 <a name="buttons"><h2 class="my-3">Buttons</h2></a>
 <app-include [components]="components"></app-include>
 <div class="card mx-n3 mx-sm-0 mb-4">
-  <h4 class="card-header">Button styles and modifiers</h4>
+  <app-anchor-heading heading="Button styles and modifiers"></app-anchor-heading>
   <div class="card-body">
     <p>The default class for all buttons in bootstrap is <code>.btn</code>. It gives elements with the class base line button styles like: padding, font-weight, white-space etc. and can be applied to both <code>buttons</code> and <code>anchor</code> elements to name a few.</p>
     <p>Bootstrap has a few different modifiers that can be used together with the base class, we primarily use <code>.btn-primary</code>, <code>.btn-secondary</code> and <code>.btn-link</code>, use the latter to give buttons the same behavior as normal links (used for links placed outside text segments and paragraphs as well as actions similar to "go to" or regular links). You can also use the outline version if you want an "inverted" button with border. Note that we only support <code>.btn-primary</code>,<code>.btn-secondary</code>,<code>.btn-light</code>,<code>.btn-danger</code> and <code>.btn-dark</code> from bootstrap, if you use any of the others they will fall back to the primary style.</p>
@@ -25,7 +25,7 @@
   </div>
 </div>
 <div class="card mb-4 mx-n3 mx-md-0" id="buttonsLightExample">
-  <h4 class="card-header">Buttons and colored backgrounds</h4>
+  <app-anchor-heading heading="Buttons and colored backgrounds"></app-anchor-heading>
   <div class="card-body">
     <p>The <code>.btn-light</code> and <code>.btn-dark</code> classes should only be used when buttons are placed on colored or dark backgrounds/images.</p>
     <div class="row align-items-center no-gutters">
@@ -50,8 +50,19 @@
     </div>
   </div>
 </div>
+<div class="card mb-4 mx-n3 mx-md-0" id="buttonsCloseExample">
+  <app-anchor-heading heading="Close button"></app-anchor-heading>
+  <div class="card-body">
+    <p>Add <code>.close</code> to a button to get correct style and icon for a close button and don't forget to include text for screen readers with the aria label. The button will be right aligned by default. Use inside modals, alerts, badges and other components that can be closed or dismissed.</p>
+    <app-example source="button/close/close.component.html">
+      <div class="ex-example close-example">
+        <app-close></app-close>
+      </div>
+    </app-example>
+  </div>
+</div>
 <div class="card mb-4 mx-n3 mx-md-0" id="buttonsGridExample">
-  <h4 class="card-header">Responsive design and buttons</h4>
+  <app-anchor-heading heading="Responsive design and buttons"></app-anchor-heading>
   <div class="card-body">
     <p>If you look at the example above on smaller screen you'll notice that the buttons won't stack nicely. To have full control and to create a good experience on mobile devices and tablets consider placing buttons in a grid.</p>
     <app-example source="button/grid/grid.component.html">
@@ -60,7 +71,7 @@
   </div>
 </div>
 <div class="card mb-4 mx-n3 mx-md-0" id="buttonsIconExample">
-  <h4 class="card-header">Icons in buttons</h4>
+  <app-anchor-heading heading="Icons in buttons"></app-anchor-heading>
   <div class="card-body">
     <p>Example with icons, note the alignment on mobile devices (smaller screens) using a grid. The second example also uses the utility class <code>order-*</code> to change the button order on different screen sizes.</p>
     <app-example source="button/icons/icons.component.html">
@@ -69,7 +80,7 @@
   </div>
 </div>
 <div class="card mb-4 mx-n3 mx-md-0" id="smallButtonsExample">
-  <h4 class="card-header">Sizing</h4>
+  <app-anchor-heading heading="Sizing"></app-anchor-heading>
   <div class="card-body">
     <p>Add <code>.btn-sm</code> for smaller buttons and <code>.btn-lg</code> for larger buttons.</p>
     <app-example source="button/sizes/sizes.component.html">
@@ -78,7 +89,7 @@
   </div>
 </div>
 <div class="card mb-4 mx-n3 mx-md-0" id="additionalButtonsExample">
-  <h4 class="card-header">Alternative buttons</h4>
+  <app-anchor-heading heading="Alternative buttons"></app-anchor-heading>
   <div class="card-body">
     <p>Since SEB Style is a theme for Bootstrap and Bootstrap has some additional button classes to differentiate the severity or the meaning of a button like <code>.btn-success</code> please note that they'll fallback to the default style.</p>
     <button type="button" class="btn btn-success">Success</button>
