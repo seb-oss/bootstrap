@@ -84,6 +84,12 @@
   }
 }
 
+.modal-header {
+  .close {
+    margin: 0 0 0 auto;
+  }
+}
+
 .modal-body {
   overflow: auto;
 }
