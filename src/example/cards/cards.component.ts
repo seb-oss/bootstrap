@@ -29,7 +29,7 @@ export class CardsComponent implements OnInit {
 }`
 
   snippet = Prism.highlight(
-this.css, Prism.languages['markup']);
+this.css, Prism.languages.markup);
   constructor() { }
 
   ngOnInit(): void {

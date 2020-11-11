@@ -25,7 +25,7 @@ export class CodeSnippetComponent implements OnInit {
   }
 
   private _path: string;
-  private _language: string = 'markup';
+  private _language = 'markup';
   constructor() {}
 
   ngOnInit(): void {}

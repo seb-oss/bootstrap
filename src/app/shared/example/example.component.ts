@@ -49,9 +49,9 @@ export class ExampleComponent {
 
   private _source: string;
   private _title: string;
-  private _loadSource: boolean = true;
-  private _language: string = 'markup';
-  private _isVisible: boolean = true;
+  private _loadSource = true;
+  private _language = 'markup';
+  private _isVisible = true;
 
   constructor(private utilities: UtilitiesService) {}
 

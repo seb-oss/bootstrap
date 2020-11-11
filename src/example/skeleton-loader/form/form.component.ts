@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  showOverlay: boolean = false;
+  showOverlay = false;
   constructor() { }
 
   ngOnInit(): void {

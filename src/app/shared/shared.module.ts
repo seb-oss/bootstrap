@@ -46,7 +46,7 @@ export class SharedModule {
       faExclamationTriangle,
       faQuestionSquare,
       faLink,
-      <any>faGithub
+      faGithub as any
     );
   }
 }

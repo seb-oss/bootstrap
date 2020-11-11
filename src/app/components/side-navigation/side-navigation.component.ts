@@ -23,7 +23,7 @@ export class SideNavigationComponent implements OnInit {
 
   ngOnInit() {
     this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe((event: any) => {
-      this.activeRoute = event['urlAfterRedirects'];
+      this.activeRoute = event.urlAfterRedirects;
     });
 
     this.$menuItems = this.menuService.getComponents();

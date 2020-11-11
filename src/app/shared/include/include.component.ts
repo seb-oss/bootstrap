@@ -42,7 +42,7 @@ export class IncludeComponent implements OnInit {
     );
   }
 
-  private _scssImports: string = '';
+  private _scssImports = '';
   private _component: ScssImport;
   private _type: 'styles' | 'mixin' = 'styles';
   public activeSnippet = 'default';
@@ -62,7 +62,7 @@ export class IncludeComponent implements OnInit {
     this.snip = snip;
     this.importContent = `<pre class="language-css"><code class="language-css">${Prism.highlight(
       snip.trim(),
-      Prism.languages['css']
+      Prism.languages.css
     )}</code></pre>`;
   }
   constructor(private utilities: UtilitiesService) {}

@@ -58,7 +58,7 @@ export class ValidationMessagePipe implements PipeTransform {
             return 'Required, please enter your personal id.'
         } else if (ERROR === 'toShort') {
             return 'To short, please enter complete personal id with 12 digits.'
-        } else if(ERROR === 'incorrect') {
+        } else if (ERROR === 'incorrect') {
             return 'Incorrect personal identity number.'
         }
         return ERROR
@@ -82,12 +82,12 @@ export function personalIdentityNumberValidator(): ValidatorFn {
 
         // make sure id when entered is at least 12 digits long
         if (personalIdentityNumber.toString().length < 12) {
-            return {'toShort': {personalIdentityNumber}};
+            return {toShort: {personalIdentityNumber}};
         }
 
         // check if personal id entered is valid using luhn algorithm (https://sv.wikipedia.org/wiki/luhn-algoritmen)
         const personalId = sweValidation.ssn(personalIdentityNumber);
-        return !personalId.isValid ? {'incorrect': {personalIdentityNumber}} : null;
+        return !personalId.isValid ? {incorrect: {personalIdentityNumber}} : null;
     };
 }
 

@@ -89,7 +89,7 @@ export class MobileNavigationComponent implements OnInit {
 
   constructor(private menuService: MenuService) {}
   public components: Array<MenuItem> = [];
-  menuState: string = 'show';
+  menuState = 'show';
 
   ngOnInit() {
     this.$activeTab = this.menuService.$activeTab;

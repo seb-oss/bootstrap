@@ -9,7 +9,7 @@ import { MobileNavigationComponent } from './components/mobile-navigation/mobile
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
-import { ToastContainerModule, ToastrModule } from 'ngx-toastr';
+import { ToastrModule } from 'ngx-toastr';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({

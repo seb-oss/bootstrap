@@ -13,7 +13,7 @@ export class ButtonsComponent {
     title: 'buttons',
     fileName: 'button',
     comment: 'buttons'
-  },{
+  }, {
     title: 'close button',
     fileName: 'close',
     comment: 'close button'

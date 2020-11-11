@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./advanced.component.scss']
 })
 export class AdvancedComponent implements OnInit {
-  showOverlay: boolean = false;
+  showOverlay = false;
   constructor() { }
 
   ngOnInit(): void {

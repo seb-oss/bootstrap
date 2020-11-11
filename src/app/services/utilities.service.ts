@@ -49,7 +49,7 @@ export class UtilitiesService {
         return false;
       } finally {
         document.body.removeChild(textarea);
-        //setTimeout(() => this.showCopyNotice = false);
+        // setTimeout(() => this.showCopyNotice = false);
       }
     }
   }
