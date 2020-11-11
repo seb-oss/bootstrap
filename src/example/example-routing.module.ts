@@ -29,6 +29,7 @@ export const routes: Routes = [
   { path: 'tooltip', loadChildren: () => import('./tooltip/tooltip.module').then(m => m.TooltipModule) },
   { path: 'toast', loadChildren: () => import('./toast/toast.module').then(m => m.ToastModule) },
   { path: 'accordion', loadChildren: () => import('./accordion/accordion.module').then(m => m.AccordionModule) },
+  { path: 'badges', loadChildren: () => import('./badge/badge.module').then(m => m.BadgeModule) },
   { path: '**', redirectTo: 'buttons', pathMatch: 'full' },
 ];
 
