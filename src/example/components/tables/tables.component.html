@@ -3,7 +3,7 @@
   <h4 class="card-header">Include styles in your project</h4>
   <div class="card-body">
     <p>The styles are included by default if you import <code>'~@sebgroup/bootstrap/scss/bootstrap'</code> in your project (import to styles.scss if you're using angular-cli), to optimize your app you should however only import the parts you need (see import with minimal dependencies below).</p>
-    <exemplify [sources]="[{
+    <!--<exemplify [sources]="[{
         'name':'default import',
         'src':'@import \'~@sebgroup/bootstrap/scss/bootstrap\';\n','lang':'css'
         },{
@@ -14,7 +14,7 @@
         '@import \'~@sebgroup/bootstrap/scss/mixins/mixins\';\n'+
         '@import \'~@sebgroup/bootstrap/scss/styles/tables\'; /* <-- ADD THIS */\n'
         ,'lang':'css'
-        }]"></exemplify>
+        }]"></exemplify>-->
   </div>
 </div>
 <div class="alert alert-info alert-icon mx-n3 mx-md-0"><strong>Want more table features?</strong> The examples below shows the markup and classes needed when using standard html tables, if you're using angular and want support for sorting, filtering, search, export to CSV etc. please check out <a class="alert-link" href="https://hjalmers.github.io/angular-generic-table/" target="_blank">Angular Generic Table</a>.</div>
@@ -55,7 +55,7 @@
           </tr>
           </tbody>
         </table>
-        <exemplify [sources]="[{name:'markup', src: '<table class=&quot;table&quot;>...</table>', lang:'markup'}]"></exemplify>
+        <!--<exemplify [sources]="[{name:'markup', src: '<table class=&quot;table&quot;>...</table>', lang:'markup'}]"></exemplify>-->
       </div>
     </div>
   </div>
@@ -95,7 +95,7 @@
           </tr>
           </tbody>
         </table>
-        <exemplify [sources]="[{name:'markup', src: '<table class=&quot;table table-striped&quot;>...</table>', lang:'markup'}]"></exemplify>
+        <!--<exemplify [sources]="[{name:'markup', src: '<table class=&quot;table table-striped&quot;>...</table>', lang:'markup'}]"></exemplify>-->
       </div>
     </div>
   </div>
@@ -138,7 +138,7 @@
           </tr>
           </tbody>
         </table>
-        <exemplify [sources]="[{name:'markup', src: '<table class=&quot;table table-bordered&quot;>...</table>', lang:'markup'}]"></exemplify>
+        <!--<exemplify [sources]="[{name:'markup', src: '<table class=&quot;table table-bordered&quot;>...</table>', lang:'markup'}]"></exemplify>-->
       </div>
     </div>
   </div>
@@ -181,7 +181,7 @@
           </tr>
           </tbody>
         </table>
-        <exemplify [sources]="[{name:'markup', src: '<table class=&quot;table table-hover&quot;>...</table>', lang:'markup'}]"></exemplify>
+        <!--<exemplify [sources]="[{name:'markup', src: '<table class=&quot;table table-hover&quot;>...</table>', lang:'markup'}]"></exemplify>-->
       </div>
     </div>
   </div>
@@ -225,7 +225,7 @@
           </tr>
           </tbody>
         </table>
-        <exemplify [sources]="[{name:'markup', src: '<table class=&quot;table table-sm&quot;>...</table>', lang:'markup'}]"></exemplify>
+        <!--<exemplify [sources]="[{name:'markup', src: '<table class=&quot;table table-sm&quot;>...</table>', lang:'markup'}]"></exemplify>-->
       </div>
     </div>
   </div>
@@ -261,7 +261,7 @@
         </tr>
         </tbody>
       </table>
-        <exemplify [sources]="[{name:'markup', src: '<table class=&quot;table table-expandable&quot;>...</table>', lang:'markup'}]"></exemplify>
+        <!--<exemplify [sources]="[{name:'markup', src: '<table class=&quot;table table-expandable&quot;>...</table>', lang:'markup'}]"></exemplify>-->
       </div>
     </div>
   </div>
@@ -311,12 +311,12 @@
       </tr>
       </tbody>
     </table>
-    <exemplify [selector]="'#sortIcons .table thead tr'"></exemplify>
+    <!--<exemplify [selector]="'#sortIcons .table thead tr'"></exemplify>-->
   </div>
   <div class="card-body">
     <h5>Using mixin and custom class names</h5>
     <p>Perhaps you're using something else than boostrap or the table component you're using has a different markup. Then you can make use of our mixin.</p>
-    <exemplify [sources]="[{
+    <!--<exemplify [sources]="[{
         'name':'mixin usage',
         'src':'/* functions, variables and mixins don\'t add css/size to project */\n' +
         '@import \'~@sebgroup/bootstrap/scss/styles/functions\';\n'+
@@ -329,6 +329,6 @@
         '  @include table-sort(\'.sort-class\', \'.sort-asc-class\', \'.sort-desc-class\',\'.sort-disabled-class\');\n' +
         '}'
         ,'lang':'css'
-        }]"></exemplify>
+        }]"></exemplify>-->
   </div>
 </div>

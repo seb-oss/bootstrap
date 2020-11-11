@@ -6,7 +6,6 @@ import { AlertsComponent } from './components/alerts/alerts.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import {FormsModule} from '@angular/forms';
 import { TablesComponent } from './components/tables/tables.component';
-import {ExemplifyModule} from 'angular-exemplify';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 import {
     FormsComponent,
@@ -44,7 +43,6 @@ import {SharedModule} from '../app/shared/shared.module';
     CommonModule,
     FormsModule,
     HttpClientModule,
-    ExemplifyModule,
     RouterModule,
     ExampleRoutingModule,
     SharedModule,
