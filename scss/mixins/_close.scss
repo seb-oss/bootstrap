@@ -1,21 +1,45 @@
-@mixin close($color) {
-  opacity: 1;
+@mixin close($color, $use-background: true) {
+  $hover-color: $white;
+
+  /*opacity: 1;
   right: 0;
   top: 0;
   position: absolute;
-  z-index: 1;
-  &::after {
-    content: '';
-    background: str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath d='M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z' fill='#{color-yiq($color)}'/%3E%3C/svg%3E"), "#", "%23");
-    background-size: 1rem 1.125rem;
-    background-repeat: no-repeat;
-    width: 1rem;
-    height: 1.125rem;
-    display: block;
-    padding: 1.5rem;
-    background-position: center;
+  z-index: 1;*/
+  &::before {
+    // background-image: str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath d='M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z' fill='#{color-yiq($color)}'/%3E%3C/svg%3E"), "#", "%23");
+    background-image: str-replace($close-icon, str-replace(#{'fill=\'' + $close-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + color-yiq($color) + '\''}, "#", "%23")); // SEB specific
   }
-  &:hover {
-    opacity: 0.75;
+
+  @if($use-background) {
+    &:hover::before, &:focus::before {
+      background-image: str-replace($close-icon, str-replace(#{'fill=\'' + $close-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + $white + '\''}, "#", "%23")); // SEB specific
+    }
+    &:not(:disabled):not(.disabled) {
+      @include hover-focus() {
+        &::after {
+          background: rgba($theme-color-overlay-color, $theme-color-overlay-opacity);
+        }
+      }
+      &:active::after {
+        background: rgba($theme-color-overlay-color, $theme-color-overlay-active-opacity);
+      }
+    }
+    /* smartphones, touchscreens */
+    @media (hover: none) and (pointer: coarse) {
+      &:not(:disabled):not(.disabled) {
+        &::after {
+          background: rgba($theme-color-overlay-color, $theme-color-overlay-opacity);
+        }
+      }
+    }
+  } @else {
+    &:hover::before, &:focus::before {
+      background-image: str-replace($close-icon, str-replace(#{'fill=\'' + $close-color + '\''}, "#", "%23"), str-replace(#{'fill=\'' + color-yiq($color) + '\''}, "#", "%23")); // SEB specific
+      opacity: .5;
+    }
+    &:not(:disabled):not(.disabled):hover::after, &:not(:disabled):not(.disabled):focus::after {
+      display:none;
+    }
   }
 }

@@ -1,0 +1,20 @@
+<h5 *ngIf="title">{{title}}</h5>
+<ng-content select=".ex-example"></ng-content>
+<div class="row align-items-center justify-content-md-end mt-3 no-gutters">
+  <div class="col">
+    <h5 class="mb-0">Markup</h5>
+  </div>
+  <div class="col-auto markup-controls">
+    <button class="btn btn-link" (click)="toggleVisibility()">
+      <span *ngIf="isVisible">Hide <fa-icon icon="eye-slash"></fa-icon></span>
+      <span *ngIf="!isVisible">Show <fa-icon icon="eye"></fa-icon></span>
+    </button>
+    <button class="btn btn-link" (click)="copyToClipboard(source)">Copy <fa-icon icon="copy"></fa-icon></button>
+  </div>
+</div>
+<div class="mb-5 mx-n3 mx-sm-0 animate-fade-in" *ngIf="isVisible">
+  <app-code-snippet [path]="source" *ngIf="source else noSource;" [language]="language"></app-code-snippet>
+</div>
+<ng-template #noSource>
+  <div class="alert alert-warning alert-icon"><strong>Source is missing!</strong> Please make sure you've added the code example source.</div>
+</ng-template>

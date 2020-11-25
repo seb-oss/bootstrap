@@ -56,7 +56,7 @@
       <ng-container *ngFor="let menuItem of $menuItems | async">
         <div class="row align-items-center menu-item" routerLinkActive="active">
           <div class="col pl-0">
-            <a class="nav-link" routerLink="{{menuItem.path}}" (click)="menuItem.active = !menuItem.active; toggleMenu();">{{menuItem.name}}</a>
+            <a class="nav-link" [routerLink]="menuItem.path" [routerLinkActive]="'active'">{{menuItem.name}}</a>
           </div>
         </div>
       </ng-container>

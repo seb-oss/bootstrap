@@ -9,32 +9,28 @@ import { MobileNavigationComponent } from './components/mobile-navigation/mobile
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
-import { ToastContainerModule, ToastrModule} from 'ngx-toastr';
+import { ToastrModule } from 'ngx-toastr';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SideNavigationComponent,
-    MobileNavigationComponent,
-    HeaderComponent,
-    AboutComponent
-  ],
+  declarations: [AppComponent, SideNavigationComponent, MobileNavigationComponent, HeaderComponent, AboutComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    SharedModule,
     ToastrModule.forRoot({
-        timeOut: 10000,
-        closeButton: true,
-        disableTimeOut: false,
-        progressBar: true,
-        toastClass: 'toast',
-        positionClass: 'toast-bottom-right',
-        enableHtml: true
+      timeOut: 10000,
+      closeButton: true,
+      disableTimeOut: false,
+      progressBar: true,
+      toastClass: 'toast',
+      positionClass: 'toast-bottom-right',
+      enableHtml: true,
     }),
     AppRoutingModule,
-    ExampleModule
+    ExampleModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,10 @@
+// add margin for example only
+::ng-deep :not(.markup-controls) > .btn + .btn {
+  margin-left: .5rem;
+}
+
+::ng-deep .close-example {
+  position: relative;
+  height: 1.5rem;
+  width: fit-content;
+}

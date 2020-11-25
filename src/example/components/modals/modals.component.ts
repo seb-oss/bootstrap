@@ -35,10 +35,10 @@ export class ModalsComponent implements OnInit {
       const contentBody = document.getElementsByTagName('ngb-modal-window')[0];
       modalRef.result.then((result) => {
           clearAllBodyScrollLocks();
-        this.closeResult = `Closed with: ${result}`;
+          this.closeResult = `Closed with: ${result}`;
       }, (reason) => {
           clearAllBodyScrollLocks();
-        this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+          this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
       });
 
       disableBodyScroll(contentBody);

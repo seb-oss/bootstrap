@@ -1,0 +1,4 @@
+@import "scss/core";
+.alert-dark {
+  @include alert-icon($dark, $dark, $dark, 'info')
+}

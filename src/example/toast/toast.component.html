@@ -1,0 +1,64 @@
+<a name="buttons"><h2 class="my-3">Toast notifications</h2></a>
+<app-include [components]="components"></app-include>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Card with header and content"></app-anchor-heading>
+  <div class="card-body">
+    <p>Bootstrap provides classes for toasts i.e. you can just add <code>.toast</code> to an element get the basic appearance of a toast, however SEB:s take on toast notifications and their design is a bit simplified and inherits the style from alerts so the <a href="https://getbootstrap.com/docs/4.3/components/toasts/" target="_blank">bootstrap toast examples</a> need to be altered a bit. Just add <code>.toast</code> together with one of the following contextual classes.</p>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Context</th>
+        <th>Usage</th>
+        <th>Class name</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Info</td>
+        <td>Content that holds neutral information that we find useful for users and that we want to inform them about.</td>
+        <td><code>.toast-info</code></td>
+      </tr>
+      <tr>
+        <td>Success</td>
+        <td>Should be used as a response to an action or something that is considered to be positive or a success.</td>
+        <td><code>.toast-success</code></td>
+      </tr>
+      <tr>
+        <td>Warning</td>
+        <td>Not an error but important information for a user to consider or be aware of.</td>
+        <td><code>.toast-warning</code></td>
+      </tr>
+      <tr>
+        <td>Danger</td>
+        <td>Used for errors or when something goes wrong.</td>
+        <td><code>.toast-danger</code></td>
+      </tr>
+      </tbody>
+    </table>
+    <app-example title="Standard"
+                 source="toast/standard/standard.component.html">
+      <app-standard class="ex-example"></app-standard>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Toast notifications with timeout"></app-anchor-heading>
+  <div class="card-body" id="timeout">
+    <div class="alert alert-warning alert-icon"><strong>Javascript needed!</strong> Please note that the examples above are just used to illustrate the appearance of toast notifications, and the markup could be reused with any framework or toast component as long as they use the toast class. Toast notifications use the same style and appearance as alerts but you need a framework to control when and how to show them. The examples below uses a third-party library for angular called ngx-toastr, if you're using angular, please take a look at <a class="alert-link" href="https://sebgroup.github.io/ngx-toastr/" target="_blank">@sebgroup/ngx-toastr</a> for more info on installation and usage.</div>
+    <p>These toasts will disappear after a set time.</p>
+    <div class="row">
+      <div class="col-6 col-md-auto mb-3 mb-md-0">
+        <button class="btn btn-primary w-100" (click)="showToast('info')">Show info</button>
+      </div>
+      <div class="col-6 col-md-auto mb-3 mb-md-0">
+        <button class="btn btn-primary w-100" (click)="showToast('success')">Show success</button>
+      </div>
+      <div class="col-6 col-md-auto">
+        <button class="btn btn-primary w-100" (click)="showToast('warning')">Show warning</button>
+      </div>
+      <div class="col-6 col-md-auto">
+        <button class="btn btn-primary w-100" (click)="showToast('error')">Show error</button>
+      </div>
+    </div>
+  </div>
+</div>

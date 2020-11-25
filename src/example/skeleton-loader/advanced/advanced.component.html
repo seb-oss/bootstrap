@@ -1,0 +1,49 @@
+<div class="custom-control custom-checkbox mb-3">
+  <input type="checkbox" class="custom-control-input" id="showOverlayTable" [(ngModel)]="showOverlay" name="showOverlay">
+  <label class="custom-control-label" for="showOverlayTable">Show real content overlay</label>
+</div>
+<table class="table table-hover mb-0">
+  <thead>
+  <tr>
+    <th>Account</th>
+    <th>Currency</th>
+    <th>Balance</th>
+    <th class="text-right">Actions</th>
+  </tr>
+  <tr class="bg-light">
+    <th>n/a</th>
+    <th>n/a</th>
+    <th><div class="skeleton-loader skeleton-loader-fill-sm delay-1"></div></th>
+    <th><div class="skeleton-loader skeleton-loader-fill-sm delay-3 float-right" style="width: 110px;"></div></th>
+  </tr>
+  </thead>
+</table>
+<table class="table table-hover mb-0 overlay-content" *ngIf="showOverlay">
+  <tbody>
+  <tr>
+    <td>5123456789</td>
+    <td>SEK</td>
+    <td>123 231,00</td>
+    <td class="text-right"><button class="btn btn-outline-primary btn-sm mt-n2 mb-n1">Transfer</button></td>
+  </tr>
+  <tr>
+    <td>5345345455</td>
+    <td>USD</td>
+    <td>291,00</td>
+    <td class="text-right"><button class="btn btn-outline-primary btn-sm mt-n2 mb-n1">Transfer</button></td>
+  </tr>
+  <tr>
+    <td>5123457642</td>
+    <td>GBP</td>
+    <td>3 251,23</td>
+    <td class="text-right"><button class="btn btn-outline-primary btn-sm mt-n2 mb-n1">Transfer</button></td>
+  </tr>
+  <tr>
+    <td>5978465466</td>
+    <td>EUR</td>
+    <td>141,57</td>
+    <td class="text-right"><button class="btn btn-outline-primary btn-sm mt-n2 mb-n1">Transfer</button></td>
+  </tr>
+  </tbody>
+</table>
+<div class="skeleton-loader skeleton-loader-table" style="height: 181px;"></div>

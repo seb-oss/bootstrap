@@ -6,7 +6,6 @@ import { AlertsComponent } from './components/alerts/alerts.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import {FormsModule} from '@angular/forms';
 import { TablesComponent } from './components/tables/tables.component';
-import {ExemplifyModule} from 'angular-exemplify';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 import {
     FormsComponent,
@@ -24,7 +23,6 @@ import { CardsComponent } from './components/cards/cards.component';
 import { ModalsComponent } from './components/modals/modals.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { TooltipsComponent } from './components/tooltips/tooltips.component';
-import { AccordionComponent } from './components/accordion/accordion.component';
 import { TypographyComponent } from './components/typography/typography.component';
 import { SkeletonLoaderComponent } from './components/skeleton-loader/skeleton-loader.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
@@ -36,16 +34,18 @@ import { ColorsComponent } from './components/colors/colors.component';
 import { ToastNotificationsComponent } from './components/toast-notifications/toast-notifications.component';
 import {SpinnersComponent} from './components/spinners/spinners.component';
 import { ButtonGroupComponent } from './components/button-group/button-group.component';
-import {IncludeComponent} from '../app/components/include/include.component';
 import {AnimationsComponent} from './components/animations/animations.component';
+import {ExampleRoutingModule} from './example-routing.module';
+import {SharedModule} from '../app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     HttpClientModule,
-    ExemplifyModule,
     RouterModule,
+    ExampleRoutingModule,
+    SharedModule,
     NgbModule
   ],
   declarations: [
@@ -68,7 +68,6 @@ import {AnimationsComponent} from './components/animations/animations.component'
       ModalsComponent,
       PaginationComponent,
       TooltipsComponent,
-      AccordionComponent,
       TypographyComponent,
       SkeletonLoaderComponent,
       DatepickerComponent,
@@ -79,7 +78,6 @@ import {AnimationsComponent} from './components/animations/animations.component'
       ColorsComponent,
       ToastNotificationsComponent,
       ButtonGroupComponent,
-    IncludeComponent
   ],
   exports: [ButtonsComponent]
 })

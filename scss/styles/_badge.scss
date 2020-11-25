@@ -1,1 +1,44 @@
 @import "../bootstrap-core/badge";
+
+.badge-close {
+  margin-right: 14px;
+}
+.badge > .close::before {
+  top: 0;
+  left: 0;
+  background-size: .5rem;
+  background-color: inherit;
+  height: 18px;
+  width: 18px;
+  padding: 9px;
+}
+
+// Badge close color
+@each $color, $value in $theme-colors {
+  .badge[class*=#{$color}] > .close {
+    @include close($value, false);
+  }
+}
+
+.badge > .close {
+  position:absolute;
+  background: inherit;
+  height: 18px;
+  width: 18px;
+  margin-top: -3px;
+  margin-left: 1px;
+  &:focus {
+    outline: none;
+  }
+}
+/*
+.badge > .close:not(:disabled):not(.disabled):hover::before,
+.badge > .close:not(:disabled):not(.disabled):focus::before {
+  background-image: escape-svg($close-icon-hover);
+}
+
+.badge > .close:not(:disabled):not(.disabled):hover::after,
+.badge > .close:not(:disabled):not(.disabled):focus::after {
+  display:none;
+}
+*/

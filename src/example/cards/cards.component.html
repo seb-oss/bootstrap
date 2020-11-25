@@ -1,0 +1,36 @@
+<a name="buttons"><h2 class="my-3">Cards</h2></a>
+<app-include [components]="components"></app-include>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Card with header and content"></app-anchor-heading>
+  <div class="card-body">
+    <p class="mb-3">For more info and examples please refer to Bootstraps <a href="http://getbootstrap.com/docs/4.4/components/card/" target="_blank">official documentation</a>.</p>
+    <app-example title="Standard"
+                 source="cards/standard/standard.component.html">
+      <app-standard class="ex-example bg-light d-block p-4"></app-standard>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Cards in grid with equal height and card footer"></app-anchor-heading>
+  <div class="card-body">
+    <p class="mb-3">Leverage the bootstrap grid and the row-cols class to define number of columns per screen size. Combine with utility class <code>.h-100</code> to make the cards use the whole height and <code>.card-footer</code> nicely align card actions at the bottom of the card.</p>
+    <app-example title="Cards with rows and columns"
+                 source="cards/with-grid/with-grid.component.html">
+      <app-with-grid class="ex-example bg-light d-block p-3 p-sm-4 mx-n3 mx-sm-0"></app-with-grid>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Cards in columns"></app-anchor-heading>
+  <div class="card-body">
+    <p>Flex-box container with column layout will layout all items from top to bottom and left to right by default and create a masonry-like layout. By default <code>.card-columns</code> use 3 columns for screen sizes <code>sm</code> and up. You can make the layout responsive by adding custom css as seen in the example below.</p>
+    <app-example title="Cards in columns"
+                 source="cards/columns/columns.component.html">
+      <app-columns class="ex-example bg-light d-block p-3 p-sm-4 mx-n3 mx-sm-0"></app-columns>
+    </app-example>
+    <h5>Custom css</h5>
+    <pre class="language-css mx-n1 mx-sm-0 border-top"><code class="language-css">
+      <div [innerHTML]="snippet"></div></code>
+    </pre>
+  </div>
+</div>

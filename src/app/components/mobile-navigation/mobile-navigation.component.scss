@@ -1,5 +1,5 @@
-@import "../../../../scss/variables";
-@import "../../../../scss/mixins/mixins";
+@import '../../../../scss/variables';
+@import '../../../../scss/mixins/mixins';
 .mobile-nav {
   position: fixed;
   top: 56px;
@@ -21,8 +21,8 @@
 
 .mobile-header {
   .col {
-    padding-top: .65rem;
-    padding-bottom: .35rem;
+    padding-top: 0.65rem;
+    padding-bottom: 0.35rem;
     //padding: .375em 0;
   }
   .active {
@@ -40,7 +40,7 @@ header {
 .mobile-header {
   background: #333;
   color: #fff;
-  height:56px;
+  height: 56px;
   position: fixed;
   z-index: 2;
   left: 0;

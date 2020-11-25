@@ -1,0 +1,22 @@
+<a name="buttons"><h2 class="my-3">Breadcrumbs</h2></a>
+<app-include [components]="components"></app-include>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Standard breadcrumbs"></app-anchor-heading>
+  <div class="card-body">
+    <p>Use breadcrumbs to leave a trace so that the users can find their way back when navigating the app. On mobile devices only the second to last item will be displayed together with a back icon, resize the browser to see it live.</p>
+    <app-example title="Standard"
+                 source="breadcrumbs/standard/standard.component.html">
+      <app-standard class="ex-example"></app-standard>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Breadcrumbs on dark or colored backgrounds"></app-anchor-heading>
+  <div class="card-body">
+    <p>For better contrast against dark and colored backgrounds add the <code>.breadcrumbs-light</code> class to the breadcrumb element.</p>
+    <app-example title="Light version"
+                 source="breadcrumbs/contrast/contrast.component.html">
+        <app-contrast class="ex-example bg-info-element d-block px-3"></app-contrast>
+    </app-example>
+  </div>
+</div>

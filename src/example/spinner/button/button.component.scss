@@ -1,0 +1,21 @@
+@import "scss/core";
+.btn + .btn {
+  margin-left: map-get($spacers, 3);
+}
+
+.btn-light {
+  position: relative;
+}
+
+.btn-light::after {
+  display: block;
+  content: '';
+  background: $black;
+  background: #000;
+  position: absolute;
+  top: -(map-get($spacers, 2));
+  left: -(map-get($spacers, 2));
+  width: calc(100% + #{map-get($spacers, 3)});
+  height: calc(100% + #{map-get($spacers, 3)});
+  z-index: -1;
+}

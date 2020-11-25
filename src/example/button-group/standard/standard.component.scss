@@ -1,0 +1,7 @@
+@import "../../../../scss/core";
+.btn-group {
+  display: block;
+  + .btn-group {
+    margin-top: map-get($spacers, 3);
+  }
+}
