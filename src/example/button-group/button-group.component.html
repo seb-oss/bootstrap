@@ -1,0 +1,43 @@
+<a name="buttons"><h2 class="my-3">Button groups</h2></a>
+<app-include [components]="components"></app-include>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Button groups"></app-anchor-heading>
+  <div class="card-body">
+    <p>Group buttons together using a button group, check <a href="https://getbootstrap.com/docs/4.2/components/button-group/" target="_blank">bootstrap docs</a> for more info and examples. Add <code>.active</code> class to a button to highlight it as active. Note that javascript is required to use button groups like radio buttons or checkboxes.</p>
+    <app-example title="Standard"
+                 source="button-group/standard/standard.component.html">
+      <app-standard class="ex-example"></app-standard>
+    </app-example>
+    <div class="mb-4">
+      <h5>Disabled state</h5>
+      <p>Triggered by <code>.disabled</code> class or disabled attribute on each button.</p>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-outline-primary disabled">Left</button>
+        <button type="button" class="btn btn-outline-primary disabled">Middle</button>
+        <button type="button" class="btn btn-outline-primary disabled">Right</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Sizes"></app-anchor-heading>
+  <div class="card-body">
+    <p>Group buttons together using a button group, check <a href="https://getbootstrap.com/docs/4.2/components/button-group/" target="_blank">bootstrap docs</a> for more info and examples. Note that javascript is required to use button groups like radio buttons or checkboxes.</p>
+    <app-example title="Sizes"
+                 source="button-group/sizes/sizes.component.html">
+      <app-sizes class="ex-example"></app-sizes>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Different flavours"></app-anchor-heading>
+  <div class="card-body">
+    <p>
+    Since button group relies on buttons all modifiers for regular buttons work for button groups too e.g.
+    </p>
+    <app-example title="Dark button group"
+                 source="button-group/flavours/flavours.component.html">
+      <app-flavours class="ex-example"></app-flavours>
+    </app-example>
+  </div>
+</div>

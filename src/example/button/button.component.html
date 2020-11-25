@@ -1,0 +1,99 @@
+<a name="buttons"><h2 class="my-3">Buttons</h2></a>
+<app-include [components]="components"></app-include>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Button styles and modifiers"></app-anchor-heading>
+  <div class="card-body">
+    <p>The default class for all buttons in bootstrap is <code>.btn</code>. It gives elements with the class base line button styles like: padding, font-weight, white-space etc. and can be applied to both <code>buttons</code> and <code>anchor</code> elements to name a few.</p>
+    <p>Bootstrap has a few different modifiers that can be used together with the base class, we primarily use <code>.btn-primary</code>, <code>.btn-secondary</code> and <code>.btn-link</code>, use the latter to give buttons the same behavior as normal links (used for links placed outside text segments and paragraphs as well as actions similar to "go to" or regular links). You can also use the outline version if you want an "inverted" button with border. Note that we only support <code>.btn-primary</code>,<code>.btn-secondary</code>,<code>.btn-light</code>,<code>.btn-danger</code> and <code>.btn-dark</code> from bootstrap, if you use any of the others they will fall back to the primary style.</p>
+    <p>Against colored backgrounds or images it's recommended to use the <code>.btn-light</code> or <code>.btn-dark</code> modifier to get good contrast .</p>
+    <app-example title="Standard"
+                 source="button/standard/standard.component.html">
+      <app-standard class="ex-example"></app-standard>
+    </app-example>
+    <app-example title="Outlined"
+                 source="button/outlined/outlined.component.html">
+      <app-outlined class="ex-example"></app-outlined>
+    </app-example>
+    <div class="mb-4">
+      <h5>Disabled state</h5>
+      <p>Triggered by <code>.disabled</code> class or disabled attribute.</p>
+      <button type="button" class="btn btn-primary disabled">Primary</button>
+      <button type="button" class="btn btn-outline-primary disabled">Primary outlined</button>
+      <button type="button" class="btn btn-secondary disabled">Secondary</button>
+      <button type="button" class="btn btn-link disabled">Link</button>
+    </div>
+  </div>
+</div>
+<div class="card mb-4 mx-n3 mx-md-0" id="buttonsLightExample">
+  <app-anchor-heading heading="Buttons and colored backgrounds"></app-anchor-heading>
+  <div class="card-body">
+    <p>The <code>.btn-light</code> and <code>.btn-dark</code> classes should only be used when buttons are placed on colored or dark backgrounds/images.</p>
+    <div class="row align-items-center no-gutters">
+      <div class="col-6 col-md-4 col-lg bg-primary-element py-4 text-center">
+        <button class="btn btn-light">Light</button>
+      </div>
+      <div class="col-6 col-md-4 col-lg bg-info-element py-4 text-center">
+        <button class="btn btn-light">Light</button>
+      </div>
+      <div class="col-6 col-md-4 col-lg bg-success-element py-4 text-center">
+        <button class="btn btn-light">Light</button>
+      </div>
+      <div class="col-6 col-md-4 col-lg bg-warning-element py-4 text-center">
+        <button class="btn btn-dark">Dark</button>
+      </div>
+      <div class="col-6 col-md-4 col-lg bg-danger-element py-4 text-center">
+        <button class="btn btn-light">Light</button>
+      </div>
+      <div class="col-6 col-md-4 col-lg bg-secondary-element py-4 text-center">
+        <button class="btn btn-dark">Dark</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mb-4 mx-n3 mx-md-0" id="buttonsCloseExample">
+  <app-anchor-heading heading="Close button"></app-anchor-heading>
+  <div class="card-body">
+    <p>Add <code>.close</code> to a button to get correct style and icon for a close button and don't forget to include text for screen readers with the aria label. The button will be right aligned by default. Use inside <a routerLink="/examples/modals">modals</a>, <a routerLink="/examples/alerts" fragment="dismissable">alerts</a>, <a routerLink="/examples/badges" fragment="dismissableBadges">badges</a> and other components that can be closed or dismissed.</p>
+    <app-example source="button/close/close.component.html">
+      <div class="ex-example close-example">
+        <app-close></app-close>
+      </div>
+    </app-example>
+  </div>
+</div>
+<div class="card mb-4 mx-n3 mx-md-0" id="buttonsGridExample">
+  <app-anchor-heading heading="Responsive design and buttons"></app-anchor-heading>
+  <div class="card-body">
+    <p>If you look at the example above on smaller screen you'll notice that the buttons won't stack nicely. To have full control and to create a good experience on mobile devices and tablets consider placing buttons in a grid.</p>
+    <app-example source="button/grid/grid.component.html">
+      <app-grid class="ex-example"></app-grid>
+    </app-example>
+  </div>
+</div>
+<div class="card mb-4 mx-n3 mx-md-0" id="buttonsIconExample">
+  <app-anchor-heading heading="Icons in buttons"></app-anchor-heading>
+  <div class="card-body">
+    <p>Example with icons, note the alignment on mobile devices (smaller screens) using a grid. The second example also uses the utility class <code>order-*</code> to change the button order on different screen sizes.</p>
+    <app-example source="button/icons/icons.component.html">
+      <app-icons class="ex-example"></app-icons>
+    </app-example>
+  </div>
+</div>
+<div class="card mb-4 mx-n3 mx-md-0" id="smallButtonsExample">
+  <app-anchor-heading heading="Sizing"></app-anchor-heading>
+  <div class="card-body">
+    <p>Add <code>.btn-sm</code> for smaller buttons and <code>.btn-lg</code> for larger buttons.</p>
+    <app-example source="button/sizes/sizes.component.html">
+      <app-sizes class="ex-example"></app-sizes>
+    </app-example>
+  </div>
+</div>
+<div class="card mb-4 mx-n3 mx-md-0" id="additionalButtonsExample">
+  <app-anchor-heading heading="Alternative buttons"></app-anchor-heading>
+  <div class="card-body">
+    <p>Since SEB Style is a theme for Bootstrap and Bootstrap has some additional button classes to differentiate the severity or the meaning of a button like <code>.btn-success</code> please note that they'll fallback to the default style.</p>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<a name="buttons"><h2 class="my-3">Table</h2></a>
+<app-include [components]="components"></app-include>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Base table and modifiers"></app-anchor-heading>
+  <div class="card-body">
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col">
+        <app-example title="Base (default standard)"
+                     source="tables/standard/standard.component.html">
+          <app-standard class="ex-example"></app-standard>
+        </app-example>
+      </div>
+      <div class="col">
+        <app-example title="Striped"
+                     source="tables/striped/striped.component.html">
+          <app-striped class="ex-example"></app-striped>
+        </app-example>
+      </div>
+      <div class="col">
+        <app-example title="Bordered"
+                     source="tables/bordered/bordered.component.html">
+          <app-bordered class="ex-example"></app-bordered>
+        </app-example>
+      </div>
+      <div class="col">
+        <app-example title="Hoverable"
+                     source="tables/hoverable/hoverable.component.html">
+          <app-hoverable class="ex-example"></app-hoverable>
+        </app-example>
+      </div>
+      <div class="col">
+        <app-example title="Small"
+                     source="tables/small/small.component.html">
+          <app-small class="ex-example"></app-small>
+        </app-example>
+      </div>
+      <div class="col">
+        <app-example title="Expanded"
+                     source="tables/expanded/expanded.component.html">
+          <app-expanded class="ex-example"></app-expanded>
+        </app-example>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Horizontal scroll"></app-anchor-heading>
+  <div class="card-body">
+    <p>If you want the table and it's content to be scrollable you need to wrap it in an element with overflow property set to <code>auto</code>. Bootstrap provides a utility class that can be used for this calle <code>.overflow-auto</code>. To get the margins right, use <code>.mb-0</code> and <code>.mb-3</code> to move the margin to the wrapping element.</p>
+    <app-example source="tables/horizontal-scroll/horizontal-scroll.component.html">
+      <app-horizontal-scroll class="ex-example"></app-horizontal-scroll>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Table sorting"></app-anchor-heading>
+  <div class="card-body">
+    <p>You can add icons in two different ways:</p>
+    <ul class="list-group list-group-bullet mb-4">
+      <li class="list-group-item">Using predefined classes</li>
+      <li class="list-group-item">Custom class names with table-sort mixin</li>
+    </ul>
+    <h4>Using sort class</h4>
+    <p>To let the user know that a column is sortable you can add <code>.sort</code> to the column header (<code>&lt;th&gt;</code> element) together with <code>.sort-asc</code> or <code>.sort-desc</code> to indicate how it's sorted. If sorting for some reason is disabled you can also add <code>.disabled</code> to the column header.</p>
+    <div class="alert alert-info alert-icon">Please note that the table below is not really sortable (it's just plain html) and that it's just an example with the classes you need to add to get the icons.</div>
+    <app-example title="Sorting"
+                 source="tables/sort/sort.component.html">
+      <app-sort class="ex-example"></app-sort>
+    </app-example>
+    <h4>Using mixin and custom class names</h4>
+    <p>Perhaps you're using something else than boostrap or the table component you're using has a different markup. Then you can make use of our mixin.</p>
+    <app-example loadSource="false"
+                 [source]="mixin"
+                 language="css">
+    </app-example>
+  </div>
+</div>

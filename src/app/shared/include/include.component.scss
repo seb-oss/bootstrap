@@ -1,0 +1,4 @@
+@import 'scss/core';
+.btn.btn-link.position-absolute {
+  right: map-get($spacers, 3);
+}

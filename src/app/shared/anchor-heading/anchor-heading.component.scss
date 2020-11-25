@@ -1,0 +1,14 @@
+@import 'scss/core';
+h4 {
+  cursor: pointer;
+  display: inline-block;
+  fa-icon {
+    opacity: 0;
+  }
+  &:hover {
+    fa-icon {
+      @include add-transition('fadeIn');
+      opacity: 1;
+    }
+  }
+}

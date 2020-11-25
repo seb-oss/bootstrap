@@ -1,0 +1,103 @@
+<a name="alerts"><h2 class="my-3">Alerts</h2></a>
+<app-include [components]="components"></app-include>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="When to use?"></app-anchor-heading>
+  <div class="card-body">
+    <p>Alerts are available for any length of text and can be used for more than traditional alerts. Ideally they should be used when we want content or information to stand out, be separated from the "normal" state, highlight a change, make the user aware of important information or simply to convey the response from an action.</p>
+    <h5>What context should I use?</h5>
+    <p>For proper styling, use one of the required contextual classes described below. Avoid using different contexts/colors as a means of separating categories and content of the same type as it might confuse users and make the real context less obvious.</p>
+    <h5>Why have primary, secondary and info when they all look the same?</h5>
+    <p>The appearance might be the same but the semantic meaning is different. This theme is built on bootstrap which has alerts for different semantic contexts, i.e secondary content is not the same as information content, secondary content could be more information or details about a specific service or function while info should be treated as more temporary and is typically added dynamically to a page based on some event or a trigger, ex. information about cookies. Our design however has the same style for these alerts but you should still think about which one is more appropriate for you based on the context and semantic meaning. </p>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Context</th>
+        <th>Usage</th>
+        <th>Class name</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Primary</td>
+        <td>For content that should stand out but lacks obvious meaning/context and is not a response to an action. <strong>Note:</strong> most of the time you don't want to use this class instead use <code>alert-secondary</code> when you just want the content to stick out from main content and <code>alert-info</code> when you want to inform the user about something neutral.</td>
+        <td><code>.alert-primary</code></td>
+      </tr>
+      <tr>
+        <td>Secondary</td>
+        <td>For secondary content that should stand out but lacks obvious meaning/context and is not a response to an action.</td>
+        <td><code>.alert-secondary</code></td>
+      </tr>
+      <tr>
+        <td>Info</td>
+        <td>Content that holds neutral information that we find useful for users and that we want to inform them about.</td>
+        <td><code>.alert-info</code></td>
+      </tr>
+      <tr>
+        <td>Success</td>
+        <td>Should be used as a response to an action or something that is considered to be positive or a success.</td>
+        <td><code>.alert-success</code></td>
+      </tr>
+      <tr>
+        <td>Warning</td>
+        <td>Not an error but important information for a user to consider or be aware of.</td>
+        <td><code>.alert-warning</code></td>
+      </tr>
+      <tr>
+        <td>Danger</td>
+        <td>Used for errors or when something goes wrong.</td>
+        <td><code>.alert-danger</code></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Standard alert"></app-anchor-heading>
+  <div class="card-body">
+  <p>The examples below use the traditional <code>.alert-*</code> class (replace * with context), for use cases where the message is really important and needs to stand out.</p>
+    <app-example title="Standard"
+                 source="alerts/standard/standard.component.html">
+      <app-standard class="ex-example"></app-standard>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="With icons"></app-anchor-heading>
+  <div class="card-body">
+    <p>The examples below use the traditional <code>.alert-*</code> class (replace * with context), together with <code>.alert-icon</code> to add extra emphasis by displaying an icon next to the message. Note that only <code>info</code>, <code>warning</code> and <code>danger</code> alerts have icons at the moment.</p>
+    <app-example title="With icons"
+                 source="alerts/icons/icons.component.html">
+      <app-icons class="ex-example"></app-icons>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="With links"></app-anchor-heading>
+  <div class="card-body">
+    <p>Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
+    <app-example title="With links"
+                 source="alerts/links/links.component.html">
+      <app-links class="ex-example"></app-links>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Responsive with buttons"></app-anchor-heading>
+  <div class="card-body">
+    <p>Use a grid to create responsive alert layouts, note that <code>.btn-light</code> and <code>.btn-dark</code> should be used for buttons in alerts. Try and resize the page to see how they behave.</p>
+    <app-example title="Responsive with buttons"
+                 source="alerts/responsive-with-buttons/responsive-with-buttons.component.html">
+      <app-responsive-with-buttons class="ex-example"></app-responsive-with-buttons>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Dismissable"></app-anchor-heading>
+  <div class="card-body">
+    <p>A more complex alert that can be dismissed (please note that JavaScript or framework is needed to dismiss alert messages!).</p>
+    <app-example title="Alerts that can be dismissed"
+                 source="alerts/dismissable/dismissable.component.html">
+      <app-dismissable class="ex-example"></app-dismissable>
+    </app-example>
+  </div>
+</div>

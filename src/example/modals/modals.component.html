@@ -1,0 +1,114 @@
+<a name="buttons"><h2 class="my-3">Modals</h2></a>
+<app-include [components]="components"></app-include>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Standard modal"></app-anchor-heading>
+  <div class="card-body">
+    <div class="alert alert-warning alert-icon mx-n3 mx-md-0"><strong>Javascript needed!</strong> Please note that the examples below is just a representation of how modals look and the needed markup. In order to use modals you need javascript to control when and how to show them.
+      <p class="mt-3"><strong>Using Angular?</strong> A simple and elegant solution to add modals to an angular app and at the same time allow browser history to determine modal state is to leverage the angular router and add the modal markup to route component. If you don't want to use routes you could also take a look at <a class="alert-link" href="https://ng-bootstrap.github.io/" target="_blank">ng-bootstrap</a> and their <a class="alert-link" href="https://ng-bootstrap.github.io/#/components/modal" target="_blank">modal component</a>.</p>
+      <p class="mt-3"><strong>Mobile development!</strong> To make the experience extra crisp on mobile devices and more specifically to avoid the issue with <a class="alert-link" href="https://www.google.com/search?q=content+scrolling+behind+modal" target="_blank">scrolling content behind the modal</a>, you should consider adding <a class="alert-link" href="https://github.com/willmcpo/body-scroll-lock" target="_blank">body scroll lock</a> to your project when implementing modals. An example implementation for angular can also be found on <a class="alert-link" href="https://stackblitz.com/edit/seb-modal-body-scroll-lock" target="_blank">stack blitz</a>.</p>
+    </div>
+    <div class="form-row">
+      <div class="col-12 col-sm-auto mb-3">
+        <button class="btn btn-primary w-100" (click)="open(content)">Open modal with backdrop</button>
+      </div>
+    </div>
+    <app-example title="Standard"
+                 source="modals/standard/standard.component.html">
+      <app-standard class="ex-example bg-secondary d-block p-2 p-sm-4 mx-n3 mx-sm-auto"></app-standard>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Sizes"></app-anchor-heading>
+  <div class="card-body">
+    <p>Add <code>.modal-lg</code> class to the modal dialog to get a larger modal, works with normal modals and aside modals.</p>
+    <div class="form-row">
+      <div class="col-12 col-sm-auto">
+        <button class="btn btn-primary w-100" (click)="open(content, {size:'lg'})">Open large modal</button>
+      </div>
+      <div class="col-12 col-sm-auto mt-3 mt-sm-0 mb-3">
+        <button class="btn btn-primary w-100" (click)="open(largeContent, {windowClass:'modal-aside modal-aside-right', size:'lg'})">Open large aside modal</button>
+      </div>
+    </div>
+    <app-example title="Large modal"
+                 source="modals/sizes/sizes.component.html">
+      <app-sizes class="ex-example"></app-sizes>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Standard modal with scroll"></app-anchor-heading>
+  <div class="card-body">
+    <p>Add the class <code>.modal-dialog-scrollable</code> to the modal element to allow the body content to overflow i.e. scroll. If you want the buttons or modal actions to align nicely at the bottom put them inside a modal footer with the class <code>.border-top</code> to get a border against the scrolling content body. This goes for aside and fullscreen modals too!</p>
+    <app-example title="Scrollable content"
+                 source="modals/scroll/scroll.component.html">
+      <app-scroll class="ex-example bg-secondary d-block p-2 p-sm-4 mx-n3 mx-sm-auto"></app-scroll>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Aside modal aka slide-out"></app-anchor-heading>
+  <div class="card-body">
+    <p>Add <code>.modal-aside</code> class to the modal element together with either <code>.modal-aside-right</code> or <code>.modal-aside-left</code> to get a modal that will slide in from the side.</p>
+    <div class="form-row">
+      <div class="col-12 col-sm-auto mb-3">
+        <button class="btn btn-primary w-100" (click)="open(content, {windowClass:'modal-aside modal-aside-right'})">Open aside modal</button>
+      </div>
+    </div>
+    <app-example title="Aside modal"
+                 source="modals/aside/aside.component.html">
+      <app-aside class="ex-example"></app-aside>
+    </app-example>
+  </div>
+</div>
+<div class="card mx-n3 mx-sm-0 mb-4">
+  <app-anchor-heading heading="Fullscreen modal aka take-over"></app-anchor-heading>
+  <div class="card-body">
+    <p>Add <code>.modal-fullscreen</code> class to the modal element to get a fullscreen modal.</p>
+    <div class="form-row">
+      <div class="col-12 col-sm-auto mb-3">
+        <button class="btn btn-primary w-100" (click)="open(content, {windowClass:'modal-fullscreen'})">Open fullscreen modal</button>
+      </div>
+    </div>
+    <app-example title="Fullscreen modal"
+                 source="modals/fullscreen/fullscreen.component.html">
+      <app-fullscreen class="ex-example"></app-fullscreen>
+    </app-example>
+  </div>
+</div>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Modal body text goes here.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="modal.dismiss('Cross click')">Close</button>
+    <button type="button" class="btn btn-primary" (click)="modal.close('Save click')">Save changes</button>
+  </div>
+</ng-template>
+<ng-template #largeContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Modal body text goes here.</p>
+    <div class="bg-primary-element text-white align-self-center p-3" style="width: 600px; height: 600px;">
+      <p class="lead font-weight-normal">The large aside modal will adjust it's width to the width of the content.<br/>
+        Max width = 768px<br/>
+        Min width = 320px
+      </p>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="modal.dismiss('Cross click')">Close</button>
+    <button type="button" class="btn btn-primary" (click)="modal.close('Save click')">Save changes</button>
+  </div>
+</ng-template>

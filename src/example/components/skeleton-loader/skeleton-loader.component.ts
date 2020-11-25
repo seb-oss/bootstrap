@@ -16,7 +16,7 @@ import {ScssImport} from '../../../app/interfaces/scss-import';
 })
 export class SkeletonLoaderComponent {
 
-  showOverlay: boolean = false;
+  showOverlay = false;
   components: Array<ScssImport> = [{
     title: 'skeleton loaders',
     fileName: 'skeleton-loader',
