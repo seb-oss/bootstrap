@@ -9,7 +9,8 @@ export class DismissableComponent implements OnInit {
 
   alerts = {
     error: true,
-    success: true
+    success: true,
+    warning: true
   };
 
   constructor() { }
