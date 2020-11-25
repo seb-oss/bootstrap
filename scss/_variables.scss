@@ -79,6 +79,10 @@ $theme-colors: map-merge(
     $theme-colors
 );
 
+$theme-color-overlay-color: $black !default; // SEB specific, used for overlays such as progress bars om theme colors
+$theme-color-overlay-opacity: .25 !default; // SEB specific, opacity for overlay on theme color
+$theme-color-overlay-active-opacity: .5 !default; // SEB specific, opacity for overlay on theme color
+
 // theme icons // SEB specific
 $icon-fill-color: $black;
 $theme-icons: () !default;
