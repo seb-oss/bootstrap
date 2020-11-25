@@ -13,6 +13,13 @@
   padding: 9px;
 }
 
+// Badge close color
+@each $color, $value in $theme-colors {
+  .badge[class*=#{$color}] > .close {
+    @include close($value, false);
+  }
+}
+
 .badge > .close {
   position:absolute;
   background: inherit;
@@ -24,7 +31,7 @@
     outline: none;
   }
 }
-
+/*
 .badge > .close:not(:disabled):not(.disabled):hover::before,
 .badge > .close:not(:disabled):not(.disabled):focus::before {
   background-image: escape-svg($close-icon-hover);
@@ -34,3 +41,4 @@
 .badge > .close:not(:disabled):not(.disabled):focus::after {
   display:none;
 }
+*/

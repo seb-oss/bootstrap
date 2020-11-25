@@ -23,6 +23,22 @@
     }
   }*/
 
+  &::before {
+    content: '';
+    background: escape-svg($close-icon);
+    background-size: 1rem;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    padding: 1.375rem;
+    position: absolute;
+    top: -.375rem;
+    left: -.375rem;
+    z-index: 1;
+  }
+  span {
+    display: none;
+  }
+
   &:not(:disabled):not(.disabled) {
     @include hover-focus() {
       &::after {
@@ -95,7 +111,7 @@ a.close.disabled {
 }
 
 
-button.close {
+/*button.close {
   &::before {
     content: '';
     background: escape-svg($close-icon);
@@ -111,6 +127,6 @@ button.close {
   span {
     display: none;
   }
-}
+}*/
 
 
