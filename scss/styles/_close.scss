@@ -1,132 +1,20 @@
-// @import "../bootstrap-core/close";
-
 .close {
-  float: right;
-  @include font-size($close-font-size);
-  font-weight: $close-font-weight;
-  line-height: 1;
-  color: $close-color;
-  text-shadow: $close-text-shadow;
-  position: relative;
-  width: 2rem;
-  // opacity: .5;
-
-  // Override <a>'s hover style
-  @include hover() {
-    color: $close-color;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    border-radius: 50%;
+    line-height: 0;
+    padding: 0.5em;
     text-decoration: none;
-  }
+    transition: background-color 200ms, color 200ms;
 
-  /*&:not(:disabled):not(.disabled) {
-    @include hover-focus() {
-      opacity: .75;
+    &:hover:not(:disabled) {
+        background-color: rgba($gray-600, 0.4);
     }
-  }*/
 
-  &::before {
-    content: '';
-    background: escape-svg($close-icon);
-    background-size: 1rem;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    padding: 1.375rem;
-    position: absolute;
-    top: -.375rem;
-    left: -.375rem;
-    z-index: 1;
-  }
-  span {
-    display: none;
-  }
-
-  &:not(:disabled):not(.disabled) {
-    @include hover-focus() {
-      &::after {
-        content: '';
-        background: $close-icon-hover-bg;
-        border-radius: 50%;
-        height: 2rem;
-        width: 2rem;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-        @include add-transition('fadeIn');
-        opacity: 1;
-      }
+    &::after {
+        content: "\2715";
+        line-height: 0.8em;
+        display: inline-block;
     }
-    &:active::after {
-      content: '';
-      background: $close-icon-active-bg;
-      border-radius: 50%;
-      height: 2rem;
-      width: 2rem;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      @include add-transition('fadeIn');
-      opacity: 1;
-    }
-  }
-  /* smartphones, touchscreens */
-  @media (hover: none) and (pointer: coarse) {
-    &:not(:disabled):not(.disabled) {
-      &::after {
-        content: '';
-        background: $close-icon-hover-bg;
-        border-radius: 50%;
-        height: 2rem;
-        width: 2rem;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-        opacity: 1;
-      }
-    }
-  }
 }
-
-// Additional properties for button version
-// iOS requires the button element instead of an anchor tag.
-// If you want the anchor version, it requires `href="#"`.
-// See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
-
-// stylelint-disable-next-line selector-no-qualifying-type
-button.close {
-  padding: 0;
-  background-color: transparent;
-  border: 0;
-}
-
-// Future-proof disabling of clicks on `<a>` elements
-
-// stylelint-disable-next-line selector-no-qualifying-type
-a.close.disabled {
-  pointer-events: none;
-}
-
-
-/*button.close {
-  &::before {
-    content: '';
-    background: escape-svg($close-icon);
-    background-size: 1rem;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    padding: 1.375rem;
-    position: absolute;
-    top: -.375rem;
-    left: -.375rem;
-    z-index: 1;
-  }
-  span {
-    display: none;
-  }
-}*/
-
-
