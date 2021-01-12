@@ -1,5 +1,6 @@
 .close {
     border: none;
+    outline: none;
     box-shadow: none;
     background: transparent;
     border-radius: 50%;
@@ -8,8 +9,11 @@
     text-decoration: none;
     transition: background-color 200ms, color 200ms;
 
-    &:hover:not(:disabled) {
-        background-color: rgba($gray-600, 0.4);
+    &:not(:disabled) {
+        &:hover,
+        &:focus {
+            background-color: rgba($gray-600, 0.4);
+        }
     }
 
     &::after {
