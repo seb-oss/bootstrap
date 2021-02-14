@@ -1,0 +1,6 @@
+<meta http-equiv="refresh" id="metaRedirect"/>
+<script>
+  sessionStorage.redirect = location.href;
+  const target = 'https://sebgroup.github.io/bootstrap/' + location.href.split('https://sebgroup.github.io/bootstrap')[1].split('/')[1];
+  document.getElementById("metaRedirect").setAttribute("content", "0;URL="+target);
+</script>
