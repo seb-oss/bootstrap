@@ -29,7 +29,7 @@
       <div class="col-12 col-sm-auto mt-3 mt-sm-0 mb-3">
         <button class="btn btn-primary w-100" (click)="open(largeContent, {windowClass:'modal-aside modal-aside-right', size:'lg'})">Open large aside modal</button>
       </div>
-    </div>
+      </div>
     <app-example title="Large modal"
                  source="modals/sizes/sizes.component.html">
       <app-sizes class="ex-example"></app-sizes>
@@ -40,6 +40,11 @@
   <app-anchor-heading heading="Standard modal with scroll"></app-anchor-heading>
   <div class="card-body">
     <p>Add the class <code>.modal-dialog-scrollable</code> to the modal element to allow the body content to overflow i.e. scroll. If you want the buttons or modal actions to align nicely at the bottom put them inside a modal footer with the class <code>.border-top</code> to get a border against the scrolling content body. This goes for aside and fullscreen modals too!</p>
+    <div class="form-row">
+      <div class="col-12 col-sm-auto mb-3">
+        <button class="btn btn-primary w-100" (click)="open(longContent, {scrollable: true})">Open modal with scroll</button>
+      </div>
+    </div>
     <app-example title="Scrollable content"
                  source="modals/scroll/scroll.component.html">
       <app-scroll class="ex-example bg-secondary d-block p-2 p-sm-4 mx-n3 mx-sm-auto"></app-scroll>
@@ -50,9 +55,13 @@
   <app-anchor-heading heading="Aside modal aka slide-out"></app-anchor-heading>
   <div class="card-body">
     <p>Add <code>.modal-aside</code> class to the modal element together with either <code>.modal-aside-right</code> or <code>.modal-aside-left</code> to get a modal that will slide in from the side.</p>
+    <p>Aside modals will by default scroll content if it overflows the modal body size, note that you need to add <code>.border-top</code> to the footer to get the top border.</p>
     <div class="form-row">
       <div class="col-12 col-sm-auto mb-3">
         <button class="btn btn-primary w-100" (click)="open(content, {windowClass:'modal-aside modal-aside-right'})">Open aside modal</button>
+      </div>
+      <div class="col-12 col-sm-auto mb-3">
+        <button class="btn btn-primary w-100" (click)="open(longContent, {windowClass:'modal-aside modal-aside-right'})">Open aside modal with scroll</button>
       </div>
     </div>
     <app-example title="Aside modal"
@@ -65,9 +74,13 @@
   <app-anchor-heading heading="Fullscreen modal aka take-over"></app-anchor-heading>
   <div class="card-body">
     <p>Add <code>.modal-fullscreen</code> class to the modal element to get a fullscreen modal.</p>
+    <p>Fullscreen modals will by default scroll content if it overflows the modal body size, note that you need to add <code>.border-top</code> to the footer to get the top border.</p>
     <div class="form-row">
       <div class="col-12 col-sm-auto mb-3">
         <button class="btn btn-primary w-100" (click)="open(content, {windowClass:'modal-fullscreen'})">Open fullscreen modal</button>
+      </div>
+      <div class="col-12 col-sm-auto mb-3">
+        <button class="btn btn-primary w-100" (click)="open(longContent, {windowClass:'modal-fullscreen'})">Open fullscreen modal with scroll</button>
       </div>
     </div>
     <app-example title="Fullscreen modal"
@@ -79,7 +92,7 @@
 <ng-template #content let-modal>
   <div class="modal-header">
     <h4 class="modal-title">Modal title</h4>
-    <button type="button" class="close" aria-label="Close">
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
@@ -87,14 +100,33 @@
     <p>Modal body text goes here.</p>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="modal.dismiss('Cross click')">Close</button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="modal.dismiss('Button click')">Close</button>
+    <button type="button" class="btn btn-primary" (click)="modal.close('Save click')">Save changes</button>
+  </div>
+</ng-template>
+<ng-template #longContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum vehicula mattis. Cras lobortis interdum venenatis. Praesent quis mauris quis sem porttitor laoreet in et sem. Proin cursus lacus eu lacus fermentum eleifend. Suspendisse potenti. Etiam pharetra gravida felis eget fringilla. Aenean scelerisque sagittis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mi lacus, congue a eros at, egestas laoreet nisl. Vestibulum congue vestibulum lacinia. Pellentesque fringilla consectetur dui, malesuada eleifend lorem ornare vel. Integer egestas quam ut viverra sodales. Quisque vehicula vitae libero et sollicitudin.</p>
+    <p>Sed eleifend felis suscipit libero ultrices fringilla. Curabitur vitae lorem non felis varius laoreet. Nulla non aliquam elit. Curabitur fringilla eros et enim rutrum rutrum. Sed aliquet feugiat enim ut varius. Integer eleifend vitae diam at auctor. In efficitur, nisl quis laoreet venenatis, nisl lorem varius massa, nec interdum odio diam nec ante. Pellentesque et sem massa. Phasellus tristique elementum urna, vel porta nunc mollis quis. Integer a ex posuere, lacinia diam hendrerit, blandit tellus.</p>
+    <p>Suspendisse potenti. Maecenas iaculis, lorem eget sagittis rutrum, est libero tempus nunc, vitae mattis leo metus nec ante. Donec ac nulla id arcu vestibulum finibus. Sed ornare mattis est, quis mollis nulla mattis in. Ut elit nulla, laoreet eu massa vel, fermentum varius orci. Maecenas pharetra magna eu ornare mollis. Praesent orci quam, aliquet ac lobortis ac, luctus non nisi. Sed congue urna ipsum, nec luctus lectus convallis non. Aliquam imperdiet quam neque, eu faucibus lectus vulputate et. Nulla facilisi. Mauris maximus, nulla et facilisis semper, libero odio commodo lectus, sed aliquam massa sapien eget orci. Aliquam egestas vulputate nisi sed condimentum. Etiam ex risus, pulvinar ac risus sit amet, ornare efficitur lacus. Vestibulum euismod ipsum in mauris suscipit, non mattis felis egestas.</p>    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum vehicula mattis. Cras lobortis interdum venenatis. Praesent quis mauris quis sem porttitor laoreet in et sem. Proin cursus lacus eu lacus fermentum eleifend. Suspendisse potenti. Etiam pharetra gravida felis eget fringilla. Aenean scelerisque sagittis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mi lacus, congue a eros at, egestas laoreet nisl. Vestibulum congue vestibulum lacinia. Pellentesque fringilla consectetur dui, malesuada eleifend lorem ornare vel. Integer egestas quam ut viverra sodales. Quisque vehicula vitae libero et sollicitudin.</p>
+    <p>Sed eleifend felis suscipit libero ultrices fringilla. Curabitur vitae lorem non felis varius laoreet. Nulla non aliquam elit. Curabitur fringilla eros et enim rutrum rutrum. Sed aliquet feugiat enim ut varius. Integer eleifend vitae diam at auctor. In efficitur, nisl quis laoreet venenatis, nisl lorem varius massa, nec interdum odio diam nec ante. Pellentesque et sem massa. Phasellus tristique elementum urna, vel porta nunc mollis quis. Integer a ex posuere, lacinia diam hendrerit, blandit tellus.</p>
+    <p>Suspendisse potenti. Maecenas iaculis, lorem eget sagittis rutrum, est libero tempus nunc, vitae mattis leo metus nec ante. Donec ac nulla id arcu vestibulum finibus. Sed ornare mattis est, quis mollis nulla mattis in. Ut elit nulla, laoreet eu massa vel, fermentum varius orci. Maecenas pharetra magna eu ornare mollis. Praesent orci quam, aliquet ac lobortis ac, luctus non nisi. Sed congue urna ipsum, nec luctus lectus convallis non. Aliquam imperdiet quam neque, eu faucibus lectus vulputate et. Nulla facilisi. Mauris maximus, nulla et facilisis semper, libero odio commodo lectus, sed aliquam massa sapien eget orci. Aliquam egestas vulputate nisi sed condimentum. Etiam ex risus, pulvinar ac risus sit amet, ornare efficitur lacus. Vestibulum euismod ipsum in mauris suscipit, non mattis felis egestas.</p>
+  </div>
+  <div class="modal-footer border-top">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="modal.dismiss('Button click')">Close</button>
     <button type="button" class="btn btn-primary" (click)="modal.close('Save click')">Save changes</button>
   </div>
 </ng-template>
 <ng-template #largeContent let-modal>
   <div class="modal-header">
     <h4 class="modal-title">Modal title</h4>
-    <button type="button" class="close" aria-label="Close">
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
@@ -108,7 +140,22 @@
     </div>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="modal.dismiss('Cross click')">Close</button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="modal.dismiss('Button click')">Close</button>
+    <button type="button" class="btn btn-primary" (click)="modal.close('Save click')">Save changes</button>
+  </div>
+</ng-template>
+<ng-template #iframeContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body p-0">
+    <iframe src="#" style="border:none;" class="h-100"></iframe>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="modal.dismiss('Button click')">Close</button>
     <button type="button" class="btn btn-primary" (click)="modal.close('Save click')">Save changes</button>
   </div>
 </ng-template>
