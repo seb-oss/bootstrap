@@ -22,6 +22,7 @@
   <app-anchor-heading heading="Sizes"></app-anchor-heading>
   <div class="card-body">
     <p>Add <code>.modal-lg</code> class to the modal dialog to get a larger modal, works with normal modals and aside modals.</p>
+    <p>The width of large aside modals will grow and assume the size of the content (if width is set) and the max width is currently set to 768px (the breakpoint for medium sized screens). Note that if you use an iframe inside a large aside modal it's width will be set to 100% and fixed to 768px on md screens and up. </p>
     <div class="form-row">
       <div class="col-12 col-sm-auto">
         <button class="btn btn-primary w-100" (click)="open(content, {size:'lg'})">Open large modal</button>
@@ -29,7 +30,10 @@
       <div class="col-12 col-sm-auto mt-3 mt-sm-0 mb-3">
         <button class="btn btn-primary w-100" (click)="open(largeContent, {windowClass:'modal-aside modal-aside-right', size:'lg'})">Open large aside modal</button>
       </div>
+      <div class="col-12 col-sm-auto mt-3 mt-sm-0 mb-3">
+        <button class="btn btn-primary w-100" (click)="open(iframeContent, {windowClass:'modal-aside modal-aside-right', size:'lg'})">Open large aside modal with iframe</button>
       </div>
+    </div>
     <app-example title="Large modal"
                  source="modals/sizes/sizes.component.html">
       <app-sizes class="ex-example"></app-sizes>
