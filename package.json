@@ -4,7 +4,7 @@
   "homepage": "https://sebgroup.github.io/bootstrap/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0",
     "build:demo": "ng build --prod --base-href https://sebgroup.github.io/bootstrap/ && copyfiles -f src/404.html dist/bootstrap",
     "prebuild:demo": "rimraf dist/bootstrap && replace __TRAVIS_BUILD_NUMBER__ $TRAVIS_BUILD_NUMBER src/environments/environment.ts && replace __TRAVIS_BUILD_NUMBER__ $TRAVIS_BUILD_NUMBER src/environments/environment.prod.ts",
     "build-dev": "ng build --source-map false --base-href https://sebgroup.github.io/bootstrap/dev/ --output-path dist/bootstrap/dev && copyfiles -f src/dev/404.html dist/bootstrap/dev",
@@ -110,7 +110,7 @@
     "@types/node": "^12.19.7",
     "autoprefixer": "^9.8.6",
     "backstopjs": "^5.0.6",
-    "body-scroll-lock": "^2.7.1",
+    "body-scroll-lock": "^3.1.5",
     "bootstrap": "^4.5.3",
     "clean-css-cli": "^4.2.1",
     "codelyzer": "^6.0.0",
