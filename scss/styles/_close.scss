@@ -56,6 +56,13 @@
         opacity: 1;
       }
     }
+    &:focus {
+      outline: none;
+      &::after {
+        outline: none;
+        box-shadow: 0 0 4px 1px $blue;
+      }
+    }
     &:active::after {
       content: '';
       background: $close-icon-active-bg;
