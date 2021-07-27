@@ -14,7 +14,7 @@
     "prebuild": "rimraf dist/lib",
     "prepublish-lib": "npm run build",
     "publish-lib": "npm publish dist/lib",
-    "compile-css": "webpack --config webpack.sass.js && rm ./dist/lib/css/*.js",
+    "compile-css": "webpack --config webpack.sass.js && rm ./dist/lib/css/*.js && rm ./dist/lib/css/*.js.map",
     "copy-scss": "copyfiles -u 1 'scss/**/*.scss' -e 'scss/**/*-prebuild*.scss' dist/lib/scss",
     "copy-fonts": "copyfiles -u 2 scss/fonts/* dist/lib/fonts",
     "test": "ng test",
