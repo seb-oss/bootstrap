@@ -2,17 +2,17 @@
   @each $key, $value in $gutters {
     @media (min-width: map-get($grid-breakpoints, $key)) {
       .row:not(.no-gutters) {
-        margin-left: map-get($gutters, $key) *(-1)/2;
-        margin-right: map-get($gutters, $key) *(-1)/2;
+        margin-left: map-get($gutters, $key) *(-1)*0.5;
+        margin-right: map-get($gutters, $key) *(-1)*0.5;
       }
       [class^='col'],
       [class*=' col'] {
-        padding-left: map-get($gutters, $key)/2;
-        padding-right: map-get($gutters, $key)/2;
+        padding-left: map-get($gutters, $key)*0.5;
+        padding-right: map-get($gutters, $key)*0.5;
       }
       .container-fluid, .container, .container-content {
-        padding-left: map-get($gutters, $key)/2;
-        padding-right: map-get($gutters, $key)/2;
+        padding-left: map-get($gutters, $key)*0.5;
+        padding-right: map-get($gutters, $key)*0.5;
       }
     }
   }
