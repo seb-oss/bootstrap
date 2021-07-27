@@ -21,6 +21,6 @@
   },
   "homepage": "https://sebgroup.github.io/bootstrap/",
   "dependencies": {
-    "@sebgroup/fonts": "^1.0.0"
+    "@sebgroup/fonts": "^1.1.0"
   }
 }
