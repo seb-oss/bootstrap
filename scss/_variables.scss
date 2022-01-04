@@ -425,16 +425,22 @@ $pagination-padding-x-sm:           $input-btn-padding-x-sm !default;
 $pagination-padding-y-lg:           $input-btn-padding-y-lg !default;//.75rem !default;
 $pagination-padding-x-lg:           $input-btn-padding-x-lg !default;
 $pagination-line-height:            1.5 !default;
+$pagination-color:                  $gray-800 !default;
 
-$pagination-hover-color:            $white !default;
-$pagination-hover-bg:               $blue !default;
-$pagination-hover-border-color:     $blue !default;
+$pagination-hover-color:            initial !default;
+$pagination-hover-bg:               transparent !default;
+$pagination-hover-border-color:     transparent !default;
+$pagination-hover-box-shadow:       0 2px 6px 0 rgba($black, .15) !default;
 
-$pagination-active-bg:              $blue-dark !default;
-$pagination-active-border-color:    $blue-dark !default;
+$pagination-active-bg:              $gray-800 !default;
+$pagination-active-border-color:    $gray-800 !default;
 
 $pagination-border-radius:          4px !default; // SEB Specific
-$pagination-border-color:           $input-border-color !default;
+$pagination-border-color:           transparent !default;
+
+$pagination-disabled-color:         $gray-500 !default;
+$pagination-disabled-bg:            transparent !default;
+$pagination-disabled-border-color:  transparent !default;
 
 
 
