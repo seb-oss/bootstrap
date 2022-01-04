@@ -242,8 +242,8 @@ $small-font-size:             $font-size-sm !default;
 //
 // Style anchor elements.
 
-$link-color:                $blue-darker !default;
-$link-hover-color:          $blue !default;
+$link-color:                #0062BC !default; //$blue-darker !default;
+$link-hover-color:          $blue-darker !default;
 $link-weight:               $font-weight-medium !default; // SEB specific
 
 $external-link-icon-color:        $link-color !default; // SEB specific
