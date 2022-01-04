@@ -47,11 +47,11 @@
     ($submitted-bg == $success) or // override success button
     ($submitted-bg == $primary) // override primary button
   {
-    $background: $blue-dark;
-    $color: $blue-dark;
-    $border: $blue-dark;
-    $hover-background: $blue;
-    $hover-border: $blue;
+    $background: $blue-darker;
+    $color: $blue-darker;
+    $border: $blue-darker;
+    $hover-background: $blue-dark;
+    $hover-border: $blue-dark;
     $active-background: $blue-darker;
     $active-border: $blue-darker;
   }
@@ -134,10 +134,10 @@
 @mixin button-outline-variant($color, $color-hover: #fff) {
   // store submitted background
   $submitted-color: $color;
-  $bg-hover: $blue;
+  $bg-hover: $blue-dark;
   $active-bg: $blue-darker;
   $color: $blue-darker;
-  $border-color: $blue-dark;
+  $border-color: $blue-darker;
 
   // override danger button
   @if($submitted-color == $danger) {
