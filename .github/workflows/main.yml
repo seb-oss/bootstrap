@@ -9,15 +9,28 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: "16"
+
     - name: Get branch name
       shell: bash
       run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF##*/})"
       id: branch
 
-    - name: Add token for Font Awesome registry access
-      env:
-        FA_TOKEN: ${{ secrets.FA_TOKEN }}
-      run: npm run add-fa-config
+    #- name: Add token for Font Awesome registry access
+    #  env:
+    #    FA_TOKEN: ${{ secrets.FA_TOKEN }}
+    #  run: npm run add-fa-config
+
+    - name: Add token for Font Awesome to .npmrc
+      run: |
+        echo '
+          always-auth=true
+          //npm.fontawesome.com/:_authToken=${{ secrets.FA_TOKEN }}
+        ' >> .npmrc
+      shell: bash
 
     - name: Install dependencies
       run: npm ci
