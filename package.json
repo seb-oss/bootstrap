@@ -44,7 +44,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run package-lock-sanitizer && git add package-lock.json",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
