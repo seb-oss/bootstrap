@@ -30,6 +30,7 @@
 /backstop_data/bitmaps_test/
 
 # misc
+/.angular/cache
 /.sass-cache
 /connect.lock
 /coverage

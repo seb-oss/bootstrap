@@ -39,7 +39,12 @@ export class ModalsComponent implements OnInit {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
 
-    disableBodyScroll(contentBody);
+    disableBodyScroll(contentBody, {
+      allowTouchMove: el => {
+        // only allow scroll if parent to touched element contains modal-content or modal-body class
+        return el.parentElement.classList.contains('modal-content') || el.parentElement.classList.contains('modal-body')
+      },
+    });
   }
 
   private getDismissReason(reason: any): string {
